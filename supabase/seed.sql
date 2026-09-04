@@ -1,0 +1,3 @@
+-- CafeRest seed file
+-- This file will be populated as the database schema evolves.
+-- For now, it remains empty.

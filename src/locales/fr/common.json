@@ -1,0 +1,17 @@
+{
+  "app": {
+    "name": "CafeRest",
+    "description": "Application POS/ERP pour cafes et restaurants"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Creer",
+    "search": "Rechercher",
+    "noResults": "Aucun resultat"
+  }
+}
