@@ -8,8 +8,12 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+      "format": "prettier --write .",
+      "format:check": "prettier --check .",
+      "db:link": "node scripts/supabase-cli.mjs link",
+      "db:push": "node scripts/supabase-cli.mjs db push",
+      "db:reset": "node scripts/supabase-cli.mjs db reset",
+      "db:status": "node scripts/supabase-cli.mjs db status"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.6",
