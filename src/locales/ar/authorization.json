@@ -50,6 +50,12 @@
     "ingredientSupplierNoRefs": "مرجع كتالوج شراء غير صالح (كمية أو سعر أو وحدة غير صحيحة).",
     "crossEstablishment": "مرجع محظور: العنصر ينتمي إلى منشأة أخرى.",
     "currencyRequired": "العملة مطلوبة لهذه العملية.",
+    "purchaseOrderNotFound": "طلب الشراء غير موجود.",
+    "purchaseOrderLocked": "لا يمكن تعديل طلب الشراء هذا في حالته الحالية.",
+    "purchaseOrderInvalidStatus": "هذا الإجراء غير مسموح به في الحالة الحالية لطلب الشراء.",
+    "purchaseOrderEmpty": "يجب أن يحتوي طلب الشراء على عنصر واحد على الأقل.",
+    "purchaseOrderDiscountInvalid": "الخصم المحدد على هذا العنصر غير صالح.",
+    "purchaseOrderDuplicateNumber": "يوجد طلب شراء بهذا الرقم بالفعل.",
     "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
   },
   "switch": {

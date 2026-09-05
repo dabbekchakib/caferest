@@ -1,0 +1,23 @@
+{
+  "submit": "Submit",
+  "submitTitle": "Submit for approval",
+  "submitDescription": "The order will move to pending approval.",
+  "approve": "Approve",
+  "approveTitle": "Approve",
+  "approveDescription": "The order will be marked approved, ready to send.",
+  "send": "Send",
+  "sendTitle": "Send to supplier",
+  "sendDescription": "The order will be marked as sent to the supplier.",
+  "cancel": "Cancel",
+  "cancelTitle": "Cancel",
+  "cancelDescription": "The order will be cancelled and can no longer be edited.",
+  "close": "Close",
+  "closeTitle": "Close",
+  "closeDescription": "The order will be closed.",
+  "duplicate": "Duplicate",
+  "delete": "Delete",
+  "edit": "Edit",
+  "cancelReason": "Cancellation reason",
+  "reasonPlaceholder": "Provide a reason (optional)…",
+  "confirm": "Confirm"
+}

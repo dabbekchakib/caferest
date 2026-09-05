@@ -50,6 +50,12 @@
     "ingredientSupplierNoRefs": "Invalid purchase catalog reference (incorrect quantity, price or unit).",
     "crossEstablishment": "Forbidden reference: the item belongs to another establishment.",
     "currencyRequired": "A currency is required for this operation.",
+    "purchaseOrderNotFound": "Purchase order not found.",
+    "purchaseOrderLocked": "This purchase order cannot be edited in its current state.",
+    "purchaseOrderInvalidStatus": "This action is not allowed in the purchase order's current state.",
+    "purchaseOrderEmpty": "The purchase order must contain at least one item.",
+    "purchaseOrderDiscountInvalid": "The discount configured on this item is invalid.",
+    "purchaseOrderDuplicateNumber": "A purchase order with this number already exists.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

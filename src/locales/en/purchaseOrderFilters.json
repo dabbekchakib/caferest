@@ -1,0 +1,11 @@
+{
+  "search": "Search",
+  "searchPlaceholder": "Number or item…",
+  "allStatuses": "All statuses",
+  "allSuppliers": "All suppliers",
+  "supplier": "Supplier",
+  "status": "Status",
+  "dateFrom": "From",
+  "dateTo": "Until",
+  "reset": "Reset"
+}

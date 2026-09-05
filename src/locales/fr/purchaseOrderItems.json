@@ -1,0 +1,16 @@
+{
+  "sku": "Réf. fournisseur",
+  "ingredient": "Article",
+  "description": "Description",
+  "quantity": "Quantité",
+  "unit": "Unité",
+  "unitPrice": "Prix unitaire",
+  "discount": "Remise",
+  "taxRate": "Taxe",
+  "tax": "Montant taxe",
+  "subtotal": "Sous-total",
+  "total": "Total",
+  "notes": "Notes",
+  "noItems": "Aucun article",
+  "itemsCount": "articles"
+}

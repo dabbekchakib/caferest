@@ -1,0 +1,10 @@
+{
+  "draft": "Brouillon",
+  "pendingApproval": "En attente d'approbation",
+  "approved": "Approuvé",
+  "sent": "Envoyé",
+  "partiallyReceived": "Partiellement reçu",
+  "fullyReceived": "Réceptionné",
+  "cancelled": "Annulé",
+  "closed": "Clôturé"
+}

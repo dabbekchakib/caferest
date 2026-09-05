@@ -94,6 +94,15 @@ const AUDIT_ACTIONS = [
   "ingredient_supplier.preferred",
   "supplier_price.created",
   "supplier_price.updated",
+  "purchase_order.created",
+  "purchase_order.updated",
+  "purchase_order.submitted",
+  "purchase_order.approved",
+  "purchase_order.sent",
+  "purchase_order.cancelled",
+  "purchase_order.closed",
+  "purchase_order.deleted",
+  "purchase_order.duplicated",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];

@@ -1,0 +1,11 @@
+{
+  "search": "Recherche",
+  "searchPlaceholder": "Numéro ou article…",
+  "allStatuses": "Tous les statuts",
+  "allSuppliers": "Tous les fournisseurs",
+  "supplier": "Fournisseur",
+  "status": "Statut",
+  "dateFrom": "Du",
+  "dateTo": "Au",
+  "reset": "Réinitialiser"
+}

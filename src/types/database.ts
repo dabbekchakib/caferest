@@ -794,15 +794,30 @@ export interface Database {
           id: string;
           establishment_id: string;
           supplier_id: string | null;
-          reference: string;
+          order_number: string;
           status: PurchaseOrderStatus;
           order_date: Datetime;
-          expected_date: Datetime | null;
+          expected_delivery_date: Datetime | null;
+          currency_code: string;
           subtotal: number;
+          discount_amount: number;
           tax_amount: number;
+          shipping_amount: number;
+          other_charges: number;
           total: number;
           notes: string | null;
+          internal_notes: string | null;
+          supplier_notes: string | null;
+          shipping_address: string | null;
+          billing_address: string | null;
+          approved_by: string | null;
+          approved_at: Datetime | null;
+          sent_at: Datetime | null;
+          cancelled_at: Datetime | null;
+          closed_at: Datetime | null;
+          cancellation_reason: string | null;
           created_by: string | null;
+          updated_by: string | null;
           created_at: Datetime;
           updated_at: Datetime;
         };
@@ -810,15 +825,30 @@ export interface Database {
           id?: string;
           establishment_id: string;
           supplier_id?: string | null;
-          reference: string;
+          order_number: string;
           status?: PurchaseOrderStatus;
           order_date?: Datetime;
-          expected_date?: Datetime | null;
+          expected_delivery_date?: Datetime | null;
+          currency_code?: string;
           subtotal?: number;
+          discount_amount?: number;
           tax_amount?: number;
+          shipping_amount?: number;
+          other_charges?: number;
           total?: number;
           notes?: string | null;
+          internal_notes?: string | null;
+          supplier_notes?: string | null;
+          shipping_address?: string | null;
+          billing_address?: string | null;
+          approved_by?: string | null;
+          approved_at?: Datetime | null;
+          sent_at?: Datetime | null;
+          cancelled_at?: Datetime | null;
+          closed_at?: Datetime | null;
+          cancellation_reason?: string | null;
           created_by?: string | null;
+          updated_by?: string | null;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
@@ -832,12 +862,24 @@ export interface Database {
           id: string;
           purchase_order_id: string;
           ingredient_id: string | null;
+          ingredient_supplier_id: string | null;
+          description: string | null;
+          supplier_sku: string | null;
           quantity: number;
-          unit_id: string | null;
+          purchase_unit_id: string | null;
           unit_price: number;
+          discount_type: string;
+          discount_value: number;
+          discount_amount: number;
           tax_id: string | null;
+          tax_rate: number;
           tax_amount: number;
+          subtotal: number;
           total: number;
+          received_quantity: number;
+          remaining_quantity: number;
+          notes: string | null;
+          sort_order: number;
           created_at: Datetime;
           updated_at: Datetime;
         };
@@ -845,17 +887,53 @@ export interface Database {
           id?: string;
           purchase_order_id: string;
           ingredient_id?: string | null;
+          ingredient_supplier_id?: string | null;
+          description?: string | null;
+          supplier_sku?: string | null;
           quantity?: number;
-          unit_id?: string | null;
+          purchase_unit_id?: string | null;
           unit_price?: number;
+          discount_type?: string;
+          discount_value?: number;
+          discount_amount?: number;
           tax_id?: string | null;
+          tax_rate?: number;
           tax_amount?: number;
+          subtotal?: number;
           total?: number;
+          received_quantity?: number;
+          remaining_quantity?: number;
+          notes?: string | null;
+          sort_order?: number;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
         Update: Partial<
           Database["public"]["Tables"]["purchase_order_items"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      purchase_order_status_history: {
+        Row: {
+          id: string;
+          purchase_order_id: string;
+          from_status: string | null;
+          to_status: string;
+          reason: string | null;
+          changed_by: string | null;
+          created_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          purchase_order_id: string;
+          from_status?: string | null;
+          to_status: string;
+          reason?: string | null;
+          changed_by?: string | null;
+          created_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["purchase_order_status_history"]["Insert"]
         >;
         Relationships: [];
       };
@@ -1549,11 +1627,13 @@ export type RecipeStatus = "draft" | "active" | "inactive" | "archived";
 
 export type PurchaseOrderStatus =
   | "draft"
-  | "pending"
-  | "ordered"
+  | "pending_approval"
+  | "approved"
+  | "sent"
   | "partially_received"
-  | "received"
-  | "cancelled";
+  | "fully_received"
+  | "cancelled"
+  | "closed";
 
 export type InventoryLocationType = "storage" | "bar" | "kitchen" | "reserve";
 

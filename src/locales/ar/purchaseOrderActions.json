@@ -1,0 +1,23 @@
+{
+  "submit": "إرسال للموافقة",
+  "submitTitle": "إرسال للموافقة",
+  "submitDescription": "سينتقل الطلب إلى حالة بانتظار الموافقة.",
+  "approve": "اعتماد",
+  "approveTitle": "اعتماد",
+  "approveDescription": "سيتم وضع علامة معتمد على الطلب، جاهز للإرسال.",
+  "send": "إرسال",
+  "sendTitle": "إرسال للمورّد",
+  "sendDescription": "سيتم وضع علامة مُرسَل على الطلب.",
+  "cancel": "إلغاء",
+  "cancelTitle": "إلغاء",
+  "cancelDescription": "سيتم إلغاء الطلب ولن يمكن تعديله بعد الآن.",
+  "close": "إغلاق",
+  "closeTitle": "إغلاق",
+  "closeDescription": "سيتم إغلاق الطلب.",
+  "duplicate": "تكرار",
+  "delete": "حذف",
+  "edit": "تعديل",
+  "cancelReason": "سبب الإلغاء",
+  "reasonPlaceholder": "اذكر السبب (اختياري)…",
+  "confirm": "تأكيد"
+}

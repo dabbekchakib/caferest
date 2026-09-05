@@ -1,0 +1,9 @@
+{
+  "discountTypeInvalid": "Type de remise invalide.",
+  "discountMax": "Le pourcentage de remise ne peut pas dépasser 100.",
+  "discountExceedsGross": "La remise fixe ne peut pas dépasser le montant brut de la ligne.",
+  "discountNone": "Aucune valeur de remise n'est autorisée sans privilège de remise.",
+  "noItems": "Le bon doit contenir au moins un article.",
+  "statusInvalid": "Statut de bon de commande invalide.",
+  "invalidTransition": "Action non autorisée pour le statut actuel du bon de commande."
+}

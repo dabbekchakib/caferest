@@ -1,0 +1,23 @@
+{
+  "submit": "Soumettre",
+  "submitTitle": "Soumettre pour approbation",
+  "submitDescription": "Le bon passera en attente d'approbation.",
+  "approve": "Approuver",
+  "approveTitle": "Approuver",
+  "approveDescription": "Le bon sera marqué comme approuvé, prêt à être envoyé.",
+  "send": "Envoyer",
+  "sendTitle": "Envoyer au fournisseur",
+  "sendDescription": "Le bon sera marqué comme envoyé au fournisseur.",
+  "cancel": "Annuler",
+  "cancelTitle": "Annuler",
+  "cancelDescription": "Le bon sera annulé et ne pourra plus être modifié.",
+  "close": "Clôturer",
+  "closeTitle": "Clôturer",
+  "closeDescription": "Le bon sera clôturé.",
+  "duplicate": "Dupliquer",
+  "delete": "Supprimer",
+  "edit": "Modifier",
+  "cancelReason": "Motif d'annulation",
+  "reasonPlaceholder": "Préciser le motif (optionnel)…",
+  "confirm": "Confirmer"
+}

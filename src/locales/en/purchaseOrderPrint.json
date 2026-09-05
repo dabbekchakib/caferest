@@ -1,0 +1,14 @@
+{
+  "title": "Purchase order print",
+  "orderNumber": "Order number",
+  "supplier": "Supplier",
+  "orderDate": "Order date",
+  "expectedDate": "Expected delivery",
+  "status": "Status",
+  "currency": "Currency",
+  "items": "Items",
+  "totals": "Totals",
+  "print": "Print",
+  "downloadPdf": "Download PDF",
+  "back": "Back"
+}

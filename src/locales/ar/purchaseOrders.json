@@ -1,0 +1,20 @@
+{
+  "title": "أوامر الشراء",
+  "subtitle": "إدارة أوامر الشراء من الموردين.",
+  "newOrder": "أمر جديد",
+  "searchPlaceholder": "البحث بالرقم…",
+  "emptyTitle": "لا توجد أوامر شراء",
+  "emptyDescription": "أنشئ أول أمر شراء من كتالوج المورد.",
+  "createFirst": "إنشاء أمر شراء",
+  "results": "نتيجة",
+  "columns": {
+    "number": "الرقم",
+    "supplier": "المورد",
+    "date": "التاريخ",
+    "expectedDate": "التسليم المتوقع",
+    "status": "الحالة",
+    "items": "البنود",
+    "total": "الإجمالي",
+    "actions": "إجراءات"
+  }
+}

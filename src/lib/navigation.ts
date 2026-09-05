@@ -107,6 +107,7 @@ export const navSections: NavSection[] = [
         labelKey: "purchaseOrders",
         href: "/purchase-orders",
         icon: ClipboardList,
+        permission: "purchases.view",
       },
       { labelKey: "receiving", href: "/receiving", icon: PackageCheck },
     ],

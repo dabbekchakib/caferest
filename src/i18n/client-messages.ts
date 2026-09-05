@@ -60,6 +60,17 @@ import frSupplierFilters from "@/locales/fr/supplierFilters.json";
 import frSupplierValidation from "@/locales/fr/supplierValidation.json";
 import frSupplierActions from "@/locales/fr/supplierActions.json";
 import frSupplierComparison from "@/locales/fr/supplierComparison.json";
+import frPurchaseOrders from "@/locales/fr/purchaseOrders.json";
+import frPurchaseOrderForm from "@/locales/fr/purchaseOrderForm.json";
+import frPurchaseOrderDetails from "@/locales/fr/purchaseOrderDetails.json";
+import frPurchaseOrderItems from "@/locales/fr/purchaseOrderItems.json";
+import frPurchaseOrderStatus from "@/locales/fr/purchaseOrderStatus.json";
+import frPurchaseOrderActions from "@/locales/fr/purchaseOrderActions.json";
+import frPurchaseOrderValidation from "@/locales/fr/purchaseOrderValidation.json";
+import frPurchaseOrderTotals from "@/locales/fr/purchaseOrderTotals.json";
+import frPurchaseOrderFilters from "@/locales/fr/purchaseOrderFilters.json";
+import frPurchaseOrderPrint from "@/locales/fr/purchaseOrderPrint.json";
+import frPurchaseOrderHistory from "@/locales/fr/purchaseOrderHistory.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -120,6 +131,17 @@ import enSupplierFilters from "@/locales/en/supplierFilters.json";
 import enSupplierValidation from "@/locales/en/supplierValidation.json";
 import enSupplierActions from "@/locales/en/supplierActions.json";
 import enSupplierComparison from "@/locales/en/supplierComparison.json";
+import enPurchaseOrders from "@/locales/en/purchaseOrders.json";
+import enPurchaseOrderForm from "@/locales/en/purchaseOrderForm.json";
+import enPurchaseOrderDetails from "@/locales/en/purchaseOrderDetails.json";
+import enPurchaseOrderItems from "@/locales/en/purchaseOrderItems.json";
+import enPurchaseOrderStatus from "@/locales/en/purchaseOrderStatus.json";
+import enPurchaseOrderActions from "@/locales/en/purchaseOrderActions.json";
+import enPurchaseOrderValidation from "@/locales/en/purchaseOrderValidation.json";
+import enPurchaseOrderTotals from "@/locales/en/purchaseOrderTotals.json";
+import enPurchaseOrderFilters from "@/locales/en/purchaseOrderFilters.json";
+import enPurchaseOrderPrint from "@/locales/en/purchaseOrderPrint.json";
+import enPurchaseOrderHistory from "@/locales/en/purchaseOrderHistory.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -180,6 +202,17 @@ import arSupplierFilters from "@/locales/ar/supplierFilters.json";
 import arSupplierValidation from "@/locales/ar/supplierValidation.json";
 import arSupplierActions from "@/locales/ar/supplierActions.json";
 import arSupplierComparison from "@/locales/ar/supplierComparison.json";
+import arPurchaseOrders from "@/locales/ar/purchaseOrders.json";
+import arPurchaseOrderForm from "@/locales/ar/purchaseOrderForm.json";
+import arPurchaseOrderDetails from "@/locales/ar/purchaseOrderDetails.json";
+import arPurchaseOrderItems from "@/locales/ar/purchaseOrderItems.json";
+import arPurchaseOrderStatus from "@/locales/ar/purchaseOrderStatus.json";
+import arPurchaseOrderActions from "@/locales/ar/purchaseOrderActions.json";
+import arPurchaseOrderValidation from "@/locales/ar/purchaseOrderValidation.json";
+import arPurchaseOrderTotals from "@/locales/ar/purchaseOrderTotals.json";
+import arPurchaseOrderFilters from "@/locales/ar/purchaseOrderFilters.json";
+import arPurchaseOrderPrint from "@/locales/ar/purchaseOrderPrint.json";
+import arPurchaseOrderHistory from "@/locales/ar/purchaseOrderHistory.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -241,6 +274,17 @@ interface LocaleBundle {
   supplierValidation: MessageRecord;
   supplierActions: MessageRecord;
   supplierComparison: MessageRecord;
+  purchaseOrders: MessageRecord;
+  purchaseOrderForm: MessageRecord;
+  purchaseOrderDetails: MessageRecord;
+  purchaseOrderItems: MessageRecord;
+  purchaseOrderStatus: MessageRecord;
+  purchaseOrderActions: MessageRecord;
+  purchaseOrderValidation: MessageRecord;
+  purchaseOrderTotals: MessageRecord;
+  purchaseOrderFilters: MessageRecord;
+  purchaseOrderPrint: MessageRecord;
+  purchaseOrderHistory: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -303,6 +347,17 @@ const fr: LocaleBundle = {
   supplierValidation: frSupplierValidation,
   supplierActions: frSupplierActions,
   supplierComparison: frSupplierComparison,
+  purchaseOrders: frPurchaseOrders,
+  purchaseOrderForm: frPurchaseOrderForm,
+  purchaseOrderDetails: frPurchaseOrderDetails,
+  purchaseOrderItems: frPurchaseOrderItems,
+  purchaseOrderStatus: frPurchaseOrderStatus,
+  purchaseOrderActions: frPurchaseOrderActions,
+  purchaseOrderValidation: frPurchaseOrderValidation,
+  purchaseOrderTotals: frPurchaseOrderTotals,
+  purchaseOrderFilters: frPurchaseOrderFilters,
+  purchaseOrderPrint: frPurchaseOrderPrint,
+  purchaseOrderHistory: frPurchaseOrderHistory,
 };
 
 const en: LocaleBundle = {
@@ -365,6 +420,17 @@ const en: LocaleBundle = {
   supplierValidation: enSupplierValidation,
   supplierActions: enSupplierActions,
   supplierComparison: enSupplierComparison,
+  purchaseOrders: enPurchaseOrders,
+  purchaseOrderForm: enPurchaseOrderForm,
+  purchaseOrderDetails: enPurchaseOrderDetails,
+  purchaseOrderItems: enPurchaseOrderItems,
+  purchaseOrderStatus: enPurchaseOrderStatus,
+  purchaseOrderActions: enPurchaseOrderActions,
+  purchaseOrderValidation: enPurchaseOrderValidation,
+  purchaseOrderTotals: enPurchaseOrderTotals,
+  purchaseOrderFilters: enPurchaseOrderFilters,
+  purchaseOrderPrint: enPurchaseOrderPrint,
+  purchaseOrderHistory: enPurchaseOrderHistory,
 };
 
 const ar: LocaleBundle = {
@@ -427,6 +493,17 @@ const ar: LocaleBundle = {
   supplierValidation: arSupplierValidation,
   supplierActions: arSupplierActions,
   supplierComparison: arSupplierComparison,
+  purchaseOrders: arPurchaseOrders,
+  purchaseOrderForm: arPurchaseOrderForm,
+  purchaseOrderDetails: arPurchaseOrderDetails,
+  purchaseOrderItems: arPurchaseOrderItems,
+  purchaseOrderStatus: arPurchaseOrderStatus,
+  purchaseOrderActions: arPurchaseOrderActions,
+  purchaseOrderValidation: arPurchaseOrderValidation,
+  purchaseOrderTotals: arPurchaseOrderTotals,
+  purchaseOrderFilters: arPurchaseOrderFilters,
+  purchaseOrderPrint: arPurchaseOrderPrint,
+  purchaseOrderHistory: arPurchaseOrderHistory,
 };
 
 export type MessagesBundle = typeof fr;

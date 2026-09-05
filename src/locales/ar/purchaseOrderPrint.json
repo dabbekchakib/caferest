@@ -1,0 +1,14 @@
+{
+  "title": "طباعة أمر الشراء",
+  "orderNumber": "رقم الأمر",
+  "supplier": "المورّد",
+  "orderDate": "تاريخ الطلب",
+  "expectedDate": "التسليم المتوقع",
+  "status": "الحالة",
+  "currency": "العملة",
+  "items": "البنود",
+  "totals": "الإجماليات",
+  "print": "طباعة",
+  "downloadPdf": "تنزيل PDF",
+  "back": "رجوع"
+}

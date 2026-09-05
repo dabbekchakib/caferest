@@ -123,6 +123,39 @@ import arSupplierActions from "../src/locales/ar/supplierActions.json";
 import frSupplierComparison from "../src/locales/fr/supplierComparison.json";
 import enSupplierComparison from "../src/locales/en/supplierComparison.json";
 import arSupplierComparison from "../src/locales/ar/supplierComparison.json";
+import frPurchaseOrders from "../src/locales/fr/purchaseOrders.json";
+import enPurchaseOrders from "../src/locales/en/purchaseOrders.json";
+import arPurchaseOrders from "../src/locales/ar/purchaseOrders.json";
+import frPurchaseOrderForm from "../src/locales/fr/purchaseOrderForm.json";
+import enPurchaseOrderForm from "../src/locales/en/purchaseOrderForm.json";
+import arPurchaseOrderForm from "../src/locales/ar/purchaseOrderForm.json";
+import frPurchaseOrderDetails from "../src/locales/fr/purchaseOrderDetails.json";
+import enPurchaseOrderDetails from "../src/locales/en/purchaseOrderDetails.json";
+import arPurchaseOrderDetails from "../src/locales/ar/purchaseOrderDetails.json";
+import frPurchaseOrderItems from "../src/locales/fr/purchaseOrderItems.json";
+import enPurchaseOrderItems from "../src/locales/en/purchaseOrderItems.json";
+import arPurchaseOrderItems from "../src/locales/ar/purchaseOrderItems.json";
+import frPurchaseOrderStatus from "../src/locales/fr/purchaseOrderStatus.json";
+import enPurchaseOrderStatus from "../src/locales/en/purchaseOrderStatus.json";
+import arPurchaseOrderStatus from "../src/locales/ar/purchaseOrderStatus.json";
+import frPurchaseOrderActions from "../src/locales/fr/purchaseOrderActions.json";
+import enPurchaseOrderActions from "../src/locales/en/purchaseOrderActions.json";
+import arPurchaseOrderActions from "../src/locales/ar/purchaseOrderActions.json";
+import frPurchaseOrderValidation from "../src/locales/fr/purchaseOrderValidation.json";
+import enPurchaseOrderValidation from "../src/locales/en/purchaseOrderValidation.json";
+import arPurchaseOrderValidation from "../src/locales/ar/purchaseOrderValidation.json";
+import frPurchaseOrderTotals from "../src/locales/fr/purchaseOrderTotals.json";
+import enPurchaseOrderTotals from "../src/locales/en/purchaseOrderTotals.json";
+import arPurchaseOrderTotals from "../src/locales/ar/purchaseOrderTotals.json";
+import frPurchaseOrderFilters from "../src/locales/fr/purchaseOrderFilters.json";
+import enPurchaseOrderFilters from "../src/locales/en/purchaseOrderFilters.json";
+import arPurchaseOrderFilters from "../src/locales/ar/purchaseOrderFilters.json";
+import frPurchaseOrderPrint from "../src/locales/fr/purchaseOrderPrint.json";
+import enPurchaseOrderPrint from "../src/locales/en/purchaseOrderPrint.json";
+import arPurchaseOrderPrint from "../src/locales/ar/purchaseOrderPrint.json";
+import frPurchaseOrderHistory from "../src/locales/fr/purchaseOrderHistory.json";
+import enPurchaseOrderHistory from "../src/locales/en/purchaseOrderHistory.json";
+import arPurchaseOrderHistory from "../src/locales/ar/purchaseOrderHistory.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -185,6 +218,17 @@ const namespaces = [
   ["supplierValidation", enSupplierValidation, frSupplierValidation, arSupplierValidation],
   ["supplierActions", enSupplierActions, frSupplierActions, arSupplierActions],
   ["supplierComparison", enSupplierComparison, frSupplierComparison, arSupplierComparison],
+  ["purchaseOrders", enPurchaseOrders, frPurchaseOrders, arPurchaseOrders],
+  ["purchaseOrderForm", enPurchaseOrderForm, frPurchaseOrderForm, arPurchaseOrderForm],
+  ["purchaseOrderDetails", enPurchaseOrderDetails, frPurchaseOrderDetails, arPurchaseOrderDetails],
+  ["purchaseOrderItems", enPurchaseOrderItems, frPurchaseOrderItems, arPurchaseOrderItems],
+  ["purchaseOrderStatus", enPurchaseOrderStatus, frPurchaseOrderStatus, arPurchaseOrderStatus],
+  ["purchaseOrderActions", enPurchaseOrderActions, frPurchaseOrderActions, arPurchaseOrderActions],
+  ["purchaseOrderValidation", enPurchaseOrderValidation, frPurchaseOrderValidation, arPurchaseOrderValidation],
+  ["purchaseOrderTotals", enPurchaseOrderTotals, frPurchaseOrderTotals, arPurchaseOrderTotals],
+  ["purchaseOrderFilters", enPurchaseOrderFilters, frPurchaseOrderFilters, arPurchaseOrderFilters],
+  ["purchaseOrderPrint", enPurchaseOrderPrint, frPurchaseOrderPrint, arPurchaseOrderPrint],
+  ["purchaseOrderHistory", enPurchaseOrderHistory, frPurchaseOrderHistory, arPurchaseOrderHistory],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

@@ -57,6 +57,12 @@ export const AUTHORIZATION_ERROR_CODES = {
   INGREDIENT_SUPPLIER_NOREFS: "INGREDIENT_SUPPLIER_NOREFS",
   CROSS_ESTABLISHMENT_REFERENCE: "CROSS_ESTABLISHMENT_REFERENCE",
   CURRENCY_REQUIRED: "CURRENCY_REQUIRED",
+  PURCHASE_ORDER_NOT_FOUND: "PURCHASE_ORDER_NOT_FOUND",
+  PURCHASE_ORDER_LOCKED: "PURCHASE_ORDER_LOCKED",
+  PURCHASE_ORDER_INVALID_STATUS: "PURCHASE_ORDER_INVALID_STATUS",
+  PURCHASE_ORDER_EMPTY: "PURCHASE_ORDER_EMPTY",
+  PURCHASE_ORDER_DISCOUNT_INVALID: "PURCHASE_ORDER_DISCOUNT_INVALID",
+  PURCHASE_ORDER_DUPLICATE_NUMBER: "PURCHASE_ORDER_DUPLICATE_NUMBER",
   GENERIC: "GENERIC",
 } as const;
 
@@ -117,6 +123,15 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     INGREDIENT_SUPPLIER_NOREFS: "authorization.errors.ingredientSupplierNoRefs",
     CROSS_ESTABLISHMENT_REFERENCE: "authorization.errors.crossEstablishment",
     CURRENCY_REQUIRED: "authorization.errors.currencyRequired",
+    PURCHASE_ORDER_NOT_FOUND: "authorization.errors.purchaseOrderNotFound",
+    PURCHASE_ORDER_LOCKED: "authorization.errors.purchaseOrderLocked",
+    PURCHASE_ORDER_INVALID_STATUS:
+      "authorization.errors.purchaseOrderInvalidStatus",
+    PURCHASE_ORDER_EMPTY: "authorization.errors.purchaseOrderEmpty",
+    PURCHASE_ORDER_DISCOUNT_INVALID:
+      "authorization.errors.purchaseOrderDiscountInvalid",
+    PURCHASE_ORDER_DUPLICATE_NUMBER:
+      "authorization.errors.purchaseOrderDuplicateNumber",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -164,6 +179,23 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   ingredient_suppliers_price_check: "INGREDIENT_SUPPLIER_NOREFS",
   supplier_price_history_price_check: "INGREDIENT_SUPPLIER_NOREFS",
   supplier_price_history_quantity_check: "INGREDIENT_SUPPLIER_NOREFS",
+  uq_purchase_orders_establishment_order_number:
+    "PURCHASE_ORDER_DUPLICATE_NUMBER",
+};
+
+/**
+ * Maps the stable messages raised by the phase-14 security-definer RPCs to
+ * domain codes. The strings are part of the RPC contract — keep in sync with
+ * `supabase/migrations/00000000000048_phase_14_purchase_orders.sql`.
+ */
+export const RPC_MESSAGE_TO_CODE: Record<string, AuthorizationErrorCode> = {
+  forbidden: "FORBIDDEN",
+  purchase_order_not_found: "PURCHASE_ORDER_NOT_FOUND",
+  purchase_order_locked: "PURCHASE_ORDER_LOCKED",
+  purchase_order_invalid_status: "PURCHASE_ORDER_INVALID_STATUS",
+  purchase_order_empty: "PURCHASE_ORDER_EMPTY",
+  purchase_order_discount_invalid: "PURCHASE_ORDER_DISCOUNT_INVALID",
+  cross_establishment_reference: "CROSS_ESTABLISHMENT_REFERENCE",
 };
 
 export class AuthorizationError extends Error {
@@ -196,7 +228,9 @@ export function toAuthorizationError(error: unknown): AuthorizationError {
 
   if (message) {
     const code =
-      DB_CONSTRAINT_TO_CODE[message] ?? DB_CONSTRAINT_TO_CODE[message.trim()];
+      RPC_MESSAGE_TO_CODE[message] ??
+      DB_CONSTRAINT_TO_CODE[message] ??
+      DB_CONSTRAINT_TO_CODE[message.trim()];
     if (code) return new AuthorizationError(code, message);
   }
 

@@ -1,0 +1,20 @@
+{
+  "title": "Bons de commande",
+  "subtitle": "Gérez vos bons de commande fournisseurs.",
+  "newOrder": "Nouveau bon",
+  "searchPlaceholder": "Rechercher par numéro…",
+  "emptyTitle": "Aucun bon de commande",
+  "emptyDescription": "Créez votre premier bon de commande à partir du catalogue fournisseur.",
+  "createFirst": "Créer un bon de commande",
+  "results": "résultats",
+  "columns": {
+    "number": "Numéro",
+    "supplier": "Fournisseur",
+    "date": "Date",
+    "expectedDate": "Livraison attendue",
+    "status": "Statut",
+    "items": "Articles",
+    "total": "Total",
+    "actions": "Actions"
+  }
+}

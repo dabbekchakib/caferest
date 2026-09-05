@@ -1,0 +1,10 @@
+{
+  "draft": "Draft",
+  "pendingApproval": "Pending approval",
+  "approved": "Approved",
+  "sent": "Sent",
+  "partiallyReceived": "Partially received",
+  "fullyReceived": "Received",
+  "cancelled": "Cancelled",
+  "closed": "Closed"
+}

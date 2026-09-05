@@ -1,0 +1,20 @@
+{
+  "title": "Purchase orders",
+  "subtitle": "Manage your supplier purchase orders.",
+  "newOrder": "New order",
+  "searchPlaceholder": "Search by number…",
+  "emptyTitle": "No purchase orders",
+  "emptyDescription": "Create your first purchase order from the supplier catalog.",
+  "createFirst": "Create a purchase order",
+  "results": "results",
+  "columns": {
+    "number": "Number",
+    "supplier": "Supplier",
+    "date": "Date",
+    "expectedDate": "Expected delivery",
+    "status": "Status",
+    "items": "Items",
+    "total": "Total",
+    "actions": "Actions"
+  }
+}

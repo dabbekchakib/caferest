@@ -50,6 +50,12 @@
     "ingredientSupplierNoRefs": "Référence invalide dans le catalogue d'achat (quantité, prix ou unité incorrects).",
     "crossEstablishment": "Référence interdite : l'élément appartient à un autre établissement.",
     "currencyRequired": "La devise est requise pour cette opération.",
+    "purchaseOrderNotFound": "Bon de commande introuvable.",
+    "purchaseOrderLocked": "Ce bon de commande ne peut plus être modifié dans son état actuel.",
+    "purchaseOrderInvalidStatus": "L'action demandée n'est pas autorisée pour le statut actuel du bon de commande.",
+    "purchaseOrderEmpty": "Le bon de commande doit contenir au moins un article.",
+    "purchaseOrderDiscountInvalid": "La remise configurée sur cet article est invalide.",
+    "purchaseOrderDuplicateNumber": "Un bon de commande avec ce numéro existe déjà.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

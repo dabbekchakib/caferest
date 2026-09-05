@@ -1,0 +1,16 @@
+{
+  "sku": "رمز المورّد",
+  "ingredient": "الصنف",
+  "description": "الوصف",
+  "quantity": "الكمية",
+  "unit": "الوحدة",
+  "unitPrice": "سعر الوحدة",
+  "discount": "الخصم",
+  "taxRate": "الضريبة",
+  "tax": "مبلغ الضريبة",
+  "subtotal": "المجموع الفرعي",
+  "total": "الإجمالي",
+  "notes": "ملاحظات",
+  "noItems": "لا توجد بنود",
+  "itemsCount": "بند"
+}

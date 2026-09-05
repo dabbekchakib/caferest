@@ -1,0 +1,14 @@
+{
+  "title": "Impression du bon de commande",
+  "orderNumber": "Numéro de bon",
+  "supplier": "Fournisseur",
+  "orderDate": "Date de commande",
+  "expectedDate": "Livraison attendue",
+  "status": "Statut",
+  "currency": "Devise",
+  "items": "Articles",
+  "totals": "Totaux",
+  "print": "Imprimer",
+  "downloadPdf": "Télécharger le PDF",
+  "back": "Retour"
+}

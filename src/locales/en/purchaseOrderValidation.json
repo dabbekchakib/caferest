@@ -1,0 +1,9 @@
+{
+  "discountTypeInvalid": "Invalid discount type.",
+  "discountMax": "The discount percentage cannot exceed 100.",
+  "discountExceedsGross": "The fixed discount cannot exceed the line gross amount.",
+  "discountNone": "A discount value is not allowed without discount privileges.",
+  "noItems": "The order must contain at least one item.",
+  "statusInvalid": "Invalid purchase order status.",
+  "invalidTransition": "Action not allowed in the purchase order's current status."
+}

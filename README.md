@@ -106,6 +106,7 @@ All tables use Supabase RLS policies for security.
 - `docs/recipes.md` — Recipes, composition, and cost preview
 - `docs/yields.md` — Yield management and theoretical consumption
 - `docs/suppliers.md` — Suppliers and the purchase catalog
+- `docs/purchase-orders.md` — Purchase orders (Phase 14)
 
 ## Deployment (Vercel)
 

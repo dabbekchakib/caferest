@@ -1,0 +1,10 @@
+{
+  "draft": "مسودة",
+  "pendingApproval": "بانتظار الموافقة",
+  "approved": "معتمد",
+  "sent": "مُرسَل",
+  "partiallyReceived": "مستلم جزئياً",
+  "fullyReceived": "مستلم بالكامل",
+  "cancelled": "ملغى",
+  "closed": "مغلق"
+}
