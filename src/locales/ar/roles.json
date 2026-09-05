@@ -1,0 +1,63 @@
+{
+  "title": "الأدوار",
+  "description": "إنشاء الأدوار وإدارة مستواها في التسلسل الهرمي",
+  "breadcrumb": "الأدوار",
+  "createButton": "دور جديد",
+  "createTitle": "إنشاء دور",
+  "editTitle": "تعديل الدور",
+  "duplicateTitle": "تكرار الدور",
+  "fields": {
+    "name": "الاسم",
+    "namePlaceholder": "مثال: رئيس القاعة",
+    "code": "الرمز",
+    "codePlaceholder": "مثال: head_waiter",
+    "codeHint": "معرّف تقني فريد (أحرف صغيرة وأرقام و _).",
+    "level": "مستوى التسلسل الهرمي",
+    "levelHint": "المستويات الأعلى تتفوق على الأدنى (1 إلى 99).",
+    "description": "الوصف",
+    "descriptionPlaceholder": "ما فائدة هذا الدور؟",
+    "isActive": "دور نشط"
+  },
+  "table": {
+    "role": "الدور",
+    "code": "الرمز",
+    "level": "المستوى",
+    "permissions": "الصلاحيات",
+    "users": "المستخدمون",
+    "status": "الحالة",
+    "actions": "إجراءات"
+  },
+  "permissionsCount": "{count} صلاحية",
+  "usersCount": "{count} مستخدم",
+  "badges": {
+    "system": "نظامي",
+    "custom": "مخصص",
+    "active": "نشط",
+    "inactive": "غير نشط"
+  },
+  "actions": {
+    "edit": "تعديل",
+    "permissions": "الصلاحيات",
+    "duplicate": "تكرار",
+    "activate": "تفعيل",
+    "deactivate": "تعطيل",
+    "delete": "حذف"
+  },
+  "toggleDialog": {
+    "activateTitle": "تفعيل الدور",
+    "deactivateTitle": "تعطيل الدور",
+    "deactivateDescription": "سيفقد مستخدمو هذا الدور الصلاحيات المرتبطة به.",
+    "confirm": "تأكيد"
+  },
+  "deleteDialog": {
+    "title": "حذف الدور",
+    "description": "سيتم أيضًا حذف إسنادات هذا الدور.",
+    "confirm": "حذف"
+  },
+  "createSuccess": "تم إنشاء الدور",
+  "updateSuccess": "تم تحديث الدور",
+  "empty": {
+    "title": "لا توجد أدوار",
+    "description": "أنشئ أول دور مخصص للبدء."
+  }
+}

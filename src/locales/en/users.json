@@ -1,0 +1,80 @@
+{
+  "title": "Users",
+  "description": "Manage member accounts, roles and access",
+  "breadcrumb": "Users",
+  "searchPlaceholder": "Search by name or email…",
+  "inviteButton": "Invite",
+  "filters": {
+    "all": "All",
+    "active": "Active",
+    "inactive": "Inactive",
+    "role": "Role",
+    "status": "Status"
+  },
+  "table": {
+    "user": "User",
+    "roles": "Roles",
+    "status": "Status",
+    "joined": "Joined",
+    "lastSignIn": "Last sign-in",
+    "actions": "Actions"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "invited": "Invite sent"
+  },
+  "invite": {
+    "title": "Invite a user",
+    "description": "An invitation email will be sent to join your establishment.",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "role": "Initial role",
+    "submit": "Send invitation",
+    "submitting": "Sending…",
+    "success": "Invitation sent"
+  },
+  "actions": {
+    "view": "View",
+    "deactivate": "Deactivate",
+    "activate": "Activate",
+    "delete": "Delete"
+  },
+  "deactivateDialog": {
+    "title": "Deactivate user",
+    "description": "This user will no longer be able to access the application until reactivated.",
+    "confirm": "Deactivate"
+  },
+  "activateDialog": {
+    "title": "Reactivate user",
+    "description": "This user will be able to sign in again.",
+    "confirm": "Reactivate"
+  },
+  "deleteDialog": {
+    "title": "Delete user",
+    "description": "This action is irreversible: the account and its access will be permanently deleted.",
+    "confirm": "Delete"
+  },
+  "empty": {
+    "title": "No users found",
+    "description": "Try adjusting your filters or sending a new invitation."
+  },
+  "memberSince": "Member since",
+  "neverConnected": "Never connected",
+  "detail": {
+    "personal": "Personal information",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "status": "Status",
+    "confirmed": "Email confirmed",
+    "memberships": "Establishments",
+    "roles": "Roles",
+    "rolesHint": "Roles assigned in the selected establishment.",
+    "noRoles": "No role in this establishment.",
+    "permissionsTitle": "Effective permissions",
+    "permissionsHint": "Permissions aggregated from active roles.",
+    "addRole": "Assign a role",
+    "removeRole": "Remove role"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Roles",
+  "description": "Create and manage roles and their hierarchy level",
+  "breadcrumb": "Roles",
+  "createButton": "New role",
+  "createTitle": "Create a role",
+  "editTitle": "Edit role",
+  "duplicateTitle": "Duplicate role",
+  "fields": {
+    "name": "Name",
+    "namePlaceholder": "e.g. Head waiter",
+    "code": "Code",
+    "codePlaceholder": "e.g. head_waiter",
+    "codeHint": "Unique technical identifier (lowercase, digits, underscore).",
+    "level": "Hierarchy level",
+    "levelHint": "Higher levels outrank lower ones (1 to 99).",
+    "description": "Description",
+    "descriptionPlaceholder": "What is this role for?",
+    "isActive": "Active role"
+  },
+  "table": {
+    "role": "Role",
+    "code": "Code",
+    "level": "Level",
+    "permissions": "Permissions",
+    "users": "Users",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "permissionsCount": "{count} permission|{count} permissions",
+  "usersCount": "{count} user|{count} users",
+  "badges": {
+    "system": "System",
+    "custom": "Custom",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "actions": {
+    "edit": "Edit",
+    "permissions": "Permissions",
+    "duplicate": "Duplicate",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "delete": "Delete"
+  },
+  "toggleDialog": {
+    "activateTitle": "Activate role",
+    "deactivateTitle": "Deactivate role",
+    "deactivateDescription": "Users of this role will lose its associated permissions.",
+    "confirm": "Confirm"
+  },
+  "deleteDialog": {
+    "title": "Delete role",
+    "description": "Role assignments will be removed as well.",
+    "confirm": "Delete"
+  },
+  "createSuccess": "Role created",
+  "updateSuccess": "Role updated",
+  "empty": {
+    "title": "No roles found",
+    "description": "Create a first custom role to get started."
+  }
+}

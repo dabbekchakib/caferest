@@ -626,7 +626,12 @@ export interface Database {
           id: string;
           name: string;
           code: string;
+          slug: string | null;
           description: string | null;
+          is_system: boolean;
+          is_active: boolean;
+          level: number;
+          establishment_id: string | null;
           created_at: Datetime;
           updated_at: Datetime;
         };
@@ -634,7 +639,12 @@ export interface Database {
           id?: string;
           name: string;
           code: string;
+          slug?: string | null;
           description?: string | null;
+          is_system?: boolean;
+          is_active?: boolean;
+          level?: number;
+          establishment_id?: string | null;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
@@ -646,15 +656,57 @@ export interface Database {
           user_id: string;
           role_id: string;
           establishment_id: string;
+          created_by: string | null;
           created_at: Datetime;
         };
         Insert: {
           user_id: string;
           role_id: string;
           establishment_id: string;
+          created_by?: string | null;
           created_at?: Datetime;
         };
         Update: Partial<Database["public"]["Tables"]["user_roles"]["Insert"]>;
+        Relationships: [];
+      };
+      permissions: {
+        Row: {
+          id: string;
+          name: string;
+          slug: string;
+          module: string;
+          description: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          name: string;
+          slug: string;
+          module: string;
+          description?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<Database["public"]["Tables"]["permissions"]["Insert"]>;
+        Relationships: [];
+      };
+      role_permissions: {
+        Row: {
+          id: string;
+          role_id: string;
+          permission_id: string;
+          created_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          role_id: string;
+          permission_id: string;
+          created_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["role_permissions"]["Insert"]
+        >;
         Relationships: [];
       };
       dining_areas: {
@@ -1041,6 +1093,54 @@ export interface Database {
       get_establishment_settings: {
         Args: { p_establishment_id: string };
         Returns: Json;
+      };
+      has_permission: {
+        Args: { p_est_id: string; p_slug: string };
+        Returns: boolean;
+      };
+      has_permission_anywhere: {
+        Args: { p_slug: string };
+        Returns: boolean;
+      };
+      user_has_permission: {
+        Args: { p_user_id: string; p_est_id: string; p_slug: string };
+        Returns: boolean;
+      };
+      user_has_permission_anywhere: {
+        Args: { p_user_id: string; p_slug: string };
+        Returns: boolean;
+      };
+      user_get_permissions: {
+        Args: { p_user_id: string; p_est_id: string };
+        Returns: string[];
+      };
+      user_get_role_codes: {
+        Args: { p_user_id: string; p_est_id: string };
+        Returns: string[];
+      };
+      user_get_max_level: {
+        Args: { p_user_id: string; p_est_id: string };
+        Returns: number;
+      };
+      user_count_active_admins: {
+        Args: { p_est_id: string; p_exclude_user_id: string };
+        Returns: number;
+      };
+      user_is_establishment_member: {
+        Args: { p_user_id: string; p_est_id: string };
+        Returns: boolean;
+      };
+      user_is_profile_active: {
+        Args: { p_user_id: string };
+        Returns: boolean;
+      };
+      user_is_super_admin_by_id: {
+        Args: { p_user_id: string };
+        Returns: boolean;
+      };
+      current_profile_is_active: {
+        Args: Record<string, never>;
+        Returns: boolean;
       };
     };
   };

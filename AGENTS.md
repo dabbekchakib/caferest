@@ -59,6 +59,26 @@ CafeRest is a POS/ERP application for cafes and restaurants built with Next.js, 
 - Validate all inputs server-side with Zod.
 - Use Supabase middleware for session management.
 
+## Authorization (RBAC)
+
+- Permissions are stable `slug` strings (`<module>.<action>`); the client-side
+  catalog in `src/lib/authorization/permissions.ts` MUST stay in sync with
+  `supabase/migrations/...27_seed_permissions.sql`.
+- Guard every user/role page or action through `src/services/authorization.ts`
+  (`requirePagePermission` for pages, `requirePermission`/`requireAnyPermission`
+  for actions, `hasPermission` for UI toggles).
+- The service-role client (`src/lib/supabase/admin.ts`, `server-only`) bypasses
+  RLS on PURPOSE (user provisioning, status, deletes). Every call path must
+  first pass service guards (permission, hierarchy, last-admin, self-modification).
+  Never import `createAdminClient` from a `"use client"` file.
+- Server actions return `ActionResult` (`src/lib/authorization/action-result.ts`);
+  translate failures client-side via the root translator with the returned `key`.
+- Add your new permission slugs/modules to: the SQL seed, `permissions.ts`,
+  `apps` untouched, `src/locales/{fr,en,ar}/permissions.json` (`slugs.*` +
+  `moduleGroups.*`), and the locale-parity + authorization tests.
+- Never let custom logic update role/permission rows outside `src/features/roles`
+  and never bypass the system-role / last-admin protection.
+
 ## Git
 
 - Never commit `.env`, `.env.local`, or any file containing secrets.

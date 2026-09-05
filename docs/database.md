@@ -1,4 +1,4 @@
-# Database — Architecture Supabase (PHASE 03)
+# Database — Architecture Supabase (PHASE 06)
 
 Ce document décrit l'architecture PostgreSQL mise en place pour CafeRest.
 Toutes les tables sont créées par des migrations SQL dans `supabase/migrations/`
@@ -13,7 +13,7 @@ et sont la seule source de vérité (aucune table TypeScript uniquement).
 - Isolation par `establishment_id` : un utilisateur ne voit que son établissement.
 - Le stock est **traçable par mouvements** (jamais de modification directe).
 
-## Tables (34)
+## Tables (36)
 
 | Table                   | Rôle                                     |
 | ----------------------- | ---------------------------------------- |
@@ -39,6 +39,8 @@ et sont la seule source de vérité (aucune table TypeScript uniquement).
 | `profiles`              | Profils (liés à `auth.users`)            |
 | `roles`                 | Rôles applicatifs                        |
 | `user_roles`            | Rôles par utilisateur/établissement      |
+| `permissions`           | Catalogue de permissions (slugs)         |
+| `role_permissions`      | Permissions par rôle (N:M)              |
 | `dining_areas`          | Zones de salle                           |
 | `tables`                | Tables de salle                          |
 | `customers`             | Clients                                  |
@@ -95,10 +97,10 @@ consommation de chaque tasse à partir des `recipe_items`.
 ## RLS
 
 Règle centrale : `belongs_to_establishment(establishment_id)` → l'utilisateur
-est membre de l'établissement (via `user_roles`) **ou** est `super_admin`.
-Jamais `USING (true)` sur les données métier.
+est membre actif de l'établissement (via `establishment_members`) **ou** est
+`super_admin`. Jamais `USING (true)` sur les données métier.
 
-Fonctions d'aide (dans `migrations/022_security_functions.sql`) :
+Fonctions d'aide (dans `022_security_functions.sql`) :
 
 - `is_establishment_member(est_id)`
 - `has_role(est_id, role_code)`
@@ -107,10 +109,26 @@ Fonctions d'aide (dans `migrations/022_security_functions.sql`) :
 - `get_setting(p_key)`
 - `get_establishment_settings(p_establishment_id)`
 
+Fonctions RBAC (dans `026_rbac.sql` — security definer, niveau utilisateur) :
+
+- `has_permission(est_id, slug)` / `has_permission_anywhere(slug)`
+- `user_get_permissions(p_user_id, p_est_id)` — permissions effectives
+- `user_get_role_codes(p_user_id, p_est_id)` / `user_get_max_level(p_user_id, p_est_id)`
+- `user_count_active_admins(p_est_id, p_exclude_user_id)` — garde dernier-admin
+- `user_is_profile_active(p_user_id)` / `current_profile_is_active()`
+- `user_is_super_admin_by_id(p_user_id)`
+
+Voir `docs/authorization.md` pour l'architecture RBAC complète et
+`scripts/verify-rbac.sql` pour la checklist de vérification SQL.
+
 ## Rôles
 
-`super_admin`, `admin`, `manager`, `cashier`, `waiter`, `kitchen`, `bar`,
-`stock_manager`, `purchasing`, `accountant`.
+Rôles **système** (hiérarchisés, `is_system=true`) : `super_admin` (100),
+`admin` (80), `manager` (60), `stock_manager` (55), `accountant` (50),
+`purchasing` (45), `cashier`/`waiter`/`kitchen`/`bar` (40). Les rôles
+personnalisés sont scopés par `establishment_id` (niveau par défaut 10).
+Chaque rôle porte un jeu de permissions via `role_permissions` (catalogue
+seedé dans `027_seed_permissions.sql`, 56 slugs / 17 modules).
 
 ## Stock traçable
 

@@ -31,7 +31,7 @@
   "loyalty": "Loyalty",
   "analytics": "Analytics",
   "users": "Users",
-  "permissions": "Permissions",
+  "roles": "Roles",
   "journal": "Journal",
   "settings": "Settings",
   "styleGuide": "Style Guide",
@@ -44,5 +44,5 @@
   "salesReports": "Sales",
   "pointOfSale": "Point of sale",
   "demo": "CafeRest Demo",
-  "demoPhase": "Phase 04 — Internationalization"
+  "demoPhase": "Phase 06 — RBAC"
 }

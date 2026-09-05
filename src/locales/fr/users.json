@@ -1,0 +1,80 @@
+{
+  "title": "Utilisateurs",
+  "description": "Gérer les comptes, les rôles et les accès des membres",
+  "breadcrumb": "Utilisateurs",
+  "searchPlaceholder": "Rechercher par nom ou e-mail…",
+  "inviteButton": "Inviter",
+  "filters": {
+    "all": "Tous",
+    "active": "Actifs",
+    "inactive": "Inactifs",
+    "role": "Rôle",
+    "status": "Statut"
+  },
+  "table": {
+    "user": "Utilisateur",
+    "roles": "Rôles",
+    "status": "Statut",
+    "joined": "Inscrit le",
+    "lastSignIn": "Dernière connexion",
+    "actions": "Actions"
+  },
+  "status": {
+    "active": "Actif",
+    "inactive": "Inactif",
+    "invited": "Invitation envoyée"
+  },
+  "invite": {
+    "title": "Inviter un utilisateur",
+    "description": "Un e-mail d'invitation sera envoyé pour rejoindre votre établissement.",
+    "email": "E-mail",
+    "emailPlaceholder": "vous@exemple.com",
+    "role": "Rôle initial",
+    "submit": "Envoyer l'invitation",
+    "submitting": "Envoi en cours…",
+    "success": "Invitation envoyée"
+  },
+  "actions": {
+    "view": "Voir",
+    "deactivate": "Désactiver",
+    "activate": "Activer",
+    "delete": "Supprimer"
+  },
+  "deactivateDialog": {
+    "title": "Désactiver l'utilisateur",
+    "description": "Cet utilisateur ne pourra plus accéder à l'application jusqu'à réactivation.",
+    "confirm": "Désactiver"
+  },
+  "activateDialog": {
+    "title": "Réactiver l'utilisateur",
+    "description": "Cet utilisateur pourra de nouveau se connecter.",
+    "confirm": "Réactiver"
+  },
+  "deleteDialog": {
+    "title": "Supprimer l'utilisateur",
+    "description": "Cette action est irréversible : le compte et ses accès seront définitivement supprimés.",
+    "confirm": "Supprimer"
+  },
+  "empty": {
+    "title": "Aucun utilisateur trouvé",
+    "description": "Essayez d'ajuster vos filtres ou de lancer une nouvelle invitation."
+  },
+  "memberSince": "Membre depuis",
+  "neverConnected": "Jamais connecté",
+  "detail": {
+    "personal": "Informations personnelles",
+    "name": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "status": "Statut",
+    "confirmed": "E-mail confirmé",
+    "memberships": "Établissements",
+    "roles": "Rôles",
+    "rolesHint": "Rôles attribués dans l'établissement sélectionné.",
+    "noRoles": "Aucun rôle dans cet établissement.",
+    "permissionsTitle": "Permissions effectives",
+    "permissionsHint": "Permissions agrégées depuis les rôles actifs.",
+    "addRole": "Attribuer un rôle",
+    "removeRole": "Retirer le rôle"
+  }
+}

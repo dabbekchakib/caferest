@@ -1,0 +1,63 @@
+{
+  "title": "Rôles",
+  "description": "Créer et gérer les rôles et leur niveau de hiérarchie",
+  "breadcrumb": "Rôles",
+  "createButton": "Nouveau rôle",
+  "createTitle": "Créer un rôle",
+  "editTitle": "Modifier le rôle",
+  "duplicateTitle": "Dupliquer le rôle",
+  "fields": {
+    "name": "Nom",
+    "namePlaceholder": "Ex. : Chef de salle",
+    "code": "Code",
+    "codePlaceholder": "Ex. : head_waiter",
+    "codeHint": "Identifiant technique unique (minuscules, chiffres, _).",
+    "level": "Niveau de hiérarchie",
+    "levelHint": "Plus le niveau est élevé, plus le rôle est élevé (1 à 99).",
+    "description": "Description",
+    "descriptionPlaceholder": "À quoi sert ce rôle ?",
+    "isActive": "Rôle actif"
+  },
+  "table": {
+    "role": "Rôle",
+    "code": "Code",
+    "level": "Niveau",
+    "permissions": "Permissions",
+    "users": "Utilisateurs",
+    "status": "Statut",
+    "actions": "Actions"
+  },
+  "permissionsCount": "{count} permission|{count} permissions",
+  "usersCount": "{count} utilisateur|{count} utilisateurs",
+  "badges": {
+    "system": "Système",
+    "custom": "Personnalisé",
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+  "actions": {
+    "edit": "Modifier",
+    "permissions": "Permissions",
+    "duplicate": "Dupliquer",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "delete": "Supprimer"
+  },
+  "toggleDialog": {
+    "activateTitle": "Activer le rôle",
+    "deactivateTitle": "Désactiver le rôle",
+    "deactivateDescription": "Les utilisateurs de ce rôle perdront leurs permissions associées.",
+    "confirm": "Confirmer"
+  },
+  "deleteDialog": {
+    "title": "Supprimer le rôle",
+    "description": "Les attributions de ce rôle seront également supprimées.",
+    "confirm": "Supprimer"
+  },
+  "createSuccess": "Rôle créé",
+  "updateSuccess": "Rôle mis à jour",
+  "empty": {
+    "title": "Aucun rôle trouvé",
+    "description": "Créez un premier rôle personnalisé pour commencer."
+  }
+}

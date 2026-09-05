@@ -25,6 +25,10 @@ import frNotifications from "@/locales/fr/notifications.json";
 import frStyleGuide from "@/locales/fr/styleGuide.json";
 import frUiTest from "@/locales/fr/uiTest.json";
 import frForm from "@/locales/fr/form.json";
+import frUsers from "@/locales/fr/users.json";
+import frRoles from "@/locales/fr/roles.json";
+import frPermissions from "@/locales/fr/permissions.json";
+import frAuthorization from "@/locales/fr/authorization.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -50,6 +54,10 @@ import enNotifications from "@/locales/en/notifications.json";
 import enStyleGuide from "@/locales/en/styleGuide.json";
 import enUiTest from "@/locales/en/uiTest.json";
 import enForm from "@/locales/en/form.json";
+import enUsers from "@/locales/en/users.json";
+import enRoles from "@/locales/en/roles.json";
+import enPermissions from "@/locales/en/permissions.json";
+import enAuthorization from "@/locales/en/authorization.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -75,6 +83,10 @@ import arNotifications from "@/locales/ar/notifications.json";
 import arStyleGuide from "@/locales/ar/styleGuide.json";
 import arUiTest from "@/locales/ar/uiTest.json";
 import arForm from "@/locales/ar/form.json";
+import arUsers from "@/locales/ar/users.json";
+import arRoles from "@/locales/ar/roles.json";
+import arPermissions from "@/locales/ar/permissions.json";
+import arAuthorization from "@/locales/ar/authorization.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -101,6 +113,10 @@ interface LocaleBundle {
   styleGuide: MessageRecord;
   uiTest: MessageRecord;
   form: MessageRecord;
+  users: MessageRecord;
+  roles: MessageRecord;
+  permissions: MessageRecord;
+  authorization: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -128,6 +144,10 @@ const fr: LocaleBundle = {
   styleGuide: frStyleGuide,
   uiTest: frUiTest,
   form: frForm,
+  users: frUsers,
+  roles: frRoles,
+  permissions: frPermissions,
+  authorization: frAuthorization,
 };
 
 const en: LocaleBundle = {
@@ -155,6 +175,10 @@ const en: LocaleBundle = {
   styleGuide: enStyleGuide,
   uiTest: enUiTest,
   form: enForm,
+  users: enUsers,
+  roles: enRoles,
+  permissions: enPermissions,
+  authorization: enAuthorization,
 };
 
 const ar: LocaleBundle = {
@@ -182,6 +206,10 @@ const ar: LocaleBundle = {
   styleGuide: arStyleGuide,
   uiTest: arUiTest,
   form: arForm,
+  users: arUsers,
+  roles: arRoles,
+  permissions: arPermissions,
+  authorization: arAuthorization,
 };
 
 export type MessagesBundle = typeof fr;

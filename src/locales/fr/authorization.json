@@ -1,0 +1,21 @@
+{
+  "errors": {
+    "unauthorized": "Vous devez être connecté pour effectuer cette action.",
+    "forbidden": "Vous n'avez pas la permission d'effectuer cette action.",
+    "invalidEstablishment": "Établissement invalide ou non autorisé.",
+    "accountDisabled": "Ce compte a été désactivé.",
+    "notFound": "Ressource introuvable.",
+    "lastAdmin": "Impossible : c'est le dernier administrateur actif de l'établissement.",
+    "systemRole": "Les rôles système ne peuvent pas être modifiés.",
+    "selfModification": "Vous ne pouvez pas modifier votre propre compte.",
+    "roleHierarchy": "Impossible : le rôle cible est au même niveau ou supérieur au vôtre.",
+    "roleScope": "Ce rôle n'appartient pas à cet établissement.",
+    "generic": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "switch": {
+    "title": "Changer d'établissement",
+    "placeholder": "Établissement",
+    "successTitle": "Établissement changé",
+    "successDescription": "Vous travaillez maintenant dans le nouvel établissement."
+  }
+}

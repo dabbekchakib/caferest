@@ -1,0 +1,21 @@
+{
+  "errors": {
+    "unauthorized": "You must be signed in to perform this action.",
+    "forbidden": "You don't have permission to perform this action.",
+    "invalidEstablishment": "Invalid or unauthorized establishment.",
+    "accountDisabled": "This account has been disabled.",
+    "notFound": "Resource not found.",
+    "lastAdmin": "Cannot do that: this is the last active administrator of the establishment.",
+    "systemRole": "System roles cannot be modified.",
+    "selfModification": "You cannot modify your own account.",
+    "roleHierarchy": "Cannot do that: the target role is equal to or higher than yours.",
+    "roleScope": "This role does not belong to this establishment.",
+    "generic": "Something went wrong. Please try again."
+  },
+  "switch": {
+    "title": "Switch establishment",
+    "placeholder": "Establishment",
+    "successTitle": "Establishment switched",
+    "successDescription": "You are now working in the new establishment."
+  }
+}

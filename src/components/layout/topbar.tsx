@@ -31,6 +31,7 @@ import { ConnectionStatus } from "@/components/shared/connection-status";
 import { NotificationItem } from "@/components/shared/notification-item";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { EstablishmentSwitcher } from "@/components/rbac/establishment-switcher";
 import { useToast } from "@/stores/use-toast-store";
 import { Badge } from "@/components/ui/badge";
 import { useAuth } from "@/hooks/use-auth";
@@ -52,6 +53,9 @@ const SEGMENT_NAV_KEY: Record<string, string> = {
   suppliers: "suppliers",
   reports: "reports",
   settings: "settings",
+  users: "users",
+  roles: "roles",
+  logs: "journal",
   "style-guide": "styleGuide",
 };
 
@@ -144,6 +148,8 @@ export function Topbar({ title }: { title?: string }) {
 
       <div className="ms-auto flex items-center gap-2">
         <ConnectionStatus status="online" className="hidden md:inline-flex" />
+
+        <EstablishmentSwitcher className="hidden lg:flex" />
 
         <LanguageSwitcher className="hidden sm:flex" />
 

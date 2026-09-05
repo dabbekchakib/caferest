@@ -1,0 +1,80 @@
+{
+  "title": "المستخدمون",
+  "description": "إدارة حسابات الأعضاء والأدوار والوصول",
+  "breadcrumb": "المستخدمون",
+  "searchPlaceholder": "البحث بالاسم أو البريد الإلكتروني…",
+  "inviteButton": "دعوة",
+  "filters": {
+    "all": "الكل",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "role": "الدور",
+    "status": "الحالة"
+  },
+  "table": {
+    "user": "المستخدم",
+    "roles": "الأدوار",
+    "status": "الحالة",
+    "joined": "تاريخ الانضمام",
+    "lastSignIn": "آخر تسجيل دخول",
+    "actions": "إجراءات"
+  },
+  "status": {
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "invited": "تم إرسال الدعوة"
+  },
+  "invite": {
+    "title": "دعوة مستخدم",
+    "description": "سيتم إرسال بريد إلكتروني للدعوة للانضمام إلى منشأتك.",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "you@example.com",
+    "role": "الدور الأولي",
+    "submit": "إرسال الدعوة",
+    "submitting": "جارٍ الإرسال…",
+    "success": "تم إرسال الدعوة"
+  },
+  "actions": {
+    "view": "عرض",
+    "deactivate": "تعطيل",
+    "activate": "تفعيل",
+    "delete": "حذف"
+  },
+  "deactivateDialog": {
+    "title": "تعطيل المستخدم",
+    "description": "لن يتمكن هذا المستخدم من الوصول إلى التطبيق حتى يتم إعادة تفعيله.",
+    "confirm": "تعطيل"
+  },
+  "activateDialog": {
+    "title": "إعادة تفعيل المستخدم",
+    "description": "سيتمكن هذا المستخدم من تسجيل الدخول مرة أخرى.",
+    "confirm": "إعادة تفعيل"
+  },
+  "deleteDialog": {
+    "title": "حذف المستخدم",
+    "description": "هذا الإجراء لا رجعة فيه: سيتم حذف الحساب وأذوناته نهائيًا.",
+    "confirm": "حذف"
+  },
+  "empty": {
+    "title": "لا يوجد مستخدمون",
+    "description": "جرّب تعديل عوامل التصفية أو إرسال دعوة جديدة."
+  },
+  "memberSince": "عضو منذ",
+  "neverConnected": "لم يسجّل الدخول بعد",
+  "detail": {
+    "personal": "المعلومات الشخصية",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "status": "الحالة",
+    "confirmed": "البريد مؤكّد",
+    "memberships": "المنشآت",
+    "roles": "الأدوار",
+    "rolesHint": "الأدوار الممنوحة في المنشأة المحددة.",
+    "noRoles": "لا يوجد دور في هذه المنشأة.",
+    "permissionsTitle": "الصلاحيات الفعلية",
+    "permissionsHint": "الصلاحيات المُجمّعة من الأدوار النشطة.",
+    "addRole": "إسناد دور",
+    "removeRole": "إزالة الدور"
+  }
+}

@@ -6,6 +6,7 @@ import { Coffee } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { navSections } from "@/lib/navigation";
 import { useAppStore } from "@/stores/use-app-store";
+import { useAuthorization } from "@/hooks/use-authorization";
 import { cn } from "@/lib/utils";
 import { Tooltip } from "@/components/ui/tooltip";
 
@@ -13,6 +14,7 @@ export function Sidebar() {
   const pathname = usePathname();
   const collapsed = useAppStore((state) => state.sidebarCollapsed);
   const t = useTranslations("navigation");
+  const { can } = useAuthorization();
 
   return (
     <aside
@@ -41,15 +43,20 @@ export function Sidebar() {
       </div>
 
       <nav className="flex-1 space-y-6 overflow-y-auto px-3 py-4">
-        {navSections.map((section) => (
-          <div key={section.labelKey}>
-            {!collapsed && (
-              <p className="mb-1.5 px-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-sidebar-muted)]">
-                {t(section.labelKey)}
-              </p>
-            )}
-            <ul className="space-y-0.5">
-              {section.items.map((item) => {
+        {navSections.map((section) => {
+          const items = section.items.filter(
+            (item) => !item.permission || can(item.permission)
+          );
+          if (items.length === 0) return null;
+          return (
+            <div key={section.labelKey}>
+              {!collapsed && (
+                <p className="mb-1.5 px-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-sidebar-muted)]">
+                  {t(section.labelKey)}
+                </p>
+              )}
+              <ul className="space-y-0.5">
+                {items.map((item) => {
                 const active =
                   pathname === item.href ||
                   (item.href !== "/dashboard" &&
@@ -100,9 +107,10 @@ export function Sidebar() {
                   </li>
                 );
               })}
-            </ul>
-          </div>
-        ))}
+              </ul>
+            </div>
+          );
+        })}
       </nav>
 
       <div className="border-t border-[var(--color-sidebar-border)] p-3">

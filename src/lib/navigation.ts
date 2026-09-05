@@ -37,6 +37,8 @@ export interface NavItem {
   icon: LucideIcon;
   badge?: string;
   disabled?: boolean;
+  /** Permission slug controlling item visibility (filters sidebar/menus). */
+  permission?: string;
 }
 
 export interface NavSection {
@@ -126,9 +128,9 @@ export const navSections: NavSection[] = [
   {
     labelKey: "administration",
     items: [
-      { labelKey: "users", href: "/users", icon: UserCog },
-      { labelKey: "permissions", href: "/permissions", icon: ShieldCheck },
-      { labelKey: "journal", href: "/logs", icon: History },
+      { labelKey: "users", href: "/users", icon: UserCog, permission: "users.view" },
+      { labelKey: "roles", href: "/roles", icon: ShieldCheck, permission: "roles.view" },
+      { labelKey: "journal", href: "/logs", icon: History, permission: "audit_logs.view" },
     ],
   },
   {

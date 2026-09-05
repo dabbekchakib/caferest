@@ -6,6 +6,18 @@ import arAuth from "../src/locales/ar/auth.json";
 import frValidation from "../src/locales/fr/validation.json";
 import enValidation from "../src/locales/en/validation.json";
 import arValidation from "../src/locales/ar/validation.json";
+import frUsers from "../src/locales/fr/users.json";
+import enUsers from "../src/locales/en/users.json";
+import arUsers from "../src/locales/ar/users.json";
+import frRoles from "../src/locales/fr/roles.json";
+import enRoles from "../src/locales/en/roles.json";
+import arRoles from "../src/locales/ar/roles.json";
+import frPermissions from "../src/locales/fr/permissions.json";
+import enPermissions from "../src/locales/en/permissions.json";
+import arPermissions from "../src/locales/ar/permissions.json";
+import frAuthorization from "../src/locales/fr/authorization.json";
+import enAuthorization from "../src/locales/en/authorization.json";
+import arAuthorization from "../src/locales/ar/authorization.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -26,15 +38,21 @@ function sortedKeys(value: JsonValue): string[] {
   return flatten(value).sort();
 }
 
-test("auth namespace keys match across fr/en/ar", () => {
-  assert.deepEqual(sortedKeys(enAuth), sortedKeys(frAuth));
-  assert.deepEqual(sortedKeys(arAuth), sortedKeys(frAuth));
-});
+const namespaces = [
+  ["auth", enAuth, frAuth, arAuth],
+  ["validation", enValidation, frValidation, arValidation],
+  ["users", enUsers, frUsers, arUsers],
+  ["roles", enRoles, frRoles, arRoles],
+  ["permissions", enPermissions, frPermissions, arPermissions],
+  ["authorization", enAuthorization, frAuthorization, arAuthorization],
+] as const;
 
-test("validation namespace keys match across fr/en/ar", () => {
-  assert.deepEqual(sortedKeys(enValidation), sortedKeys(frValidation));
-  assert.deepEqual(sortedKeys(arValidation), sortedKeys(frValidation));
-});
+for (const [ns, en, fr, ar] of namespaces) {
+  test(`${ns} namespace keys match across fr/en/ar`, () => {
+    assert.deepEqual(sortedKeys(en), sortedKeys(fr));
+    assert.deepEqual(sortedKeys(ar), sortedKeys(fr));
+  });
+}
 
 test("every translation value is a non-empty string", () => {
   const walk = (value: JsonValue, ns: string) => {
@@ -48,14 +66,9 @@ test("every translation value is a non-empty string", () => {
       );
     }
   };
-  for (const pair of [
-    [frAuth, "fr.auth"],
-    [enAuth, "en.auth"],
-    [arAuth, "ar.auth"],
-    [frValidation, "fr.validation"],
-    [enValidation, "en.validation"],
-    [arValidation, "ar.validation"],
-  ] as const) {
-    walk(pair[0], pair[1]);
+  for (const [_ns, en, fr, ar] of namespaces) {
+    walk(en, `en.${_ns}`);
+    walk(fr, `fr.${_ns}`);
+    walk(ar, `ar.${_ns}`);
   }
 });
