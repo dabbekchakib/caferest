@@ -1,0 +1,19 @@
+{
+  "required": "Ce champ est obligatoire.",
+  "invalidEmail": "Adresse e-mail invalide.",
+  "invalidValue": "Valeur incorrecte.",
+  "passwordTooShort": "Le mot de passe est trop court.",
+  "passwordTooShortCount": "Le mot de passe doit contenir au moins {min} caractères.",
+  "minLength": "Ce champ doit contenir au moins {min} caractères.",
+  "maxLength": "Ce champ ne doit pas dépasser {max} caractères.",
+  "minValue": "La valeur doit être supérieure ou égale à {min}.",
+  "maxValue": "La valeur doit être inférieure ou égale à {max}.",
+  "positive": "La valeur doit être positive.",
+  "priceNonNegative": "Le prix doit être supérieur ou égal à 0.",
+  "quantityPositive": "La quantité doit être supérieure à 0.",
+  "invalidNumber": "Nombre invalide.",
+  "invalidDate": "Date invalide.",
+  "regex": "Format invalide.",
+  "passwordMismatch": "Les mots de passe ne correspondent pas.",
+  "itemsCount": "{count} article|{count} articles"
+}

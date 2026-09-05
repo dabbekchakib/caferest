@@ -1,0 +1,13 @@
+{
+  "title": "الطاولات",
+  "breadcrumb": "الطاولات",
+  "create": "طاولة جديدة",
+  "table": "الطاولة",
+  "capacity": "السعة",
+  "area": "المنطقة",
+  "status": "الحالة",
+  "statusAvailable": "متاحة",
+  "statusOccupied": "محجوزة",
+  "statusReserved": "محجوزة مسبقاً",
+  "noData": "لا توجد طاولات"
+}

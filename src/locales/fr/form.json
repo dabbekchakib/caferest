@@ -1,0 +1,19 @@
+{
+  "name": "Nom",
+  "description": "Description",
+  "price": "Prix",
+  "quantity": "Quantité",
+  "unit": "Unité",
+  "category": "Catégorie",
+  "supplier": "Fournisseur",
+  "status": "Statut",
+  "date": "Date",
+  "phone": "Téléphone",
+  "email": "Email",
+  "address": "Adresse",
+  "city": "Ville",
+  "country": "Pays",
+  "labelRequired": "{label} (obligatoire)",
+  "placeholder": "Rechercher...",
+  "value": "Valeur"
+}

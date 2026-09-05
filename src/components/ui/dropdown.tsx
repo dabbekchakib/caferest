@@ -20,7 +20,8 @@ const DropdownContext = createContext<DropdownContextValue | null>(null);
 
 function useDropdown() {
   const ctx = useContext(DropdownContext);
-  if (!ctx) throw new Error("Dropdown components must be used inside <Dropdown>");
+  if (!ctx)
+    throw new Error("Dropdown components must be used inside <Dropdown>");
   return ctx;
 }
 
@@ -31,7 +32,12 @@ export interface DropdownProps {
   onOpenChange?: (open: boolean) => void;
 }
 
-export function Dropdown({ children, className, open: controlled, onOpenChange }: DropdownProps) {
+export function Dropdown({
+  children,
+  className,
+  open: controlled,
+  onOpenChange,
+}: DropdownProps) {
   const [internal, setInternal] = useState(false);
   const open = controlled ?? internal;
   const setOpen = (o: boolean) => {
@@ -43,7 +49,10 @@ export function Dropdown({ children, className, open: controlled, onOpenChange }
 
   return (
     <DropdownContext.Provider value={{ open, setOpen, close }}>
-      <div ref={ref} className={cn("relative inline-block text-left", className)}>
+      <div
+        ref={ref}
+        className={cn("relative inline-block text-left", className)}
+      >
         {children}
       </div>
     </DropdownContext.Provider>
@@ -54,7 +63,12 @@ export interface DropdownTriggerProps extends ButtonHTMLAttributes<HTMLButtonEle
   children?: ReactNode;
 }
 
-export function DropdownTrigger({ className, children, onClick, ...props }: DropdownTriggerProps) {
+export function DropdownTrigger({
+  className,
+  children,
+  onClick,
+  ...props
+}: DropdownTriggerProps) {
   const { open, setOpen } = useDropdown();
   return (
     <button
@@ -79,7 +93,11 @@ export interface DropdownContentProps {
   align?: "start" | "end" | "center";
 }
 
-export function DropdownContent({ children, className, align = "end" }: DropdownContentProps) {
+export function DropdownContent({
+  children,
+  className,
+  align = "end",
+}: DropdownContentProps) {
   const { open } = useDropdown();
   if (!open) return null;
   return (
@@ -105,7 +123,12 @@ export interface DropdownItemProps extends ButtonHTMLAttributes<HTMLButtonElemen
   inset?: boolean;
 }
 
-export function DropdownItem({ className, children, inset = false, ...props }: DropdownItemProps) {
+export function DropdownItem({
+  className,
+  children,
+  inset = false,
+  ...props
+}: DropdownItemProps) {
   const { close } = useDropdown();
   return (
     <button
@@ -127,14 +150,27 @@ export function DropdownItem({ className, children, inset = false, ...props }: D
   );
 }
 
-export function DropdownLabel({ className, children }: { className?: string; children: ReactNode }) {
+export function DropdownLabel({
+  className,
+  children,
+}: {
+  className?: string;
+  children: ReactNode;
+}) {
   return (
-    <div className={cn("px-3 py-1.5 text-xs font-medium text-[var(--color-muted-foreground)]", className)}>
+    <div
+      className={cn(
+        "px-3 py-1.5 text-xs font-medium text-[var(--color-muted-foreground)]",
+        className
+      )}
+    >
       {children}
     </div>
   );
 }
 
 export function DropdownSeparator({ className }: { className?: string }) {
-  return <div className={cn("my-1 h-px bg-[var(--color-border)]", className)} />;
+  return (
+    <div className={cn("my-1 h-px bg-[var(--color-border)]", className)} />
+  );
 }

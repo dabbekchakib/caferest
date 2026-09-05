@@ -24,17 +24,28 @@ export function Field({
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
       {label && (
-        <label htmlFor={htmlFor} className="text-sm font-medium text-[var(--color-foreground)]">
+        <label
+          htmlFor={htmlFor}
+          className="text-sm font-medium text-[var(--color-foreground)]"
+        >
           {label}
-          {required && <span className="ml-0.5 text-[var(--color-danger)]" aria-hidden>*</span>}
+          {required && (
+            <span className="ml-0.5 text-[var(--color-danger)]" aria-hidden>
+              *
+            </span>
+          )}
         </label>
       )}
       {description && (
-        <p className="text-xs text-[var(--color-muted-foreground)]">{description}</p>
+        <p className="text-xs text-[var(--color-muted-foreground)]">
+          {description}
+        </p>
       )}
       {children}
       {helpText && !error && (
-        <p className="text-xs text-[var(--color-muted-foreground)]">{helpText}</p>
+        <p className="text-xs text-[var(--color-muted-foreground)]">
+          {helpText}
+        </p>
       )}
       {error && (
         <p role="alert" className="text-xs text-[var(--color-danger)]">

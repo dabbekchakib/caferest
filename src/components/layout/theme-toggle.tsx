@@ -1,19 +1,21 @@
 "use client";
 
 import { Monitor, Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useThemeStore } from "@/stores/use-theme-store";
 import { cn } from "@/lib/utils";
 
 export function ThemeToggle({ className }: { className?: string }) {
   const theme = useThemeStore((state) => state.theme);
   const setTheme = useThemeStore((state) => state.setTheme);
+  const t = useTranslations("common");
 
   const resolved = useThemeStore((state) => state.resolvedTheme);
 
   const options = [
-    { value: "light" as const, label: "Clair", Icon: Sun },
-    { value: "dark" as const, label: "Sombre", Icon: Moon },
-    { value: "system" as const, label: "Système", Icon: Monitor },
+    { value: "light" as const, label: t("theme.light"), Icon: Sun },
+    { value: "dark" as const, label: t("theme.dark"), Icon: Moon },
+    { value: "system" as const, label: t("theme.system"), Icon: Monitor },
   ];
 
   const effective = theme === "system" ? resolved : theme;
@@ -25,7 +27,7 @@ export function ThemeToggle({ className }: { className?: string }) {
         className
       )}
       role="group"
-      aria-label="Thème de l'interface"
+      aria-label={t("theme.ariaLabel")}
     >
       {options.map(({ value, label, Icon }) => (
         <button

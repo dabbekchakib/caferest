@@ -1,0 +1,18 @@
+{
+  "title": "الطلبات",
+  "breadcrumb": "الطلبات",
+  "create": "طلب جديد",
+  "reference": "المرجع",
+  "table": "الطاولة",
+  "customer": "العميل",
+  "items": "العناصر",
+  "total": "المجموع",
+  "status": "الحالة",
+  "statusPending": "قيد الانتظار",
+  "statusInProgress": "قيد التنفيذ",
+  "statusPaid": "مدفوعة",
+  "statusCancelled": "ملغاة",
+  "created": "تم إنشاء الطلب.",
+  "cancelled": "تم إلغاء الطلب.",
+  "noData": "لا توجد طلبات"
+}

@@ -28,9 +28,13 @@ export function EmptyState({
         {icon ?? <PackageOpen className="size-7" aria-hidden />}
       </div>
       <div className="space-y-1">
-        <h3 className="text-lg font-semibold text-[var(--color-foreground)]">{title}</h3>
+        <h3 className="text-lg font-semibold text-[var(--color-foreground)]">
+          {title}
+        </h3>
         {description && (
-          <p className="mx-auto max-w-sm text-sm text-[var(--color-muted-foreground)]">{description}</p>
+          <p className="mx-auto max-w-sm text-sm text-[var(--color-muted-foreground)]">
+            {description}
+          </p>
         )}
       </div>
       {action && <div className="mt-1">{action}</div>}

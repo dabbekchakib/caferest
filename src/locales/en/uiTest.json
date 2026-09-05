@@ -1,0 +1,41 @@
+{
+  "title": "UI Test",
+  "title2": "Responsive Test",
+  "description": "Test mobile, tablet and desktop breakpoints, as well as RTL and dark mode.",
+  "breakpoints": {
+    "mobile320": "Mobile 320px",
+    "mobile375": "Mobile 375px",
+    "tablet": "Tablet 768px",
+    "desktop": "Desktop 1280px"
+  },
+  "notes": {
+    "rarelyUsed": "Rarely used",
+    "iphone": "iPhone",
+    "posTerminal": "POS terminal",
+    "standard": "Standard"
+  },
+  "responsiveElements": "Responsive elements",
+  "responsiveHint": "The layout must adapt from 320px to 1920px without breaking, and stay readable in dark mode.",
+  "tip": "Tip: resize the window, enable dark mode via the button in the topbar, and use <code>devtools</code> in the developer tools to test RTL.",
+  "ok": "OK",
+  "ready": "Ready",
+  "primary": "Primary",
+  "outline": "Outline",
+  "danger": "Danger",
+  "success": "Success",
+  "inProgress": "In progress",
+
+  "i18n": {
+    "title": "Internationalization demo",
+    "description": "Preview of localized formats (dates, numbers, currency, plurals) and RTL direction based on the active locale.",
+    "localeLabel": "Active locale",
+    "directionLabel": "Direction",
+    "dateLabel": "Date",
+    "timeLabel": "Time",
+    "numberLabel": "Number",
+    "currencyLabel": "Currency (TND)",
+    "pluralLabel": "Plurals",
+    "quantityItem": "{count} item|{count} items",
+    "switchLabel": "Switch language via the topbar to see formats change without a reload."
+  }
+}

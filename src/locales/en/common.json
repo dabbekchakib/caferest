@@ -1,17 +1,109 @@
 {
   "app": {
     "name": "CafeRest",
-    "description": "POS/ERP application for cafes and restaurants"
+    "description": "POS/ERP application for cafés and restaurants"
   },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
     "save": "Save",
+    "saveChanges": "Save changes",
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",
     "create": "Create",
     "search": "Search",
-    "noResults": "No results"
-  }
+    "noResults": "No results",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open": "Open",
+    "confirm": "Confirm",
+    "submit": "Submit",
+    "refresh": "Refresh",
+    "export": "Export",
+    "viewAll": "View all",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "today": "Today",
+    "status": "Status",
+    "actions": "Actions",
+    "name": "Name",
+    "date": "Date",
+    "quantity": "Quantity",
+    "total": "Total",
+    "price": "Price",
+    "unit": "Unit",
+    "category": "Category",
+    "supplier": "Supplier",
+    "type": "Type",
+    "all": "All",
+    "noData": "No data available",
+    "loadingData": "Loading...",
+    "language": "Change language",
+    "taxRate": "VAT ({rate}%)",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleSidebar": "Collapse / expand sidebar",
+    "demo": "CafeRest Demo",
+    "demoPhase": "Phase 04 — Internationalization"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "showing": "Showing {from}-{to} of {total}",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {page}"
+  },
+  "table": {
+    "selectAll": "Select all",
+    "selectRow": "Select row",
+    "noData": "No data."
+  },
+  "empty": {
+    "title": "No data available",
+    "comingSoon": "This module will be developed in a future phase.",
+    "placeholder": "This is a placeholder. The feature will be implemented in subsequent phases.",
+    "notFound": "No results found"
+  },
+  "error": {
+    "title": "An error occurred",
+    "description": "Unable to load data. Please try again."
+  },
+  "connection": {
+    "online": "Online",
+    "offline": "Offline",
+    "syncing": "Syncing..."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "ariaLabel": "Breadcrumb"
+  },
+  "demo": {
+    "title": "CafeRest Demo",
+    "phase": "Phase 02 — Design System"
+  },
+  "status": {
+    "pending": "Pending",
+    "inProgress": "In progress",
+    "paid": "Paid",
+    "completed": "Completed",
+    "failed": "Failed",
+    "cancelled": "Cancelled",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "theme": {
+    "ariaLabel": "Interface theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "charts": {
+    "line": "Line chart",
+    "bar": "Bar chart"
+  },
+  "closeNotification": "Dismiss notification"
 }

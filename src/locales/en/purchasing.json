@@ -1,0 +1,16 @@
+{
+  "title": "Purchase orders",
+  "breadcrumb": "Purchase orders",
+  "purchaseOrder": "Purchase order",
+  "supplier": "Supplier",
+  "reference": "Reference",
+  "expectedDate": "Expected delivery date",
+  "status": "Status",
+  "total": "Total",
+  "statusDraft": "Draft",
+  "statusOrdered": "Ordered",
+  "statusReceived": "Received",
+  "statusPartial": "Partially received",
+  "statusCancelled": "Cancelled",
+  "noData": "No purchase orders"
+}

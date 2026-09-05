@@ -1,0 +1,20 @@
+{
+  "title": "Produits",
+  "breadcrumb": "Produits",
+  "create": "Nouveau produit",
+  "edit": "Modifier le produit",
+  "delete": "Supprimer le produit",
+  "name": "Nom",
+  "description": "Description",
+  "price": "Prix",
+  "tax": "Taxe",
+  "category": "Catégorie",
+  "unit": "Unité",
+  "sku": "Référence (SKU)",
+  "barcode": "Code-barres",
+  "status": "Statut",
+  "created": "Produit créé avec succès.",
+  "updated": "Produit modifié.",
+  "deleted": "Produit supprimé.",
+  "noData": "Aucun produit trouvé"
+}

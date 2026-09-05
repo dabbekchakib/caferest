@@ -1,0 +1,14 @@
+{
+  "title": "Stock",
+  "breadcrumb": "Stock",
+  "lowStock": "Stock faible",
+  "lowStockDesc": "Alerte lorsque le stock descend sous ce seuil.",
+  "valuationMethod": "Méthode de valorisation",
+  "averageCost": "Coût moyen pondéré",
+  "fifo": "PEPS (FIFO)",
+  "ingredient": "Ingrédient",
+  "location": "Emplacement",
+  "onHand": "En stock",
+  "reorderLevel": "Seuil de réapprovisionnement",
+  "noData": "Aucun ingrédient"
+}

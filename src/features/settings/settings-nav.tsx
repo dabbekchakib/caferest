@@ -10,6 +10,7 @@ import {
   Printer,
   ShoppingCart,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export type SettingsSectionKey =
@@ -23,23 +24,19 @@ export type SettingsSectionKey =
   | "printing"
   | "notifications";
 
-export interface SettingsSectionMeta {
+export const SETTINGS_SECTIONS: {
   key: SettingsSectionKey;
-  label: string;
-  description: string;
   icon: LucideIcon;
-}
-
-export const SETTINGS_SECTIONS: SettingsSectionMeta[] = [
-  { key: "general", label: "Général", description: "Identité de l'établissement", icon: Building2 },
-  { key: "branding", label: "Branding", description: "Logo, favicon & couleurs", icon: Palette },
-  { key: "localization", label: "Langue & région", description: "Langues, RTL, fuseau, formats", icon: Languages },
-  { key: "currency", label: "Devise", description: "Devise et formats numériques", icon: Coins },
-  { key: "taxes", label: "Taxes", description: "Taux et taxe par défaut", icon: Percent },
-  { key: "pos", label: "POS", description: "Comportement du point de vente", icon: ShoppingCart },
-  { key: "inventory", label: "Stock", description: "Règles et seuils de stock", icon: Boxes },
-  { key: "printing", label: "Impression", description: "Tickets de caisse", icon: Printer },
-  { key: "notifications", label: "Notifications", description: "Alertes et notifications", icon: Bell },
+}[] = [
+  { key: "general", icon: Building2 },
+  { key: "branding", icon: Palette },
+  { key: "localization", icon: Languages },
+  { key: "currency", icon: Coins },
+  { key: "taxes", icon: Percent },
+  { key: "pos", icon: ShoppingCart },
+  { key: "inventory", icon: Boxes },
+  { key: "printing", icon: Printer },
+  { key: "notifications", icon: Bell },
 ];
 
 interface SettingsNavProps {
@@ -48,21 +45,23 @@ interface SettingsNavProps {
 }
 
 export function SettingsNav({ active, onSelect }: SettingsNavProps) {
+  const t = useTranslations("settings");
   return (
     <nav
-      aria-label="Sections de configuration"
+      aria-label={t("navAria")}
       className="flex gap-2 overflow-x-auto pb-1 md:flex-col md:overflow-visible md:pb-0"
     >
       {SETTINGS_SECTIONS.map((section) => {
         const Icon = section.icon;
         const isActive = section.key === active;
+        const label = t(`nav.${section.key}`);
         return (
           <button
             key={section.key}
             type="button"
             onClick={() => onSelect(section.key)}
             aria-current={isActive ? "page" : undefined}
-            title={section.label}
+            title={label}
             className={cn(
               "flex shrink-0 items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-ring)]",
               isActive
@@ -71,7 +70,7 @@ export function SettingsNav({ active, onSelect }: SettingsNavProps) {
             )}
           >
             <Icon className="size-4 shrink-0" aria-hidden />
-            <span className="hidden md:inline">{section.label}</span>
+            <span className="hidden md:inline">{label}</span>
           </button>
         );
       })}

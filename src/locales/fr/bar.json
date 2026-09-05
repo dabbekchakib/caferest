@@ -1,0 +1,9 @@
+{
+  "title": "Bar",
+  "breadcrumb": "Bar",
+  "orders": "Commandes en cours",
+  "preparing": "En préparation",
+  "ready": "Prêt",
+  "serve": "Servir",
+  "noData": "Aucune commande au bar"
+}

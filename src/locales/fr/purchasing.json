@@ -1,0 +1,16 @@
+{
+  "title": "Commandes d'achat",
+  "breadcrumb": "Commandes d'achat",
+  "purchaseOrder": "Bon de commande",
+  "supplier": "Fournisseur",
+  "reference": "Référence",
+  "expectedDate": "Date de livraison prévue",
+  "status": "Statut",
+  "total": "Total",
+  "statusDraft": "Brouillon",
+  "statusOrdered": "Commandé",
+  "statusReceived": "Réceptionné",
+  "statusPartial": "Partiellement reçu",
+  "statusCancelled": "Annulé",
+  "noData": "Aucun bon de commande"
+}

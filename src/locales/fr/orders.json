@@ -1,0 +1,18 @@
+{
+  "title": "Commandes",
+  "breadcrumb": "Commandes",
+  "create": "Nouvelle commande",
+  "reference": "Référence",
+  "table": "Table",
+  "customer": "Client",
+  "items": "Articles",
+  "total": "Total",
+  "status": "Statut",
+  "statusPending": "En attente",
+  "statusInProgress": "En cours",
+  "statusPaid": "Payée",
+  "statusCancelled": "Annulée",
+  "created": "Commande créée.",
+  "cancelled": "Commande annulée.",
+  "noData": "Aucune commande"
+}

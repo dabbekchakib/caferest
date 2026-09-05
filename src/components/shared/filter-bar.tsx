@@ -17,7 +17,9 @@ export function FilterBar({ children, className, results }: FilterBarProps) {
     >
       {children}
       {results && (
-        <span className="ms-auto text-xs text-[var(--color-muted-foreground)]">{results}</span>
+        <span className="ms-auto text-xs text-[var(--color-muted-foreground)]">
+          {results}
+        </span>
       )}
     </div>
   );

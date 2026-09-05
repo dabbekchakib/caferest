@@ -33,7 +33,10 @@ export function useDynamicTheme() {
         } = await supabase.auth.getUser();
         if (cancelled || !user) return;
 
-        const establishmentId = await getActiveEstablishmentId(supabase, user.id);
+        const establishmentId = await getActiveEstablishmentId(
+          supabase,
+          user.id
+        );
         if (cancelled || !establishmentId) return;
 
         const map = await getSettingsMap(supabase, establishmentId);

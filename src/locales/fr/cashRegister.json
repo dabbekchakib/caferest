@@ -1,0 +1,12 @@
+{
+  "title": "Caisse",
+  "breadcrumb": "Caisse",
+  "cashRegister": "Caisse",
+  "code": "Code",
+  "opening": "Fond de caisse",
+  "closing": "Clôture de caisse",
+  "sessionOpened": "Session ouverte.",
+  "sessionClosed": "Caisse clôturée.",
+  "sessionValidated": "Session du jour validée.",
+  "noData": "Aucune session"
+}

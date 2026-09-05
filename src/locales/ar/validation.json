@@ -1,0 +1,19 @@
+{
+  "required": "هذا الحقل مطلوب.",
+  "invalidEmail": "بريد إلكتروني غير صالح.",
+  "invalidValue": "قيمة غير صحيحة.",
+  "passwordTooShort": "كلمة المرور قصيرة جدًا.",
+  "passwordTooShortCount": "يجب أن تحتوي كلمة المرور على {min} أحرف على الأقل.",
+  "minLength": "يجب أن يحتوي هذا الحقل على {min} أحرف على الأقل.",
+  "maxLength": "يجب ألا يتجاوز هذا الحقل {max} حرفًا.",
+  "minValue": "يجب أن تكون القيمة أكبر من أو تساوي {min}.",
+  "maxValue": "يجب أن تكون القيمة أصغر من أو تساوي {max}.",
+  "positive": "يجب أن تكون القيمة موجبة.",
+  "priceNonNegative": "يجب أن يكون السعر أكبر من أو يساوي 0.",
+  "quantityPositive": "يجب أن تكون الكمية أكبر من 0.",
+  "invalidNumber": "رقم غير صالح.",
+  "invalidDate": "تاريخ غير صالح.",
+  "regex": "تنسيق غير صالح.",
+  "passwordMismatch": "كلمتا المرور غير متطابقتين.",
+  "itemsCount": "{count} عنصر|{count} عناصر"
+}

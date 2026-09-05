@@ -1,0 +1,179 @@
+{
+  "title": "Configuration",
+  "description": "Gérez l'établissement, le branding, la monnaie, les taxes et les modules.",
+  "breadcrumb": "Configuration",
+  "saveChanges": "Enregistrer les modifications",
+  "saved": "Paramètres enregistrés",
+  "savedDesc": "Configuration mise à jour.",
+  "demoTitle": "Mode démonstration",
+  "demoDesc": "Supabase n'est pas encore configuré, les modifications ne peuvent pas être enregistrées.",
+  "requiresConnection": "Connexion Supabase requise",
+  "requiresConnectionDesc": "Les modifications ne peuvent pas encore être enregistrées.",
+  "genericSave": "Enregistrer",
+  "navAria": "Sections de configuration",
+
+  "nav": {
+    "general": "Général",
+    "branding": "Branding",
+    "localization": "Langue & région",
+    "currency": "Devise",
+    "taxes": "Taxes",
+    "pos": "POS",
+    "inventory": "Stock",
+    "printing": "Impression",
+    "notifications": "Notifications"
+  },
+  "navDesc": {
+    "general": "Informations sur l'établissement et reçus",
+    "branding": "Logo, favicon et couleurs",
+    "localization": "Langue, fuseau et formats",
+    "currency": "Monnaie et formats numériques",
+    "taxes": "Taux de TVA",
+    "pos": "Comportement du point de vente",
+    "inventory": "Règles de gestion du stock",
+    "printing": "Impression des tickets",
+    "notifications": "Alertes et notifications"
+  },
+
+  "general": {
+    "title": "Informations générales",
+    "titleDesc": "Les coordonnées et identifiants de l'établissement.",
+    "establishmentName": "Nom de l'établissement",
+    "legalName": "Raison sociale",
+    "registrationNumber": "N° d'enregistrement",
+    "taxNumber": "N° fiscal",
+    "phone": "Téléphone",
+    "email": "Email",
+    "website": "Site web",
+    "address": "Adresse",
+    "city": "Ville",
+    "postalCode": "Code postal",
+    "country": "Pays",
+    "tunisia": "Tunisie",
+    "receiptHeaderFooter": "En-tête et pied de reçu",
+    "receiptHeaderFooterDesc": "Texte affiché en haut et en bas des tickets.",
+    "receiptHeader": "En-tête du reçu",
+    "receiptFooter": "Pied du reçu",
+    "headerHelp": "Ex. adresse, téléphone, horaires.",
+    "myCafe": "Mon Café"
+  },
+
+  "branding": {
+    "title": "Identité visuelle",
+    "titleDesc": "Le logo et le favicon sont stockés dans Supabase Storage. Collez ou uploadez vos images.",
+    "logo": "Logo",
+    "favicon": "Favicon",
+    "upload": "Téléversement",
+    "uploadDesc": "L'upload vers Supabase Storage sera disponible une fois Supabase configuré.",
+    "storageUrl": "URL publique (Supabase Storage)",
+    "colors": "Couleurs",
+    "colorsDesc": "Appliquées dynamiquement au design system.",
+    "primary": "Couleur primaire",
+    "secondary": "Couleur secondaire",
+    "accent": "Couleur d'accent",
+    "success": "Succès",
+    "warning": "Avertissement",
+    "danger": "Danger",
+    "darkMode": "Mode sombre",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Suivre le système",
+    "preview": "Aperçu"
+  },
+
+  "localization": {
+    "language": "Langue",
+    "languageDesc": "Langue par défaut et langues disponibles.",
+    "defaultLocale": "Langue par défaut",
+    "rtl": "RTL",
+    "rtlHelp": "Le RTL est activé automatiquement pour l'arabe.",
+    "auto": "Automatique",
+    "enabled": "Activé",
+    "disabled": "Désactivé",
+    "availableLocales": "Langues disponibles",
+    "localesDesc": "Séparées par des virgules.",
+    "francais": "Français",
+    "english": "English",
+    "arabic": "العربية",
+    "region": "Région",
+    "regionDesc": "Fuseau horaire et formats.",
+    "timezone": "Fuseau horaire",
+    "firstDayOfWeek": "Premier jour de la semaine",
+    "monday": "Lundi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche",
+    "dateFormat": "Format de date",
+    "timeFormat": "Format de l'heure"
+  },
+
+  "currency": {
+    "currency": "Devise",
+    "currencyDesc": "Configuration de la monnaie utilisée dans l'application.",
+    "code": "Code devise",
+    "symbol": "Symbole",
+    "position": "Position du symbole",
+    "before": "Avant le montant",
+    "after": "Après le montant",
+    "decimalPlaces": "Nombre de décimales",
+    "thousandSeparator": "Séparateur de milliers",
+    "decimalSeparator": "Séparateur décimal",
+    "preview": "Aperçu"
+  },
+
+  "taxes": {
+    "taxes": "Taxes / TVA",
+    "taxesDesc": "Le taux par défaut est utilisé pour les nouveaux produits. Plusieurs taux sont gérés en base (0%, 7%, 13%, 19%).",
+    "defaultRate": "Taux de TVA par défaut (%)",
+    "default": "par défaut",
+    "zero": "TVA 0%",
+    "seven": "TVA 7%",
+    "thirteen": "TVA 13%",
+    "nineteen": "TVA 19%"
+  },
+
+  "pos": {
+    "title": "Comportement du POS",
+    "titleDesc": "Options du module point de vente.",
+    "allowNegativeStock": "Autoriser le stock négatif",
+    "allowNegativeStockDesc": "Permettre de vendre un produit en rupture de stock.",
+    "requireConfirmation": "Exiger la confirmation de commande",
+    "requireConfirmationDesc": "Demander une confirmation avant d'envoyer la commande en cuisine.",
+    "allowDiscount": "Autoriser les remises",
+    "allowDiscountDesc": "Permettre d'appliquer des remises sur la commande."
+  },
+
+  "inventory": {
+    "title": "Règles de stock",
+    "titleDesc": "Gestion des niveaux et alertes.",
+    "allowNegativeStock": "Autoriser le stock négatif",
+    "allowNegativeStockDesc": "Autoriser les mouvements qui font passer le stock sous zéro.",
+    "lowStockThreshold": "Seuil d'alerte de stock bas",
+    "thresholdHelp": "Alerte lorsque le stock descend sous ce seuil.",
+    "valuationMethod": "Méthode de valorisation",
+    "averageCost": "Coût moyen pondéré",
+    "fifo": "PEPS (FIFO)"
+  },
+
+  "printing": {
+    "title": "Impression des tickets",
+    "titleDesc": "Réglages des tickets de caisse.",
+    "receiptWidth": "Largeur du reçu (mm)",
+    "showTax": "Afficher la TVA",
+    "showTaxDesc": "Afficher le détail des taxes sur le ticket.",
+    "showServer": "Afficher le serveur",
+    "showServerDesc": "Afficher le nom du serveur sur le ticket."
+  },
+
+  "notifications": {
+    "title": "Notifications",
+    "titleDesc": "Choisissez les événements à notifier.",
+    "stockAlerts": "Alertes de stock",
+    "stockAlertsDesc": "Notifier lorsque le stock est faible.",
+    "newOrders": "Nouvelles commandes",
+    "newOrdersDesc": "Notifier les nouvelles commandes entrantes.",
+    "cashRegister": "Caisse",
+    "cashRegisterDesc": "Notifier l'ouverture/fermeture de caisse.",
+    "purchasing": "Achats",
+    "purchasingDesc": "Notifier les réceptions et commandes d'achat."
+  }
+}

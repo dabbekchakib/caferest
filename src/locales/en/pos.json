@@ -1,0 +1,22 @@
+{
+  "title": "New order",
+  "customers": "{count} guest|{count} guests",
+  "change": "Change",
+  "release": "Release",
+  "activeOrder": "Current order",
+  "itemCount": "{count} item|{count} items",
+  "addItemPlaceholder": "Add an item...",
+  "selectProducts": "Select products",
+  "decrease": "Decrease",
+  "increase": "Increase",
+  "remove": "Remove",
+  "subtotal": "Subtotal",
+  "total": "TOTAL",
+  "pay": "Pay",
+  "all": "All",
+  "catCoffee": "Coffee",
+  "catDrinks": "Drinks",
+  "catBar": "Bar",
+  "catKitchen": "Kitchen",
+  "catDesserts": "Desserts"
+}

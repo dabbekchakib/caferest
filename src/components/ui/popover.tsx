@@ -25,7 +25,12 @@ export interface PopoverProps {
   onOpenChange?: (open: boolean) => void;
 }
 
-export function Popover({ children, className, open: controlled, onOpenChange }: PopoverProps) {
+export function Popover({
+  children,
+  className,
+  open: controlled,
+  onOpenChange,
+}: PopoverProps) {
   const [internal, setInternal] = useState(false);
   const open = controlled ?? internal;
   const setOpen = (o: boolean) => {
@@ -69,7 +74,11 @@ export interface PopoverContentProps {
   align?: "start" | "end" | "center";
 }
 
-export function PopoverContent({ children, className, align = "start" }: PopoverContentProps) {
+export function PopoverContent({
+  children,
+  className,
+  align = "start",
+}: PopoverContentProps) {
   const { open } = usePopover();
   if (!open) return null;
   return (

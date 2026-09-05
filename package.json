@@ -8,12 +8,14 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-      "format": "prettier --write .",
-      "format:check": "prettier --check .",
-      "db:link": "node scripts/supabase-cli.mjs link",
-      "db:push": "node scripts/supabase-cli.mjs db push",
-      "db:reset": "node scripts/supabase-cli.mjs db reset",
-      "db:status": "node scripts/supabase-cli.mjs db status"
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:build": "tsc -p tsconfig.tests.json",
+    "test": "npm run test:build && node --test \"dist-tests/tests/*.test.js\"",
+    "db:link": "node scripts/supabase-cli.mjs link",
+    "db:push": "node scripts/supabase-cli.mjs db push",
+    "db:reset": "node scripts/supabase-cli.mjs db reset",
+    "db:status": "node scripts/supabase-cli.mjs db status"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.6",
@@ -21,6 +23,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^1.41.0",
     "next": "16.3.4",
+    "next-intl": "^4.14.2",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-hook-form": "^7.87.0",

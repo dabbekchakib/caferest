@@ -1,0 +1,14 @@
+{
+  "title": "Stock",
+  "breadcrumb": "Stock",
+  "lowStock": "Low stock",
+  "lowStockDesc": "Alert when stock falls below this threshold.",
+  "valuationMethod": "Valuation method",
+  "averageCost": "Weighted average cost",
+  "fifo": "FIFO",
+  "ingredient": "Ingredient",
+  "location": "Location",
+  "onHand": "On hand",
+  "reorderLevel": "Reorder level",
+  "noData": "No ingredients"
+}

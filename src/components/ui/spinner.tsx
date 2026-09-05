@@ -24,12 +24,13 @@ const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
         {...props}
       >
         <Loader2
-          className={cn("animate-spin text-[var(--color-primary)]", sizeMap[size])}
+          className={cn(
+            "animate-spin text-[var(--color-primary)]",
+            sizeMap[size]
+          )}
           aria-hidden
         />
-        {label && (
-          <span className="sr-only">{label}</span>
-        )}
+        {label && <span className="sr-only">{label}</span>}
       </div>
     );
   }

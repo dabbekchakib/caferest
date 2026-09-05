@@ -1,17 +1,109 @@
 {
   "app": {
     "name": "CafeRest",
-    "description": "تطبيق نقاط بيع/تخطيط موارد للمقاهي والمطاعم"
+    "description": "تطبيق نقاط بيع/تخطيط موارد المؤسسات للمقاهي والمطاعم"
   },
   "common": {
-    "loading": "جاري التحميل...",
+    "loading": "جارٍ التحميل...",
     "error": "حدث خطأ",
     "save": "حفظ",
+    "saveChanges": "حفظ التغييرات",
     "cancel": "إلغاء",
     "delete": "حذف",
     "edit": "تعديل",
     "create": "إنشاء",
     "search": "بحث",
-    "noResults": "لا توجد نتائج"
-  }
+    "noResults": "لا توجد نتائج",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "close": "إغلاق",
+    "open": "فتح",
+    "confirm": "تأكيد",
+    "submit": "إرسال",
+    "refresh": "تحديث",
+    "export": "تصدير",
+    "viewAll": "عرض الكل",
+    "none": "لا شيء",
+    "yes": "نعم",
+    "no": "لا",
+    "today": "اليوم",
+    "status": "الحالة",
+    "actions": "الإجراءات",
+    "name": "الاسم",
+    "date": "التاريخ",
+    "quantity": "الكمية",
+    "total": "المجموع",
+    "price": "السعر",
+    "unit": "الوحدة",
+    "category": "الفئة",
+    "supplier": "المورد",
+    "type": "النوع",
+    "all": "الكل",
+    "noData": "لا تتوفر بيانات",
+    "loadingData": "جارٍ التحميل...",
+    "language": "تغيير اللغة",
+    "taxRate": "الضريبة ({rate}%)",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "toggleSidebar": "طي/توسيع الشريط الجانبي",
+    "demo": "عرض كافيه ريست التجريبي",
+    "demoPhase": "المرحلة 04 — التدويل"
+  },
+  "pagination": {
+    "label": "التنقل بين الصفحات",
+    "showing": "عرض {from}-{to} من {total}",
+    "previous": "السابق",
+    "next": "التالي",
+    "page": "صفحة {page}"
+  },
+  "table": {
+    "selectAll": "تحديد الكل",
+    "selectRow": "تحديد الصف",
+    "noData": "لا توجد بيانات."
+  },
+  "empty": {
+    "title": "لا تتوفر بيانات",
+    "comingSoon": "سيتم تطوير هذه الوحدة في المرحلة القادمة.",
+    "placeholder": "هذا مساحة محجوزة. سيتم تنفيذ الوظيفة في المراحل التالية.",
+    "notFound": "لم يتم العثور على نتائج"
+  },
+  "error": {
+    "title": "حدث خطأ",
+    "description": "تعذر تحميل البيانات. يرجى المحاولة مرة أخرى."
+  },
+  "connection": {
+    "online": "متصل",
+    "offline": "غير متصل",
+    "syncing": "جارٍ المزامنة..."
+  },
+  "breadcrumb": {
+    "home": "الرئيسية",
+    "ariaLabel": "مسار التنقل"
+  },
+  "demo": {
+    "title": "عرض توضيحي CafeRest",
+    "phase": "المرحلة 02 — نظام التصميم"
+  },
+  "status": {
+    "pending": "قيد الانتظار",
+    "inProgress": "قيد التنفيذ",
+    "paid": "مدفوعة",
+    "completed": "مكتمل",
+    "failed": "فشل",
+    "cancelled": "ملغاة",
+    "active": "نشط",
+    "inactive": "غير نشط"
+  },
+  "theme": {
+    "ariaLabel": "واجهة المظهر",
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام"
+  },
+  "charts": {
+    "line": "مخطط خطي",
+    "bar": "مخطط أعمدة"
+  },
+  "closeNotification": "إغلاق الإشعار"
 }

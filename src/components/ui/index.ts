@@ -15,8 +15,21 @@ export {
 } from "./card";
 export { Badge, type BadgeProps } from "./badge";
 export { Avatar, type AvatarProps } from "./avatar";
-export { Dialog, DialogContent, DialogFooter, type DialogProps, type DialogSize } from "./dialog";
-export { Dropdown, DropdownContent, DropdownItem, DropdownLabel, DropdownSeparator, DropdownTrigger } from "./dropdown";
+export {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  type DialogProps,
+  type DialogSize,
+} from "./dialog";
+export {
+  Dropdown,
+  DropdownContent,
+  DropdownItem,
+  DropdownLabel,
+  DropdownSeparator,
+  DropdownTrigger,
+} from "./dropdown";
 export { Popover, PopoverContent, PopoverTrigger } from "./popover";
 export { Tooltip, type TooltipProps } from "./tooltip";
 export { Tabs, TabsList, TabsTrigger, TabsContent } from "./tabs";

@@ -1,0 +1,20 @@
+{
+  "title": "Notifications",
+  "productCreated": "Product created successfully.",
+  "productUpdated": "Product updated.",
+  "configurationSaved": "Settings saved.",
+  "configurationSavedDesc": "Settings updated.",
+  "lowStock": "Low stock.",
+  "orderCreated": "Order created.",
+  "orderCancelled": "Order cancelled.",
+  "topbarTitle": "Notifications",
+  "newOrder": "New order #{number}",
+  "tableItems": "Table {table} — {count} items|Table {table} — {count} item",
+  "timeAgoMin": "{min} min ago",
+  "timeAgoHour": "1 hour ago",
+  "timeAgoHours": "{hours} hours ago",
+  "lowStockEspresso": "Low stock: Espresso",
+  "unitRemaining": "{count} units remaining|{count} unit remaining",
+  "cashRegisterClosed": "Cash register closed",
+  "sessionValidated": "Today's session validated"
+}

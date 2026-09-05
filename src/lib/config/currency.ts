@@ -15,9 +15,21 @@ export function getCurrencySettings(map: SettingsMap): ResolvedCurrency {
   return {
     code: settingValue<string>(map, "currency.code", "TND"),
     symbol: settingValue<string>(map, "currency.symbol", "TND"),
-    position: settingValue<"before" | "after">(map, "currency.position", "after"),
+    position: settingValue<"before" | "after">(
+      map,
+      "currency.position",
+      "after"
+    ),
     decimalPlaces: settingValue<number>(map, "currency.decimal_places", 3),
-    thousandSeparator: settingValue<string>(map, "currency.thousand_separator", ","),
-    decimalSeparator: settingValue<string>(map, "currency.decimal_separator", "."),
+    thousandSeparator: settingValue<string>(
+      map,
+      "currency.thousand_separator",
+      ","
+    ),
+    decimalSeparator: settingValue<string>(
+      map,
+      "currency.decimal_separator",
+      "."
+    ),
   };
 }

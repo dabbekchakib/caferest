@@ -1,0 +1,19 @@
+{
+  "name": "Name",
+  "description": "Description",
+  "price": "Price",
+  "quantity": "Quantity",
+  "unit": "Unit",
+  "category": "Category",
+  "supplier": "Supplier",
+  "status": "Status",
+  "date": "Date",
+  "phone": "Phone",
+  "email": "Email",
+  "address": "Address",
+  "city": "City",
+  "country": "Country",
+  "labelRequired": "{label} (required)",
+  "placeholder": "Search...",
+  "value": "Value"
+}

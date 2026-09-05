@@ -56,7 +56,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["establishments"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["establishments"]["Insert"]
+        >;
         Relationships: [];
       };
       establishment_members: {
@@ -72,7 +74,9 @@ export interface Database {
           is_active?: boolean;
           created_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["establishment_members"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["establishment_members"]["Insert"]
+        >;
         Relationships: [];
       };
       settings: {
@@ -170,7 +174,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["unit_conversions"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["unit_conversions"]["Insert"]
+        >;
         Relationships: [];
       };
       categories: {
@@ -390,7 +396,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["recipe_yields"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["recipe_yields"]["Insert"]
+        >;
         Relationships: [];
       };
       suppliers: {
@@ -460,7 +468,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["purchase_orders"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["purchase_orders"]["Insert"]
+        >;
         Relationships: [];
       };
       purchase_order_items: {
@@ -490,7 +500,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["purchase_order_items"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["purchase_order_items"]["Insert"]
+        >;
         Relationships: [];
       };
       inventory_locations: {
@@ -514,7 +526,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["inventory_locations"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["inventory_locations"]["Insert"]
+        >;
         Relationships: [];
       };
       stock_items: {
@@ -578,7 +592,9 @@ export interface Database {
           created_by?: string | null;
           created_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["stock_movements"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["stock_movements"]["Insert"]
+        >;
         Relationships: [];
       };
       profiles: {
@@ -816,7 +832,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["payment_methods"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["payment_methods"]["Insert"]
+        >;
         Relationships: [];
       };
       payments: {
@@ -866,7 +884,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["cash_registers"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["cash_registers"]["Insert"]
+        >;
         Relationships: [];
       };
       cash_sessions: {
@@ -898,7 +918,9 @@ export interface Database {
           created_at?: Datetime;
           updated_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["cash_sessions"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["cash_sessions"]["Insert"]
+        >;
         Relationships: [];
       };
       expenses: {
@@ -958,7 +980,9 @@ export interface Database {
           read_at?: Datetime | null;
           created_at?: Datetime;
         };
-        Update: Partial<Database["public"]["Tables"]["notifications"]["Insert"]>;
+        Update: Partial<
+          Database["public"]["Tables"]["notifications"]["Insert"]
+        >;
         Relationships: [];
       };
       audit_logs: {
@@ -1050,12 +1074,7 @@ export type SettingGroup =
   | "system";
 
 export type UnitCategory =
-  | "weight"
-  | "volume"
-  | "quantity"
-  | "length"
-  | "packaging"
-  | "portion";
+  "weight" | "volume" | "quantity" | "length" | "packaging" | "portion";
 
 export type ProductType = "product" | "composite" | "service";
 export type YieldType = "exact_consumption" | "batch_yield" | "range_yield";
@@ -1082,11 +1101,7 @@ export type StockMovementType =
   | "opening";
 
 export type TableStatus =
-  | "available"
-  | "occupied"
-  | "reserved"
-  | "cleaning"
-  | "blocked";
+  "available" | "occupied" | "reserved" | "cleaning" | "blocked";
 
 export type OrderStatus =
   | "draft"

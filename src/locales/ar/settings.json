@@ -1,0 +1,179 @@
+{
+  "title": "الإعدادات",
+  "description": "إدارة المؤسسة والهوية البصرية والعملة والضرائب والوحدات.",
+  "breadcrumb": "الإعدادات",
+  "saveChanges": "حفظ التغييرات",
+  "saved": "تم حفظ الإعدادات",
+  "savedDesc": "تم تحديث الإعدادات.",
+  "demoTitle": "الوضع التوضيحي",
+  "demoDesc": "لم يتم تكوين Supabase بعد، لا يمكن حفظ التغييرات.",
+  "requiresConnection": "يتطلب اتصال Supabase",
+  "requiresConnectionDesc": "لا يمكن حفظ التغييرات بعد.",
+  "genericSave": "حفظ",
+  "navAria": "أقسام الإعدادات",
+
+  "nav": {
+    "general": "عام",
+    "branding": "الهوية البصرية",
+    "localization": "اللغة والمنطقة",
+    "currency": "العملة",
+    "taxes": "الضرائب",
+    "pos": "نقطة البيع",
+    "inventory": "المخزون",
+    "printing": "الطباعة",
+    "notifications": "الإشعارات"
+  },
+  "navDesc": {
+    "general": "معلومات المؤسسة والإيصالات",
+    "branding": "الشعار والأيقونة والألوان",
+    "localization": "اللغة والمنطقة والصيغ",
+    "currency": "العملة وصيغ الأرقام",
+    "taxes": "نسبة ضريبة القيمة المضافة",
+    "pos": "سلوك نقطة البيع",
+    "inventory": "قواعد إدارة المخزون",
+    "printing": "طباعة الإيصالات",
+    "notifications": "التنبيهات والإشعارات"
+  },
+
+  "general": {
+    "title": "المعلومات العامة",
+    "titleDesc": "بيانات الاتصال والمعرّفات الخاصة بالمؤسسة.",
+    "establishmentName": "اسم المؤسسة",
+    "legalName": "الاسم القانوني",
+    "registrationNumber": "رقم السجل التجاري",
+    "taxNumber": "الرقم الجبائي",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "website": "الموقع الإلكتروني",
+    "address": "العنوان",
+    "city": "المدينة",
+    "postalCode": "الرمز البريدي",
+    "country": "الدولة",
+    "tunisia": "تونس",
+    "receiptHeaderFooter": "ترويسة وتذييل الإيصال",
+    "receiptHeaderFooterDesc": "النص المعروض في أعلى وأسفل الإيصالات.",
+    "receiptHeader": "ترويسة الإيصال",
+    "receiptFooter": "تذييل الإيصال",
+    "headerHelp": "مثال: العنوان، الهاتف، ساعات العمل.",
+    "myCafe": "مقهى خاص بي"
+  },
+
+  "branding": {
+    "title": "الهوية البصرية",
+    "titleDesc": "يُخزَّن الشعار والأيقونة المصغرة في Supabase Storage. الصق أو ارفع صورك.",
+    "logo": "الشعار",
+    "favicon": "الأيقونة المصغرة",
+    "upload": "رفع ملف",
+    "uploadDesc": "سيتوفر الرفع إلى Supabase Storage بمجرد تكوين Supabase.",
+    "storageUrl": "رابط عام (Supabase Storage)",
+    "colors": "الألوان",
+    "colorsDesc": "تُطبَّق ديناميكيًا على نظام التصميم.",
+    "primary": "اللون الأساسي",
+    "secondary": "اللون الثانوي",
+    "accent": "لون التمييز",
+    "success": "نجاح",
+    "warning": "تحذير",
+    "danger": "خطر",
+    "darkMode": "الوضع الداكن",
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "اتبع النظام",
+    "preview": "معاينة"
+  },
+
+  "localization": {
+    "language": "اللغة",
+    "languageDesc": "اللغة الافتراضية واللغات المتاحة.",
+    "defaultLocale": "اللغة الافتراضية",
+    "rtl": "RTL",
+    "rtlHelp": "يتم تفعيل RTL تلقائيًا للعربية.",
+    "auto": "تلقائي",
+    "enabled": "مفعّل",
+    "disabled": "معطّل",
+    "availableLocales": "اللغات المتاحة",
+    "localesDesc": "مفصولة بفواصل.",
+    "francais": "Français",
+    "english": "English",
+    "arabic": "العربية",
+    "region": "المنطقة",
+    "regionDesc": "المنطقة الزمنية والصيغ.",
+    "timezone": "المنطقة الزمنية",
+    "firstDayOfWeek": "أول أيام الأسبوع",
+    "monday": "الإثنين",
+    "saturday": "السبت",
+    "sunday": "الأحد",
+    "dateFormat": "صيغة التاريخ",
+    "timeFormat": "صيغة الوقت"
+  },
+
+  "currency": {
+    "currency": "العملة",
+    "currencyDesc": "إعداد العملة المستخدمة في التطبيق.",
+    "code": "رمز العملة",
+    "symbol": "الرمز",
+    "position": "وضع الرمز",
+    "before": "قبل المبلغ",
+    "after": "بعد المبلغ",
+    "decimalPlaces": "عدد الخانات العشرية",
+    "thousandSeparator": "فاصل الآلاف",
+    "decimalSeparator": "فاصل عشري",
+    "preview": "معاينة"
+  },
+
+  "taxes": {
+    "taxes": "الضرائب / ضريبة القيمة المضافة",
+    "taxesDesc": "يُستخدم المعدل الافتراضي للمنتجات الجديدة. تُدار معدلات متعددة في قاعدة البيانات (0%، 7%، 13%، 19%).",
+    "defaultRate": "نسبة الضريبة الافتراضية (%)",
+    "default": "الافتراضي",
+    "zero": "ضريبة 0%",
+    "seven": "ضريبة 7%",
+    "thirteen": "ضريبة 13%",
+    "nineteen": "ضريبة 19%"
+  },
+
+  "pos": {
+    "title": "سلوك نقطة البيع",
+    "titleDesc": "خيارات وحدة نقطة البيع.",
+    "allowNegativeStock": "السماح بالمخزون السالب",
+    "allowNegativeStockDesc": "السماح ببيع منتج نفد من المخزون.",
+    "requireConfirmation": "طلب تأكيد الطلب",
+    "requireConfirmationDesc": "طلب تأكيد قبل إرسال الطلب إلى المطبخ.",
+    "allowDiscount": "السماح بالخصومات",
+    "allowDiscountDesc": "السماح بتطبيق خصومات على الطلب."
+  },
+
+  "inventory": {
+    "title": "قواعد المخزون",
+    "titleDesc": "إدارة المستويات والتنبيهات.",
+    "allowNegativeStock": "السماح بالمخزون السالب",
+    "allowNegativeStockDesc": "السماح بالحركات التي تجعل المخزون أقل من الصفر.",
+    "lowStockThreshold": "حد تنبيه انخفاض المخزون",
+    "thresholdHelp": "تنبيه عند انخفاض المخزون دون هذا الحد.",
+    "valuationMethod": "طريقة التقييم",
+    "averageCost": "متوسط التكلفة المرجحة",
+    "fifo": "الأقدم صدوراً (FIFO)"
+  },
+
+  "printing": {
+    "title": "طباعة الإيصالات",
+    "titleDesc": "إعدادات إيصال الكاشير.",
+    "receiptWidth": "عرض الإيصال (مم)",
+    "showTax": "عرض الضريبة",
+    "showTaxDesc": "عرض تفاصيل الضريبة على الإيصال.",
+    "showServer": "عرض النادل",
+    "showServerDesc": "عرض اسم النادل على الإيصال."
+  },
+
+  "notifications": {
+    "title": "الإشعارات",
+    "titleDesc": "اختر الأحداث التي تريد الإشعار بها.",
+    "stockAlerts": "تنبيهات المخزون",
+    "stockAlertsDesc": "الإشعار عندما يكون المخزون منخفضًا.",
+    "newOrders": "طلبات جديدة",
+    "newOrdersDesc": "الإشعار بالطلبات الجديدة الواردة.",
+    "cashRegister": "الصندوق",
+    "cashRegisterDesc": "الإشعار عند فتح/إغلاق الصندوق.",
+    "purchasing": "المشتريات",
+    "purchasingDesc": "الإشعار بالاستلام وأوامر الشراء."
+  }
+}

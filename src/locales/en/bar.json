@@ -1,0 +1,9 @@
+{
+  "title": "Bar",
+  "breadcrumb": "Bar",
+  "orders": "Active orders",
+  "preparing": "Preparing",
+  "ready": "Ready",
+  "serve": "Serve",
+  "noData": "No bar orders"
+}

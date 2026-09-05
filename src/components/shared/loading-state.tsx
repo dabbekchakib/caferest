@@ -1,4 +1,5 @@
 import { LoaderCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export interface LoadingStateProps {
@@ -6,15 +7,25 @@ export interface LoadingStateProps {
   className?: string;
 }
 
-export function LoadingState({ label = "Chargement...", className }: LoadingStateProps) {
+export function LoadingState({ label, className }: LoadingStateProps) {
+  const t = useTranslations("common");
+  const resolvedLabel = label ?? t("common.loading");
   return (
     <div
       role="status"
-      className={cn("flex flex-col items-center justify-center gap-3 py-16 text-center", className)}
-      aria-label={label}
+      className={cn(
+        "flex flex-col items-center justify-center gap-3 py-16 text-center",
+        className
+      )}
+      aria-label={resolvedLabel}
     >
-      <LoaderCircle className="size-8 animate-spin text-[var(--color-primary)]" aria-hidden />
-      <p className="text-sm text-[var(--color-muted-foreground)]">{label}</p>
+      <LoaderCircle
+        className="size-8 animate-spin text-[var(--color-primary)]"
+        aria-hidden
+      />
+      <p className="text-sm text-[var(--color-muted-foreground)]">
+        {resolvedLabel}
+      </p>
     </div>
   );
 }
@@ -27,7 +38,10 @@ export function TableSkeleton({ rows = 5 }: { rows?: number }) {
   return (
     <div className="space-y-3">
       {Array.from({ length: rows }).map((_, i) => (
-        <div key={i} className="h-11 rounded-lg bg-[var(--color-muted)] skeleton" />
+        <div
+          key={i}
+          className="h-11 rounded-lg bg-[var(--color-muted)] skeleton"
+        />
       ))}
     </div>
   );

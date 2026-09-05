@@ -32,7 +32,7 @@ import {
 } from "lucide-react";
 
 export interface NavItem {
-  title: string;
+  labelKey: string;
   href: string;
   icon: LucideIcon;
   badge?: string;
@@ -40,102 +40,116 @@ export interface NavItem {
 }
 
 export interface NavSection {
-  title: string;
+  labelKey: string;
   items: NavItem[];
 }
 
 export const navSections: NavSection[] = [
   {
-    title: "Général",
-    items: [{ title: "Dashboard", href: "/dashboard", icon: LayoutDashboard }],
-  },
-  {
-    title: "POS",
+    labelKey: "general",
     items: [
-      { title: "Nouvelle commande", href: "/pos", icon: ShoppingCart },
-      { title: "Commandes", href: "/orders", icon: ClipboardList, badge: "4" },
-      { title: "Tables", href: "/tables", icon: LayoutGrid },
-      { title: "Cuisine", href: "/kitchen", icon: CookingPot },
-      { title: "Bar", href: "/bar", icon: Martini },
+      { labelKey: "dashboard", href: "/dashboard", icon: LayoutDashboard },
     ],
   },
   {
-    title: "Ventes",
+    labelKey: "pos",
     items: [
-      { title: "Ventes", href: "/sales", icon: ReceiptText },
-      { title: "Tickets", href: "/tickets", icon: ListOrdered },
-      { title: "Paiements", href: "/payments", icon: Wallet },
-      { title: "Caisse", href: "/register", icon: Banknote },
+      { labelKey: "newOrder", href: "/pos", icon: ShoppingCart },
+      { labelKey: "orders", href: "/orders", icon: ClipboardList, badge: "4" },
+      { labelKey: "tables", href: "/tables", icon: LayoutGrid },
+      { labelKey: "kitchen", href: "/kitchen", icon: CookingPot },
+      { labelKey: "bar", href: "/bar", icon: Martini },
     ],
   },
   {
-    title: "Produits",
+    labelKey: "sales",
     items: [
-      { title: "Produits", href: "/products", icon: Package },
-      { title: "Catégories", href: "/categories", icon: FolderTree },
-      { title: "Recettes", href: "/recipes", icon: BookOpenText },
-      { title: "Rendements", href: "/yields", icon: Factory },
+      { labelKey: "salesReports", href: "/sales", icon: ReceiptText },
+      { labelKey: "tickets", href: "/tickets", icon: ListOrdered },
+      { labelKey: "payments", href: "/payments", icon: Wallet },
+      { labelKey: "cashRegister", href: "/register", icon: Banknote },
     ],
   },
   {
-    title: "Approvisionnement",
+    labelKey: "products",
     items: [
-      { title: "Fournisseurs", href: "/suppliers", icon: Truck },
-      { title: "Demandes d'achat", href: "/purchase-requests", icon: ClipboardPlus },
-      { title: "Commandes", href: "/purchase-orders", icon: ClipboardList },
-      { title: "Réceptions", href: "/receiving", icon: PackageCheck },
+      { labelKey: "products", href: "/products", icon: Package },
+      { labelKey: "categories", href: "/categories", icon: FolderTree },
+      { labelKey: "recipes", href: "/recipes", icon: BookOpenText },
+      { labelKey: "yields", href: "/yields", icon: Factory },
     ],
   },
   {
-    title: "Stock",
+    labelKey: "supply",
     items: [
-      { title: "Stock", href: "/inventory", icon: Boxes },
-      { title: "Mouvements", href: "/stock-movements", icon: ArrowLeftRight },
-      { title: "Inventaires", href: "/stock-counts", icon: ClipboardMinus },
-      { title: "Pertes", href: "/losses", icon: ClipboardMinus },
+      { labelKey: "suppliers", href: "/suppliers", icon: Truck },
+      {
+        labelKey: "purchaseRequests",
+        href: "/purchase-requests",
+        icon: ClipboardPlus,
+      },
+      {
+        labelKey: "purchaseOrders",
+        href: "/purchase-orders",
+        icon: ClipboardList,
+      },
+      { labelKey: "receiving", href: "/receiving", icon: PackageCheck },
     ],
   },
   {
-    title: "Clients",
+    labelKey: "stock",
     items: [
-      { title: "Clients", href: "/customers", icon: Users },
-      { title: "Fidélité", href: "/loyalty", icon: Sparkles },
+      { labelKey: "inventory", href: "/inventory", icon: Boxes },
+      {
+        labelKey: "stockMovements",
+        href: "/stock-movements",
+        icon: ArrowLeftRight,
+      },
+      { labelKey: "stockCounts", href: "/stock-counts", icon: ClipboardMinus },
+      { labelKey: "losses", href: "/losses", icon: ClipboardMinus },
     ],
   },
   {
-    title: "Rapports",
+    labelKey: "customers",
     items: [
-      { title: "Rapports", href: "/reports", icon: BarChart3 },
-      { title: "Analyses", href: "/analytics", icon: LineChart },
+      { labelKey: "customers", href: "/customers", icon: Users },
+      { labelKey: "loyalty", href: "/loyalty", icon: Sparkles },
     ],
   },
   {
-    title: "Administration",
+    labelKey: "reports",
     items: [
-      { title: "Utilisateurs", href: "/users", icon: UserCog },
-      { title: "Permissions", href: "/permissions", icon: ShieldCheck },
-      { title: "Journal", href: "/logs", icon: History },
+      { labelKey: "reports", href: "/reports", icon: BarChart3 },
+      { labelKey: "analytics", href: "/analytics", icon: LineChart },
     ],
   },
   {
-    title: "Système",
+    labelKey: "administration",
     items: [
-      { title: "Configuration", href: "/settings", icon: Settings },
-      { title: "Style Guide", href: "/style-guide", icon: BookMarked },
+      { labelKey: "users", href: "/users", icon: UserCog },
+      { labelKey: "permissions", href: "/permissions", icon: ShieldCheck },
+      { labelKey: "journal", href: "/logs", icon: History },
+    ],
+  },
+  {
+    labelKey: "system",
+    items: [
+      { labelKey: "settings", href: "/settings", icon: Settings },
+      { labelKey: "styleGuide", href: "/style-guide", icon: BookMarked },
     ],
   },
 ];
 
 export interface BottomNavItem {
-  title: string;
+  labelKey: string;
   href: string;
   icon: LucideIcon;
 }
 
 export const bottomNavItems: BottomNavItem[] = [
-  { title: "Accueil", href: "/dashboard", icon: LayoutDashboard },
-  { title: "POS", href: "/pos", icon: ShoppingCart },
-  { title: "Commandes", href: "/orders", icon: ClipboardList },
-  { title: "Stock", href: "/inventory", icon: Boxes },
-  { title: "Plus", href: "/menu", icon: LayoutGrid },
+  { labelKey: "home", href: "/dashboard", icon: LayoutDashboard },
+  { labelKey: "pos", href: "/pos", icon: ShoppingCart },
+  { labelKey: "orders", href: "/orders", icon: ClipboardList },
+  { labelKey: "inventory", href: "/inventory", icon: Boxes },
+  { labelKey: "more", href: "/menu", icon: LayoutGrid },
 ];

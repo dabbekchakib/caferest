@@ -1,0 +1,13 @@
+{
+  "title": "Tables",
+  "breadcrumb": "Tables",
+  "create": "New table",
+  "table": "Table",
+  "capacity": "Capacity",
+  "area": "Area",
+  "status": "Status",
+  "statusAvailable": "Available",
+  "statusOccupied": "Occupied",
+  "statusReserved": "Reserved",
+  "noData": "No tables"
+}

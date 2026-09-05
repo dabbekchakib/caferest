@@ -3,4 +3,5 @@ node_modules
 out
 build
 coverage
+dist-tests
 supabase/migrations

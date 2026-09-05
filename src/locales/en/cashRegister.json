@@ -1,0 +1,12 @@
+{
+  "title": "Cash register",
+  "breadcrumb": "Cash register",
+  "cashRegister": "Cash register",
+  "code": "Code",
+  "opening": "Opening float",
+  "closing": "Cash register closing",
+  "sessionOpened": "Session opened.",
+  "sessionClosed": "Cash register closed.",
+  "sessionValidated": "Today's session validated.",
+  "noData": "No sessions"
+}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 import { Coffee, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { navSections } from "@/lib/navigation";
 import { useAppStore } from "@/stores/use-app-store";
 import { useLockBody } from "@/hooks/use-lock-body";
@@ -24,6 +25,8 @@ export function MobileDrawer() {
   const open = useAppStore((state) => state.mobileNavOpen);
   const setOpen = useAppStore((state) => state.setMobileNavOpen);
   const pathname = usePathname();
+  const t = useTranslations("navigation");
+  const tc = useTranslations("common");
   useLockBody(open);
   const mounted = useMounted();
 
@@ -46,7 +49,7 @@ export function MobileDrawer() {
         )}
         role="dialog"
         aria-modal="true"
-        aria-label="Menu de navigation"
+        aria-label={t("mobileLabel")}
       >
         <div className="flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2.5">
@@ -54,27 +57,31 @@ export function MobileDrawer() {
               <Coffee className="size-5" aria-hidden />
             </span>
             <span className="text-lg font-bold">
-              Cafe<span className="text-[var(--color-sidebar-primary)]">Rest</span>
+              Cafe
+              <span className="text-[var(--color-sidebar-primary)]">Rest</span>
             </span>
           </div>
           <button
             type="button"
             onClick={() => setOpen(false)}
             className="rounded-lg p-2 text-[var(--color-sidebar-muted)] hover:bg-[var(--color-sidebar-accent)] hover:text-[var(--color-sidebar-foreground)]"
-            aria-label="Fermer le menu"
+            aria-label={tc("closeMenu")}
           >
             <X className="size-5" aria-hidden />
           </button>
         </div>
         <nav className="flex-1 space-y-5 overflow-y-auto px-3 py-4">
           {navSections.map((section) => (
-            <div key={section.title}>
+            <div key={section.labelKey}>
               <p className="mb-1.5 px-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-sidebar-muted)]">
-                {section.title}
+                {t(section.labelKey)}
               </p>
               <ul className="space-y-0.5">
                 {section.items.map((item) => {
-                  const active = pathname === item.href || (item.href !== "/dashboard" && pathname.startsWith(item.href));
+                  const active =
+                    pathname === item.href ||
+                    (item.href !== "/dashboard" &&
+                      pathname.startsWith(item.href));
                   return (
                     <li key={item.href}>
                       <Link
@@ -88,7 +95,7 @@ export function MobileDrawer() {
                         )}
                       >
                         <item.icon className="size-5 shrink-0" aria-hidden />
-                        <span className="flex-1">{item.title}</span>
+                        <span className="flex-1">{t(item.labelKey)}</span>
                         {item.badge && (
                           <span className="rounded-full bg-[var(--color-sidebar-primary)] px-2 py-0.5 text-[10px] font-semibold text-white">
                             {item.badge}

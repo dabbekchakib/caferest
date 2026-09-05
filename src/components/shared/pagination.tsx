@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export interface PaginationProps {
@@ -26,6 +27,7 @@ export function Pagination({
   pageSize,
   className,
 }: PaginationProps) {
+  const t = useTranslations("common");
   const visiblePages = (() => {
     const pages: (number | "...")[] = [];
     if (totalPages <= 7) return range(1, totalPages);
@@ -40,25 +42,40 @@ export function Pagination({
   })();
 
   return (
-    <div className={cn("flex flex-col items-center gap-3 sm:flex-row sm:justify-between", className)}>
+    <div
+      className={cn(
+        "flex flex-col items-center gap-3 sm:flex-row sm:justify-between",
+        className
+      )}
+    >
       {totalItems !== undefined && pageSize !== undefined && (
         <p className="text-sm text-[var(--color-muted-foreground)]">
-          Affichage {(page - 1) * pageSize + 1}–{Math.min(page * pageSize, totalItems)} sur {totalItems}
+          {t("pagination.showing", {
+            from: (page - 1) * pageSize + 1,
+            to: Math.min(page * pageSize, totalItems),
+            total: totalItems,
+          })}
         </p>
       )}
-      <nav aria-label="Pagination" className="flex items-center gap-1">
+      <nav
+        aria-label={t("pagination.label")}
+        className="flex items-center gap-1"
+      >
         <button
           type="button"
           onClick={() => onPageChange(page - 1)}
           disabled={page <= 1}
           className="inline-flex size-9 items-center justify-center rounded-lg text-sm text-[var(--color-muted-foreground)] transition-colors hover:bg-[var(--color-muted)] hover:text-[var(--color-foreground)] disabled:pointer-events-none disabled:opacity-40"
-          aria-label="Page précédente"
+          aria-label={t("pagination.previous")}
         >
           <ChevronLeft className="size-4 rtl:rotate-180" aria-hidden />
         </button>
         {visiblePages.map((p, i) =>
           p === "..." ? (
-            <span key={`dot-${i}`} className="px-1 text-sm text-[var(--color-muted-foreground)]">
+            <span
+              key={`dot-${i}`}
+              className="px-1 text-sm text-[var(--color-muted-foreground)]"
+            >
               …
             </span>
           ) : (
@@ -83,7 +100,7 @@ export function Pagination({
           onClick={() => onPageChange(page + 1)}
           disabled={page >= totalPages}
           className="inline-flex size-9 items-center justify-center rounded-lg text-sm text-[var(--color-muted-foreground)] transition-colors hover:bg-[var(--color-muted)] hover:text-[var(--color-foreground)] disabled:pointer-events-none disabled:opacity-40"
-          aria-label="Page suivante"
+          aria-label={t("pagination.next")}
         >
           <ChevronRight className="size-4 rtl:rotate-180" aria-hidden />
         </button>

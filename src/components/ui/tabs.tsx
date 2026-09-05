@@ -24,7 +24,13 @@ export interface TabsProps {
   children: ReactNode;
 }
 
-export function Tabs({ defaultValue, value, onValueChange, className, children }: TabsProps) {
+export function Tabs({
+  defaultValue,
+  value,
+  onValueChange,
+  className,
+  children,
+}: TabsProps) {
   const [internal, setInternal] = useState(defaultValue);
   const current = value ?? internal;
   const setValue = (v: string) => {
@@ -64,7 +70,12 @@ export interface TabsTriggerProps {
   disabled?: boolean;
 }
 
-export function TabsTrigger({ value, className, children, disabled }: TabsTriggerProps) {
+export function TabsTrigger({
+  value,
+  className,
+  children,
+  disabled,
+}: TabsTriggerProps) {
   const { value: current, setValue } = useTabsContext();
   const selected = current === value;
   return (

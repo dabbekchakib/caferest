@@ -1,0 +1,11 @@
+{
+  "title": "Customers",
+  "breadcrumb": "Customers",
+  "create": "New customer",
+  "firstName": "First name",
+  "lastName": "Last name",
+  "phone": "Phone",
+  "email": "Email",
+  "loyaltyPoints": "Loyalty points",
+  "noData": "No customers"
+}

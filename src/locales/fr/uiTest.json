@@ -1,0 +1,41 @@
+{
+  "title": "Test UI",
+  "title2": "Responsive Test",
+  "description": "Tester les points de rupture mobile, tablette et desktop, ainsi que RTL et dark mode.",
+  "breakpoints": {
+    "mobile320": "Mobile 320px",
+    "mobile375": "Mobile 375px",
+    "tablet": "Tablette 768px",
+    "desktop": "Desktop 1280px"
+  },
+  "notes": {
+    "rarelyUsed": "Rarement utilisé",
+    "iphone": "iPhone",
+    "posTerminal": "Terminal POS",
+    "standard": "Standard"
+  },
+  "responsiveElements": "Éléments responsives",
+  "responsiveHint": "Le layout doit s'adapter de 320px à 1920px sans casser, et rester lisible en dark mode.",
+  "tip": "Astuce : changez la taille de la fenêtre, activez le mode sombre via le bouton dans la topbar, et utilisez <code>devtools</code> dans les outils de développement pour tester RTL.",
+  "ok": "OK",
+  "ready": "Prêt",
+  "primary": "Primaire",
+  "outline": "Contour",
+  "danger": "Danger",
+  "success": "Succès",
+  "inProgress": "En cours",
+
+  "i18n": {
+    "title": "Démo internationalisation",
+    "description": "Aperçu des formats localisés (dates, nombres, devises, pluriels) et de la direction RTL selon la locale active.",
+    "localeLabel": "Locale active",
+    "directionLabel": "Direction",
+    "dateLabel": "Date",
+    "timeLabel": "Heure",
+    "numberLabel": "Nombre",
+    "currencyLabel": "Devise (TND)",
+    "pluralLabel": "Pluriels",
+    "quantityItem": "{count} article|{count} articles",
+    "switchLabel": "Basculer la langue via la topbar pour voir les formats changer sans rechargement."
+  }
+}

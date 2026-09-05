@@ -1,0 +1,16 @@
+{
+  "title": "أوامر الشراء",
+  "breadcrumb": "أوامر الشراء",
+  "purchaseOrder": "أمر الشراء",
+  "supplier": "المورد",
+  "reference": "المرجع",
+  "expectedDate": "تاريخ التسليم المتوقع",
+  "status": "الحالة",
+  "total": "المجموع",
+  "statusDraft": "مسودة",
+  "statusOrdered": "تم الطلب",
+  "statusReceived": "تم الاستلام",
+  "statusPartial": "تم الاستلام جزئياً",
+  "statusCancelled": "ملغى",
+  "noData": "لا توجد أوامر شراء"
+}

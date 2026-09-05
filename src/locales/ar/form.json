@@ -1,0 +1,19 @@
+{
+  "name": "الاسم",
+  "description": "الوصف",
+  "price": "السعر",
+  "quantity": "الكمية",
+  "unit": "الوحدة",
+  "category": "الفئة",
+  "supplier": "المورد",
+  "status": "الحالة",
+  "date": "التاريخ",
+  "phone": "الهاتف",
+  "email": "البريد الإلكتروني",
+  "address": "العنوان",
+  "city": "المدينة",
+  "country": "الدولة",
+  "labelRequired": "{label} (مطلوب)",
+  "placeholder": "بحث...",
+  "value": "القيمة"
+}

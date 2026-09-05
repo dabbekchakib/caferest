@@ -15,42 +15,42 @@ et sont la seule source de vérité (aucune table TypeScript uniquement).
 
 ## Tables (34)
 
-| Table | Rôle |
-|-------|------|
-| `establishments` | Établissements (multi-établissement) |
+| Table                   | Rôle                                     |
+| ----------------------- | ---------------------------------------- |
+| `establishments`        | Établissements (multi-établissement)     |
 | `establishment_members` | Appartenance utilisateur ↔ établissement |
-| `settings` | Configuration clé-valeur centralisée |
-| `locales` | Langues (fr, en, ar + RTL) |
-| `units` | Unités de mesure |
-| `unit_conversions` | Conversions (kg→g, L→ml, cl→ml) |
-| `categories` | Catégories hiérarchiques |
-| `taxes` | Taux de TVA configurables |
-| `products` | Produits vendus |
-| `ingredients` | Matières premières (stock) |
-| `recipes` | Recettes |
-| `recipe_items` | Ingrédients d'une recette |
-| `recipe_yields` | Rendement (min/std/max) |
-| `suppliers` | Fournisseurs |
-| `purchase_orders` | Commandes d'achat |
-| `purchase_order_items` | Lignes de commande d'achat |
-| `inventory_locations` | Emplacements de stock |
-| `stock_items` | Quantités par ingrédient/emplacement |
-| `stock_movements` | Mouvements de stock traçables |
-| `profiles` | Profils (liés à `auth.users`) |
-| `roles` | Rôles applicatifs |
-| `user_roles` | Rôles par utilisateur/établissement |
-| `dining_areas` | Zones de salle |
-| `tables` | Tables de salle |
-| `customers` | Clients |
-| `orders` | Commandes |
-| `order_items` | Lignes de commande |
-| `payment_methods` | Moyens de paiement |
-| `payments` | Paiements |
-| `cash_registers` | Caisses |
-| `cash_sessions` | Sessions de caisse |
-| `expenses` | Dépenses |
-| `notifications` | Notifications (Realtime) |
-| `audit_logs` | Journal d'audit (immutable) |
+| `settings`              | Configuration clé-valeur centralisée     |
+| `locales`               | Langues (fr, en, ar + RTL)               |
+| `units`                 | Unités de mesure                         |
+| `unit_conversions`      | Conversions (kg→g, L→ml, cl→ml)          |
+| `categories`            | Catégories hiérarchiques                 |
+| `taxes`                 | Taux de TVA configurables                |
+| `products`              | Produits vendus                          |
+| `ingredients`           | Matières premières (stock)               |
+| `recipes`               | Recettes                                 |
+| `recipe_items`          | Ingrédients d'une recette                |
+| `recipe_yields`         | Rendement (min/std/max)                  |
+| `suppliers`             | Fournisseurs                             |
+| `purchase_orders`       | Commandes d'achat                        |
+| `purchase_order_items`  | Lignes de commande d'achat               |
+| `inventory_locations`   | Emplacements de stock                    |
+| `stock_items`           | Quantités par ingrédient/emplacement     |
+| `stock_movements`       | Mouvements de stock traçables            |
+| `profiles`              | Profils (liés à `auth.users`)            |
+| `roles`                 | Rôles applicatifs                        |
+| `user_roles`            | Rôles par utilisateur/établissement      |
+| `dining_areas`          | Zones de salle                           |
+| `tables`                | Tables de salle                          |
+| `customers`             | Clients                                  |
+| `orders`                | Commandes                                |
+| `order_items`           | Lignes de commande                       |
+| `payment_methods`       | Moyens de paiement                       |
+| `payments`              | Paiements                                |
+| `cash_registers`        | Caisses                                  |
+| `cash_sessions`         | Sessions de caisse                       |
+| `expenses`              | Dépenses                                 |
+| `notifications`         | Notifications (Realtime)                 |
+| `audit_logs`            | Journal d'audit (immutable)              |
 
 ## Relations clés
 
@@ -99,6 +99,7 @@ est membre de l'établissement (via `user_roles`) **ou** est `super_admin`.
 Jamais `USING (true)` sur les données métier.
 
 Fonctions d'aide (dans `migrations/022_security_functions.sql`) :
+
 - `is_establishment_member(est_id)`
 - `has_role(est_id, role_code)`
 - `is_super_admin()`

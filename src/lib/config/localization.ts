@@ -17,8 +17,14 @@ export interface ResolvedLocalization {
 const RTL_LOCALES = new Set(["ar"]);
 
 /** Resolve localization settings and compute the effective RTL flag. */
-export function getLocalizationSettings(map: SettingsMap): ResolvedLocalization {
-  const defaultLocale = settingValue<string>(map, "localization.default_locale", "fr");
+export function getLocalizationSettings(
+  map: SettingsMap
+): ResolvedLocalization {
+  const defaultLocale = settingValue<string>(
+    map,
+    "localization.default_locale",
+    "fr"
+  );
   const rtlSetting = settingValue<string | boolean>(
     map,
     "localization.rtl_enabled",
@@ -50,10 +56,22 @@ export function getLocalizationSettings(map: SettingsMap): ResolvedLocalization 
     defaultLocale,
     availableLocales,
     timezone: settingValue<string>(map, "localization.timezone", "UTC"),
-    dateFormat: settingValue<string>(map, "localization.date_format", "DD/MM/YYYY"),
+    dateFormat: settingValue<string>(
+      map,
+      "localization.date_format",
+      "DD/MM/YYYY"
+    ),
     timeFormat: settingValue<string>(map, "localization.time_format", "HH:mm"),
-    numberFormat: settingValue<string>(map, "localization.number_format", "fr-TN"),
-    firstDayOfWeek: settingValue<number>(map, "localization.first_day_of_week", 1),
+    numberFormat: settingValue<string>(
+      map,
+      "localization.number_format",
+      "fr-TN"
+    ),
+    firstDayOfWeek: settingValue<number>(
+      map,
+      "localization.first_day_of_week",
+      1
+    ),
     rtl,
   };
 }

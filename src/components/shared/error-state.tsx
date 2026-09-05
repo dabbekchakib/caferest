@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { AlertTriangle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export interface ErrorStateProps {
@@ -10,11 +11,12 @@ export interface ErrorStateProps {
 }
 
 export function ErrorState({
-  title = "Une erreur est survenue",
-  description = "Impossible de charger les données. Veuillez réessayer.",
+  title,
+  description,
   action,
   className,
 }: ErrorStateProps) {
+  const t = useTranslations("common");
   return (
     <div
       role="alert"
@@ -27,8 +29,12 @@ export function ErrorState({
         <AlertTriangle className="size-7" aria-hidden />
       </div>
       <div className="space-y-1">
-        <h3 className="text-lg font-semibold text-[var(--color-danger)]">{title}</h3>
-        <p className="text-sm text-[var(--color-foreground)]">{description}</p>
+        <h3 className="text-lg font-semibold text-[var(--color-danger)]">
+          {title ?? t("error.title")}
+        </h3>
+        <p className="text-sm text-[var(--color-foreground)]">
+          {description ?? t("error.description")}
+        </p>
       </div>
       {action && <div className="mt-1">{action}</div>}
     </div>

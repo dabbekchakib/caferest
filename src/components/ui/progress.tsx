@@ -17,7 +17,17 @@ const variantMap = {
 } as const;
 
 const Progress = forwardRef<HTMLDivElement, ProgressProps>(
-  ({ className, value, max = 100, variant = "primary", classNameBar, ...props }, ref) => {
+  (
+    {
+      className,
+      value,
+      max = 100,
+      variant = "primary",
+      classNameBar,
+      ...props
+    },
+    ref
+  ) => {
     const percentage = Math.min(100, Math.max(0, (value / max) * 100));
     return (
       <div
@@ -26,11 +36,18 @@ const Progress = forwardRef<HTMLDivElement, ProgressProps>(
         aria-valuenow={value}
         aria-valuemin={0}
         aria-valuemax={max}
-        className={cn("h-2 w-full overflow-hidden rounded-full bg-[var(--color-muted)]", className)}
+        className={cn(
+          "h-2 w-full overflow-hidden rounded-full bg-[var(--color-muted)]",
+          className
+        )}
         {...props}
       >
         <div
-          className={cn("h-full rounded-full transition-all duration-300", variantMap[variant], classNameBar)}
+          className={cn(
+            "h-full rounded-full transition-all duration-300",
+            variantMap[variant],
+            classNameBar
+          )}
           style={{ width: `${percentage}%` }}
         />
       </div>

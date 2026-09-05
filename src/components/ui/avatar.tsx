@@ -20,7 +20,15 @@ const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(
   ({ className, src, alt = "", size = "md", fallback, ...props }, ref) => {
     if (src) {
       return (
-        <span ref={ref} className={cn("inline-flex shrink-0 overflow-hidden rounded-full", sizeMap[size], className)} {...props}>
+        <span
+          ref={ref}
+          className={cn(
+            "inline-flex shrink-0 overflow-hidden rounded-full",
+            sizeMap[size],
+            className
+          )}
+          {...props}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={src} alt={alt} className="size-full object-cover" />
         </span>

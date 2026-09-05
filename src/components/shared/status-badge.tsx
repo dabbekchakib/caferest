@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import type { BadgeProps } from "@/components/ui/badge";
 
-export type StatusVariant = "success" | "warning" | "danger" | "info" | "muted" | "primary";
+export type StatusVariant =
+  "success" | "warning" | "danger" | "info" | "muted" | "primary";
 
 export interface StatusBadgeProps {
   status: StatusVariant;

@@ -44,6 +44,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# compiled tests
+/dist-tests
+
 # IDE
 .vscode/
 .idea/

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export interface LineChartProps {
@@ -17,6 +18,7 @@ export function LineChart({
   color = "var(--color-primary)",
   fill = true,
 }: LineChartProps) {
+  const t = useTranslations("common");
   if (data.length < 2) return null;
   const width = 600;
   const padding = 8;
@@ -27,13 +29,18 @@ export function LineChart({
 
   const points = data.map((value, i) => {
     const x = padding + i * stepX;
-    const y = height - padding - ((value - min) / range) * (height - padding * 2);
+    const y =
+      height - padding - ((value - min) / range) * (height - padding * 2);
     return [x, y] as const;
   });
 
-  const linePath = points.map(([x, y], i) => `${i === 0 ? "M" : "L"} ${x} ${y}`).join(" ");
+  const linePath = points
+    .map(([x, y], i) => `${i === 0 ? "M" : "L"} ${x} ${y}`)
+    .join(" ");
   const areaPath = `${linePath} L ${points[points.length - 1][0]} ${height - padding} L ${points[0][0]} ${height - padding} Z`;
-  const gridLines = [0.25, 0.5, 0.75].map((f) => padding + f * (height - padding * 2));
+  const gridLines = [0.25, 0.5, 0.75].map(
+    (f) => padding + f * (height - padding * 2)
+  );
 
   return (
     <div className={cn("w-full", className)}>
@@ -42,7 +49,7 @@ export function LineChart({
         width="100%"
         height={height}
         role="img"
-        aria-label="Graphique en courbes"
+        aria-label={t("charts.line")}
       >
         <defs>
           <linearGradient id="cr-line-fill" x1="0" y1="0" x2="0" y2="1">
@@ -51,12 +58,34 @@ export function LineChart({
           </linearGradient>
         </defs>
         {gridLines.map((y, i) => (
-          <line key={i} x1={padding} y1={y} x2={width - padding} y2={y} stroke="var(--color-border)" strokeWidth="1" strokeDasharray="4 4" />
+          <line
+            key={i}
+            x1={padding}
+            y1={y}
+            x2={width - padding}
+            y2={y}
+            stroke="var(--color-border)"
+            strokeWidth="1"
+            strokeDasharray="4 4"
+          />
         ))}
         {fill && <path d={areaPath} fill="url(#cr-line-fill)" />}
-        <path d={linePath} fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path
+          d={linePath}
+          fill="none"
+          stroke={color}
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
         {points.map(([x, y], i) => (
-          <circle key={i} cx={x} cy={y} r={i === points.length - 1 ? 4 : 3} fill={color} />
+          <circle
+            key={i}
+            cx={x}
+            cy={y}
+            r={i === points.length - 1 ? 4 : 3}
+            fill={color}
+          />
         ))}
       </svg>
       {labels && (
@@ -78,8 +107,15 @@ export interface BarChartProps {
   color?: string;
 }
 
-export function BarChart({ data, labels, className, height = 200, color = "var(--color-primary)" }: BarChartProps) {
+export function BarChart({
+  data,
+  labels,
+  className,
+  height = 200,
+  color = "var(--color-primary)",
+}: BarChartProps) {
   const max = Math.max(...data) * 1.1;
+  const t = useTranslations("common");
   const barWidth = 60;
   const gap = 20;
   const totalWidth = data.length * (barWidth + gap);
@@ -87,13 +123,28 @@ export function BarChart({ data, labels, className, height = 200, color = "var(-
 
   return (
     <div className={cn("w-full", className)}>
-      <svg viewBox={`0 0 ${totalWidth} ${height}`} width="100%" height={height} role="img" aria-label="Graphique en barres">
+      <svg
+        viewBox={`0 0 ${totalWidth} ${height}`}
+        width="100%"
+        height={height}
+        role="img"
+        aria-label={t("charts.bar")}
+      >
         {data.map((value, i) => {
           const barHeight = (value / max) * barAreaHeight;
           const x = i * (barWidth + gap);
           const y = height - barHeight;
           return (
-            <rect key={i} x={x} y={y} width={barWidth} height={barHeight} rx="6" fill={color} opacity="0.85">
+            <rect
+              key={i}
+              x={x}
+              y={y}
+              width={barWidth}
+              height={barHeight}
+              rx="6"
+              fill={color}
+              opacity="0.85"
+            >
               <title>{value}</title>
             </rect>
           );
@@ -102,7 +153,11 @@ export function BarChart({ data, labels, className, height = 200, color = "var(-
       {labels && (
         <div className="mt-2 flex justify-between text-[10px] text-[var(--color-muted-foreground)]">
           {labels.map((label, i) => (
-            <span key={i} style={{ width: barWidth }} className="shrink-0 text-center">
+            <span
+              key={i}
+              style={{ width: barWidth }}
+              className="shrink-0 text-center"
+            >
               {label}
             </span>
           ))}

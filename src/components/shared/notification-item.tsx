@@ -28,17 +28,35 @@ export function NotificationItem({
       )}
     >
       {unread && (
-        <span className="absolute top-3 end-3 size-2 rounded-full bg-[var(--color-primary)]" aria-hidden />
+        <span
+          className="absolute top-3 end-3 size-2 rounded-full bg-[var(--color-primary)]"
+          aria-hidden
+        />
       )}
-      {icon && <div className="mt-0.5 shrink-0 text-[var(--color-muted-foreground)]">{icon}</div>}
+      {icon && (
+        <div className="mt-0.5 shrink-0 text-[var(--color-muted-foreground)]">
+          {icon}
+        </div>
+      )}
       <div className="min-w-0 flex-1 space-y-0.5">
-        <p className={cn("truncate text-sm", unread ? "font-semibold text-[var(--color-foreground)]" : "text-[var(--color-foreground)]")}>
+        <p
+          className={cn(
+            "truncate text-sm",
+            unread
+              ? "font-semibold text-[var(--color-foreground)]"
+              : "text-[var(--color-foreground)]"
+          )}
+        >
           {title}
         </p>
         {description && (
-          <p className="line-clamp-2 text-xs text-[var(--color-muted-foreground)]">{description}</p>
+          <p className="line-clamp-2 text-xs text-[var(--color-muted-foreground)]">
+            {description}
+          </p>
         )}
-        {time && <p className="text-xs text-[var(--color-muted-foreground)]">{time}</p>}
+        {time && (
+          <p className="text-xs text-[var(--color-muted-foreground)]">{time}</p>
+        )}
       </div>
       {action && <div className="shrink-0">{action}</div>}
     </div>

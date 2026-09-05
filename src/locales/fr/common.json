@@ -1,17 +1,109 @@
 {
   "app": {
     "name": "CafeRest",
-    "description": "Application POS/ERP pour cafes et restaurants"
+    "description": "Application POS/ERP pour cafés et restaurants"
   },
   "common": {
     "loading": "Chargement...",
     "error": "Une erreur est survenue",
     "save": "Enregistrer",
+    "saveChanges": "Enregistrer les modifications",
     "cancel": "Annuler",
     "delete": "Supprimer",
     "edit": "Modifier",
-    "create": "Creer",
+    "create": "Créer",
     "search": "Rechercher",
-    "noResults": "Aucun resultat"
-  }
+    "noResults": "Aucun résultat",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "confirm": "Confirmer",
+    "submit": "Envoyer",
+    "refresh": "Actualiser",
+    "export": "Exporter",
+    "viewAll": "Voir tout",
+    "none": "Aucun",
+    "yes": "Oui",
+    "no": "Non",
+    "today": "Aujourd'hui",
+    "status": "Statut",
+    "actions": "Actions",
+    "name": "Nom",
+    "date": "Date",
+    "quantity": "Quantité",
+    "total": "Total",
+    "price": "Prix",
+    "unit": "Unité",
+    "category": "Catégorie",
+    "supplier": "Fournisseur",
+    "type": "Type",
+    "all": "Tous",
+    "noData": "Aucune donnée disponible",
+    "loadingData": "Chargement...",
+    "language": "Changement de langue",
+    "taxRate": "TVA ({rate}%)",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "toggleSidebar": "Réduire / agrandir la sidebar",
+    "demo": "Démo CaféRest",
+    "demoPhase": "Phase 04 — Internationalisation"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "showing": "Affichage {from}-{to} sur {total}",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page {page}"
+  },
+  "table": {
+    "selectAll": "Tout sélectionner",
+    "selectRow": "Sélectionner la ligne",
+    "noData": "Aucune donnée."
+  },
+  "empty": {
+    "title": "Aucune donnée disponible",
+    "comingSoon": "Ce module sera développé dans une prochaine phase.",
+    "placeholder": "Ceci est un espace réservé. La fonctionnalité sera implémentée dans les phases suivantes.",
+    "notFound": "Aucun résultat trouvé"
+  },
+  "error": {
+    "title": "Une erreur est survenue",
+    "description": "Impossible de charger les données. Veuillez réessayer."
+  },
+  "connection": {
+    "online": "En ligne",
+    "offline": "Hors connexion",
+    "syncing": "Synchronisation..."
+  },
+  "breadcrumb": {
+    "home": "Accueil",
+    "ariaLabel": "Fil d'ariane"
+  },
+  "demo": {
+    "title": "Démo CaféRest",
+    "phase": "Phase 02 — Design System"
+  },
+  "status": {
+    "pending": "En attente",
+    "inProgress": "En cours",
+    "paid": "Payée",
+    "completed": "Terminé",
+    "failed": "Échec",
+    "cancelled": "Annulé",
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+  "theme": {
+    "ariaLabel": "Thème de l'interface",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "charts": {
+    "line": "Graphique en courbes",
+    "bar": "Graphique en barres"
+  },
+  "closeNotification": "Fermer la notification"
 }

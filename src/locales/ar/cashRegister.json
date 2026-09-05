@@ -1,0 +1,12 @@
+{
+  "title": "الصندوق",
+  "breadcrumb": "الصندوق",
+  "cashRegister": "الصندوق",
+  "code": "الرقم",
+  "opening": "رأس المال الافتتاحي",
+  "closing": "إقفال الصندوق",
+  "sessionOpened": "تم فتح الجلسة.",
+  "sessionClosed": "تم إقفال الصندوق.",
+  "sessionValidated": "تم التحقق من جلسة اليوم.",
+  "noData": "لا توجد جلسات"
+}

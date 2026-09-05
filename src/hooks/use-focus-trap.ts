@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, type RefObject } from "react";
 
-export function useFocusTrap<T extends HTMLElement = HTMLElement>(): RefObject<T | null> {
+export function useFocusTrap<
+  T extends HTMLElement = HTMLElement,
+>(): RefObject<T | null> {
   const ref = useRef<T>(null);
 
   useEffect(() => {

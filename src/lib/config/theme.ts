@@ -17,7 +17,9 @@ export function getThemeSettings(map: SettingsMap): ResolvedTheme {
 }
 
 /** Map a ResolvedTheme object to CSS custom properties applied on :root. */
-export function themeToCssVariables(theme: ResolvedTheme): Record<string, string> {
+export function themeToCssVariables(
+  theme: ResolvedTheme
+): Record<string, string> {
   return {
     "--color-primary": theme.primaryColor,
     "--color-secondary": theme.secondaryColor,

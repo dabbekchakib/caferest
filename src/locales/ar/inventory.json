@@ -1,0 +1,14 @@
+{
+  "title": "المخزون",
+  "breadcrumb": "المخزون",
+  "lowStock": "مخزون منخفض",
+  "lowStockDesc": "تنبيه عند انخفاض المخزون عن هذا الحد.",
+  "valuationMethod": "طريقة التقييم",
+  "averageCost": "متوسط التكلفة المرجحة",
+  "fifo": "الأقدم صدوراً (FIFO)",
+  "ingredient": "المكوّن",
+  "location": "الموقع",
+  "onHand": "المتوفر",
+  "reorderLevel": "حد إعادة الطلب",
+  "noData": "لا توجد مكونات"
+}

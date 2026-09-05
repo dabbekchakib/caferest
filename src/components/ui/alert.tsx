@@ -2,7 +2,10 @@ import { forwardRef, type HTMLAttributes } from "react";
 import { AlertCircle, CheckCircle2, Info, TriangleAlert } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, "title"> {
+export interface AlertProps extends Omit<
+  HTMLAttributes<HTMLDivElement>,
+  "title"
+> {
   variant?: "info" | "success" | "warning" | "danger";
   title?: React.ReactNode;
   action?: React.ReactNode;
@@ -50,11 +53,20 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>(
         )}
         {...props}
       >
-        <Icon className={cn("mt-0.5 size-5 shrink-0", config[variant].text)} aria-hidden />
+        <Icon
+          className={cn("mt-0.5 size-5 shrink-0", config[variant].text)}
+          aria-hidden
+        />
         <div className="flex flex-1 flex-col gap-1">
-          {title && <div className={cn("text-sm font-semibold", config[variant].text)}>{title}</div>}
+          {title && (
+            <div className={cn("text-sm font-semibold", config[variant].text)}>
+              {title}
+            </div>
+          )}
           {children && (
-            <div className="text-sm text-[var(--color-foreground)]">{children}</div>
+            <div className="text-sm text-[var(--color-foreground)]">
+              {children}
+            </div>
           )}
         </div>
         {action && <div className="shrink-0">{action}</div>}

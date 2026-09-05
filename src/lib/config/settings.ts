@@ -1,8 +1,5 @@
 import type { Json } from "@/types/database";
-import type {
-  SettingGroup,
-  SettingType,
-} from "@/types/database";
+import type { SettingGroup, SettingType } from "@/types/database";
 import type {
   SettingEntry,
   SettingsMap,
@@ -68,12 +65,11 @@ export function parseSettingValue(
 }
 
 /** Serialize a typed value back to its raw string for storage. */
-export function serializeSettingValue(
-  value: TypedSettingValue | Json
-): string {
+export function serializeSettingValue(value: TypedSettingValue | Json): string {
   if (typeof value === "boolean") return value ? "true" : "false";
   if (typeof value === "number") return String(value);
-  if (typeof value === "string" || typeof value === "bigint") return String(value);
+  if (typeof value === "string" || typeof value === "bigint")
+    return String(value);
   return JSON.stringify(value);
 }
 

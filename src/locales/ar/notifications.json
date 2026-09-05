@@ -1,0 +1,20 @@
+{
+  "title": "الإشعارات",
+  "productCreated": "تم إنشاء المنتج بنجاح.",
+  "productUpdated": "تم تعديل المنتج.",
+  "configurationSaved": "تم حفظ الإعدادات.",
+  "configurationSavedDesc": "تم تحديث الإعدادات.",
+  "lowStock": "المخزون منخفض.",
+  "orderCreated": "تم إنشاء الطلب.",
+  "orderCancelled": "تم إلغاء الطلب.",
+  "topbarTitle": "الإشعارات",
+  "newOrder": "طلب جديد #{number}",
+  "tableItems": "طاولة {table} — {count} عناصر|طاولة {table} — {count} عنصر",
+  "timeAgoMin": "منذ {min} دقيقة",
+  "timeAgoHour": "منذ ساعة",
+  "timeAgoHours": "منذ {hours} ساعات",
+  "lowStockEspresso": "مخزون منخفض: إسبريسو",
+  "unitRemaining": "متبقي {count} وحدات|متبقي {count} وحدة",
+  "cashRegisterClosed": "تم إقفال الصندوق",
+  "sessionValidated": "تم التحقق من جلسة اليوم"
+}

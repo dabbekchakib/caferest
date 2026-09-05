@@ -75,20 +75,18 @@ export async function upsertSetting(
       .eq("key", input.key);
   }
 
-  return client
-    .from("settings")
-    .upsert(
-      {
-        establishment_id: establishmentId,
-        key: input.key,
-        value: input.value,
-        type: input.type ?? "string",
-        group_name: input.group ?? "general",
-        description: input.description ?? null,
-        is_public: input.isPublic ?? false,
-      },
-      { onConflict: "establishment_id,key" }
-    );
+  return client.from("settings").upsert(
+    {
+      establishment_id: establishmentId,
+      key: input.key,
+      value: input.value,
+      type: input.type ?? "string",
+      group_name: input.group ?? "general",
+      description: input.description ?? null,
+      is_public: input.isPublic ?? false,
+    },
+    { onConflict: "establishment_id,key" }
+  );
 }
 
 /** Upsert many settings in a single transaction-aware batch. */
@@ -120,10 +118,7 @@ export async function updateEstablishment(
   establishmentId: string,
   patch: Partial<Database["public"]["Tables"]["establishments"]["Update"]>
 ) {
-  return client
-    .from("establishments")
-    .update(patch)
-    .eq("id", establishmentId);
+  return client.from("establishments").update(patch).eq("id", establishmentId);
 }
 
 export { parseSettingValue, serializeSettingValue };

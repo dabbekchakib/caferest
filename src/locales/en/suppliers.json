@@ -1,0 +1,11 @@
+{
+  "title": "Suppliers",
+  "breadcrumb": "Suppliers",
+  "create": "New supplier",
+  "name": "Name",
+  "code": "Code",
+  "phone": "Phone",
+  "email": "Email",
+  "address": "Address",
+  "noData": "No suppliers"
+}

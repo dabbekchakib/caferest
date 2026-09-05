@@ -1,0 +1,20 @@
+{
+  "title": "Notifications",
+  "productCreated": "Produit créé avec succès.",
+  "productUpdated": "Produit modifié.",
+  "configurationSaved": "Configuration enregistrée.",
+  "configurationSavedDesc": "Configuration mise à jour.",
+  "lowStock": "Stock faible.",
+  "orderCreated": "Commande créée.",
+  "orderCancelled": "Commande annulée.",
+  "topbarTitle": "Notifications",
+  "newOrder": "Nouvelle commande #{number}",
+  "tableItems": "Table {table} — {count} articles|Table {table} — {count} article",
+  "timeAgoMin": "Il y a {min} min",
+  "timeAgoHour": "Il y a 1 h",
+  "timeAgoHours": "Il y a {hours} h",
+  "lowStockEspresso": "Stock bas : Espresso",
+  "unitRemaining": "Il reste {count} unités|Il reste {count} unité",
+  "cashRegisterClosed": "Caisse clôturée",
+  "sessionValidated": "Session du jour validée"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "طلب جديد",
+  "customers": "{count} عميل واحد|{count} عملاء",
+  "change": "تغيير",
+  "release": "تحرير",
+  "activeOrder": "الطلب الحالي",
+  "itemCount": "{count} عنصر|{count} عناصر",
+  "addItemPlaceholder": "أضف عنصرًا...",
+  "selectProducts": "اختر المنتجات",
+  "decrease": "إنقاص",
+  "increase": "زيادة",
+  "remove": "إزالة",
+  "subtotal": "المجموع الفرعي",
+  "total": "الإجمالي",
+  "pay": "الدفع",
+  "all": "الكل",
+  "catCoffee": "القهوة",
+  "catDrinks": "المشروبات",
+  "catBar": "البار",
+  "catKitchen": "المطبخ",
+  "catDesserts": "الحلويات"
+}

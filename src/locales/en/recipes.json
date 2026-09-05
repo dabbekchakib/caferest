@@ -1,0 +1,12 @@
+{
+  "title": "Recipes",
+  "breadcrumb": "Recipes",
+  "create": "New recipe",
+  "name": "Name",
+  "product": "Product",
+  "yield": "Yield",
+  "yieldType": "Yield type",
+  "servings": "Servings",
+  "cost": "Cost",
+  "noData": "No recipes"
+}

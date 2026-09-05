@@ -2,6 +2,7 @@
 
 import { useState, type ReactNode } from "react";
 import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export interface Column<T> {
@@ -39,6 +40,7 @@ export function DataTable<T>({
   const [sortKey, setSortKey] = useState<string | null>(null);
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
   const [selected, setSelected] = useState<string[]>([]);
+  const t = useTranslations("common");
 
   const sorted = (() => {
     if (!sortKey) return data;
@@ -48,7 +50,8 @@ export function DataTable<T>({
     return [...data].sort((a, b) => {
       const va = col.sortValue!(a);
       const vb = col.sortValue!(b);
-      if (typeof va === "number" && typeof vb === "number") return (va - vb) * dir;
+      if (typeof va === "number" && typeof vb === "number")
+        return (va - vb) * dir;
       return String(va).localeCompare(String(vb)) * dir;
     });
   })();
@@ -66,7 +69,9 @@ export function DataTable<T>({
 
   function toggleRow(key: string) {
     setSelected((prev) => {
-      const next = prev.includes(key) ? prev.filter((k) => k !== key) : [...prev, key];
+      const next = prev.includes(key)
+        ? prev.filter((k) => k !== key)
+        : [...prev, key];
       onSelectionChange?.(next);
       return next;
     });
@@ -91,14 +96,17 @@ export function DataTable<T>({
                     checked={allSelected}
                     onChange={toggleAll}
                     className="size-4 accent-[var(--color-primary)]"
-                    aria-label="Tout sélectionner"
+                    aria-label={t("table.selectAll")}
                   />
                 </th>
               )}
               {columns.map((col) => (
                 <th
                   key={col.key}
-                  className={cn("px-4 py-3 text-start text-xs font-semibold uppercase tracking-wide text-[var(--color-muted-foreground)]", col.headerClassName)}
+                  className={cn(
+                    "px-4 py-3 text-start text-xs font-semibold uppercase tracking-wide text-[var(--color-muted-foreground)]",
+                    col.headerClassName
+                  )}
                 >
                   {col.sortable ? (
                     <button
@@ -114,7 +122,10 @@ export function DataTable<T>({
                           <ArrowDown className="size-3.5" aria-hidden />
                         )
                       ) : (
-                        <ArrowUpDown className="size-3.5 opacity-40" aria-hidden />
+                        <ArrowUpDown
+                          className="size-3.5 opacity-40"
+                          aria-hidden
+                        />
                       )}
                     </button>
                   ) : (
@@ -127,10 +138,13 @@ export function DataTable<T>({
           <tbody>
             {sorted.length === 0 ? (
               <tr>
-                <td colSpan={columns.length + (selectable ? 1 : 0)} className="p-4">
+                <td
+                  colSpan={columns.length + (selectable ? 1 : 0)}
+                  className="p-4"
+                >
                   {emptyState ?? (
                     <div className="py-8 text-center text-sm text-[var(--color-muted-foreground)]">
-                      Aucune donnée.
+                      {t("table.noData")}
                     </div>
                   )}
                 </td>
@@ -160,13 +174,19 @@ export function DataTable<T>({
                           onChange={() => toggleRow(key)}
                           onClick={(e) => e.stopPropagation()}
                           className="size-4 accent-[var(--color-primary)]"
-                          aria-label="Sélectionner la ligne"
+                          aria-label={t("table.selectRow")}
                         />
                       </td>
                     )}
                     {columns.map((col) =>
                       col.hideOnMobile ? null : (
-                        <td key={col.key} className={cn("px-4 py-3 align-middle", col.className)}>
+                        <td
+                          key={col.key}
+                          className={cn(
+                            "px-4 py-3 align-middle",
+                            col.className
+                          )}
+                        >
                           {col.accessor(row)}
                         </td>
                       )

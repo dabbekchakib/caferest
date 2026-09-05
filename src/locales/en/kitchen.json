@@ -1,0 +1,9 @@
+{
+  "title": "Kitchen",
+  "breadcrumb": "Kitchen",
+  "orders": "Active orders",
+  "preparing": "Preparing",
+  "ready": "Ready",
+  "serve": "Serve",
+  "noData": "No kitchen orders"
+}

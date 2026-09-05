@@ -8,6 +8,7 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { useFocusTrap } from "@/hooks/use-focus-trap";
 import { useLockBody } from "@/hooks/use-lock-body";
@@ -48,6 +49,7 @@ export function Dialog({
   closeOnOverlay = true,
 }: DialogProps) {
   const panelRef = useFocusTrap<HTMLDivElement>();
+  const t = useTranslations("common");
   useLockBody(open);
   const panelRefEl = useRef<HTMLDivElement | null>(null);
 
@@ -66,7 +68,11 @@ export function Dialog({
   }, [open, onOpenChange]);
 
   function handleOverlayClick(e: ReactMouseEvent) {
-    if (closeOnOverlay && panelRefEl.current && !panelRefEl.current.contains(e.target as Node)) {
+    if (
+      closeOnOverlay &&
+      panelRefEl.current &&
+      !panelRefEl.current.contains(e.target as Node)
+    ) {
       onOpenChange(false);
     }
   }
@@ -98,7 +104,9 @@ export function Dialog({
             <div className="space-y-1">
               {title && <h2 className="text-lg font-semibold">{title}</h2>}
               {description && (
-                <p className="text-sm text-[var(--color-muted-foreground)]">{description}</p>
+                <p className="text-sm text-[var(--color-muted-foreground)]">
+                  {description}
+                </p>
               )}
             </div>
             {!hideClose && (
@@ -106,7 +114,7 @@ export function Dialog({
                 type="button"
                 onClick={() => onOpenChange(false)}
                 className="rounded-md p-1.5 text-[var(--color-muted-foreground)] transition-colors hover:bg-[var(--color-muted)] hover:text-[var(--color-foreground)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-ring)]"
-                aria-label="Fermer"
+                aria-label={t("common.close")}
               >
                 <X className="size-5" aria-hidden />
               </button>
@@ -125,15 +133,26 @@ export function Dialog({
   );
 }
 
-export function DialogFooter({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
+export function DialogFooter({
+  className,
+  children,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={cn("mt-5 flex items-center justify-end gap-2", className)} {...props}>
+    <div
+      className={cn("mt-5 flex items-center justify-end gap-2", className)}
+      {...props}
+    >
       {children}
     </div>
   );
 }
 
-export function DialogContent({ className, children, ...props }: HTMLAttributes<HTMLDivElement>) {
+export function DialogContent({
+  className,
+  children,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) {
   return (
     <div className={cn("space-y-4", className)} {...props}>
       {children}

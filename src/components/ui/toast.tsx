@@ -1,8 +1,14 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { CheckCircle2, Info, TriangleAlert, X, XCircle } from "lucide-react";
-import { useToastStore, type Toast, type ToastVariant } from "@/stores/use-toast-store";
+import { useTranslations } from "next-intl";
+import {
+  useToastStore,
+  type Toast,
+  type ToastVariant,
+} from "@/stores/use-toast-store";
 import { cn } from "@/lib/utils";
 
 const config: Record<ToastVariant, { icon: typeof Info; classes: string }> = {
@@ -14,24 +20,34 @@ const config: Record<ToastVariant, { icon: typeof Info; classes: string }> = {
 
 function ToastItem({ toast }: { toast: Toast }) {
   const dismiss = useToastStore((state) => state.dismiss);
+  const t = useTranslations("common");
   const Icon = config[toast.variant].icon;
   return (
     <div
       className="pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-popover)] p-4 shadow-lg animate-slide-in-from-right rtl:animate-slide-in-from-left"
       role="alert"
     >
-      <Icon className={cn("mt-0.5 size-5 shrink-0", config[toast.variant].classes)} aria-hidden />
+      <Icon
+        className={cn("mt-0.5 size-5 shrink-0", config[toast.variant].classes)}
+        aria-hidden
+      />
       <div className="flex-1 space-y-0.5">
-        {toast.title && <p className="text-sm font-semibold text-[var(--color-foreground)]">{toast.title}</p>}
+        {toast.title && (
+          <p className="text-sm font-semibold text-[var(--color-foreground)]">
+            {toast.title}
+          </p>
+        )}
         {toast.description && (
-          <p className="text-sm text-[var(--color-muted-foreground)]">{toast.description}</p>
+          <p className="text-sm text-[var(--color-muted-foreground)]">
+            {toast.description}
+          </p>
         )}
       </div>
       <button
         type="button"
         onClick={() => dismiss(toast.id)}
         className="rounded p-1 text-[var(--color-muted-foreground)] transition-colors hover:bg-[var(--color-muted)] hover:text-[var(--color-foreground)]"
-        aria-label="Fermer la notification"
+        aria-label={t("closeNotification")}
       >
         <X className="size-4" aria-hidden />
       </button>
@@ -41,7 +57,13 @@ function ToastItem({ toast }: { toast: Toast }) {
 
 export function ToastViewport() {
   const toasts = useToastStore((state) => state.toasts);
-  if (typeof window === "undefined") return null;
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
+
+  if (!mounted) return null;
 
   return createPortal(
     <div

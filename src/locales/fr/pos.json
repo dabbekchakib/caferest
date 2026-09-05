@@ -1,0 +1,22 @@
+{
+  "title": "Nouvelle commande",
+  "customers": "{count} client|{count} clients",
+  "change": "Changer",
+  "release": "Libérer",
+  "activeOrder": "Commande en cours",
+  "itemCount": "{count} article|{count} articles",
+  "addItemPlaceholder": "Ajouter un article...",
+  "selectProducts": "Sélectionnez des produits",
+  "decrease": "Diminuer",
+  "increase": "Augmenter",
+  "remove": "Retirer",
+  "subtotal": "Sous-total",
+  "total": "TOTAL",
+  "pay": "Payer",
+  "all": "Tous",
+  "catCoffee": "Café",
+  "catDrinks": "Boissons",
+  "catBar": "Bar",
+  "catKitchen": "Cuisine",
+  "catDesserts": "Desserts"
+}

@@ -17,7 +17,17 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
-  ({ className, variant = "primary", size = "md", dot = false, children, ...props }, ref) => {
+  (
+    {
+      className,
+      variant = "primary",
+      size = "md",
+      dot = false,
+      children,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <span
         ref={ref}

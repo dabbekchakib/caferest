@@ -1,0 +1,179 @@
+{
+  "title": "Settings",
+  "description": "Manage your establishment, branding, currency, taxes, and modules.",
+  "breadcrumb": "Settings",
+  "saveChanges": "Save changes",
+  "saved": "Settings saved",
+  "savedDesc": "Settings updated.",
+  "demoTitle": "Demo mode",
+  "demoDesc": "Supabase is not configured yet, changes cannot be saved.",
+  "requiresConnection": "Supabase connection required",
+  "requiresConnectionDesc": "Changes cannot be saved yet.",
+  "genericSave": "Save",
+  "navAria": "Settings sections",
+
+  "nav": {
+    "general": "General",
+    "branding": "Branding",
+    "localization": "Language & region",
+    "currency": "Currency",
+    "taxes": "Taxes",
+    "pos": "POS",
+    "inventory": "Stock",
+    "printing": "Printing",
+    "notifications": "Notifications"
+  },
+  "navDesc": {
+    "general": "Establishment info and receipts",
+    "branding": "Logo, favicon, and colors",
+    "localization": "Language, timezone, and formats",
+    "currency": "Currency and number formats",
+    "taxes": "VAT rates",
+    "pos": "Point of sale behavior",
+    "inventory": "Stock management rules",
+    "printing": "Ticket printing",
+    "notifications": "Alerts and notifications"
+  },
+
+  "general": {
+    "title": "General information",
+    "titleDesc": "Establishment contact details and identifiers.",
+    "establishmentName": "Establishment name",
+    "legalName": "Legal name",
+    "registrationNumber": "Registration number",
+    "taxNumber": "Tax number",
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal code",
+    "country": "Country",
+    "tunisia": "Tunisia",
+    "receiptHeaderFooter": "Receipt header & footer",
+    "receiptHeaderFooterDesc": "Text displayed at the top and bottom of tickets.",
+    "receiptHeader": "Receipt header",
+    "receiptFooter": "Receipt footer",
+    "headerHelp": "e.g. address, phone, opening hours.",
+    "myCafe": "My Cafe"
+  },
+
+  "branding": {
+    "title": "Visual identity",
+    "titleDesc": "Logo and favicon are stored in Supabase Storage. Paste or upload your images.",
+    "logo": "Logo",
+    "favicon": "Favicon",
+    "upload": "Upload",
+    "uploadDesc": "Upload to Supabase Storage will be available once Supabase is configured.",
+    "storageUrl": "Public URL (Supabase Storage)",
+    "colors": "Colors",
+    "colorsDesc": "Applied dynamically to the design system.",
+    "primary": "Primary color",
+    "secondary": "Secondary color",
+    "accent": "Accent color",
+    "success": "Success",
+    "warning": "Warning",
+    "danger": "Danger",
+    "darkMode": "Dark mode",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "preview": "Preview"
+  },
+
+  "localization": {
+    "language": "Language",
+    "languageDesc": "Default language and available languages.",
+    "defaultLocale": "Default language",
+    "rtl": "RTL",
+    "rtlHelp": "RTL is enabled automatically for Arabic.",
+    "auto": "Automatic",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "availableLocales": "Available languages",
+    "localesDesc": "Separated by commas.",
+    "francais": "Français",
+    "english": "English",
+    "arabic": "العربية",
+    "region": "Region",
+    "regionDesc": "Timezone and formats.",
+    "timezone": "Timezone",
+    "firstDayOfWeek": "First day of the week",
+    "monday": "Monday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "dateFormat": "Date format",
+    "timeFormat": "Time format"
+  },
+
+  "currency": {
+    "currency": "Currency",
+    "currencyDesc": "Configuration of the currency used in the application.",
+    "code": "Currency code",
+    "symbol": "Symbol",
+    "position": "Symbol position",
+    "before": "Before amount",
+    "after": "After amount",
+    "decimalPlaces": "Decimal places",
+    "thousandSeparator": "Thousands separator",
+    "decimalSeparator": "Decimal separator",
+    "preview": "Preview"
+  },
+
+  "taxes": {
+    "taxes": "Taxes / VAT",
+    "taxesDesc": "The default rate is used for new products. Multiple rates are managed in the database (0%, 7%, 13%, 19%).",
+    "defaultRate": "Default VAT rate (%)",
+    "default": "default",
+    "zero": "VAT 0%",
+    "seven": "VAT 7%",
+    "thirteen": "VAT 13%",
+    "nineteen": "VAT 19%"
+  },
+
+  "pos": {
+    "title": "POS behavior",
+    "titleDesc": "Options for the point of sale module.",
+    "allowNegativeStock": "Allow negative stock",
+    "allowNegativeStockDesc": "Allow selling a product that is out of stock.",
+    "requireConfirmation": "Require order confirmation",
+    "requireConfirmationDesc": "Ask for confirmation before sending the order to the kitchen.",
+    "allowDiscount": "Allow discounts",
+    "allowDiscountDesc": "Allow applying discounts to the order."
+  },
+
+  "inventory": {
+    "title": "Stock rules",
+    "titleDesc": "Manage levels and alerts.",
+    "allowNegativeStock": "Allow negative stock",
+    "allowNegativeStockDesc": "Allow movements that bring stock below zero.",
+    "lowStockThreshold": "Low stock alert threshold",
+    "thresholdHelp": "Alert when stock drops below this threshold.",
+    "valuationMethod": "Valuation method",
+    "averageCost": "Weighted average cost",
+    "fifo": "FIFO"
+  },
+
+  "printing": {
+    "title": "Ticket printing",
+    "titleDesc": "Cash receipt settings.",
+    "receiptWidth": "Receipt width (mm)",
+    "showTax": "Show VAT",
+    "showTaxDesc": "Show tax details on the ticket.",
+    "showServer": "Show server",
+    "showServerDesc": "Show the server's name on the ticket."
+  },
+
+  "notifications": {
+    "title": "Notifications",
+    "titleDesc": "Choose which events to be notified about.",
+    "stockAlerts": "Stock alerts",
+    "stockAlertsDesc": "Notify when stock is low.",
+    "newOrders": "New orders",
+    "newOrdersDesc": "Notify about new incoming orders.",
+    "cashRegister": "Cash register",
+    "cashRegisterDesc": "Notify on cash register open/close.",
+    "purchasing": "Purchasing",
+    "purchasingDesc": "Notify about receiving and purchase orders."
+  }
+}
