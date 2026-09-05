@@ -29,6 +29,8 @@ import frUsers from "@/locales/fr/users.json";
 import frRoles from "@/locales/fr/roles.json";
 import frPermissions from "@/locales/fr/permissions.json";
 import frAuthorization from "@/locales/fr/authorization.json";
+import frUnits from "@/locales/fr/units.json";
+import frUnitConversions from "@/locales/fr/unitConversions.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -58,6 +60,8 @@ import enUsers from "@/locales/en/users.json";
 import enRoles from "@/locales/en/roles.json";
 import enPermissions from "@/locales/en/permissions.json";
 import enAuthorization from "@/locales/en/authorization.json";
+import enUnits from "@/locales/en/units.json";
+import enUnitConversions from "@/locales/en/unitConversions.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -87,6 +91,8 @@ import arUsers from "@/locales/ar/users.json";
 import arRoles from "@/locales/ar/roles.json";
 import arPermissions from "@/locales/ar/permissions.json";
 import arAuthorization from "@/locales/ar/authorization.json";
+import arUnits from "@/locales/ar/units.json";
+import arUnitConversions from "@/locales/ar/unitConversions.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -117,6 +123,8 @@ interface LocaleBundle {
   roles: MessageRecord;
   permissions: MessageRecord;
   authorization: MessageRecord;
+  units: MessageRecord;
+  unitConversions: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -148,6 +156,8 @@ const fr: LocaleBundle = {
   roles: frRoles,
   permissions: frPermissions,
   authorization: frAuthorization,
+  units: frUnits,
+  unitConversions: frUnitConversions,
 };
 
 const en: LocaleBundle = {
@@ -179,6 +189,8 @@ const en: LocaleBundle = {
   roles: enRoles,
   permissions: enPermissions,
   authorization: enAuthorization,
+  units: enUnits,
+  unitConversions: enUnitConversions,
 };
 
 const ar: LocaleBundle = {
@@ -210,6 +222,8 @@ const ar: LocaleBundle = {
   roles: arRoles,
   permissions: arPermissions,
   authorization: arAuthorization,
+  units: arUnits,
+  unitConversions: arUnitConversions,
 };
 
 export type MessagesBundle = typeof fr;

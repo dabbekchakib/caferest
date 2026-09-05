@@ -28,6 +28,8 @@
   "stockMovements": "Movements",
   "stockCounts": "Stock counts",
   "losses": "Losses",
+  "units": "Units",
+  "unitConversions": "Conversions",
   "loyalty": "Loyalty",
   "analytics": "Analytics",
   "users": "Users",

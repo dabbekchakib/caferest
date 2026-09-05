@@ -1,0 +1,66 @@
+{
+  "title": "Units",
+  "description": "Reference of measuring, service and packaging units",
+  "createButton": "New unit",
+  "searchPlaceholder": "Search units…",
+  "breadcrumb": "Units",
+  "fields": {
+    "name": "Name",
+    "namePlaceholder": "E.g. 75 cl bottle",
+    "symbol": "Symbol",
+    "symbolPlaceholder": "E.g. btl",
+    "type": "Type",
+    "description": "Description",
+    "descriptionPlaceholder": "Additional information…",
+    "precision": "Precision",
+    "precisionHint": "Number of decimal places shown for this unit.",
+    "isActive": "Active",
+    "isBase": "Base unit",
+    "baseHint": "Conversions are computed towards this unit."
+  },
+  "types": {
+    "all": "All types",
+    "mass": "Mass",
+    "volume": "Volume",
+    "count": "Quantity",
+    "service": "Service",
+    "custom": "Custom"
+  },
+  "badges": {
+    "system": "System",
+    "custom": "Custom",
+    "base": "Base",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "table": {
+    "unit": "Unit",
+    "symbol": "Symbol",
+    "type": "Type",
+    "precision": "Decimals",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "actions": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "toggle": "Enable / Disable"
+  },
+  "createTitle": "New unit",
+  "editTitle": "Edit unit",
+  "createSuccess": "Unit created",
+  "updateSuccess": "Unit updated",
+  "toggleDialog": {
+    "activateTitle": "Enable unit",
+    "deactivateTitle": "Disable unit",
+    "confirm": "Confirm"
+  },
+  "deleteDialog": {
+    "title": "Delete unit",
+    "description": "This action cannot be undone.",
+    "confirm": "Delete"
+  },
+  "emptyTitle": "No units",
+  "emptyDescription": "Create your first custom unit to extend the reference.",
+  "systemHint": "System units (g, ml, kg…) are shared by every establishment and cannot be modified."
+}

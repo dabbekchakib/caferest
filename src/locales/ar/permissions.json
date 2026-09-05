@@ -29,7 +29,9 @@
     "customers": "العملاء",
     "reports": "التقارير",
     "notifications": "الإشعارات",
-    "audit": "سجل التدقيق"
+    "audit": "سجل التدقيق",
+    "units": "الوحدات",
+    "unit_conversions": "التحويلات"
   },
   "slugs": {
     "dashboard.view": "عرض لوحة التحكم",
@@ -87,6 +89,14 @@
     "reports.view": "عرض التقارير",
     "reports.export": "تصدير التقارير",
     "notifications.view": "عرض الإشعارات",
-    "audit_logs.view": "الاطلاع على سجل التدقيق"
+    "audit_logs.view": "الاطلاع على سجل التدقيق",
+    "units.view": "عرض الوحدات",
+    "units.create": "إنشاء الوحدات",
+    "units.update": "تعديل الوحدات",
+    "units.delete": "حذف الوحدات",
+    "unit_conversions.view": "عرض التحويلات",
+    "unit_conversions.create": "إنشاء التحويلات",
+    "unit_conversions.update": "تعديل التحويلات",
+    "unit_conversions.delete": "حذف التحويلات"
   }
 }

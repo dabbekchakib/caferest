@@ -1,0 +1,66 @@
+{
+  "title": "Unités",
+  "description": "Référentiel des unités de mesure, de service et de conditionnement",
+  "createButton": "Nouvelle unité",
+  "searchPlaceholder": "Rechercher une unité…",
+  "breadcrumb": "Unités",
+  "fields": {
+    "name": "Nom",
+    "namePlaceholder": "Ex. : Bouteille 75 cl",
+    "symbol": "Symbole",
+    "symbolPlaceholder": "Ex. : btl",
+    "type": "Type",
+    "description": "Description",
+    "descriptionPlaceholder": "Informations complémentaires…",
+    "precision": "Précision",
+    "precisionHint": "Nombre de décimales affichées pour cette unité.",
+    "isActive": "Active",
+    "isBase": "Unité de base",
+    "baseHint": "Les conversions sont calculées par rapport à cette unité."
+  },
+  "types": {
+    "all": "Tous les types",
+    "mass": "Masse",
+    "volume": "Volume",
+    "count": "Quantité",
+    "service": "Service",
+    "custom": "Personnalisé"
+  },
+  "badges": {
+    "system": "Système",
+    "custom": "Personnalisée",
+    "base": "Base",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "table": {
+    "unit": "Unité",
+    "symbol": "Symbole",
+    "type": "Type",
+    "precision": "Décimales",
+    "status": "État",
+    "actions": "Actions"
+  },
+  "actions": {
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "toggle": "Activer / Désactiver"
+  },
+  "createTitle": "Nouvelle unité",
+  "editTitle": "Modifier l'unité",
+  "createSuccess": "Unité créée",
+  "updateSuccess": "Unité modifiée",
+  "toggleDialog": {
+    "activateTitle": "Activer l'unité",
+    "deactivateTitle": "Désactiver l'unité",
+    "confirm": "Confirmer"
+  },
+  "deleteDialog": {
+    "title": "Supprimer l'unité",
+    "description": "Cette action est irréversible.",
+    "confirm": "Supprimer"
+  },
+  "emptyTitle": "Aucune unité",
+  "emptyDescription": "Créez votre première unité personnalisée pour étendre le référentiel.",
+  "systemHint": "Les unités du système (g, ml, kg…) sont partagées par tous les établissements et ne peuvent pas être modifiées."
+}

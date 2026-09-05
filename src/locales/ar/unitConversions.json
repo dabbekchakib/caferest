@@ -1,0 +1,52 @@
+{
+  "title": "التحويلات",
+  "description": "علاقات التحويل بين الوحدات",
+  "createButton": "تحويل جديد",
+  "searchPlaceholder": "البحث عن تحويل…",
+  "breadcrumb": "التحويلات",
+  "fields": {
+    "fromUnit": "الوحدة المصدر",
+    "toUnit": "الوحدة الهدف",
+    "factor": "المعامل",
+    "factorHint": "الوحدة المصدر الواحدة تساوي {factor} من الوحدات الهدف.",
+    "offset": "الإزاحة",
+    "offsetHint": "مخصصة للتحويلات الخطية فقط (مثال: درجة الحرارة).",
+    "isActive": "نشط"
+  },
+  "table": {
+    "conversion": "التحويل",
+    "factor": "المعامل",
+    "status": "الحالة",
+    "actions": "إجراءات"
+  },
+  "actions": {
+    "edit": "تعديل",
+    "delete": "حذف",
+    "toggle": "تفعيل / تعطيل"
+  },
+  "createTitle": "تحويل جديد",
+  "editTitle": "تعديل التحويل",
+  "createSuccess": "تم إنشاء التحويل",
+  "updateSuccess": "تم تعديل التحويل",
+  "toggleDialog": {
+    "activateTitle": "تفعيل التحويل",
+    "deactivateTitle": "تعطيل التحويل",
+    "confirm": "تأكيد"
+  },
+  "deleteDialog": {
+    "title": "حذف التحويل",
+    "description": "لا يمكن التراجع عن هذا الإجراء.",
+    "confirm": "حذف"
+  },
+  "emptyTitle": "لا توجد تحويلات",
+  "emptyDescription": "حدد أول علاقة بين وحدتين متوافقتين.",
+  "systemHint": "تحويلات النظام (كغ ↔ غ، ل ↔ مل…) مشتركة بين جميع المؤسسات.",
+  "badges": {
+    "system": "النظام",
+    "active": "نشط",
+    "inactive": "غير نشط"
+  },
+  "errors": {
+    "sameUnit": "يجب أن تختلف الوحدة المصدر عن الوحدة الهدف."
+  }
+}

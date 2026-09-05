@@ -27,6 +27,8 @@ export const PERMISSION_MODULES = [
   "reports",
   "notifications",
   "audit",
+  "units",
+  "unit_conversions",
 ] as const;
 
 export type PermissionModule = (typeof PERMISSION_MODULES)[number];
@@ -88,6 +90,14 @@ export const PERMISSION_SLUGS = [
   "reports.export",
   "notifications.view",
   "audit_logs.view",
+  "units.view",
+  "units.create",
+  "units.update",
+  "units.delete",
+  "unit_conversions.view",
+  "unit_conversions.create",
+  "unit_conversions.update",
+  "unit_conversions.delete",
 ] as const;
 
 export type PermissionSlug = (typeof PERMISSION_SLUGS)[number];
@@ -195,6 +205,14 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "reports.export",
     "notifications.view",
     "audit_logs.view",
+    "units.view",
+    "units.create",
+    "units.update",
+    "units.delete",
+    "unit_conversions.view",
+    "unit_conversions.create",
+    "unit_conversions.update",
+    "unit_conversions.delete",
   ],
   cashier: [
     "dashboard.view",
@@ -261,6 +279,8 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "purchases.receive",
     "reports.view",
     "notifications.view",
+    "units.view",
+    "unit_conversions.view",
   ],
   purchasing: [
     "dashboard.view",
@@ -277,6 +297,8 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "products.view",
     "reports.view",
     "notifications.view",
+    "units.view",
+    "unit_conversions.view",
   ],
   accountant: [
     "dashboard.view",

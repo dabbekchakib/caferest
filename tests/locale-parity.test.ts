@@ -18,6 +18,12 @@ import arPermissions from "../src/locales/ar/permissions.json";
 import frAuthorization from "../src/locales/fr/authorization.json";
 import enAuthorization from "../src/locales/en/authorization.json";
 import arAuthorization from "../src/locales/ar/authorization.json";
+import frUnits from "../src/locales/fr/units.json";
+import enUnits from "../src/locales/en/units.json";
+import arUnits from "../src/locales/ar/units.json";
+import frUnitConversions from "../src/locales/fr/unitConversions.json";
+import enUnitConversions from "../src/locales/en/unitConversions.json";
+import arUnitConversions from "../src/locales/ar/unitConversions.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -45,6 +51,8 @@ const namespaces = [
   ["roles", enRoles, frRoles, arRoles],
   ["permissions", enPermissions, frPermissions, arPermissions],
   ["authorization", enAuthorization, frAuthorization, arAuthorization],
+  ["units", enUnits, frUnits, arUnits],
+  ["unitConversions", enUnitConversions, frUnitConversions, arUnitConversions],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

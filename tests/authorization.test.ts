@@ -50,8 +50,8 @@ test("every slug follows <module>.<action> with a known module", () => {
 
 test("getPermissionsByModule covers every module and reuses the catalog", () => {
   const grouped = getPermissionsByModule();
-  for (const module of PERMISSION_MODULES) {
-    assert.ok(grouped[module].length >= 0, `missing module ${module}`);
+  for (const mod of PERMISSION_MODULES) {
+    assert.ok(grouped[mod].length >= 0, `missing module ${mod}`);
   }
   const flattened = Object.values(grouped).flat();
   assert.equal(flattened.length, PERMISSION_SLUGS.length - 1); // audit_logs.view is aliased

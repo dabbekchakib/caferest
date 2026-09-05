@@ -22,6 +22,7 @@
     "tests/**/*.ts",
     "src/lib/auth/*.ts",
     "src/lib/authorization/*.ts",
+    "src/lib/units/*.ts",
     "src/lib/validation/zod-resolver.ts",
     "src/validations/auth.ts"
   ]

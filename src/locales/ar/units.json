@@ -1,0 +1,66 @@
+{
+  "title": "الوحدات",
+  "description": "مرجع وحدات القياس والخدمة والتغليف",
+  "createButton": "وحدة جديدة",
+  "searchPlaceholder": "البحث عن وحدة…",
+  "breadcrumb": "الوحدات",
+  "fields": {
+    "name": "الاسم",
+    "namePlaceholder": "مثال: زجاجة 75 كل",
+    "symbol": "الرمز",
+    "symbolPlaceholder": "مثال: btl",
+    "type": "النوع",
+    "description": "الوصف",
+    "descriptionPlaceholder": "معلومات إضافية…",
+    "precision": "الدقة",
+    "precisionHint": "عدد الخانات العشرية المعروضة لهذه الوحدة.",
+    "isActive": "نشطة",
+    "isBase": "وحدة أساسية",
+    "baseHint": "تُحسب التحويلات نسبةً إلى هذه الوحدة."
+  },
+  "types": {
+    "all": "كل الأنواع",
+    "mass": "كتلة",
+    "volume": "حجم",
+    "count": "كمية",
+    "service": "خدمة",
+    "custom": "مخصصة"
+  },
+  "badges": {
+    "system": "النظام",
+    "custom": "مخصصة",
+    "base": "أساسية",
+    "active": "نشطة",
+    "inactive": "غير نشطة"
+  },
+  "table": {
+    "unit": "الوحدة",
+    "symbol": "الرمز",
+    "type": "النوع",
+    "precision": "الخانات العشرية",
+    "status": "الحالة",
+    "actions": "إجراءات"
+  },
+  "actions": {
+    "edit": "تعديل",
+    "delete": "حذف",
+    "toggle": "تفعيل / تعطيل"
+  },
+  "createTitle": "وحدة جديدة",
+  "editTitle": "تعديل الوحدة",
+  "createSuccess": "تم إنشاء الوحدة",
+  "updateSuccess": "تم تعديل الوحدة",
+  "toggleDialog": {
+    "activateTitle": "تفعيل الوحدة",
+    "deactivateTitle": "تعطيل الوحدة",
+    "confirm": "تأكيد"
+  },
+  "deleteDialog": {
+    "title": "حذف الوحدة",
+    "description": "لا يمكن التراجع عن هذا الإجراء.",
+    "confirm": "حذف"
+  },
+  "emptyTitle": "لا توجد وحدات",
+  "emptyDescription": "أنشئ أول وحدة مخصصة لتوسيع المرجع.",
+  "systemHint": "وحدات النظام (غ، مل، كغ…) مشتركة بين جميع المؤسسات ولا يمكن تعديلها."
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Conversions",
+  "description": "Relations de conversion entre unités",
+  "createButton": "Nouvelle conversion",
+  "searchPlaceholder": "Rechercher une conversion…",
+  "breadcrumb": "Conversions",
+  "fields": {
+    "fromUnit": "Unité source",
+    "toUnit": "Unité cible",
+    "factor": "Facteur",
+    "factorHint": "1 unité source vaut {factor} unités cibles.",
+    "offset": "Décalage",
+    "offsetHint": "Réservé aux conversions affines (ex. : température).",
+    "isActive": "Active"
+  },
+  "table": {
+    "conversion": "Conversion",
+    "factor": "Facteur",
+    "status": "État",
+    "actions": "Actions"
+  },
+  "actions": {
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "toggle": "Activer / Désactiver"
+  },
+  "createTitle": "Nouvelle conversion",
+  "editTitle": "Modifier la conversion",
+  "createSuccess": "Conversion créée",
+  "updateSuccess": "Conversion modifiée",
+  "toggleDialog": {
+    "activateTitle": "Activer la conversion",
+    "deactivateTitle": "Désactiver la conversion",
+    "confirm": "Confirmer"
+  },
+  "deleteDialog": {
+    "title": "Supprimer la conversion",
+    "description": "Cette action est irréversible.",
+    "confirm": "Supprimer"
+  },
+  "emptyTitle": "Aucune conversion",
+  "emptyDescription": "Définissez la première relation entre deux unités compatibles.",
+  "systemHint": "Les conversions du système (kg ↔ g, L ↔ ml…) sont partagées par tous les établissements.",
+  "badges": {
+    "system": "Système",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "errors": {
+    "sameUnit": "L'unité source et l'unité cible doivent être différentes."
+  }
+}

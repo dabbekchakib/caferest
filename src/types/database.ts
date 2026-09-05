@@ -134,22 +134,32 @@ export interface Database {
       units: {
         Row: {
           id: string;
-          establishment_id: string;
+          establishment_id: string | null;
           name: string;
           symbol: string;
           category: UnitCategory;
+          type: UnitType;
+          slug: string | null;
+          description: string | null;
           precision: number;
+          is_base: boolean;
+          is_system: boolean;
           is_active: boolean;
           created_at: Datetime;
           updated_at: Datetime;
         };
         Insert: {
           id?: string;
-          establishment_id: string;
+          establishment_id?: string | null;
           name: string;
           symbol: string;
           category?: UnitCategory;
+          type?: UnitType;
+          slug?: string | null;
+          description?: string | null;
           precision?: number;
+          is_base?: boolean;
+          is_system?: boolean;
           is_active?: boolean;
           created_at?: Datetime;
           updated_at?: Datetime;
@@ -160,17 +170,25 @@ export interface Database {
       unit_conversions: {
         Row: {
           id: string;
+          establishment_id: string | null;
           from_unit_id: string;
           to_unit_id: string;
           factor: number;
+          offset_value: number;
+          is_system: boolean;
+          is_active: boolean;
           created_at: Datetime;
           updated_at: Datetime;
         };
         Insert: {
           id?: string;
+          establishment_id?: string | null;
           from_unit_id: string;
           to_unit_id: string;
           factor?: number;
+          offset_value?: number;
+          is_system?: boolean;
+          is_active?: boolean;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
@@ -1175,6 +1193,13 @@ export type SettingGroup =
 
 export type UnitCategory =
   "weight" | "volume" | "quantity" | "length" | "packaging" | "portion";
+
+export type UnitType =
+  | "mass"
+  | "volume"
+  | "count"
+  | "service"
+  | "custom";
 
 export type ProductType = "product" | "composite" | "service";
 export type YieldType = "exact_consumption" | "batch_yield" | "range_yield";

@@ -29,7 +29,9 @@
     "customers": "Clients",
     "reports": "Rapports",
     "notifications": "Notifications",
-    "audit": "Journal"
+    "audit": "Journal",
+    "units": "Unités",
+    "unit_conversions": "Conversions"
   },
   "slugs": {
     "dashboard.view": "Voir le tableau de bord",
@@ -87,6 +89,14 @@
     "reports.view": "Voir les rapports",
     "reports.export": "Exporter les rapports",
     "notifications.view": "Voir les notifications",
-    "audit_logs.view": "Consulter le journal"
+    "audit_logs.view": "Consulter le journal",
+    "units.view": "Voir les unités",
+    "units.create": "Créer des unités",
+    "units.update": "Modifier des unités",
+    "units.delete": "Supprimer des unités",
+    "unit_conversions.view": "Voir les conversions",
+    "unit_conversions.create": "Créer des conversions",
+    "unit_conversions.update": "Modifier des conversions",
+    "unit_conversions.delete": "Supprimer des conversions"
   }
 }

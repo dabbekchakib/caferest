@@ -27,6 +27,14 @@ const AUDIT_ACTIONS = [
   "role.toggled",
   "role.permissions.updated",
   "establishment.switched",
+  "unit.created",
+  "unit.updated",
+  "unit.deleted",
+  "unit.toggled",
+  "unit_conversion.created",
+  "unit_conversion.updated",
+  "unit_conversion.deleted",
+  "unit_conversion.toggled",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];

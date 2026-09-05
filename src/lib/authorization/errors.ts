@@ -17,6 +17,11 @@ export const AUTHORIZATION_ERROR_CODES = {
   SELF_MODIFICATION: "SELF_MODIFICATION",
   ROLE_HIERARCHY: "ROLE_HIERARCHY",
   ROLE_SCOPE: "ROLE_SCOPE",
+  SYSTEM_UNIT_PROTECTED: "SYSTEM_UNIT_PROTECTED",
+  UNIT_SCOPE: "UNIT_SCOPE",
+  INCOMPATIBLE_UNITS: "INCOMPATIBLE_UNITS",
+  UNIT_IN_USE: "UNIT_IN_USE",
+  DUPLICATE_UNIT: "DUPLICATE_UNIT",
   GENERIC: "GENERIC",
 } as const;
 
@@ -36,6 +41,11 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     SELF_MODIFICATION: "authorization.errors.selfModification",
     ROLE_HIERARCHY: "authorization.errors.roleHierarchy",
     ROLE_SCOPE: "authorization.errors.roleScope",
+    SYSTEM_UNIT_PROTECTED: "authorization.errors.systemUnit",
+    UNIT_SCOPE: "authorization.errors.unitScope",
+    INCOMPATIBLE_UNITS: "authorization.errors.unitConversion",
+    UNIT_IN_USE: "authorization.errors.unitInUse",
+    DUPLICATE_UNIT: "authorization.errors.duplicateUnit",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -45,6 +55,8 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   system_role_protected: "SYSTEM_ROLE_PROTECTED",
   system_role_modification_protected: "SYSTEM_ROLE_PROTECTED",
   user_roles_role_scope_mismatch: "ROLE_SCOPE",
+  system_unit_protected: "SYSTEM_UNIT_PROTECTED",
+  unit_conversion_scope_mismatch: "UNIT_SCOPE",
 };
 
 export class AuthorizationError extends Error {

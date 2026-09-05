@@ -1,0 +1,52 @@
+{
+  "title": "Conversions",
+  "description": "Conversion relationships between units",
+  "createButton": "New conversion",
+  "searchPlaceholder": "Search conversions…",
+  "breadcrumb": "Conversions",
+  "fields": {
+    "fromUnit": "Source unit",
+    "toUnit": "Target unit",
+    "factor": "Factor",
+    "factorHint": "1 source unit equals {factor} target units.",
+    "offset": "Offset",
+    "offsetHint": "For affine conversions only (e.g. temperature).",
+    "isActive": "Active"
+  },
+  "table": {
+    "conversion": "Conversion",
+    "factor": "Factor",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "actions": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "toggle": "Enable / Disable"
+  },
+  "createTitle": "New conversion",
+  "editTitle": "Edit conversion",
+  "createSuccess": "Conversion created",
+  "updateSuccess": "Conversion updated",
+  "toggleDialog": {
+    "activateTitle": "Enable conversion",
+    "deactivateTitle": "Disable conversion",
+    "confirm": "Confirm"
+  },
+  "deleteDialog": {
+    "title": "Delete conversion",
+    "description": "This action cannot be undone.",
+    "confirm": "Delete"
+  },
+  "emptyTitle": "No conversions",
+  "emptyDescription": "Define the first relationship between two compatible units.",
+  "systemHint": "System conversions (kg ↔ g, L ↔ ml…) are shared by every establishment.",
+  "badges": {
+    "system": "System",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "errors": {
+    "sameUnit": "The source unit and the target unit must be different."
+  }
+}

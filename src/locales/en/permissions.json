@@ -29,7 +29,9 @@
     "customers": "Customers",
     "reports": "Reports",
     "notifications": "Notifications",
-    "audit": "Audit log"
+    "audit": "Audit log",
+    "units": "Units",
+    "unit_conversions": "Conversions"
   },
   "slugs": {
     "dashboard.view": "View dashboard",
@@ -87,6 +89,14 @@
     "reports.view": "View reports",
     "reports.export": "Export reports",
     "notifications.view": "View notifications",
-    "audit_logs.view": "View audit log"
+    "audit_logs.view": "View audit log",
+    "units.view": "View units",
+    "units.create": "Create units",
+    "units.update": "Update units",
+    "units.delete": "Delete units",
+    "unit_conversions.view": "View conversions",
+    "unit_conversions.create": "Create conversions",
+    "unit_conversions.update": "Update conversions",
+    "unit_conversions.delete": "Delete conversions"
   }
 }

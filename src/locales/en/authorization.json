@@ -10,6 +10,11 @@
     "selfModification": "You cannot modify your own account.",
     "roleHierarchy": "Cannot do that: the target role is equal to or higher than yours.",
     "roleScope": "This role does not belong to this establishment.",
+    "systemUnit": "System units cannot be modified.",
+    "unitScope": "This does not belong to the current establishment.",
+    "unitConversion": "Cannot convert between these units: incompatible types.",
+    "unitInUse": "Cannot delete this unit: it is used by conversions.",
+    "duplicateUnit": "A unit with this symbol already exists for this establishment.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

@@ -10,6 +10,11 @@
     "selfModification": "Vous ne pouvez pas modifier votre propre compte.",
     "roleHierarchy": "Impossible : le rôle cible est au même niveau ou supérieur au vôtre.",
     "roleScope": "Ce rôle n'appartient pas à cet établissement.",
+    "systemUnit": "Les unités du système ne peuvent pas être modifiées.",
+    "unitScope": "Ceci n'appartient pas à l'établissement courant.",
+    "unitConversion": "Conversion impossible entre ces unités : types incompatibles.",
+    "unitInUse": "Impossible de supprimer cette unité : elle est utilisée par des conversions.",
+    "duplicateUnit": "Une unité avec ce symbole existe déjà pour cet établissement.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

@@ -29,6 +29,7 @@ import {
   History,
   Settings,
   BookMarked,
+  Ruler,
 } from "lucide-react";
 
 export interface NavItem {
@@ -109,6 +110,18 @@ export const navSections: NavSection[] = [
       },
       { labelKey: "stockCounts", href: "/stock-counts", icon: ClipboardMinus },
       { labelKey: "losses", href: "/losses", icon: ClipboardMinus },
+      {
+        labelKey: "units",
+        href: "/units",
+        icon: Ruler,
+        permission: "units.view",
+      },
+      {
+        labelKey: "unitConversions",
+        href: "/unit-conversions",
+        icon: ArrowLeftRight,
+        permission: "unit_conversions.view",
+      },
     ],
   },
   {
