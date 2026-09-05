@@ -32,6 +32,9 @@ export const AUTHORIZATION_ERROR_CODES = {
   DUPLICATE_SKU: "DUPLICATE_SKU",
   DUPLICATE_BARCODE: "DUPLICATE_BARCODE",
   PRODUCT_IN_USE: "PRODUCT_IN_USE",
+  SYSTEM_INGREDIENT_PROTECTED: "SYSTEM_INGREDIENT_PROTECTED",
+  INGREDIENT_SLUG_EXISTS: "INGREDIENT_SLUG_EXISTS",
+  INGREDIENT_IN_USE: "INGREDIENT_IN_USE",
   GENERIC: "GENERIC",
 } as const;
 
@@ -66,6 +69,9 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     DUPLICATE_SKU: "authorization.errors.duplicateSku",
     DUPLICATE_BARCODE: "authorization.errors.duplicateBarcode",
     PRODUCT_IN_USE: "authorization.errors.productInUse",
+    SYSTEM_INGREDIENT_PROTECTED: "authorization.errors.systemIngredient",
+    INGREDIENT_SLUG_EXISTS: "authorization.errors.ingredientSlugExists",
+    INGREDIENT_IN_USE: "authorization.errors.ingredientInUse",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -83,6 +89,13 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   products_establishment_sku_key: "DUPLICATE_SKU",
   products_establishment_barcode_key: "DUPLICATE_BARCODE",
   products_establishment_slug_key: "PRODUCT_SLUG_EXISTS",
+  uq_ingredients_establishment_sku: "DUPLICATE_SKU",
+  ingredients_establishment_sku_key: "DUPLICATE_SKU",
+  uq_ingredients_establishment_barcode: "DUPLICATE_BARCODE",
+  ingredients_establishment_barcode_key: "DUPLICATE_BARCODE",
+  uq_ingredients_establishment_slug: "INGREDIENT_SLUG_EXISTS",
+  ingredients_establishment_slug_key: "INGREDIENT_SLUG_EXISTS",
+  system_ingredient_protected: "SYSTEM_INGREDIENT_PROTECTED",
 };
 
 export class AuthorizationError extends Error {

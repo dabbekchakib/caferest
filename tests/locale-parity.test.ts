@@ -30,6 +30,9 @@ import arCategories from "../src/locales/ar/categories.json";
 import frProducts from "../src/locales/fr/products.json";
 import enProducts from "../src/locales/en/products.json";
 import arProducts from "../src/locales/ar/products.json";
+import frIngredients from "../src/locales/fr/ingredients.json";
+import enIngredients from "../src/locales/en/ingredients.json";
+import arIngredients from "../src/locales/ar/ingredients.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -61,6 +64,7 @@ const namespaces = [
   ["unitConversions", enUnitConversions, frUnitConversions, arUnitConversions],
   ["categories", enCategories, frCategories, arCategories],
   ["products", enProducts, frProducts, arProducts],
+  ["ingredients", enIngredients, frIngredients, arIngredients],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

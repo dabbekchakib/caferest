@@ -52,6 +52,16 @@ const AUDIT_ACTIONS = [
   "product.reordered",
   "product.image_uploaded",
   "product.image_deleted",
+  "ingredient.created",
+  "ingredient.updated",
+  "ingredient.deleted",
+  "ingredient.activated",
+  "ingredient.deactivated",
+  "ingredient.stock_tracking_changed",
+  "ingredient.cost_changed",
+  "ingredient.reordered",
+  "ingredient.image_uploaded",
+  "ingredient.image_deleted",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];

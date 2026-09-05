@@ -25,6 +25,9 @@
     "duplicateSku": "Un produit avec ce SKU existe déjà pour cet établissement.",
     "duplicateBarcode": "Un produit avec ce code-barres existe déjà pour cet établissement.",
     "productInUse": "Impossible de supprimer ce produit : il est utilisé par d'autres éléments.",
+    "systemIngredient": "Les ingrédients système ne peuvent pas être modifiés.",
+    "ingredientSlugExists": "Un slug identique existe déjà pour un autre ingrédient.",
+    "ingredientInUse": "Impossible de supprimer cet ingrédient : il est utilisé par d'autres éléments.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

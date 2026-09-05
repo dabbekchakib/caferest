@@ -369,16 +369,24 @@ export interface Database {
           establishment_id: string;
           category_id: string | null;
           name: string;
+          slug: string;
           sku: string | null;
           barcode: string | null;
           description: string | null;
+          ingredient_type: IngredientType;
           base_unit_id: string | null;
           purchase_unit_id: string | null;
+          purchase_quantity: number;
+          purchase_cost: number;
+          waste_percentage: number;
+          image_url: string | null;
           minimum_stock: number;
           maximum_stock: number | null;
           reorder_point: number;
-          is_stockable: boolean;
+          is_stock_tracked: boolean;
           is_active: boolean;
+          is_system: boolean;
+          sort_order: number;
           created_at: Datetime;
           updated_at: Datetime;
         };
@@ -387,20 +395,50 @@ export interface Database {
           establishment_id: string;
           category_id?: string | null;
           name: string;
+          slug: string;
           sku?: string | null;
           barcode?: string | null;
           description?: string | null;
+          ingredient_type?: IngredientType;
           base_unit_id?: string | null;
           purchase_unit_id?: string | null;
+          purchase_quantity?: number;
+          purchase_cost?: number;
+          waste_percentage?: number;
+          image_url?: string | null;
           minimum_stock?: number;
           maximum_stock?: number | null;
           reorder_point?: number;
-          is_stockable?: boolean;
+          is_stock_tracked?: boolean;
           is_active?: boolean;
+          is_system?: boolean;
+          sort_order?: number;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
         Update: Partial<Database["public"]["Tables"]["ingredients"]["Insert"]>;
+        Relationships: [];
+      };
+      ingredient_translations: {
+        Row: {
+          id: string;
+          ingredient_id: string;
+          locale: string;
+          name: string;
+          description: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          ingredient_id: string;
+          locale: string;
+          name: string;
+          description?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<Database["public"]["Tables"]["ingredient_translations"]["Insert"]>;
         Relationships: [];
       };
       recipes: {
@@ -1268,6 +1306,12 @@ export type UnitType =
   | "custom";
 
 export type ProductType = "product" | "composite" | "service";
+export type IngredientType =
+  | "raw_material"
+  | "semi_finished"
+  | "packaged"
+  | "consumable"
+  | "other";
 export type YieldType = "exact_consumption" | "batch_yield" | "range_yield";
 
 export type PurchaseOrderStatus =
