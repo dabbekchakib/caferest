@@ -51,6 +51,15 @@ import frYieldConsumption from "@/locales/fr/yieldConsumption.json";
 import frYieldRange from "@/locales/fr/yieldRange.json";
 import frYieldBatch from "@/locales/fr/yieldBatch.json";
 import frYieldPortion from "@/locales/fr/yieldPortion.json";
+import frSupplierForm from "@/locales/fr/supplierForm.json";
+import frSupplierDetails from "@/locales/fr/supplierDetails.json";
+import frSupplierCatalog from "@/locales/fr/supplierCatalog.json";
+import frSupplierContacts from "@/locales/fr/supplierContacts.json";
+import frSupplierPricing from "@/locales/fr/supplierPricing.json";
+import frSupplierFilters from "@/locales/fr/supplierFilters.json";
+import frSupplierValidation from "@/locales/fr/supplierValidation.json";
+import frSupplierActions from "@/locales/fr/supplierActions.json";
+import frSupplierComparison from "@/locales/fr/supplierComparison.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -102,6 +111,15 @@ import enYieldConsumption from "@/locales/en/yieldConsumption.json";
 import enYieldRange from "@/locales/en/yieldRange.json";
 import enYieldBatch from "@/locales/en/yieldBatch.json";
 import enYieldPortion from "@/locales/en/yieldPortion.json";
+import enSupplierForm from "@/locales/en/supplierForm.json";
+import enSupplierDetails from "@/locales/en/supplierDetails.json";
+import enSupplierCatalog from "@/locales/en/supplierCatalog.json";
+import enSupplierContacts from "@/locales/en/supplierContacts.json";
+import enSupplierPricing from "@/locales/en/supplierPricing.json";
+import enSupplierFilters from "@/locales/en/supplierFilters.json";
+import enSupplierValidation from "@/locales/en/supplierValidation.json";
+import enSupplierActions from "@/locales/en/supplierActions.json";
+import enSupplierComparison from "@/locales/en/supplierComparison.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -153,6 +171,15 @@ import arYieldConsumption from "@/locales/ar/yieldConsumption.json";
 import arYieldRange from "@/locales/ar/yieldRange.json";
 import arYieldBatch from "@/locales/ar/yieldBatch.json";
 import arYieldPortion from "@/locales/ar/yieldPortion.json";
+import arSupplierForm from "@/locales/ar/supplierForm.json";
+import arSupplierDetails from "@/locales/ar/supplierDetails.json";
+import arSupplierCatalog from "@/locales/ar/supplierCatalog.json";
+import arSupplierContacts from "@/locales/ar/supplierContacts.json";
+import arSupplierPricing from "@/locales/ar/supplierPricing.json";
+import arSupplierFilters from "@/locales/ar/supplierFilters.json";
+import arSupplierValidation from "@/locales/ar/supplierValidation.json";
+import arSupplierActions from "@/locales/ar/supplierActions.json";
+import arSupplierComparison from "@/locales/ar/supplierComparison.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -205,6 +232,15 @@ interface LocaleBundle {
   yieldRange: MessageRecord;
   yieldBatch: MessageRecord;
   yieldPortion: MessageRecord;
+  supplierForm: MessageRecord;
+  supplierDetails: MessageRecord;
+  supplierCatalog: MessageRecord;
+  supplierContacts: MessageRecord;
+  supplierPricing: MessageRecord;
+  supplierFilters: MessageRecord;
+  supplierValidation: MessageRecord;
+  supplierActions: MessageRecord;
+  supplierComparison: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -258,6 +294,15 @@ const fr: LocaleBundle = {
   yieldRange: frYieldRange,
   yieldBatch: frYieldBatch,
   yieldPortion: frYieldPortion,
+  supplierForm: frSupplierForm,
+  supplierDetails: frSupplierDetails,
+  supplierCatalog: frSupplierCatalog,
+  supplierContacts: frSupplierContacts,
+  supplierPricing: frSupplierPricing,
+  supplierFilters: frSupplierFilters,
+  supplierValidation: frSupplierValidation,
+  supplierActions: frSupplierActions,
+  supplierComparison: frSupplierComparison,
 };
 
 const en: LocaleBundle = {
@@ -311,6 +356,15 @@ const en: LocaleBundle = {
   yieldRange: enYieldRange,
   yieldBatch: enYieldBatch,
   yieldPortion: enYieldPortion,
+  supplierForm: enSupplierForm,
+  supplierDetails: enSupplierDetails,
+  supplierCatalog: enSupplierCatalog,
+  supplierContacts: enSupplierContacts,
+  supplierPricing: enSupplierPricing,
+  supplierFilters: enSupplierFilters,
+  supplierValidation: enSupplierValidation,
+  supplierActions: enSupplierActions,
+  supplierComparison: enSupplierComparison,
 };
 
 const ar: LocaleBundle = {
@@ -364,6 +418,15 @@ const ar: LocaleBundle = {
   yieldRange: arYieldRange,
   yieldBatch: arYieldBatch,
   yieldPortion: arYieldPortion,
+  supplierForm: arSupplierForm,
+  supplierDetails: arSupplierDetails,
+  supplierCatalog: arSupplierCatalog,
+  supplierContacts: arSupplierContacts,
+  supplierPricing: arSupplierPricing,
+  supplierFilters: arSupplierFilters,
+  supplierValidation: arSupplierValidation,
+  supplierActions: arSupplierActions,
+  supplierComparison: arSupplierComparison,
 };
 
 export type MessagesBundle = typeof fr;

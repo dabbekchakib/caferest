@@ -1,0 +1,17 @@
+{
+  "title": "Supplier comparison",
+  "subtitle": "Compare the normalized cost of each ingredient across suppliers.",
+  "columns": {
+    "ingredient": "Ingredient",
+    "supplier": "Supplier",
+    "price": "Purchase price",
+    "perUnit": "per unit",
+    "normalizedCost": "Normalized cost",
+    "bestDeal": "Best price"
+  },
+  "noData": "Nothing to compare: add at least two catalog offers.",
+  "bestBadge": "Best price",
+  "same": "Equal prices",
+  "normalizedHint": "Cost per base unit of the ingredient.",
+  "currentSupplier": "Current supplier"
+}

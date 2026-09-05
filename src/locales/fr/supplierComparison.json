@@ -1,0 +1,17 @@
+{
+  "title": "Comparateur de fournisseurs",
+  "subtitle": "Comparez le coût normalisé de chaque ingrédient entre les fournisseurs.",
+  "columns": {
+    "ingredient": "Ingrédient",
+    "supplier": "Fournisseur",
+    "price": "Prix d'achat",
+    "perUnit": "unité",
+    "normalizedCost": "Coût normalisé",
+    "bestDeal": "Meilleur prix"
+  },
+  "noData": "Aucun élément à comparer : ajoutez au moins deux offres du catalogue.",
+"bestBadge": "Meilleur prix",
+  "same": "Prix égaux",
+  "normalizedHint": "Coût ramené à l'unité de base de l'ingrédient.",
+  "currentSupplier": "Fournisseur actuel"
+}

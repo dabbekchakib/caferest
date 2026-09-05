@@ -48,6 +48,15 @@ export const AUTHORIZATION_ERROR_CODES = {
   YIELD_UNITS_INCOMPATIBLE: "YIELD_UNITS_INCOMPATIBLE",
   YIELD_PERCENTAGE_INVALID: "YIELD_PERCENTAGE_INVALID",
   YIELD_MODEL_INCOMPLETE: "YIELD_MODEL_INCOMPLETE",
+  SUPPLIER_NOT_FOUND: "SUPPLIER_NOT_FOUND",
+  SUPPLIER_IN_USE: "SUPPLIER_IN_USE",
+  SUPPLIER_DUPLICATE_CODE: "SUPPLIER_DUPLICATE_CODE",
+  SUPPLIER_NO_CATALOG: "SUPPLIER_NO_CATALOG",
+  SUPPLIER_CONTACT_INVALID: "SUPPLIER_CONTACT_INVALID",
+  INGREDIENT_SUPPLIER_DUPLICATE: "INGREDIENT_SUPPLIER_DUPLICATE",
+  INGREDIENT_SUPPLIER_NOREFS: "INGREDIENT_SUPPLIER_NOREFS",
+  CROSS_ESTABLISHMENT_REFERENCE: "CROSS_ESTABLISHMENT_REFERENCE",
+  CURRENCY_REQUIRED: "CURRENCY_REQUIRED",
   GENERIC: "GENERIC",
 } as const;
 
@@ -98,6 +107,16 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     YIELD_UNITS_INCOMPATIBLE: "authorization.errors.yieldUnitsIncompatible",
     YIELD_PERCENTAGE_INVALID: "authorization.errors.yieldPercentageInvalid",
     YIELD_MODEL_INCOMPLETE: "authorization.errors.yieldModelIncomplete",
+    SUPPLIER_NOT_FOUND: "authorization.errors.supplierNotFound",
+    SUPPLIER_IN_USE: "authorization.errors.supplierInUse",
+    SUPPLIER_DUPLICATE_CODE: "authorization.errors.supplierDuplicateCode",
+    SUPPLIER_NO_CATALOG: "authorization.errors.supplierNoCatalog",
+    SUPPLIER_CONTACT_INVALID: "authorization.errors.supplierContactInvalid",
+    INGREDIENT_SUPPLIER_DUPLICATE:
+      "authorization.errors.ingredientSupplierDuplicate",
+    INGREDIENT_SUPPLIER_NOREFS: "authorization.errors.ingredientSupplierNoRefs",
+    CROSS_ESTABLISHMENT_REFERENCE: "authorization.errors.crossEstablishment",
+    CURRENCY_REQUIRED: "authorization.errors.currencyRequired",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -137,6 +156,14 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   recipe_yields_percentage_check: "YIELD_PERCENTAGE_INVALID",
   recipe_yields_order_check: "YIELD_RANGE_ORDER",
   recipe_yields_standard_range_check: "YIELD_RANGE_ORDER",
+  uq_suppliers_establishment_code: "SUPPLIER_DUPLICATE_CODE",
+  uq_supplier_contacts_active_primary: "SUPPLIER_CONTACT_INVALID",
+  uq_ingredient_suppliers_item: "INGREDIENT_SUPPLIER_DUPLICATE",
+  uq_ingredient_suppliers_preferred: "SUPPLIER_CONTACT_INVALID",
+  ingredient_suppliers_quantity_check: "INGREDIENT_SUPPLIER_NOREFS",
+  ingredient_suppliers_price_check: "INGREDIENT_SUPPLIER_NOREFS",
+  supplier_price_history_price_check: "INGREDIENT_SUPPLIER_NOREFS",
+  supplier_price_history_quantity_check: "INGREDIENT_SUPPLIER_NOREFS",
 };
 
 export class AuthorizationError extends Error {

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Search…",
+  "all": "All suppliers",
+  "activeOnly": "Active only",
+  "inactiveOnly": "Inactive only",
+  "preferredOnly": "Preferred suppliers",
+  "status": {
+    "all": "All statuses",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "clear": "Reset",
+  "filters": "Filters",
+  "sortBy": "Sort by",
+  "sortName": "Name",
+  "sortCode": "Code",
+  "sortCity": "City",
+  "sortPreferred": "Preferred",
+  "totalCount": "Total: {count}",
+  "catalogCount": "Catalog items"
+}

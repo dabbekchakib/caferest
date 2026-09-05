@@ -1,0 +1,20 @@
+{
+  "title": "Contacts",
+  "add": "Ajouter un contact",
+  "primary": "Principal",
+  "columns": {
+    "name": "Nom complet",
+    "jobTitle": "Fonction",
+    "email": "Email",
+    "phone": "Téléphone",
+    "mobile": "Mobile",
+    "status": "Statut"
+  },
+  "active": "Actif",
+  "inactive": "Inactif",
+  "noData": "Aucun contact associé à ce fournisseur.",
+  "removeTitle": "Supprimer le contact",
+  "removeBody": "Ce contact sera définitivement supprimé.",
+  "removed": "Contact supprimé.",
+  "saved": "Contact enregistré."
+}

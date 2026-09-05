@@ -28,8 +28,10 @@
     "src/lib/ingredients/*.ts",
     "src/lib/recipes/*.ts",
     "src/lib/yields/*.ts",
+    "src/lib/suppliers/*.ts",
     "src/validations/recipes.ts",
     "src/validations/yields.ts",
+    "src/validations/suppliers.ts",
     "src/lib/validation/zod-resolver.ts",
     "src/validations/auth.ts"
   ]

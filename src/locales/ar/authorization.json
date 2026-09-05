@@ -41,6 +41,15 @@
     "yieldUnitsIncompatible": "وحدتا المدخلات والمخرجات غير متوافقتين.",
     "yieldPercentageInvalid": "نسبة مردود غير صالحة (يجب أن تكون بين 0 و 100).",
     "yieldModelIncomplete": "نموذج المردود المحدد غير مكتمل.",
+    "supplierNotFound": "المورد غير موجود.",
+    "supplierInUse": "لا يمكن حذف هذا المورد: مُشار إليه في كتالوج الشراء.",
+    "supplierDuplicateCode": "يوجد بالفعل مورد بنفس هذا الكود لهذه المنشأة.",
+    "supplierNoCatalog": "لا يقدّم هذا المورد أي صنف في كتالوج الشراء.",
+    "supplierContactInvalid": "جهة اتصال غير صالحة أو تكرار غير مسموح به.",
+    "ingredientSupplierDuplicate": "هذا المورد مُدرج بالفعل لهذا المكوّن.",
+    "ingredientSupplierNoRefs": "مرجع كتالوج شراء غير صالح (كمية أو سعر أو وحدة غير صحيحة).",
+    "crossEstablishment": "مرجع محظور: العنصر ينتمي إلى منشأة أخرى.",
+    "currencyRequired": "العملة مطلوبة لهذه العملية.",
     "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
   },
   "switch": {

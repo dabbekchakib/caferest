@@ -1,0 +1,41 @@
+{
+  "title": "تفاصيل المورّد",
+  "tabs": {
+    "overview": "نظرة عامة",
+    "catalog": "كتالوج الشراء",
+    "contacts": "جهات الاتصال",
+    "pricing": "سجل الأسعار",
+    "comparison": "المقارنة"
+  },
+  "overview": {
+    "identification": "التعريف",
+    "contact": "جهة الاتصال",
+    "address": "العنوان",
+    "postal": "الرمز البريدي / الولاية / البلد",
+    "commercial": "البنود التجارية",
+    "taxIdentifier": "المعرّف الضريبي",
+    "registrationNumber": "رقم التسجيل",
+    "website": "الموقع الإلكتروني",
+    "phone": "الهاتف",
+    "mobile": "الجوال",
+    "email": "البريد الإلكتروني",
+    "contactPerson": "الشخص المسؤول",
+    "contactEmail": "بريد جهة الاتصال",
+    "contactPhone": "هاتف جهة الاتصال",
+    "paymentTerms": "شروط الدفع",
+    "defaultPaymentMethod": "طريقة الدفع",
+    "deliveryLeadTimeDays": "مدة التسليم",
+    "daysSuffix": "أيام",
+    "minimumOrderAmount": "الحد الأدنى للطلب",
+    "notes": "ملاحظات"
+  },
+  "catalogCount": "{count} صنف في الكتالوج",
+  "preferredBadge": "المورّد الرئيسي",
+  "inactiveBadge": "غير نشط",
+  "createdAt": "أُنشئ في {date}",
+  "lastUpdated": "آخر تحديث {date}",
+  "edit": "تعديل",
+  "noCatalog": "لا يقدّم هذا المورّد أي صنف.",
+  "noContacts": "لا توجد جهات اتصال مرتبطة.",
+  "noPricingHistory": "لا يوجد سجل أسعار."
+}

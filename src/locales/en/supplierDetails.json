@@ -1,0 +1,41 @@
+{
+  "title": "Supplier details",
+  "tabs": {
+    "overview": "Overview",
+    "catalog": "Purchase catalog",
+    "contacts": "Contacts",
+    "pricing": "Price history",
+    "comparison": "Comparison"
+  },
+  "overview": {
+    "identification": "Identification",
+    "contact": "Contact",
+    "address": "Address",
+    "postal": "Postal code / State / Country",
+    "commercial": "Commercial terms",
+    "taxIdentifier": "Tax identifier",
+    "registrationNumber": "Registration number",
+    "website": "Website",
+    "phone": "Phone",
+    "mobile": "Mobile",
+    "email": "Email",
+    "contactPerson": "Contact person",
+    "contactEmail": "Contact email",
+    "contactPhone": "Contact phone",
+    "paymentTerms": "Payment terms",
+    "defaultPaymentMethod": "Payment method",
+    "deliveryLeadTimeDays": "Delivery lead time",
+    "daysSuffix": "days",
+    "minimumOrderAmount": "Minimum order",
+    "notes": "Notes"
+  },
+  "catalogCount": "{count} catalog item(s)",
+  "preferredBadge": "Preferred supplier",
+  "inactiveBadge": "Inactive",
+  "createdAt": "Created on {date}",
+  "lastUpdated": "Updated on {date}",
+  "edit": "Edit",
+  "noCatalog": "No items offered by this supplier.",
+  "noContacts": "No associated contacts.",
+  "noPricingHistory": "No price history."
+}

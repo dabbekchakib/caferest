@@ -41,6 +41,15 @@
     "yieldUnitsIncompatible": "The input and output units are incompatible.",
     "yieldPercentageInvalid": "Invalid yield percentage (must be between 0 and 100).",
     "yieldModelIncomplete": "The selected yield model is incomplete.",
+    "supplierNotFound": "Supplier not found.",
+    "supplierInUse": "Cannot delete this supplier: it is referenced by the purchase catalog.",
+    "supplierDuplicateCode": "A supplier with this code already exists for this establishment.",
+    "supplierNoCatalog": "This supplier has no items in the purchase catalog.",
+    "supplierContactInvalid": "Invalid contact or duplicate not allowed.",
+    "ingredientSupplierDuplicate": "This supplier is already listed for this ingredient.",
+    "ingredientSupplierNoRefs": "Invalid purchase catalog reference (incorrect quantity, price or unit).",
+    "crossEstablishment": "Forbidden reference: the item belongs to another establishment.",
+    "currencyRequired": "A currency is required for this operation.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

@@ -15,7 +15,10 @@ import {
 } from "@/services/recipes-service";
 import { listCategories } from "@/services/categories-service";
 import { listUnits } from "@/services/units-service";
+import { getIngredientSuppliers, listSuppliers } from "@/services/suppliers-service";
+import { getConversionsCached } from "@/services/units-cache";
 import { IngredientDetail } from "@/features/ingredients/ingredient-detail";
+import { IngredientSuppliersSection } from "@/features/suppliers/ingredient-suppliers-section";
 import { ProductRecipeSection } from "@/features/recipes/product-recipe-section";
 import { resolveCategoryName } from "@/lib/categories/translations";
 import type { RecipeListViewItem } from "@/lib/recipes/types";
@@ -82,6 +85,39 @@ export default async function IngredientDetailPage({
   const unitLabel = (unit: { name: string; symbol: string | null } | undefined) =>
     unit ? (unit.symbol ? `${unit.name} (${unit.symbol})` : unit.name) : null;
 
+  let suppliersSection: React.ReactNode = null;
+  const canViewSuppliers = await hasPermission("suppliers.view");
+  if (canViewSuppliers) {
+    const [supplierItems, suppliers, units, conversions, canManageCatalog, canViewPrices, canUpdatePrices] =
+      await Promise.all([
+        getIngredientSuppliers(establishmentId, ingredient.id),
+        listSuppliers(establishmentId, { activeOnly: true }),
+        listUnits(establishmentId),
+        getConversionsCached(establishmentId),
+        hasPermission("suppliers.manage_catalog"),
+        hasPermission("suppliers.view_prices"),
+        hasPermission("suppliers.update_prices"),
+      ]);
+    suppliersSection = (
+      <IngredientSuppliersSection
+        ingredientId={ingredient.id}
+        baseUnitId={ingredient.base_unit_id}
+        baseUnitSymbol={baseUnit?.symbol ?? null}
+        items={supplierItems}
+        suppliers={suppliers.map((supplierRow) => ({
+          id: supplierRow.id,
+          name: supplierRow.name,
+          code: supplierRow.code,
+        }))}
+        units={units}
+        conversions={conversions}
+        canManageCatalog={canManageCatalog}
+        canViewPrices={canViewPrices}
+        canUpdatePrices={canUpdatePrices}
+      />
+    );
+  }
+
   return (
     <IngredientDetail
       ingredient={ingredient}
@@ -96,6 +132,7 @@ export default async function IngredientDetailPage({
       canUpdate={canUpdate}
       canDelete={canDelete}
       recipeSection={recipeSection}
+      suppliersSection={suppliersSection}
     />
   );
 }

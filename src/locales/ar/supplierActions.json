@@ -1,0 +1,22 @@
+{
+  "create": "إضافة",
+  "edit": "تعديل",
+  "delete": "حذف",
+  "activate": "تفعيل",
+  "deactivate": "تعطيل",
+  "view": "عرض",
+  "newCatalogItem": "إضافة إلى الكتالوج",
+  "save": "حفظ",
+  "cancel": "إلغاء",
+  "confirm": "تأكيد",
+  "deleted": "تم حذف المورّد.",
+  "softDeleted": "تم تعطيل المورّد (مُشار إليه في الكتالوج).",
+  "activated": "تم تفعيل المورّد.",
+  "deactivated": "تم تعطيل المورّد.",
+  "activationError": "ليست لديك صلاحية تفعيل/تعطيل الموردين.",
+  "deleteError": "تعذّر حذف هذا المورّد.",
+  "saveError": "تعذّر حفظ المورّد.",
+  "catalogError": "تعذّر تعديل الكتالوج.",
+  "priceError": "تعذّر تحديث السعر.",
+  "genericError": "حدث خطأ ما."
+}

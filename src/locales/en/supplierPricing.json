@@ -1,0 +1,22 @@
+{
+  "title": "Price history",
+  "currentPrice": "Current price",
+  "columns": {
+    "ingredient": "Ingredient",
+    "price": "Price",
+    "unit": "Unit",
+    "quantity": "Qty",
+    "validFrom": "Valid from",
+    "validUntil": "to",
+    "source": "Source",
+    "notes": "Notes"
+  },
+  "source": {
+    "initial": "Initial",
+    "updated": "Update",
+    "manual": "Manual"
+  },
+  "open": "Current",
+  "noData": "No price history.",
+  "historyHint": "The history is preserved: every price change closes the previous period and opens a new one. Prices are never overwritten."
+}

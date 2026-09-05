@@ -80,6 +80,20 @@ const AUDIT_ACTIONS = [
   "recipe_yield.activated",
   "recipe_yield.deactivated",
   "recipe_yield.calculated",
+  "supplier.created",
+  "supplier.updated",
+  "supplier.deleted",
+  "supplier.activated",
+  "supplier.deactivated",
+  "supplier.contact.created",
+  "supplier.contact.updated",
+  "supplier.contact.deleted",
+  "ingredient_supplier.created",
+  "ingredient_supplier.updated",
+  "ingredient_supplier.deleted",
+  "ingredient_supplier.preferred",
+  "supplier_price.created",
+  "supplier_price.updated",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];

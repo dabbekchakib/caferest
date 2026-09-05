@@ -1,0 +1,22 @@
+{
+  "create": "Ajouter",
+  "edit": "Modifier",
+  "delete": "Supprimer",
+  "activate": "Activer",
+  "deactivate": "Désactiver",
+  "view": "Consulter",
+  "newCatalogItem": "Ajouter au catalogue",
+  "save": "Enregistrer",
+  "cancel": "Annuler",
+  "confirm": "Confirmer",
+  "deleted": "Fournisseur supprimé.",
+  "softDeleted": "Fournisseur désactivé (référencé dans le catalogue).",
+  "activated": "Fournisseur activé.",
+  "deactivated": "Fournisseur désactivé.",
+  "activationError": "Vous n'avez pas la permission d'activer/désactiver les fournisseurs.",
+  "deleteError": "Impossible de supprimer ce fournisseur.",
+  "saveError": "Impossible d'enregistrer le fournisseur.",
+  "catalogError": "Impossible de modifier le catalogue.",
+  "priceError": "Impossible de mettre à jour le prix.",
+  "genericError": "Une erreur est survenue."
+}

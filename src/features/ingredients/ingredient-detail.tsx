@@ -27,6 +27,8 @@ interface IngredientDetailProps {
   canDelete: boolean;
   /** Recipes referencing this ingredient (server-rendered section). */
   recipeSection?: React.ReactNode;
+  /** Supplier catalog section for this ingredient. */
+  suppliersSection?: React.ReactNode;
 }
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
@@ -47,6 +49,7 @@ export function IngredientDetail({
   canUpdate,
   canDelete,
   recipeSection,
+  suppliersSection,
 }: IngredientDetailProps) {
   const t = useTranslations("ingredients");
   const tn = useTranslations("navigation");
@@ -146,6 +149,8 @@ export function IngredientDetail({
           )}
 
           {recipeSection}
+
+          {suppliersSection}
 
           <Card className="p-5">
             <h3 className="mb-2 text-sm font-semibold">{t("details.dates")}</h3>

@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "Rechercher…",
+  "all": "Tous les fournisseurs",
+  "activeOnly": "Actifs uniquement",
+  "inactiveOnly": "Inactifs uniquement",
+  "preferredOnly": "Fournisseurs principaux",
+  "status": {
+    "all": "Tous les statuts",
+    "active": "Actifs",
+    "inactive": "Inactifs"
+  },
+  "clear": "Réinitialiser",
+  "filters": "Filtres",
+  "sortBy": "Trier par",
+  "sortName": "Nom",
+  "sortCode": "Code",
+  "sortCity": "Ville",
+  "sortPreferred": "Fournisseur principal",
+  "totalCount": "Total : {count}",
+  "catalogCount": "Articles au catalogue"
+}

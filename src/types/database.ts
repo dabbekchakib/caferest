@@ -602,6 +602,26 @@ export interface Database {
           tax_identifier: string | null;
           notes: string | null;
           is_active: boolean;
+          legal_name: string | null;
+          registration_number: string | null;
+          mobile: string | null;
+          website: string | null;
+          address_line_1: string | null;
+          address_line_2: string | null;
+          postal_code: string | null;
+          city: string | null;
+          state: string | null;
+          country: string | null;
+          contact_person: string | null;
+          contact_email: string | null;
+          contact_phone: string | null;
+          payment_terms: string | null;
+          default_payment_method_id: string | null;
+          delivery_lead_time_days: number | null;
+          minimum_order_amount: number | null;
+          is_preferred: boolean;
+          created_by: string | null;
+          updated_by: string | null;
           created_at: Datetime;
           updated_at: Datetime;
         };
@@ -617,10 +637,156 @@ export interface Database {
           tax_identifier?: string | null;
           notes?: string | null;
           is_active?: boolean;
+          legal_name?: string | null;
+          registration_number?: string | null;
+          mobile?: string | null;
+          website?: string | null;
+          address_line_1?: string | null;
+          address_line_2?: string | null;
+          postal_code?: string | null;
+          city?: string | null;
+          state?: string | null;
+          country?: string | null;
+          contact_person?: string | null;
+          contact_email?: string | null;
+          contact_phone?: string | null;
+          payment_terms?: string | null;
+          default_payment_method_id?: string | null;
+          delivery_lead_time_days?: number | null;
+          minimum_order_amount?: number | null;
+          is_preferred?: boolean;
+          created_by?: string | null;
+          updated_by?: string | null;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
         Update: Partial<Database["public"]["Tables"]["suppliers"]["Insert"]>;
+        Relationships: [];
+      };
+      supplier_contacts: {
+        Row: {
+          id: string;
+          supplier_id: string;
+          first_name: string | null;
+          last_name: string | null;
+          job_title: string | null;
+          email: string | null;
+          phone: string | null;
+          mobile: string | null;
+          is_primary: boolean;
+          is_active: boolean;
+          created_by: string | null;
+          updated_by: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          supplier_id: string;
+          first_name?: string | null;
+          last_name?: string | null;
+          job_title?: string | null;
+          email?: string | null;
+          phone?: string | null;
+          mobile?: string | null;
+          is_primary?: boolean;
+          is_active?: boolean;
+          created_by?: string | null;
+          updated_by?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["supplier_contacts"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      ingredient_suppliers: {
+        Row: {
+          id: string;
+          establishment_id: string;
+          ingredient_id: string;
+          supplier_id: string;
+          supplier_sku: string | null;
+          supplier_barcode: string | null;
+          purchase_unit_id: string | null;
+          purchase_quantity: number;
+          purchase_price: number;
+          currency_code: string;
+          minimum_order_quantity: number | null;
+          lead_time_days: number | null;
+          is_preferred: boolean;
+          is_active: boolean;
+          valid_from: Datetime;
+          valid_until: Datetime | null;
+          notes: string | null;
+          created_by: string | null;
+          updated_by: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id: string;
+          ingredient_id: string;
+          supplier_id: string;
+          supplier_sku?: string | null;
+          supplier_barcode?: string | null;
+          purchase_unit_id?: string | null;
+          purchase_quantity?: number;
+          purchase_price?: number;
+          currency_code?: string;
+          minimum_order_quantity?: number | null;
+          lead_time_days?: number | null;
+          is_preferred?: boolean;
+          is_active?: boolean;
+          valid_from?: Datetime;
+          valid_until?: Datetime | null;
+          notes?: string | null;
+          created_by?: string | null;
+          updated_by?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["ingredient_suppliers"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      supplier_price_history: {
+        Row: {
+          id: string;
+          establishment_id: string;
+          ingredient_supplier_id: string;
+          purchase_price: number;
+          currency_code: string;
+          purchase_unit_id: string | null;
+          purchase_quantity: number;
+          valid_from: Datetime;
+          valid_until: Datetime | null;
+          source: string | null;
+          notes: string | null;
+          created_by: string | null;
+          created_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id: string;
+          ingredient_supplier_id: string;
+          purchase_price: number;
+          currency_code: string;
+          purchase_unit_id?: string | null;
+          purchase_quantity?: number;
+          valid_from?: Datetime;
+          valid_until?: Datetime | null;
+          source?: string | null;
+          notes?: string | null;
+          created_by?: string | null;
+          created_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["supplier_price_history"]["Insert"]
+        >;
         Relationships: [];
       };
       purchase_orders: {

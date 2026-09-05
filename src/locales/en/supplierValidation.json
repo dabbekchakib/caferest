@@ -1,0 +1,20 @@
+{
+  "nameRequired": "The supplier name is required.",
+  "emailInvalid": "Invalid email address.",
+  "phoneInvalid": "Invalid phone number.",
+  "websiteInvalid": "Invalid URL.",
+  "currencyRequired": "A currency is required.",
+  "pricePositive": "The purchase price must be positive or zero.",
+  "quantityPositive": "The quantity per purchase must be greater than zero.",
+  "purchaseUnitRequired": "A purchase unit is required to define a price.",
+  "ingredientRequired": "Select an ingredient.",
+  "supplierRequired": "Select a supplier.",
+  "contactEmailInvalid": "Invalid contact email.",
+  "contactPhoneInvalid": "Invalid contact phone.",
+  "leadTimePositive": "The delivery lead time must be positive or zero.",
+  "minimumOrderPositive": "The minimum order must be positive or zero.",
+  "duplicateSupplier": "This supplier already offers this ingredient.",
+  "crossEstablishment": "Forbidden reference: item from another establishment.",
+  "codeExists": "This code is already used in this establishment.",
+  "onePrimary": "Only one active primary contact is allowed."
+}

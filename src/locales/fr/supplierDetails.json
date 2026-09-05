@@ -1,0 +1,41 @@
+{
+  "title": "Détails du fournisseur",
+  "tabs": {
+    "overview": "Aperçu",
+    "catalog": "Catalogue d'achat",
+    "contacts": "Contacts",
+    "pricing": "Historique des prix",
+    "comparison": "Comparateur"
+  },
+  "overview": {
+    "identification": "Identification",
+    "contact": "Contact",
+    "address": "Adresse",
+    "postal": "Code postal / État / Pays",
+    "commercial": "Conditions commerciales",
+    "taxIdentifier": "Identifiant fiscal",
+    "registrationNumber": "Immatriculation",
+    "website": "Site web",
+    "phone": "Téléphone",
+    "mobile": "Mobile",
+    "email": "Email",
+    "contactPerson": "Personne de contact",
+    "contactEmail": "Email de contact",
+    "contactPhone": "Téléphone de contact",
+    "paymentTerms": "Conditions de paiement",
+    "defaultPaymentMethod": "Mode de paiement",
+    "deliveryLeadTimeDays": "Délai de livraison",
+    "daysSuffix": "jours",
+    "minimumOrderAmount": "Minimum de commande",
+    "notes": "Notes"
+  },
+  "catalogCount": "{count} article(s) au catalogue",
+  "preferredBadge": "Fournisseur principal",
+  "inactiveBadge": "Inactif",
+  "createdAt": "Créé le {date}",
+  "lastUpdated": "Mis à jour le {date}",
+  "edit": "Modifier",
+  "noCatalog": "Aucun article proposé par ce fournisseur.",
+  "noContacts": "Aucun contact associé.",
+  "noPricingHistory": "Aucun historique de prix."
+}

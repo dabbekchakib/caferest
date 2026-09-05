@@ -41,6 +41,15 @@
     "yieldUnitsIncompatible": "Les unités d'entrée et de sortie sont incompatibles.",
     "yieldPercentageInvalid": "Pourcentage de rendement invalide (doit être entre 0 et 100).",
     "yieldModelIncomplete": "Le modèle de rendement sélectionné est incomplet.",
+    "supplierNotFound": "Fournisseur introuvable.",
+    "supplierInUse": "Impossible de supprimer ce fournisseur : il est référencé par le catalogue d'achat.",
+    "supplierDuplicateCode": "Un fournisseur avec ce code existe déjà pour cet établissement.",
+    "supplierNoCatalog": "Ce fournisseur ne propose aucun article dans le catalogue.",
+    "supplierContactInvalid": "Contact invalide ou doublon non autorisé.",
+    "ingredientSupplierDuplicate": "Ce fournisseur est déjà référencé pour cet ingrédient.",
+    "ingredientSupplierNoRefs": "Référence invalide dans le catalogue d'achat (quantité, prix ou unité incorrects).",
+    "crossEstablishment": "Référence interdite : l'élément appartient à un autre établissement.",
+    "currencyRequired": "La devise est requise pour cette opération.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

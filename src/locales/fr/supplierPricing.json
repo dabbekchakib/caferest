@@ -1,0 +1,22 @@
+{
+  "title": "Historique des prix",
+  "currentPrice": "Prix actuel",
+  "columns": {
+    "ingredient": "Ingrédient",
+    "price": "Prix",
+    "unit": "Unité",
+    "quantity": "Qté",
+    "validFrom": "Valable du",
+    "validUntil": "au",
+    "source": "Source",
+    "notes": "Notes"
+  },
+  "source": {
+    "initial": "Initial",
+    "updated": "Mise à jour",
+    "manual": "Manuel"
+  },
+  "open": "En cours",
+  "noData": "Aucun historique de prix.",
+  "historyHint": "L'historique est conservé : chaque changement de prix clôt la période précédente et en ouvre une nouvelle. Les prix ne sont jamais écrasés."
+}

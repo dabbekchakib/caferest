@@ -1,0 +1,22 @@
+{
+  "create": "Add",
+  "edit": "Edit",
+  "delete": "Delete",
+  "activate": "Activate",
+  "deactivate": "Deactivate",
+  "view": "View",
+  "newCatalogItem": "Add to catalog",
+  "save": "Save",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "deleted": "Supplier deleted.",
+  "softDeleted": "Supplier deactivated (referenced in the catalog).",
+  "activated": "Supplier activated.",
+  "deactivated": "Supplier deactivated.",
+  "activationError": "You do not have permission to activate/deactivate suppliers.",
+  "deleteError": "Cannot delete this supplier.",
+  "saveError": "Cannot save the supplier.",
+  "catalogError": "Cannot update the catalog.",
+  "priceError": "Cannot update the price.",
+  "genericError": "Something went wrong."
+}

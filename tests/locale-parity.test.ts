@@ -93,6 +93,36 @@ import arYieldBatch from "../src/locales/ar/yieldBatch.json";
 import frYieldPortion from "../src/locales/fr/yieldPortion.json";
 import enYieldPortion from "../src/locales/en/yieldPortion.json";
 import arYieldPortion from "../src/locales/ar/yieldPortion.json";
+import frSuppliers from "../src/locales/fr/suppliers.json";
+import enSuppliers from "../src/locales/en/suppliers.json";
+import arSuppliers from "../src/locales/ar/suppliers.json";
+import frSupplierForm from "../src/locales/fr/supplierForm.json";
+import enSupplierForm from "../src/locales/en/supplierForm.json";
+import arSupplierForm from "../src/locales/ar/supplierForm.json";
+import frSupplierDetails from "../src/locales/fr/supplierDetails.json";
+import enSupplierDetails from "../src/locales/en/supplierDetails.json";
+import arSupplierDetails from "../src/locales/ar/supplierDetails.json";
+import frSupplierCatalog from "../src/locales/fr/supplierCatalog.json";
+import enSupplierCatalog from "../src/locales/en/supplierCatalog.json";
+import arSupplierCatalog from "../src/locales/ar/supplierCatalog.json";
+import frSupplierContacts from "../src/locales/fr/supplierContacts.json";
+import enSupplierContacts from "../src/locales/en/supplierContacts.json";
+import arSupplierContacts from "../src/locales/ar/supplierContacts.json";
+import frSupplierPricing from "../src/locales/fr/supplierPricing.json";
+import enSupplierPricing from "../src/locales/en/supplierPricing.json";
+import arSupplierPricing from "../src/locales/ar/supplierPricing.json";
+import frSupplierFilters from "../src/locales/fr/supplierFilters.json";
+import enSupplierFilters from "../src/locales/en/supplierFilters.json";
+import arSupplierFilters from "../src/locales/ar/supplierFilters.json";
+import frSupplierValidation from "../src/locales/fr/supplierValidation.json";
+import enSupplierValidation from "../src/locales/en/supplierValidation.json";
+import arSupplierValidation from "../src/locales/ar/supplierValidation.json";
+import frSupplierActions from "../src/locales/fr/supplierActions.json";
+import enSupplierActions from "../src/locales/en/supplierActions.json";
+import arSupplierActions from "../src/locales/ar/supplierActions.json";
+import frSupplierComparison from "../src/locales/fr/supplierComparison.json";
+import enSupplierComparison from "../src/locales/en/supplierComparison.json";
+import arSupplierComparison from "../src/locales/ar/supplierComparison.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -145,6 +175,16 @@ const namespaces = [
   ["yieldRange", enYieldRange, frYieldRange, arYieldRange],
   ["yieldBatch", enYieldBatch, frYieldBatch, arYieldBatch],
   ["yieldPortion", enYieldPortion, frYieldPortion, arYieldPortion],
+  ["suppliers", enSuppliers, frSuppliers, arSuppliers],
+  ["supplierForm", enSupplierForm, frSupplierForm, arSupplierForm],
+  ["supplierDetails", enSupplierDetails, frSupplierDetails, arSupplierDetails],
+  ["supplierCatalog", enSupplierCatalog, frSupplierCatalog, arSupplierCatalog],
+  ["supplierContacts", enSupplierContacts, frSupplierContacts, arSupplierContacts],
+  ["supplierPricing", enSupplierPricing, frSupplierPricing, arSupplierPricing],
+  ["supplierFilters", enSupplierFilters, frSupplierFilters, arSupplierFilters],
+  ["supplierValidation", enSupplierValidation, frSupplierValidation, arSupplierValidation],
+  ["supplierActions", enSupplierActions, frSupplierActions, arSupplierActions],
+  ["supplierComparison", enSupplierComparison, frSupplierComparison, arSupplierComparison],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

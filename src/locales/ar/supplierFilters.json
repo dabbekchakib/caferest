@@ -1,0 +1,21 @@
+{
+  "searchPlaceholder": "بحث…",
+  "all": "كل الموردين",
+  "activeOnly": "النشطون فقط",
+  "inactiveOnly": "غير النشطين فقط",
+  "preferredOnly": "الموردون الرئيسيون",
+  "status": {
+    "all": "كل الحالات",
+    "active": "نشط",
+    "inactive": "غير نشط"
+  },
+  "clear": "إعادة ضبط",
+  "filters": "الفلاتر",
+  "sortBy": "ترتيب حسب",
+  "sortName": "الاسم",
+  "sortCode": "الكود",
+  "sortCity": "المدينة",
+  "sortPreferred": "المورّد الرئيسي",
+  "totalCount": "الإجمالي: {count}",
+  "catalogCount": "عناصر الكتالوج"
+}

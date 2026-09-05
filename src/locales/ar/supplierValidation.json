@@ -1,0 +1,20 @@
+{
+  "nameRequired": "اسم المورّد مطلوب.",
+  "emailInvalid": "البريد الإلكتروني غير صالح.",
+  "phoneInvalid": "رقم الهاتف غير صالح.",
+  "websiteInvalid": "رابط غير صالح.",
+  "currencyRequired": "العملة مطلوبة.",
+  "pricePositive": "يجب أن يكون سعر الشراء موجبًا أو صفرًا.",
+  "quantityPositive": "يجب أن تكون الكمية لكل عملية شراء أكبر من صفر.",
+  "purchaseUnitRequired": "وحدة الشراء مطلوبة لتحديد السعر.",
+  "ingredientRequired": "اختر مكوّنًا.",
+  "supplierRequired": "اختر مورّدًا.",
+  "contactEmailInvalid": "بريد جهة الاتصال غير صالح.",
+  "contactPhoneInvalid": "هاتف جهة الاتصال غير صالح.",
+  "leadTimePositive": "يجب أن تكون مدة التسليم موجبة أو صفرًا.",
+  "minimumOrderPositive": "يجب أن يكون الحد الأدنى للطلب موجبًا أو صفرًا.",
+  "duplicateSupplier": "هذا المورّد يقدّم هذا المكوّن بالفعل.",
+  "crossEstablishment": "مرجع محظور: عنصر من منشأة أخرى.",
+  "codeExists": "هذا الكود مستخدم بالفعل في هذه المنشأة.",
+  "onePrimary": "يُسمح بجهة اتصال رئيسية واحدة فقط."
+}

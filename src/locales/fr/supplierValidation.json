@@ -1,0 +1,20 @@
+{
+  "nameRequired": "Le nom du fournisseur est requis.",
+  "emailInvalid": "Adresse email invalide.",
+  "phoneInvalid": "Numéro de téléphone invalide.",
+  "websiteInvalid": "URL invalide.",
+  "currencyRequired": "La devise est requise.",
+  "pricePositive": "Le prix d'achat doit être positif ou nul.",
+  "quantityPositive": "La quantité par achat doit être supérieure à zéro.",
+  "purchaseUnitRequired": "L'unité d'achat est requise pour définir un prix.",
+  "ingredientRequired": "Sélectionnez un ingrédient.",
+  "supplierRequired": "Sélectionnez un fournisseur.",
+  "contactEmailInvalid": "Email de contact invalide.",
+  "contactPhoneInvalid": "Téléphone de contact invalide.",
+  "leadTimePositive": "Le délai de livraison doit être positif ou nul.",
+  "minimumOrderPositive": "Le minimum de commande doit être positif ou nul.",
+  "duplicateSupplier": "Ce fournisseur propose déjà cet ingrédient.",
+  "crossEstablishment": "Référence interdite : élément d'un autre établissement.",
+  "codeExists": "Ce code est déjà utilisé pour cet établissement.",
+  "onePrimary": "Un seul contact principal actif est autorisé."
+}
