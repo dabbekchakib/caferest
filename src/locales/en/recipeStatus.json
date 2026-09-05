@@ -1,0 +1,8 @@
+{
+  "draft": "Draft",
+  "active": "Active",
+  "inactive": "Inactive",
+  "archived": "Archived",
+  "system": "System",
+  "label": "Status"
+}

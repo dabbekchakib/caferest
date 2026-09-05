@@ -1,0 +1,25 @@
+{
+  "title": "Composition",
+  "empty": "This recipe has no items yet.",
+  "emptyHint": "Add raw materials or sub-recipes to build the recipe.",
+  "itemCount": "{count} item|{count} items",
+  "addIngredient": "Add a raw material",
+  "addSubRecipe": "Add a sub-recipe",
+  "save": "Save composition",
+  "saving": "Saving…",
+  "saved": "Composition saved",
+  "unsaved": "Unsaved changes",
+  "subRecipeBadge": "Sub-recipe",
+  "dragHint": "Drag to reorder",
+  "table": {
+    "item": "Item",
+    "type": "Type",
+    "quantity": "Quantity",
+    "unit": "Unit",
+    "waste": "Waste (%)",
+    "cost": "Cost",
+    "notes": "Notes",
+    "actions": "Actions"
+  },
+  "emptyInterval": "—"
+}

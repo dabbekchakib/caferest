@@ -1,0 +1,12 @@
+{
+  "title": "Estimated cost",
+  "rawCost": "Raw cost",
+  "perUnit": "Cost / base",
+  "missingData": "Incomplete cost data",
+  "unit": "Unit",
+  "quantity": "Quantity",
+  "contribution": "Contribution",
+  "total": "Total",
+  "estimate": "Estimated cost (preparatory)",
+  "estimateHint": "Indicative cost computed from purchase costs of raw materials. Never stored."
+}

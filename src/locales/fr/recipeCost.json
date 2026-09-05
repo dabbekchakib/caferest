@@ -1,0 +1,12 @@
+{
+  "title": "Coût estimé",
+  "rawCost": "Coût brut",
+  "perUnit": "Coût / base",
+  "missingData": "Données de coût incomplètes",
+  "unit": "Unité",
+  "quantity": "Quantité",
+  "contribution": "Contribution",
+  "total": "Total",
+  "estimate": "Coût estimé (préparatoire)",
+  "estimateHint": "Coût indicatif calculé à partir des coûts d'achat des matières premières. Ne persiste pas."
+}

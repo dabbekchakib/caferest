@@ -1,12 +1,25 @@
 {
   "title": "Recettes",
   "breadcrumb": "Recettes",
-  "create": "Nouvelle recette",
-  "name": "Nom",
-  "product": "Produit",
-  "yield": "Rendement",
-  "yieldType": "Type de rendement",
-  "servings": "Portions",
-  "cost": "Coût",
-  "noData": "Aucune recette"
+  "createButton": "Créer une recette",
+  "searchPlaceholder": "Rechercher (nom, produit)…",
+  "totalCount": "{count} recette|{count} recettes",
+  "noRecipes": "Aucune recette trouvée",
+  "noResults": "Aucune recette ne correspond à vos critères.",
+  "resetFilters": "Réinitialiser les filtres",
+  "viewTable": "Tableau",
+  "viewCards": "Cartes",
+  "table": {
+    "name": "Nom",
+    "product": "Produit",
+    "version": "Version",
+    "status": "Statut",
+    "yield": "Rendement",
+    "cost": "Coût",
+    "items": "Éléments",
+    "actions": "Actions"
+  },
+  "pagePrevious": "Précédent",
+  "pageNext": "Suivant",
+  "pageInfo": "Page {page} sur {total}"
 }

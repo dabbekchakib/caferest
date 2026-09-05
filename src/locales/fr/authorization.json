@@ -28,6 +28,13 @@
     "systemIngredient": "Les ingrédients système ne peuvent pas être modifiés.",
     "ingredientSlugExists": "Un slug identique existe déjà pour un autre ingrédient.",
     "ingredientInUse": "Impossible de supprimer cet ingrédient : il est utilisé par d'autres éléments.",
+    "systemRecipe": "Les recettes système ne peuvent pas être modifiées.",
+    "recipeEmpty": "Impossible d'activer cette recette : elle ne contient aucun élément.",
+    "recipeActiveRequired": "Cette recette doit être active pour cette action.",
+    "recipeCycle": "Impossible : cette référence créerait une boucle de sous-recettes.",
+    "recipeInvalidItem": "Élément de recette invalide : référence incorrecte ou incomplète.",
+    "recipeDefaultUnique": "Il existe déjà une recette active par défaut pour ce produit.",
+    "recipeVersionExists": "Cette version de recette existe déjà pour ce produit.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

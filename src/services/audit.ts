@@ -62,6 +62,18 @@ const AUDIT_ACTIONS = [
   "ingredient.reordered",
   "ingredient.image_uploaded",
   "ingredient.image_deleted",
+  "recipe.created",
+  "recipe.updated",
+  "recipe.deleted",
+  "recipe.activated",
+  "recipe.deactivated",
+  "recipe.archived",
+  "recipe.duplicated",
+  "recipe.set_default",
+  "recipe.item_added",
+  "recipe.item_updated",
+  "recipe.item_removed",
+  "recipe.reordered",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];

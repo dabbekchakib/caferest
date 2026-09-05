@@ -1,0 +1,7 @@
+{
+  "itemRefRequired": "Each item must reference a raw material OR a sub-recipe.",
+  "duplicateItem": "This reference is already used in the recipe.",
+  "cycle": "This sub-recipe would create a loop.",
+  "empty": "The recipe must contain at least one item.",
+  "activeRequired": "The recipe must be active for this action."
+}

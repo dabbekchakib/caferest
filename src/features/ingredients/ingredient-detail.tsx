@@ -25,6 +25,8 @@ interface IngredientDetailProps {
   costPerBaseUnit: number | null;
   canUpdate: boolean;
   canDelete: boolean;
+  /** Recipes referencing this ingredient (server-rendered section). */
+  recipeSection?: React.ReactNode;
 }
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
@@ -44,6 +46,7 @@ export function IngredientDetail({
   costPerBaseUnit,
   canUpdate,
   canDelete,
+  recipeSection,
 }: IngredientDetailProps) {
   const t = useTranslations("ingredients");
   const tn = useTranslations("navigation");
@@ -141,6 +144,8 @@ export function IngredientDetail({
               </div>
             </Card>
           )}
+
+          {recipeSection}
 
           <Card className="p-5">
             <h3 className="mb-2 text-sm font-semibold">{t("details.dates")}</h3>

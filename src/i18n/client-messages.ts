@@ -8,6 +8,15 @@ import frPos from "@/locales/fr/pos.json";
 import frProducts from "@/locales/fr/products.json";
 import frInventory from "@/locales/fr/inventory.json";
 import frRecipes from "@/locales/fr/recipes.json";
+import frRecipeForm from "@/locales/fr/recipeForm.json";
+import frRecipeBuilder from "@/locales/fr/recipeBuilder.json";
+import frRecipeDetails from "@/locales/fr/recipeDetails.json";
+import frRecipeStatus from "@/locales/fr/recipeStatus.json";
+import frRecipeActions from "@/locales/fr/recipeActions.json";
+import frRecipeValidation from "@/locales/fr/recipeValidation.json";
+import frRecipeCost from "@/locales/fr/recipeCost.json";
+import frRecipeVersions from "@/locales/fr/recipeVersions.json";
+import frRecipeYield from "@/locales/fr/recipeYield.json";
 import frPurchasing from "@/locales/fr/purchasing.json";
 import frOrders from "@/locales/fr/orders.json";
 import frCustomers from "@/locales/fr/customers.json";
@@ -40,6 +49,15 @@ import enPos from "@/locales/en/pos.json";
 import enProducts from "@/locales/en/products.json";
 import enInventory from "@/locales/en/inventory.json";
 import enRecipes from "@/locales/en/recipes.json";
+import enRecipeForm from "@/locales/en/recipeForm.json";
+import enRecipeBuilder from "@/locales/en/recipeBuilder.json";
+import enRecipeDetails from "@/locales/en/recipeDetails.json";
+import enRecipeStatus from "@/locales/en/recipeStatus.json";
+import enRecipeActions from "@/locales/en/recipeActions.json";
+import enRecipeValidation from "@/locales/en/recipeValidation.json";
+import enRecipeCost from "@/locales/en/recipeCost.json";
+import enRecipeVersions from "@/locales/en/recipeVersions.json";
+import enRecipeYield from "@/locales/en/recipeYield.json";
 import enPurchasing from "@/locales/en/purchasing.json";
 import enOrders from "@/locales/en/orders.json";
 import enCustomers from "@/locales/en/customers.json";
@@ -72,6 +90,15 @@ import arPos from "@/locales/ar/pos.json";
 import arProducts from "@/locales/ar/products.json";
 import arInventory from "@/locales/ar/inventory.json";
 import arRecipes from "@/locales/ar/recipes.json";
+import arRecipeForm from "@/locales/ar/recipeForm.json";
+import arRecipeBuilder from "@/locales/ar/recipeBuilder.json";
+import arRecipeDetails from "@/locales/ar/recipeDetails.json";
+import arRecipeStatus from "@/locales/ar/recipeStatus.json";
+import arRecipeActions from "@/locales/ar/recipeActions.json";
+import arRecipeValidation from "@/locales/ar/recipeValidation.json";
+import arRecipeCost from "@/locales/ar/recipeCost.json";
+import arRecipeVersions from "@/locales/ar/recipeVersions.json";
+import arRecipeYield from "@/locales/ar/recipeYield.json";
 import arPurchasing from "@/locales/ar/purchasing.json";
 import arOrders from "@/locales/ar/orders.json";
 import arCustomers from "@/locales/ar/customers.json";
@@ -105,6 +132,15 @@ interface LocaleBundle {
   products: MessageRecord;
   inventory: MessageRecord;
   recipes: MessageRecord;
+  recipeForm: MessageRecord;
+  recipeBuilder: MessageRecord;
+  recipeDetails: MessageRecord;
+  recipeStatus: MessageRecord;
+  recipeActions: MessageRecord;
+  recipeValidation: MessageRecord;
+  recipeCost: MessageRecord;
+  recipeVersions: MessageRecord;
+  recipeYield: MessageRecord;
   purchasing: MessageRecord;
   orders: MessageRecord;
   customers: MessageRecord;
@@ -139,6 +175,15 @@ const fr: LocaleBundle = {
   products: frProducts,
   inventory: frInventory,
   recipes: frRecipes,
+  recipeForm: frRecipeForm,
+  recipeBuilder: frRecipeBuilder,
+  recipeDetails: frRecipeDetails,
+  recipeStatus: frRecipeStatus,
+  recipeActions: frRecipeActions,
+  recipeValidation: frRecipeValidation,
+  recipeCost: frRecipeCost,
+  recipeVersions: frRecipeVersions,
+  recipeYield: frRecipeYield,
   purchasing: frPurchasing,
   orders: frOrders,
   customers: frCustomers,
@@ -173,6 +218,15 @@ const en: LocaleBundle = {
   products: enProducts,
   inventory: enInventory,
   recipes: enRecipes,
+  recipeForm: enRecipeForm,
+  recipeBuilder: enRecipeBuilder,
+  recipeDetails: enRecipeDetails,
+  recipeStatus: enRecipeStatus,
+  recipeActions: enRecipeActions,
+  recipeValidation: enRecipeValidation,
+  recipeCost: enRecipeCost,
+  recipeVersions: enRecipeVersions,
+  recipeYield: enRecipeYield,
   purchasing: enPurchasing,
   orders: enOrders,
   customers: enCustomers,
@@ -207,6 +261,15 @@ const ar: LocaleBundle = {
   products: arProducts,
   inventory: arInventory,
   recipes: arRecipes,
+  recipeForm: arRecipeForm,
+  recipeBuilder: arRecipeBuilder,
+  recipeDetails: arRecipeDetails,
+  recipeStatus: arRecipeStatus,
+  recipeActions: arRecipeActions,
+  recipeValidation: arRecipeValidation,
+  recipeCost: arRecipeCost,
+  recipeVersions: arRecipeVersions,
+  recipeYield: arRecipeYield,
   purchasing: arPurchasing,
   orders: arOrders,
   customers: arCustomers,

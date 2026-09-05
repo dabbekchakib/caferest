@@ -1,0 +1,11 @@
+{
+  "title": "Versions",
+  "overview": "Aperçu des versions",
+  "version": "Version {version}",
+  "current": "Version actuelle",
+  "default": "Par défaut",
+  "status": "Statut",
+  "created": "Créée le",
+  "view": "Voir",
+  "empty": "Aucune autre version"
+}

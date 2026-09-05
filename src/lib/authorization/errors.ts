@@ -35,6 +35,13 @@ export const AUTHORIZATION_ERROR_CODES = {
   SYSTEM_INGREDIENT_PROTECTED: "SYSTEM_INGREDIENT_PROTECTED",
   INGREDIENT_SLUG_EXISTS: "INGREDIENT_SLUG_EXISTS",
   INGREDIENT_IN_USE: "INGREDIENT_IN_USE",
+  SYSTEM_RECIPE_PROTECTED: "SYSTEM_RECIPE_PROTECTED",
+  RECIPE_EMPTY: "RECIPE_EMPTY",
+  RECIPE_ACTIVE_REQUIRED: "RECIPE_ACTIVE_REQUIRED",
+  RECIPE_CYCLE: "RECIPE_CYCLE",
+  RECIPE_INVALID_ITEM: "RECIPE_INVALID_ITEM",
+  RECIPE_DEFAULT_UNIQUE: "RECIPE_DEFAULT_UNIQUE",
+  RECIPE_VERSION_EXISTS: "RECIPE_VERSION_EXISTS",
   GENERIC: "GENERIC",
 } as const;
 
@@ -72,6 +79,13 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     SYSTEM_INGREDIENT_PROTECTED: "authorization.errors.systemIngredient",
     INGREDIENT_SLUG_EXISTS: "authorization.errors.ingredientSlugExists",
     INGREDIENT_IN_USE: "authorization.errors.ingredientInUse",
+    SYSTEM_RECIPE_PROTECTED: "authorization.errors.systemRecipe",
+    RECIPE_EMPTY: "authorization.errors.recipeEmpty",
+    RECIPE_ACTIVE_REQUIRED: "authorization.errors.recipeActiveRequired",
+    RECIPE_CYCLE: "authorization.errors.recipeCycle",
+    RECIPE_INVALID_ITEM: "authorization.errors.recipeInvalidItem",
+    RECIPE_DEFAULT_UNIQUE: "authorization.errors.recipeDefaultUnique",
+    RECIPE_VERSION_EXISTS: "authorization.errors.recipeVersionExists",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -96,6 +110,12 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   uq_ingredients_establishment_slug: "INGREDIENT_SLUG_EXISTS",
   ingredients_establishment_slug_key: "INGREDIENT_SLUG_EXISTS",
   system_ingredient_protected: "SYSTEM_INGREDIENT_PROTECTED",
+  system_recipe_protected: "SYSTEM_RECIPE_PROTECTED",
+  recipe_items_reference_xor: "RECIPE_INVALID_ITEM",
+  recipe_items_quantity_check: "RECIPE_INVALID_ITEM",
+  recipe_items_waste_check: "RECIPE_INVALID_ITEM",
+  uq_recipes_default_per_product: "RECIPE_DEFAULT_UNIQUE",
+  uq_recipes_establishment_product_version: "RECIPE_VERSION_EXISTS",
 };
 
 export class AuthorizationError extends Error {

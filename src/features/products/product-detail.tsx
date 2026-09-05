@@ -24,6 +24,8 @@ interface ProductDetailProps {
   taxLabel: string | null;
   canUpdate: boolean;
   canDelete: boolean;
+  /** Recipes section (server-rendered). Falls back to the placeholder card. */
+  recipeSection?: React.ReactNode;
 }
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
@@ -42,6 +44,7 @@ export function ProductDetail({
   taxLabel,
   canUpdate,
   canDelete,
+  recipeSection,
 }: ProductDetailProps) {
   const t = useTranslations("products");
   const tn = useTranslations("navigation");
@@ -137,24 +140,25 @@ export function ProductDetail({
             </div>
           </Card>
 
-          {product.product_type === "composite" && (
-            <Card className="p-5">
-              <h3 className="mb-2 text-sm font-semibold">
-                {t("details.recipe")}
-              </h3>
-              <p className="mb-2 text-sm text-[var(--color-muted-foreground)]">
-                {t("details.costUpcoming")}
-              </p>
-              <div className="flex items-center justify-between rounded-lg border border-dashed border-[var(--color-border)] p-4">
-                <span className="text-sm text-[var(--color-muted-foreground)]">
-                  {t("details.ingredients")}
-                </span>
-                <span className="text-xs text-[var(--color-muted-foreground)]">
-                  {t("details.futureSection")}
-                </span>
-              </div>
-            </Card>
-          )}
+          {product.product_type === "composite" &&
+            (recipeSection ?? (
+              <Card className="p-5">
+                <h3 className="mb-2 text-sm font-semibold">
+                  {t("details.recipe")}
+                </h3>
+                <p className="mb-2 text-sm text-[var(--color-muted-foreground)]">
+                  {t("details.costUpcoming")}
+                </p>
+                <div className="flex items-center justify-between rounded-lg border border-dashed border-[var(--color-border)] p-4">
+                  <span className="text-sm text-[var(--color-muted-foreground)]">
+                    {t("details.ingredients")}
+                  </span>
+                  <span className="text-xs text-[var(--color-muted-foreground)]">
+                    {t("details.futureSection")}
+                  </span>
+                </div>
+              </Card>
+            ))}
 
           {product.is_stock_tracked && (
             <Card className="p-5">

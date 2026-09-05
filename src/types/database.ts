@@ -453,6 +453,14 @@ export interface Database {
           yield_unit_id: string | null;
           preparation_time: number | null;
           is_active: boolean;
+          version: number;
+          status: RecipeStatus;
+          is_default: boolean;
+          notes: string | null;
+          is_system: boolean;
+          sort_order: number;
+          created_by: string | null;
+          updated_by: string | null;
           created_at: Datetime;
           updated_at: Datetime;
         };
@@ -467,6 +475,14 @@ export interface Database {
           yield_unit_id?: string | null;
           preparation_time?: number | null;
           is_active?: boolean;
+          version?: number;
+          status?: RecipeStatus;
+          is_default?: boolean;
+          notes?: string | null;
+          is_system?: boolean;
+          sort_order?: number;
+          created_by?: string | null;
+          updated_by?: string | null;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
@@ -477,24 +493,56 @@ export interface Database {
         Row: {
           id: string;
           recipe_id: string;
-          ingredient_id: string;
+          ingredient_id: string | null;
+          sub_recipe_id: string | null;
           quantity: number;
           unit_id: string | null;
           waste_percentage: number;
+          notes: string | null;
+          sort_order: number;
           created_at: Datetime;
           updated_at: Datetime;
         };
         Insert: {
           id?: string;
           recipe_id: string;
-          ingredient_id: string;
+          ingredient_id?: string | null;
+          sub_recipe_id?: string | null;
           quantity?: number;
           unit_id?: string | null;
           waste_percentage?: number;
+          notes?: string | null;
+          sort_order?: number;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
         Update: Partial<Database["public"]["Tables"]["recipe_items"]["Insert"]>;
+        Relationships: [];
+      };
+      recipe_translations: {
+        Row: {
+          id: string;
+          recipe_id: string;
+          locale: string;
+          name: string;
+          description: string | null;
+          notes: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          recipe_id: string;
+          locale: string;
+          name: string;
+          description?: string | null;
+          notes?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["recipe_translations"]["Insert"]
+        >;
         Relationships: [];
       };
       recipe_yields: {
@@ -1313,6 +1361,7 @@ export type IngredientType =
   | "consumable"
   | "other";
 export type YieldType = "exact_consumption" | "batch_yield" | "range_yield";
+export type RecipeStatus = "draft" | "active" | "inactive" | "archived";
 
 export type PurchaseOrderStatus =
   | "draft"

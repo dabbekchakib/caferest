@@ -1,12 +1,25 @@
 {
   "title": "الوصفات",
   "breadcrumb": "الوصفات",
-  "create": "وصفة جديدة",
-  "name": "الاسم",
-  "product": "المنتج",
-  "yield": "المردود",
-  "yieldType": "نوع المردود",
-  "servings": "عدد الحصص",
-  "cost": "التكلفة",
-  "noData": "لا توجد وصفات"
+  "createButton": "إنشاء وصفة",
+  "searchPlaceholder": "بحث (اسم، منتج)…",
+  "totalCount": "{count} وصفة|{count} وصفات",
+  "noRecipes": "لا توجد وصفات",
+  "noResults": "لا توجد وصفة تطابق معاييرك.",
+  "resetFilters": "إعادة تعيين الفلاتر",
+  "viewTable": "جدول",
+  "viewCards": "بطاقات",
+  "table": {
+    "name": "الاسم",
+    "product": "المنتج",
+    "version": "الإصدار",
+    "status": "الحالة",
+    "yield": "المردود",
+    "cost": "التكلفة",
+    "items": "العناصر",
+    "actions": "إجراءات"
+  },
+  "pagePrevious": "السابق",
+  "pageNext": "التالي",
+  "pageInfo": "صفحة {page} من {total}"
 }

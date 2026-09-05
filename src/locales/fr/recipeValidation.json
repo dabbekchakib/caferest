@@ -1,0 +1,7 @@
+{
+  "itemRefRequired": "Chaque élément doit référencer une matière première OU une sous-recette.",
+  "duplicateItem": "Cette référence est déjà utilisée dans la recette.",
+  "cycle": "Cette sous-recette créerait une boucle.",
+  "empty": "La recette doit contenir au moins un élément.",
+  "activeRequired": "La recette doit être active pour cette action."
+}

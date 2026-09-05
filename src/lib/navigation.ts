@@ -90,7 +90,7 @@ export const navSections: NavSection[] = [
         icon: Wheat,
         permission: "ingredients.view",
       },
-      { labelKey: "recipes", href: "/recipes", icon: BookOpenText },
+      { labelKey: "recipes", href: "/recipes", icon: BookOpenText, permission: "recipes.view" },
       { labelKey: "yields", href: "/yields", icon: Factory },
     ],
   },

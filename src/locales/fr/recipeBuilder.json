@@ -1,0 +1,25 @@
+{
+  "title": "Composition",
+  "empty": "Cette recette ne contient encore aucun élément.",
+  "emptyHint": "Ajoutez des matières premières ou des sous-recettes pour composer la recette.",
+  "itemCount": "{count} élément|{count} éléments",
+  "addIngredient": "Ajouter une matière première",
+  "addSubRecipe": "Ajouter une sous-recette",
+  "save": "Enregistrer la composition",
+  "saving": "Enregistrement…",
+  "saved": "Composition enregistrée",
+  "unsaved": "Modifications non enregistrées",
+  "subRecipeBadge": "Sous-recette",
+  "dragHint": "Faites glisser pour réordonner",
+  "table": {
+    "item": "Élément",
+    "type": "Type",
+    "quantity": "Quantité",
+    "unit": "Unité",
+    "waste": "Perte (%)",
+    "cost": "Coût",
+    "notes": "Notes",
+    "actions": "Actions"
+  },
+  "emptyInterval": "—"
+}

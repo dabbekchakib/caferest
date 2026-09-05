@@ -1,12 +1,25 @@
 {
   "title": "Recipes",
   "breadcrumb": "Recipes",
-  "create": "New recipe",
-  "name": "Name",
-  "product": "Product",
-  "yield": "Yield",
-  "yieldType": "Yield type",
-  "servings": "Servings",
-  "cost": "Cost",
-  "noData": "No recipes"
+  "createButton": "Create a recipe",
+  "searchPlaceholder": "Search (name, product)…",
+  "totalCount": "{count} recipe|{count} recipes",
+  "noRecipes": "No recipes found",
+  "noResults": "No recipe matches your criteria.",
+  "resetFilters": "Reset filters",
+  "viewTable": "Table",
+  "viewCards": "Cards",
+  "table": {
+    "name": "Name",
+    "product": "Product",
+    "version": "Version",
+    "status": "Status",
+    "yield": "Yield",
+    "cost": "Cost",
+    "items": "Items",
+    "actions": "Actions"
+  },
+  "pagePrevious": "Previous",
+  "pageNext": "Next",
+  "pageInfo": "Page {page} of {total}"
 }
