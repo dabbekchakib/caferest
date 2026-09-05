@@ -76,7 +76,7 @@ export const navSections: NavSection[] = [
   {
     labelKey: "products",
     items: [
-      { labelKey: "products", href: "/products", icon: Package },
+      { labelKey: "products", href: "/products", icon: Package, permission: "products.view" },
       {
         labelKey: "categories",
         href: "/categories",

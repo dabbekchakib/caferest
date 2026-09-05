@@ -20,6 +20,11 @@
     "categoryHasChildren": "Impossible de supprimer : la catégorie contient des sous-catégories.",
     "categoryInUse": "Impossible de supprimer : la catégorie est utilisée par des produits.",
     "categorySlugExists": "Un slug identique existe déjà pour une autre catégorie.",
+    "systemProduct": "Les produits système ne peuvent pas être modifiés.",
+    "productSlugExists": "Un slug identique existe déjà pour un autre produit.",
+    "duplicateSku": "Un produit avec ce SKU existe déjà pour cet établissement.",
+    "duplicateBarcode": "Un produit avec ce code-barres existe déjà pour cet établissement.",
+    "productInUse": "Impossible de supprimer ce produit : il est utilisé par d'autres éléments.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

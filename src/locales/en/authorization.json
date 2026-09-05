@@ -20,6 +20,11 @@
     "categoryHasChildren": "Cannot delete: the category still has subcategories.",
     "categoryInUse": "Cannot delete: the category is used by products.",
     "categorySlugExists": "A slug already exists for another category.",
+    "systemProduct": "System products cannot be modified.",
+    "productSlugExists": "A slug already exists for another product.",
+    "duplicateSku": "A product with this SKU already exists for this establishment.",
+    "duplicateBarcode": "A product with this barcode already exists for this establishment.",
+    "productInUse": "Cannot delete this product: it is used by other items.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

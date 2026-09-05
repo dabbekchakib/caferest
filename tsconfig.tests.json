@@ -24,6 +24,7 @@
     "src/lib/authorization/*.ts",
     "src/lib/units/*.ts",
     "src/lib/categories/*.ts",
+    "src/lib/products/*.ts",
     "src/lib/validation/zod-resolver.ts",
     "src/validations/auth.ts"
   ]

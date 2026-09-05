@@ -1,9 +1,51 @@
-﻿"use client";
+﻿import type { Metadata } from "next";
+import {
+  requirePagePermission,
+  requireCurrentEstablishment,
+  hasPermission,
+} from "@/services/authorization";
+import { listProducts } from "@/services/products-service";
+import { listCategories } from "@/services/categories-service";
+import { ProductList } from "@/features/products/product-list";
 
-import { useTranslations } from "next-intl";
-import { PlaceholderPage } from "@/components/shared/placeholder-page";
+export const metadata: Metadata = {
+  title: "Products",
+};
 
-export default function ProductsPage() {
-  const t = useTranslations("products");
-  return <PlaceholderPage title={t("title")} breadcrumb={t("breadcrumb")} />;
+export default async function ProductsPage() {
+  await requirePagePermission("products.view");
+  const establishmentId = await requireCurrentEstablishment();
+
+  const [
+    products,
+    categories,
+    canCreate,
+    canUpdate,
+    canDelete,
+    canUpdatePrice,
+    canUpdateStatus,
+    canReorder,
+  ] = await Promise.all([
+    listProducts(establishmentId),
+    listCategories(establishmentId),
+    hasPermission("products.create"),
+    hasPermission("products.update"),
+    hasPermission("products.delete"),
+    hasPermission("products.update-price"),
+    hasPermission("products.update-status"),
+    hasPermission("products.reorder"),
+  ]);
+
+  return (
+    <ProductList
+      products={products}
+      categories={categories}
+      canCreate={canCreate}
+      canUpdate={canUpdate}
+      canDelete={canDelete}
+      canUpdatePrice={canUpdatePrice}
+      canUpdateStatus={canUpdateStatus}
+      canReorder={canReorder}
+    />
+  );
 }

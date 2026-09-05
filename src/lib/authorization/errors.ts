@@ -27,6 +27,11 @@ export const AUTHORIZATION_ERROR_CODES = {
   CATEGORY_HAS_CHILDREN: "CATEGORY_HAS_CHILDREN",
   CATEGORY_IN_USE: "CATEGORY_IN_USE",
   DUPLICATE_SLUG: "DUPLICATE_SLUG",
+  SYSTEM_PRODUCT_PROTECTED: "SYSTEM_PRODUCT_PROTECTED",
+  PRODUCT_SLUG_EXISTS: "PRODUCT_SLUG_EXISTS",
+  DUPLICATE_SKU: "DUPLICATE_SKU",
+  DUPLICATE_BARCODE: "DUPLICATE_BARCODE",
+  PRODUCT_IN_USE: "PRODUCT_IN_USE",
   GENERIC: "GENERIC",
 } as const;
 
@@ -56,6 +61,11 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     CATEGORY_HAS_CHILDREN: "authorization.errors.categoryHasChildren",
     CATEGORY_IN_USE: "authorization.errors.categoryInUse",
     DUPLICATE_SLUG: "authorization.errors.categorySlugExists",
+    SYSTEM_PRODUCT_PROTECTED: "authorization.errors.systemProduct",
+    PRODUCT_SLUG_EXISTS: "authorization.errors.productSlugExists",
+    DUPLICATE_SKU: "authorization.errors.duplicateSku",
+    DUPLICATE_BARCODE: "authorization.errors.duplicateBarcode",
+    PRODUCT_IN_USE: "authorization.errors.productInUse",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -69,6 +79,10 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   unit_conversion_scope_mismatch: "UNIT_SCOPE",
   category_cycle: "CATEGORY_CYCLE",
   system_category_protected: "SYSTEM_CATEGORY_PROTECTED",
+  system_product_protected: "SYSTEM_PRODUCT_PROTECTED",
+  products_establishment_sku_key: "DUPLICATE_SKU",
+  products_establishment_barcode_key: "DUPLICATE_BARCODE",
+  products_establishment_slug_key: "PRODUCT_SLUG_EXISTS",
 };
 
 export class AuthorizationError extends Error {
