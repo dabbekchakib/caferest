@@ -15,6 +15,11 @@
     "unitConversion": "Conversion impossible entre ces unités : types incompatibles.",
     "unitInUse": "Impossible de supprimer cette unité : elle est utilisée par des conversions.",
     "duplicateUnit": "Une unité avec ce symbole existe déjà pour cet établissement.",
+    "systemCategory": "Les catégories système ne peuvent pas être modifiées.",
+    "categoryCycle": "Impossible : le déplacement créerait une boucle dans la hiérarchie.",
+    "categoryHasChildren": "Impossible de supprimer : la catégorie contient des sous-catégories.",
+    "categoryInUse": "Impossible de supprimer : la catégorie est utilisée par des produits.",
+    "categorySlugExists": "Un slug identique existe déjà pour une autre catégorie.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

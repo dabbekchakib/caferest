@@ -15,6 +15,11 @@
     "unitConversion": "Cannot convert between these units: incompatible types.",
     "unitInUse": "Cannot delete this unit: it is used by conversions.",
     "duplicateUnit": "A unit with this symbol already exists for this establishment.",
+    "systemCategory": "System categories cannot be modified.",
+    "categoryCycle": "Cannot move: this would create a loop in the hierarchy.",
+    "categoryHasChildren": "Cannot delete: the category still has subcategories.",
+    "categoryInUse": "Cannot delete: the category is used by products.",
+    "categorySlugExists": "A slug already exists for another category.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

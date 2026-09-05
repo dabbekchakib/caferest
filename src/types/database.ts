@@ -206,8 +206,11 @@ export interface Database {
           slug: string;
           description: string | null;
           image_url: string | null;
+          icon: string | null;
+          color: string | null;
           sort_order: number;
           is_active: boolean;
+          is_system: boolean;
           created_at: Datetime;
           updated_at: Datetime;
         };
@@ -219,12 +222,39 @@ export interface Database {
           slug: string;
           description?: string | null;
           image_url?: string | null;
+          icon?: string | null;
+          color?: string | null;
           sort_order?: number;
           is_active?: boolean;
+          is_system?: boolean;
           created_at?: Datetime;
           updated_at?: Datetime;
         };
         Update: Partial<Database["public"]["Tables"]["categories"]["Insert"]>;
+        Relationships: [];
+      };
+      category_translations: {
+        Row: {
+          id: string;
+          category_id: string;
+          locale: string;
+          name: string;
+          description: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          category_id: string;
+          locale: string;
+          name: string;
+          description?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["category_translations"]["Insert"]
+        >;
         Relationships: [];
       };
       taxes: {

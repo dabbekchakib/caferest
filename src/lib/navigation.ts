@@ -77,7 +77,12 @@ export const navSections: NavSection[] = [
     labelKey: "products",
     items: [
       { labelKey: "products", href: "/products", icon: Package },
-      { labelKey: "categories", href: "/categories", icon: FolderTree },
+      {
+        labelKey: "categories",
+        href: "/categories",
+        icon: FolderTree,
+        permission: "categories.view",
+      },
       { labelKey: "recipes", href: "/recipes", icon: BookOpenText },
       { labelKey: "yields", href: "/yields", icon: Factory },
     ],

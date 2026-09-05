@@ -31,6 +31,7 @@ import frPermissions from "@/locales/fr/permissions.json";
 import frAuthorization from "@/locales/fr/authorization.json";
 import frUnits from "@/locales/fr/units.json";
 import frUnitConversions from "@/locales/fr/unitConversions.json";
+import frCategories from "@/locales/fr/categories.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -62,6 +63,7 @@ import enPermissions from "@/locales/en/permissions.json";
 import enAuthorization from "@/locales/en/authorization.json";
 import enUnits from "@/locales/en/units.json";
 import enUnitConversions from "@/locales/en/unitConversions.json";
+import enCategories from "@/locales/en/categories.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -93,6 +95,7 @@ import arPermissions from "@/locales/ar/permissions.json";
 import arAuthorization from "@/locales/ar/authorization.json";
 import arUnits from "@/locales/ar/units.json";
 import arUnitConversions from "@/locales/ar/unitConversions.json";
+import arCategories from "@/locales/ar/categories.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -125,6 +128,7 @@ interface LocaleBundle {
   authorization: MessageRecord;
   units: MessageRecord;
   unitConversions: MessageRecord;
+  categories: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -158,6 +162,7 @@ const fr: LocaleBundle = {
   authorization: frAuthorization,
   units: frUnits,
   unitConversions: frUnitConversions,
+  categories: frCategories,
 };
 
 const en: LocaleBundle = {
@@ -191,6 +196,7 @@ const en: LocaleBundle = {
   authorization: enAuthorization,
   units: enUnits,
   unitConversions: enUnitConversions,
+  categories: enCategories,
 };
 
 const ar: LocaleBundle = {
@@ -224,6 +230,7 @@ const ar: LocaleBundle = {
   authorization: arAuthorization,
   units: arUnits,
   unitConversions: arUnitConversions,
+  categories: arCategories,
 };
 
 export type MessagesBundle = typeof fr;

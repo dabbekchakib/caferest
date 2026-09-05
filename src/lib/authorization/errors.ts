@@ -22,6 +22,11 @@ export const AUTHORIZATION_ERROR_CODES = {
   INCOMPATIBLE_UNITS: "INCOMPATIBLE_UNITS",
   UNIT_IN_USE: "UNIT_IN_USE",
   DUPLICATE_UNIT: "DUPLICATE_UNIT",
+  SYSTEM_CATEGORY_PROTECTED: "SYSTEM_CATEGORY_PROTECTED",
+  CATEGORY_CYCLE: "CATEGORY_CYCLE",
+  CATEGORY_HAS_CHILDREN: "CATEGORY_HAS_CHILDREN",
+  CATEGORY_IN_USE: "CATEGORY_IN_USE",
+  DUPLICATE_SLUG: "DUPLICATE_SLUG",
   GENERIC: "GENERIC",
 } as const;
 
@@ -46,6 +51,11 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     INCOMPATIBLE_UNITS: "authorization.errors.unitConversion",
     UNIT_IN_USE: "authorization.errors.unitInUse",
     DUPLICATE_UNIT: "authorization.errors.duplicateUnit",
+    SYSTEM_CATEGORY_PROTECTED: "authorization.errors.systemCategory",
+    CATEGORY_CYCLE: "authorization.errors.categoryCycle",
+    CATEGORY_HAS_CHILDREN: "authorization.errors.categoryHasChildren",
+    CATEGORY_IN_USE: "authorization.errors.categoryInUse",
+    DUPLICATE_SLUG: "authorization.errors.categorySlugExists",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -57,6 +67,8 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   user_roles_role_scope_mismatch: "ROLE_SCOPE",
   system_unit_protected: "SYSTEM_UNIT_PROTECTED",
   unit_conversion_scope_mismatch: "UNIT_SCOPE",
+  category_cycle: "CATEGORY_CYCLE",
+  system_category_protected: "SYSTEM_CATEGORY_PROTECTED",
 };
 
 export class AuthorizationError extends Error {

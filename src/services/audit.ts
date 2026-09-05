@@ -35,6 +35,13 @@ const AUDIT_ACTIONS = [
   "unit_conversion.updated",
   "unit_conversion.deleted",
   "unit_conversion.toggled",
+  "category.created",
+  "category.updated",
+  "category.deleted",
+  "category.moved",
+  "category.reordered",
+  "category.activated",
+  "category.deactivated",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];
