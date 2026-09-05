@@ -32,7 +32,8 @@
     "notifications": "الإشعارات",
     "audit": "سجل التدقيق",
     "units": "الوحدات",
-    "unit_conversions": "التحويلات"
+    "unit_conversions": "التحويلات",
+    "recipe_yields": "المردود"
   },
   "slugs": {
     "dashboard.view": "عرض لوحة التحكم",
@@ -109,6 +110,10 @@
     "unit_conversions.view": "عرض التحويلات",
     "unit_conversions.create": "إنشاء التحويلات",
     "unit_conversions.update": "تعديل التحويلات",
-    "unit_conversions.delete": "حذف التحويلات"
+    "unit_conversions.delete": "حذف التحويلات",
+    "recipe_yields.view": "عرض المردود",
+    "recipe_yields.create": "إنشاء المردود",
+    "recipe_yields.update": "تعديل المردود",
+    "recipe_yields.delete": "حذف المردود"
   }
 }

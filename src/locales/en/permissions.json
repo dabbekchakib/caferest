@@ -32,7 +32,8 @@
     "notifications": "Notifications",
     "audit": "Audit log",
     "units": "Units",
-    "unit_conversions": "Conversions"
+    "unit_conversions": "Conversions",
+    "recipe_yields": "Yields"
   },
   "slugs": {
     "dashboard.view": "View dashboard",
@@ -109,6 +110,10 @@
     "unit_conversions.view": "View conversions",
     "unit_conversions.create": "Create conversions",
     "unit_conversions.update": "Update conversions",
-    "unit_conversions.delete": "Delete conversions"
+    "unit_conversions.delete": "Delete conversions",
+    "recipe_yields.view": "View yields",
+    "recipe_yields.create": "Create yields",
+    "recipe_yields.update": "Update yields",
+    "recipe_yields.delete": "Delete yields"
   }
 }

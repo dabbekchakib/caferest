@@ -14,6 +14,16 @@ const eslintConfig = defineConfig([
       ],
     },
   },
+  {
+    rules: {
+      // Reserved positional parameters (e.g. `_conversions`) are intentional
+      // API placeholders and must not be flagged.
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+    },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:

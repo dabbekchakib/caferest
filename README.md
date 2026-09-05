@@ -101,6 +101,11 @@ Types are generated from the Supabase schema and stored in `src/types/database.t
 
 All tables use Supabase RLS policies for security.
 
+## Documentation
+
+- `docs/recipes.md` — Recipes, composition, and cost preview
+- `docs/yields.md` — Yield management and theoretical consumption
+
 ## Deployment (Vercel)
 
 1. Push to GitHub

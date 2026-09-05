@@ -1,0 +1,6 @@
+{
+  "description": "يُقسَّم كل إنتاج إلى حصص متطابقة.",
+  "portionCountLabel": "عدد الحصص",
+  "portionsLabel": "الحصص",
+  "formulaLabel": "الاستهلاك = كمية المدخلات ÷ الحصص"
+}

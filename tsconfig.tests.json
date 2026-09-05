@@ -27,7 +27,9 @@
     "src/lib/products/*.ts",
     "src/lib/ingredients/*.ts",
     "src/lib/recipes/*.ts",
+    "src/lib/yields/*.ts",
     "src/validations/recipes.ts",
+    "src/validations/yields.ts",
     "src/lib/validation/zod-resolver.ts",
     "src/validations/auth.ts"
   ]

@@ -1,0 +1,13 @@
+{
+  "title": "Consumption per serving",
+  "subtitle": "Input quantity required to produce one serving.",
+  "perServing": "Per serving",
+  "minimum": "Minimum",
+  "standard": "Standard",
+  "maximum": "Maximum",
+  "ratio": "Consumption per output unit",
+  "ingredient": "Ingredient",
+  "batch": "Batch",
+  "nestedRecipesNote": "Nested sub-recipes are computed recursively (20-level limit, cycles refused).",
+  "none": "No computable consumption."
+}

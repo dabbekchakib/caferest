@@ -1,0 +1,15 @@
+{
+  "title": "Production calculator",
+  "description": "Estimate how many outputs an available quantity can produce.",
+  "availableQuantity": "Available quantity",
+  "availableUnit": "Unit",
+  "calculate": "Calculate",
+  "calculating": "Calculating…",
+  "result": "Estimated production",
+  "resultHint": "Computed from the yield model and the selected range edge.",
+  "selectionMin": "Minimum yield",
+  "selectionStd": "Standard yield",
+  "selectionMax": "Maximum yield",
+  "noDefinition": "Define a yield for this recipe first.",
+  "error": "The calculation could not be performed."
+}

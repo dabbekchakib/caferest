@@ -1,0 +1,13 @@
+{
+  "title": "Consommation par portion",
+  "subtitle": "Quantité d'entrée nécessaire pour produire une portion.",
+  "perServing": "Par portion",
+  "minimum": "Minimum",
+  "standard": "Standard",
+  "maximum": "Maximum",
+  "ratio": "Consommation par unité de sortie",
+  "ingredient": "Ingrédient",
+  "batch": "Lot",
+  "nestedRecipesNote": "Sous-recettes imbriquées calculées récursivement (limite 20 niveaux, boucles refusées).",
+  "none": "Aucune consommation calculable."
+}

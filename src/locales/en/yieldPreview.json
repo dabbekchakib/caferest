@@ -1,0 +1,14 @@
+{
+  "title": "Yield assessment",
+  "perServingLabel": "Consumption per serving",
+  "perBatchLabel": "Production per batch",
+  "costPerServing": "Theoretical cost per serving",
+  "theoreticalCost": "Estimated theoretical cost",
+  "rangeSelection": "Yield selection",
+  "missingCostHint": "Cost unavailable: the recipe cost cannot be computed.",
+  "consumptionNote": "Consumption computed from the yield, without any stock movement.",
+  "rangeLabel": "Min {min} · Max {max}",
+  "empty": "No yield configured for this recipe.",
+  "activeBadge": "Active",
+  "inactiveBadge": "Inactive"
+}

@@ -41,6 +41,16 @@ import frAuthorization from "@/locales/fr/authorization.json";
 import frUnits from "@/locales/fr/units.json";
 import frUnitConversions from "@/locales/fr/unitConversions.json";
 import frCategories from "@/locales/fr/categories.json";
+import frYield from "@/locales/fr/yield.json";
+import frYieldForm from "@/locales/fr/yieldForm.json";
+import frYieldTypes from "@/locales/fr/yieldTypes.json";
+import frYieldValidation from "@/locales/fr/yieldValidation.json";
+import frYieldCalculator from "@/locales/fr/yieldCalculator.json";
+import frYieldPreview from "@/locales/fr/yieldPreview.json";
+import frYieldConsumption from "@/locales/fr/yieldConsumption.json";
+import frYieldRange from "@/locales/fr/yieldRange.json";
+import frYieldBatch from "@/locales/fr/yieldBatch.json";
+import frYieldPortion from "@/locales/fr/yieldPortion.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -82,6 +92,16 @@ import enAuthorization from "@/locales/en/authorization.json";
 import enUnits from "@/locales/en/units.json";
 import enUnitConversions from "@/locales/en/unitConversions.json";
 import enCategories from "@/locales/en/categories.json";
+import enYield from "@/locales/en/yield.json";
+import enYieldForm from "@/locales/en/yieldForm.json";
+import enYieldTypes from "@/locales/en/yieldTypes.json";
+import enYieldValidation from "@/locales/en/yieldValidation.json";
+import enYieldCalculator from "@/locales/en/yieldCalculator.json";
+import enYieldPreview from "@/locales/en/yieldPreview.json";
+import enYieldConsumption from "@/locales/en/yieldConsumption.json";
+import enYieldRange from "@/locales/en/yieldRange.json";
+import enYieldBatch from "@/locales/en/yieldBatch.json";
+import enYieldPortion from "@/locales/en/yieldPortion.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -123,6 +143,16 @@ import arAuthorization from "@/locales/ar/authorization.json";
 import arUnits from "@/locales/ar/units.json";
 import arUnitConversions from "@/locales/ar/unitConversions.json";
 import arCategories from "@/locales/ar/categories.json";
+import arYield from "@/locales/ar/yield.json";
+import arYieldForm from "@/locales/ar/yieldForm.json";
+import arYieldTypes from "@/locales/ar/yieldTypes.json";
+import arYieldValidation from "@/locales/ar/yieldValidation.json";
+import arYieldCalculator from "@/locales/ar/yieldCalculator.json";
+import arYieldPreview from "@/locales/ar/yieldPreview.json";
+import arYieldConsumption from "@/locales/ar/yieldConsumption.json";
+import arYieldRange from "@/locales/ar/yieldRange.json";
+import arYieldBatch from "@/locales/ar/yieldBatch.json";
+import arYieldPortion from "@/locales/ar/yieldPortion.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -165,6 +195,16 @@ interface LocaleBundle {
   units: MessageRecord;
   unitConversions: MessageRecord;
   categories: MessageRecord;
+  yield: MessageRecord;
+  yieldForm: MessageRecord;
+  yieldTypes: MessageRecord;
+  yieldValidation: MessageRecord;
+  yieldCalculator: MessageRecord;
+  yieldPreview: MessageRecord;
+  yieldConsumption: MessageRecord;
+  yieldRange: MessageRecord;
+  yieldBatch: MessageRecord;
+  yieldPortion: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -208,6 +248,16 @@ const fr: LocaleBundle = {
   units: frUnits,
   unitConversions: frUnitConversions,
   categories: frCategories,
+  yield: frYield,
+  yieldForm: frYieldForm,
+  yieldTypes: frYieldTypes,
+  yieldValidation: frYieldValidation,
+  yieldCalculator: frYieldCalculator,
+  yieldPreview: frYieldPreview,
+  yieldConsumption: frYieldConsumption,
+  yieldRange: frYieldRange,
+  yieldBatch: frYieldBatch,
+  yieldPortion: frYieldPortion,
 };
 
 const en: LocaleBundle = {
@@ -251,6 +301,16 @@ const en: LocaleBundle = {
   units: enUnits,
   unitConversions: enUnitConversions,
   categories: enCategories,
+  yield: enYield,
+  yieldForm: enYieldForm,
+  yieldTypes: enYieldTypes,
+  yieldValidation: enYieldValidation,
+  yieldCalculator: enYieldCalculator,
+  yieldPreview: enYieldPreview,
+  yieldConsumption: enYieldConsumption,
+  yieldRange: enYieldRange,
+  yieldBatch: enYieldBatch,
+  yieldPortion: enYieldPortion,
 };
 
 const ar: LocaleBundle = {
@@ -294,6 +354,16 @@ const ar: LocaleBundle = {
   units: arUnits,
   unitConversions: arUnitConversions,
   categories: arCategories,
+  yield: arYield,
+  yieldForm: arYieldForm,
+  yieldTypes: arYieldTypes,
+  yieldValidation: arYieldValidation,
+  yieldCalculator: arYieldCalculator,
+  yieldPreview: arYieldPreview,
+  yieldConsumption: arYieldConsumption,
+  yieldRange: arYieldRange,
+  yieldBatch: arYieldBatch,
+  yieldPortion: arYieldPortion,
 };
 
 export type MessagesBundle = typeof fr;

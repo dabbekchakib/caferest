@@ -1,0 +1,8 @@
+{
+  "title": "Yield",
+  "subtitle": "Theoretical production of the recipe and consumption per serving",
+  "notConfigured": "No yield configured for this recipe.",
+  "notConfiguredHint": "Define a production model to compute consumption and estimated costs.",
+  "activeLabel": "Active",
+  "inactiveLabel": "Inactive"
+}

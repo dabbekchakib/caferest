@@ -1,0 +1,8 @@
+{
+  "title": "Rendement",
+  "subtitle": "Production théorique de la recette et consommation par portion",
+  "notConfigured": "Aucun rendement configuré pour cette recette.",
+  "notConfiguredHint": "Définissez le modèle de production pour calculer la consommation et les coûts estimés.",
+  "activeLabel": "Actif",
+  "inactiveLabel": "Inactif"
+}

@@ -63,6 +63,36 @@ import arRecipeVersions from "../src/locales/ar/recipeVersions.json";
 import frRecipeYield from "../src/locales/fr/recipeYield.json";
 import enRecipeYield from "../src/locales/en/recipeYield.json";
 import arRecipeYield from "../src/locales/ar/recipeYield.json";
+import frYield from "../src/locales/fr/yield.json";
+import enYield from "../src/locales/en/yield.json";
+import arYield from "../src/locales/ar/yield.json";
+import frYieldForm from "../src/locales/fr/yieldForm.json";
+import enYieldForm from "../src/locales/en/yieldForm.json";
+import arYieldForm from "../src/locales/ar/yieldForm.json";
+import frYieldTypes from "../src/locales/fr/yieldTypes.json";
+import enYieldTypes from "../src/locales/en/yieldTypes.json";
+import arYieldTypes from "../src/locales/ar/yieldTypes.json";
+import frYieldValidation from "../src/locales/fr/yieldValidation.json";
+import enYieldValidation from "../src/locales/en/yieldValidation.json";
+import arYieldValidation from "../src/locales/ar/yieldValidation.json";
+import frYieldCalculator from "../src/locales/fr/yieldCalculator.json";
+import enYieldCalculator from "../src/locales/en/yieldCalculator.json";
+import arYieldCalculator from "../src/locales/ar/yieldCalculator.json";
+import frYieldPreview from "../src/locales/fr/yieldPreview.json";
+import enYieldPreview from "../src/locales/en/yieldPreview.json";
+import arYieldPreview from "../src/locales/ar/yieldPreview.json";
+import frYieldConsumption from "../src/locales/fr/yieldConsumption.json";
+import enYieldConsumption from "../src/locales/en/yieldConsumption.json";
+import arYieldConsumption from "../src/locales/ar/yieldConsumption.json";
+import frYieldRange from "../src/locales/fr/yieldRange.json";
+import enYieldRange from "../src/locales/en/yieldRange.json";
+import arYieldRange from "../src/locales/ar/yieldRange.json";
+import frYieldBatch from "../src/locales/fr/yieldBatch.json";
+import enYieldBatch from "../src/locales/en/yieldBatch.json";
+import arYieldBatch from "../src/locales/ar/yieldBatch.json";
+import frYieldPortion from "../src/locales/fr/yieldPortion.json";
+import enYieldPortion from "../src/locales/en/yieldPortion.json";
+import arYieldPortion from "../src/locales/ar/yieldPortion.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -105,6 +135,16 @@ const namespaces = [
   ["recipeCost", enRecipeCost, frRecipeCost, arRecipeCost],
   ["recipeVersions", enRecipeVersions, frRecipeVersions, arRecipeVersions],
   ["recipeYield", enRecipeYield, frRecipeYield, arRecipeYield],
+  ["yield", enYield, frYield, arYield],
+  ["yieldForm", enYieldForm, frYieldForm, arYieldForm],
+  ["yieldTypes", enYieldTypes, frYieldTypes, arYieldTypes],
+  ["yieldValidation", enYieldValidation, frYieldValidation, arYieldValidation],
+  ["yieldCalculator", enYieldCalculator, frYieldCalculator, arYieldCalculator],
+  ["yieldPreview", enYieldPreview, frYieldPreview, arYieldPreview],
+  ["yieldConsumption", enYieldConsumption, frYieldConsumption, arYieldConsumption],
+  ["yieldRange", enYieldRange, frYieldRange, arYieldRange],
+  ["yieldBatch", enYieldBatch, frYieldBatch, arYieldBatch],
+  ["yieldPortion", enYieldPortion, frYieldPortion, arYieldPortion],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

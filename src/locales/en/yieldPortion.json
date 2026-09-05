@@ -1,0 +1,6 @@
+{
+  "description": "Each production is cut into identical portions.",
+  "portionCountLabel": "Number of portions",
+  "portionsLabel": "Portions",
+  "formulaLabel": "Consumption = input quantity ÷ portions"
+}

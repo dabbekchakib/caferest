@@ -1,0 +1,7 @@
+{
+  "description": "The input produces a variable number of units, between a minimum and a maximum.",
+  "minLabel": "Minimum",
+  "stdLabel": "Standard",
+  "maxLabel": "Maximum",
+  "formulaLabel": "Consumption = input quantity ÷ outputs"
+}

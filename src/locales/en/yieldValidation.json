@@ -1,0 +1,8 @@
+{
+  "positiveInput": "The input quantity must be strictly positive.",
+  "positiveOutput": "The output quantity must be strictly positive.",
+  "percentageRange": "The yield percentage must be between 0 and 100.",
+  "modelIncomplete": "The selected model requires missing fields.",
+  "invalidRange": "Out-of-order bounds: minimum ≤ standard ≤ maximum required.",
+  "incompatibleUnits": "The input and output units are not compatible."
+}

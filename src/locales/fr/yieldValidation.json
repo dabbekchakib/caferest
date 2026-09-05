@@ -1,0 +1,8 @@
+{
+  "positiveInput": "La quantité d'entrée doit être strictement positive.",
+  "positiveOutput": "La quantité de sortie doit être strictement positive.",
+  "percentageRange": "Le pourcentage de rendement doit être compris entre 0 et 100.",
+  "modelIncomplete": "Le modèle choisi nécessite des champs manquants.",
+  "invalidRange": "Bornes incohérentes : minimum ≤ standard ≤ maximum requis.",
+  "incompatibleUnits": "Les unités d'entrée et de sortie ne sont pas compatibles."
+}

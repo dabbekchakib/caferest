@@ -1,0 +1,6 @@
+{
+  "description": "Un lot d'entrée produit un nombre défini d'unités de sortie.",
+  "batchSizeLabel": "Taille du lot",
+  "outputsPerBatchLabel": "Sorties par lot",
+  "formulaLabel": "Consommation = quantité du lot ÷ sorties par lot"
+}

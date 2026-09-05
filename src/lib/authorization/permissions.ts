@@ -30,6 +30,7 @@ export const PERMISSION_MODULES = [
   "audit",
   "units",
   "unit_conversions",
+  "recipe_yields",
 ] as const;
 
 export type PermissionModule = (typeof PERMISSION_MODULES)[number];
@@ -113,6 +114,10 @@ export const PERMISSION_SLUGS = [
   "unit_conversions.create",
   "unit_conversions.update",
   "unit_conversions.delete",
+  "recipe_yields.view",
+  "recipe_yields.create",
+  "recipe_yields.update",
+  "recipe_yields.delete",
 ] as const;
 
 export type PermissionSlug = (typeof PERMISSION_SLUGS)[number];
@@ -242,6 +247,10 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "unit_conversions.create",
     "unit_conversions.update",
     "unit_conversions.delete",
+    "recipe_yields.view",
+    "recipe_yields.create",
+    "recipe_yields.update",
+    "recipe_yields.delete",
   ],
   cashier: [
     "dashboard.view",
@@ -276,6 +285,7 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "products.view",
     "recipes.view",
     "ingredients.view",
+    "recipe_yields.view",
     "notifications.view",
   ],
   bar: [
@@ -285,6 +295,7 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "products.view",
     "recipes.view",
     "ingredients.view",
+    "recipe_yields.view",
     "notifications.view",
   ],
   stock_manager: [
@@ -317,6 +328,7 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "notifications.view",
     "units.view",
     "unit_conversions.view",
+    "recipe_yields.view",
   ],
   purchasing: [
     "dashboard.view",
@@ -338,6 +350,7 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "notifications.view",
     "units.view",
     "unit_conversions.view",
+    "recipe_yields.view",
   ],
   accountant: [
     "dashboard.view",
@@ -355,6 +368,7 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
     "ingredients.update-cost",
     "recipes.view",
     "recipes.cost-view",
+    "recipe_yields.view",
     "notifications.view",
   ],
 };

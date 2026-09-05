@@ -1,0 +1,12 @@
+{
+  "exact_consumption": "Consommation exacte",
+  "batch_yield": "Rendement par lot",
+  "range_yield": "Rendement variable",
+  "portion_yield": "Rendement par portion",
+  "percentage_yield": "Rendement en pourcentage",
+  "exact_consumption_desc": "L'entrée produit un nombre fixe de portions (ex. 1 kg d'espresso → 93 tasses).",
+  "batch_yield_desc": "Un lot d'entrée produit un nombre défini d'unités (ex. 5 L de sirop → 50 bouteilles de 100 ml).",
+  "range_yield_desc": "L'entrée produit entre un minimum et un maximum, avec un standard (ex. 70 à 100 tasses par kg, 85 en moyenne).",
+  "portion_yield_desc": "Une production (gâteau, plateau) est découpée en portions identiques (ex. 1 gâteau → 12 parts).",
+  "percentage_yield_desc": "L'élément perd de la masse à la préparation ; seule la part utilisable compte (ex. 1 kg de fruits à 70 % → 0,70 kg de pulpe)."
+}

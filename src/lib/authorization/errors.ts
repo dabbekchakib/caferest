@@ -42,6 +42,12 @@ export const AUTHORIZATION_ERROR_CODES = {
   RECIPE_INVALID_ITEM: "RECIPE_INVALID_ITEM",
   RECIPE_DEFAULT_UNIQUE: "RECIPE_DEFAULT_UNIQUE",
   RECIPE_VERSION_EXISTS: "RECIPE_VERSION_EXISTS",
+  RECIPE_YIELD_NOT_FOUND: "RECIPE_YIELD_NOT_FOUND",
+  YIELD_INVALID: "YIELD_INVALID",
+  YIELD_RANGE_ORDER: "YIELD_RANGE_ORDER",
+  YIELD_UNITS_INCOMPATIBLE: "YIELD_UNITS_INCOMPATIBLE",
+  YIELD_PERCENTAGE_INVALID: "YIELD_PERCENTAGE_INVALID",
+  YIELD_MODEL_INCOMPLETE: "YIELD_MODEL_INCOMPLETE",
   GENERIC: "GENERIC",
 } as const;
 
@@ -86,6 +92,12 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     RECIPE_INVALID_ITEM: "authorization.errors.recipeInvalidItem",
     RECIPE_DEFAULT_UNIQUE: "authorization.errors.recipeDefaultUnique",
     RECIPE_VERSION_EXISTS: "authorization.errors.recipeVersionExists",
+    RECIPE_YIELD_NOT_FOUND: "authorization.errors.recipeYieldNotFound",
+    YIELD_INVALID: "authorization.errors.yieldInvalid",
+    YIELD_RANGE_ORDER: "authorization.errors.yieldRangeOrder",
+    YIELD_UNITS_INCOMPATIBLE: "authorization.errors.yieldUnitsIncompatible",
+    YIELD_PERCENTAGE_INVALID: "authorization.errors.yieldPercentageInvalid",
+    YIELD_MODEL_INCOMPLETE: "authorization.errors.yieldModelIncomplete",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -116,6 +128,15 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   recipe_items_waste_check: "RECIPE_INVALID_ITEM",
   uq_recipes_default_per_product: "RECIPE_DEFAULT_UNIQUE",
   uq_recipes_establishment_product_version: "RECIPE_VERSION_EXISTS",
+  recipe_yields_recipe_id_key: "RECIPE_YIELD_NOT_FOUND",
+  recipe_yields_unique_recipe: "RECIPE_YIELD_NOT_FOUND",
+  recipe_yields_yield_type_check: "YIELD_INVALID",
+  recipe_yields_input_check: "YIELD_INVALID",
+  recipe_yields_output_check: "YIELD_INVALID",
+  recipe_yields_standard_check: "YIELD_MODEL_INCOMPLETE",
+  recipe_yields_percentage_check: "YIELD_PERCENTAGE_INVALID",
+  recipe_yields_order_check: "YIELD_RANGE_ORDER",
+  recipe_yields_standard_range_check: "YIELD_RANGE_ORDER",
 };
 
 export class AuthorizationError extends Error {

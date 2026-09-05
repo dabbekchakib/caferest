@@ -1,0 +1,12 @@
+{
+  "exact_consumption": "Exact consumption",
+  "batch_yield": "Batch yield",
+  "range_yield": "Variable yield",
+  "portion_yield": "Portion yield",
+  "percentage_yield": "Percentage yield",
+  "exact_consumption_desc": "The input produces a fixed number of servings (e.g. 1 kg of espresso → 93 cups).",
+  "batch_yield_desc": "One input batch produces a defined number of units (e.g. 5 L of syrup → 50 × 100 ml bottles).",
+  "range_yield_desc": "The input produces between a minimum and a maximum, with a standard (e.g. 70 to 100 cups per kg, 85 typical).",
+  "portion_yield_desc": "One production (cake, tray) is cut into identical portions (e.g. 1 cake → 12 slices).",
+  "percentage_yield_desc": "The item loses mass during preparation; only the usable share counts (e.g. 1 kg of fruit at 70% → 0.70 kg of pulp)."
+}

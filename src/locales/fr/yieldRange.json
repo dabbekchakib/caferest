@@ -1,0 +1,7 @@
+{
+  "description": "L'entrée produit un nombre variable d'unités, entre un minimum et un maximum.",
+  "minLabel": "Minimum",
+  "stdLabel": "Standard",
+  "maxLabel": "Maximum",
+  "formulaLabel": "Consommation = quantité d'entrée ÷ sorties"
+}

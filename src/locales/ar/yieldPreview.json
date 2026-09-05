@@ -1,0 +1,14 @@
+{
+  "title": "تقييم المردود",
+  "perServingLabel": "الاستهلاك لكل حصة",
+  "perBatchLabel": "الإنتاج لكل دفعة",
+  "costPerServing": "التكلفة النظرية لكل حصة",
+  "theoreticalCost": "التكلفة النظرية التقديرية",
+  "rangeSelection": "اختيار المردود",
+  "missingCostHint": "التكلفة غير متاحة: لا يمكن حساب تكلفة الوصفة.",
+  "consumptionNote": "الاستهلاك محسوب من المردود، دون أي حركة مخزون.",
+  "rangeLabel": "الحد الأدنى {min} · الحد الأقصى {max}",
+  "empty": "لا يوجد مردود مهيأ لهذه الوصفة.",
+  "activeBadge": "نشط",
+  "inactiveBadge": "غير نشط"
+}

@@ -35,6 +35,12 @@
     "recipeInvalidItem": "Élément de recette invalide : référence incorrecte ou incomplète.",
     "recipeDefaultUnique": "Il existe déjà une recette active par défaut pour ce produit.",
     "recipeVersionExists": "Cette version de recette existe déjà pour ce produit.",
+    "recipeYieldNotFound": "Rendement de recette introuvable.",
+    "yieldInvalid": "Le configuration du rendement est invalide.",
+    "yieldRangeOrder": "Bornes du rendement incohérentes (min ≤ standard ≤ max).",
+    "yieldUnitsIncompatible": "Les unités d'entrée et de sortie sont incompatibles.",
+    "yieldPercentageInvalid": "Pourcentage de rendement invalide (doit être entre 0 et 100).",
+    "yieldModelIncomplete": "Le modèle de rendement sélectionné est incomplet.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

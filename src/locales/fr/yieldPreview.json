@@ -1,0 +1,14 @@
+{
+  "title": "Évaluation du rendement",
+  "perServingLabel": "Consommation par portion",
+  "perBatchLabel": "Production par lot",
+  "costPerServing": "Coût théorique par portion",
+  "theoreticalCost": "Coût théorique estimatif",
+  "rangeSelection": "Sélection du rendement",
+  "missingCostHint": "Coût indisponible : le coût de recette ne peut pas être calculé.",
+  "consumptionNote": "Consommation calculée à partir du rendement, sans mouvement de stock.",
+  "rangeLabel": "Min {min} · Max {max}",
+  "empty": "Aucun rendement configuré pour cette recette.",
+  "activeBadge": "Actif",
+  "inactiveBadge": "Inactif"
+}

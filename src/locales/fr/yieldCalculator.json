@@ -1,0 +1,15 @@
+{
+  "title": "Calculateur de production",
+  "description": "Estimez la production réalisable à partir d'une quantité disponible.",
+  "availableQuantity": "Quantité disponible",
+  "availableUnit": "Unité",
+  "calculate": "Calculer",
+  "calculating": "Calcul…",
+  "result": "Production estimée",
+  "resultHint": "Calculée selon le modèle de rendement et la sélection choisie.",
+  "selectionMin": "Rendement minimum",
+  "selectionStd": "Rendement standard",
+  "selectionMax": "Rendement maximum",
+  "noDefinition": "Définissez d'abord un rendement pour cette recette.",
+  "error": "Le calcul n'a pas pu être effectué."
+}

@@ -22,6 +22,9 @@ import { RecipeBuilder } from "./recipe-builder";
 import { resolveRecipeName } from "@/lib/recipes/translations";
 import { formatRecipeCost, formatRecipeQuantityLabel } from "@/lib/recipes/format";
 import type { RecipeCostBreakdown, RecipeListViewItem, RecipeWithDetail } from "@/lib/recipes/types";
+import { RecipeYieldSection, type YieldRowInput } from "./recipe-yield-section";
+import type { TheoreticalConsumptionResult } from "@/services/yields-service";
+import type { Unit, UnitConversion } from "@/lib/units/types";
 
 interface RecipeDetailProps {
   recipe: RecipeWithDetail | null;
@@ -33,6 +36,13 @@ interface RecipeDetailProps {
   canViewCost: boolean;
   cost: RecipeCostBreakdown | null;
   versionEntries: RecipeListViewItem[];
+  yieldRow?: YieldRowInput | null;
+  units?: Unit[];
+  conversions?: UnitConversion[];
+  canEditYield?: boolean;
+  canViewCostYield?: boolean;
+  batchCost?: number | null;
+  initialConsumption?: TheoreticalConsumptionResult | null;
 }
 
 type RecipeDialog = "activate" | "archive" | "delete" | "duplicate" | "setDefault" | null;
@@ -56,6 +66,13 @@ export function RecipeDetail({
   canViewCost,
   cost,
   versionEntries,
+  yieldRow = null,
+  units = [],
+  conversions = [],
+  canEditYield = false,
+  canViewCostYield = false,
+  batchCost = null,
+  initialConsumption = null,
 }: RecipeDetailProps) {
   const t = useTranslations("recipeDetails");
   const tn = useTranslations("navigation");
@@ -401,17 +418,16 @@ export function RecipeDetail({
             )}
           </Card>
 
-          <Card className="p-5">
-            <h3 className="mb-2 text-sm font-semibold">{t("inventory")}</h3>
-            <div className="flex items-center justify-between rounded-lg border border-dashed border-[var(--color-border)] p-4">
-              <span className="text-sm text-[var(--color-muted-foreground)]">
-                {t("consumption")}
-              </span>
-              <span className="text-xs text-[var(--color-muted-foreground)]">
-                {t("futureSection")}
-              </span>
-            </div>
-          </Card>
+          <RecipeYieldSection
+            recipeId={recipe.id}
+            row={yieldRow}
+            units={units}
+            conversions={conversions}
+            canEdit={canEditYield}
+            canViewCost={canViewCostYield}
+            batchCost={batchCost}
+            initialConsumption={initialConsumption}
+          />
 
           <Card className="p-5">
             <h3 className="mb-2 text-sm font-semibold">{t("dates")}</h3>

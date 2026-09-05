@@ -10,7 +10,9 @@ import {
   getRecipeCost,
   listRecipeVersions,
 } from "@/services/recipes-service";
+import { getRecipeYield, calculateTheoreticalConsumption } from "@/services/yields-service";
 import { RecipeDetail } from "@/features/recipes/recipe-detail";
+import { getCatalogCached } from "@/services/units-cache";
 
 export const metadata: Metadata = {
   title: "Recipe details",
@@ -28,17 +30,44 @@ export default async function RecipeDetailPage({
   const recipe = await getRecipeWithItems(establishmentId, id);
   if (!recipe) notFound();
 
-  const [canUpdate, canDelete, canActivate, canArchive, canViewCost, versionEntries] =
-    await Promise.all([
-      hasPermission("recipes.update"),
-      hasPermission("recipes.delete"),
-      hasPermission("recipes.activate"),
-      hasPermission("recipes.archive"),
-      hasPermission("recipes.cost-view"),
-      listRecipeVersions(establishmentId, recipe.id),
-    ]);
+  const [
+    canUpdate,
+    canDelete,
+    canActivate,
+    canArchive,
+    canViewCost,
+    canCreateYield,
+    canUpdateYield,
+    versionEntries,
+    catalog,
+    yieldRow,
+  ] = await Promise.all([
+    hasPermission("recipes.update"),
+    hasPermission("recipes.delete"),
+    hasPermission("recipes.activate"),
+    hasPermission("recipes.archive"),
+    hasPermission("recipes.cost-view"),
+    hasPermission("recipe_yields.create"),
+    hasPermission("recipe_yields.update"),
+    listRecipeVersions(establishmentId, recipe.id),
+    getCatalogCached(establishmentId),
+    getRecipeYield(establishmentId, recipe.id),
+  ]);
 
   const cost = canViewCost ? await getRecipeCost(establishmentId, recipe.id) : null;
+
+  const canEditYield = canCreateYield || canUpdateYield;
+
+  let initialConsumption = null;
+  if (yieldRow?.row?.is_active) {
+    const consumptionResult = await calculateTheoreticalConsumption(
+      establishmentId,
+      recipe.id
+    );
+    if (consumptionResult.consumed) {
+      initialConsumption = consumptionResult;
+    }
+  }
 
   return (
     <RecipeDetail
@@ -51,6 +80,13 @@ export default async function RecipeDetailPage({
       canViewCost={canViewCost}
       cost={cost}
       versionEntries={versionEntries}
+      yieldRow={yieldRow?.row ?? null}
+      units={catalog.units}
+      conversions={catalog.conversions}
+      canEditYield={canEditYield}
+      canViewCostYield={canViewCost}
+      batchCost={cost?.rawCost ?? null}
+      initialConsumption={initialConsumption}
     />
   );
 }

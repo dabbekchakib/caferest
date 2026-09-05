@@ -35,6 +35,12 @@
     "recipeInvalidItem": "Invalid recipe item: incorrect or incomplete reference.",
     "recipeDefaultUnique": "An active default recipe already exists for this product.",
     "recipeVersionExists": "This recipe version already exists for this product.",
+    "recipeYieldNotFound": "Recipe yield not found.",
+    "yieldInvalid": "The yield configuration is invalid.",
+    "yieldRangeOrder": "Out-of-order yield bounds (min ≤ standard ≤ max).",
+    "yieldUnitsIncompatible": "The input and output units are incompatible.",
+    "yieldPercentageInvalid": "Invalid yield percentage (must be between 0 and 100).",
+    "yieldModelIncomplete": "The selected yield model is incomplete.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

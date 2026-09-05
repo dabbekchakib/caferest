@@ -1,0 +1,6 @@
+{
+  "description": "One input batch produces a defined number of output units.",
+  "batchSizeLabel": "Batch size",
+  "outputsPerBatchLabel": "Outputs per batch",
+  "formulaLabel": "Consumption = batch quantity ÷ outputs per batch"
+}
