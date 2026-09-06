@@ -34,6 +34,8 @@ export const PERMISSION_MODULES = [
   "recipe_yields",
   "stocktakes",
   "stock_adjustments",
+  "dining_areas",
+  "tables",
 ] as const;
 
 export type PermissionModule = (typeof PERMISSION_MODULES)[number];
@@ -160,6 +162,18 @@ export const PERMISSION_SLUGS = [
   "stock_adjustments.cancel",
   "stock_adjustments.view_cost",
   "stock_adjustments.approve_high_value",
+  "dining_areas.view",
+  "dining_areas.create",
+  "dining_areas.update",
+  "dining_areas.delete",
+  "dining_areas.reorder",
+  "tables.view",
+  "tables.create",
+  "tables.update",
+  "tables.delete",
+  "tables.reorder",
+  "tables.status",
+  "tables.floor_plan",
 ] as const;
 
 export type PermissionSlug = (typeof PERMISSION_SLUGS)[number];
@@ -303,6 +317,18 @@ export const SYSTEM_ROLE_DEFAULT_PERMISSIONS: Record<
   "stock_adjustments.cancel",
   "stock_adjustments.view_cost",
   "stock_adjustments.approve_high_value",
+  "dining_areas.view",
+  "dining_areas.create",
+  "dining_areas.update",
+  "dining_areas.delete",
+  "dining_areas.reorder",
+  "tables.view",
+  "tables.create",
+  "tables.update",
+  "tables.delete",
+  "tables.reorder",
+  "tables.status",
+  "tables.floor_plan",
   "orders.view",
   "orders.create",
   "orders.update",

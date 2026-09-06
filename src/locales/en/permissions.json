@@ -36,7 +36,9 @@
     "audit": "Audit log",
     "units": "Units",
     "unit_conversions": "Conversions",
-    "recipe_yields": "Yields"
+    "recipe_yields": "Yields",
+    "dining_areas": "Dining areas",
+    "tables": "Tables"
   },
   "slugs": {
     "dashboard.view": "View dashboard",
@@ -156,6 +158,18 @@
     "recipe_yields.view": "View yields",
     "recipe_yields.create": "Create yields",
     "recipe_yields.update": "Update yields",
-    "recipe_yields.delete": "Delete yields"
+    "recipe_yields.delete": "Delete yields",
+    "dining_areas.view": "View dining areas",
+    "dining_areas.create": "Create dining areas",
+    "dining_areas.update": "Update dining areas",
+    "dining_areas.delete": "Delete dining areas",
+    "dining_areas.reorder": "Reorder dining areas",
+    "tables.view": "View tables",
+    "tables.create": "Create tables",
+    "tables.update": "Update tables",
+    "tables.delete": "Delete tables",
+    "tables.reorder": "Reorder tables",
+    "tables.status": "Change table status",
+    "tables.floor_plan": "Edit floor plan"
   }
 }

@@ -94,6 +94,12 @@
     "stockAdjustmentHighValueApproval": "The total value exceeds the approval threshold: only an authorized person can approve.",
     "stockAdjustmentSelfApproval": "You cannot approve your own adjustment.",
     "stockAdjustmentInsufficientStock": "Insufficient stock for one or more items.",
+    "diningAreaNotFound": "Dining area not found.",
+    "diningSlugExists": "A slug already exists for another dining area.",
+    "tableNumberExists": "A table number already exists for this establishment.",
+    "tableSizeInvalid": "The table size is invalid.",
+    "tablePositionInvalid": "The table position is outside of the floor plan.",
+    "tableRotationInvalid": "The table rotation angle is invalid.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

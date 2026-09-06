@@ -1,0 +1,43 @@
+{
+  "title": "Floor plan",
+  "description": "Drag tables to lay out the room.",
+  "addTable": "Add table",
+  "save": "Save",
+  "saved": "Floor plan saved",
+  "readonly": "Read-only mode.",
+  "tool": {
+    "select": "Select",
+    "pan": "Pan",
+    "grid": "Grid",
+    "snap": "Snap",
+    "zoomOut": "Zoom out",
+    "zoomIn": "Zoom in",
+    "reset": "Reset view"
+  },
+  "summary": {
+    "tables": "tables",
+    "areas": "areas",
+    "unsaved": "unsaved"
+  },
+  "legend": {
+    "title": "Status legend"
+  },
+  "areas": {
+    "title": "Areas",
+    "empty": "No dining areas yet.",
+    "tables": "tables"
+  },
+  "properties": {
+    "title": "Properties",
+    "empty": "Select a table on the plan to edit it.",
+    "x": "X",
+    "y": "Y",
+    "width": "Width",
+    "height": "Height",
+    "rotation": "Rotation",
+    "status": "Status",
+    "area": "Area",
+    "areaNone": "No area",
+    "rotate": "Rotate +15°"
+  }
+}

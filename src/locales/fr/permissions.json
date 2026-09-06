@@ -36,7 +36,9 @@
     "audit": "Journal",
     "units": "Unités",
     "unit_conversions": "Conversions",
-    "recipe_yields": "Rendements"
+    "recipe_yields": "Rendements",
+    "dining_areas": "Espaces de la salle",
+    "tables": "Tables"
   },
   "slugs": {
     "dashboard.view": "Voir le tableau de bord",
@@ -156,6 +158,18 @@
     "recipe_yields.view": "Voir les rendements",
     "recipe_yields.create": "Créer des rendements",
     "recipe_yields.update": "Modifier des rendements",
-    "recipe_yields.delete": "Supprimer des rendements"
+    "recipe_yields.delete": "Supprimer des rendements",
+    "dining_areas.view": "Voir les espaces",
+    "dining_areas.create": "Créer des espaces",
+    "dining_areas.update": "Modifier des espaces",
+    "dining_areas.delete": "Supprimer des espaces",
+    "dining_areas.reorder": "Réorganiser les espaces",
+    "tables.view": "Voir les tables",
+    "tables.create": "Créer des tables",
+    "tables.update": "Modifier des tables",
+    "tables.delete": "Supprimer des tables",
+    "tables.reorder": "Réorganiser les tables",
+    "tables.status": "Changer le statut des tables",
+    "tables.floor_plan": "Éditer le plan de salle"
   }
 }

@@ -264,6 +264,18 @@ import arStockAdjustmentPrint from "../src/locales/ar/stockAdjustmentPrint.json"
 import frStockAdjustmentTypes from "../src/locales/fr/stockAdjustmentTypes.json";
 import enStockAdjustmentTypes from "../src/locales/en/stockAdjustmentTypes.json";
 import arStockAdjustmentTypes from "../src/locales/ar/stockAdjustmentTypes.json";
+import frTables from "../src/locales/fr/tables.json";
+import enTables from "../src/locales/en/tables.json";
+import arTables from "../src/locales/ar/tables.json";
+import frDiningAreas from "../src/locales/fr/diningAreas.json";
+import enDiningAreas from "../src/locales/en/diningAreas.json";
+import arDiningAreas from "../src/locales/ar/diningAreas.json";
+import frFloorPlan from "../src/locales/fr/floorPlan.json";
+import enFloorPlan from "../src/locales/en/floorPlan.json";
+import arFloorPlan from "../src/locales/ar/floorPlan.json";
+import frNavigation from "../src/locales/fr/navigation.json";
+import enNavigation from "../src/locales/en/navigation.json";
+import arNavigation from "../src/locales/ar/navigation.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -373,6 +385,10 @@ const namespaces = [
   ["stockAdjustmentHistory", enStockAdjustmentHistory, frStockAdjustmentHistory, arStockAdjustmentHistory],
   ["stockAdjustmentPrint", enStockAdjustmentPrint, frStockAdjustmentPrint, arStockAdjustmentPrint],
   ["stockAdjustmentTypes", enStockAdjustmentTypes, frStockAdjustmentTypes, arStockAdjustmentTypes],
+  ["tables", enTables, frTables, arTables],
+  ["diningAreas", enDiningAreas, frDiningAreas, arDiningAreas],
+  ["floorPlan", enFloorPlan, frFloorPlan, arFloorPlan],
+  ["navigation", enNavigation, frNavigation, arNavigation],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

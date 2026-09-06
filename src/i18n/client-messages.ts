@@ -23,6 +23,8 @@ import frCustomers from "@/locales/fr/customers.json";
 import frCashRegister from "@/locales/fr/cashRegister.json";
 import frSuppliers from "@/locales/fr/suppliers.json";
 import frTables from "@/locales/fr/tables.json";
+import frDiningAreas from "@/locales/fr/diningAreas.json";
+import frFloorPlan from "@/locales/fr/floorPlan.json";
 import frReports from "@/locales/fr/reports.json";
 import frKitchen from "@/locales/fr/kitchen.json";
 import frBar from "@/locales/fr/bar.json";
@@ -130,6 +132,8 @@ import enCustomers from "@/locales/en/customers.json";
 import enCashRegister from "@/locales/en/cashRegister.json";
 import enSuppliers from "@/locales/en/suppliers.json";
 import enTables from "@/locales/en/tables.json";
+import enDiningAreas from "@/locales/en/diningAreas.json";
+import enFloorPlan from "@/locales/en/floorPlan.json";
 import enReports from "@/locales/en/reports.json";
 import enKitchen from "@/locales/en/kitchen.json";
 import enBar from "@/locales/en/bar.json";
@@ -237,6 +241,8 @@ import arCustomers from "@/locales/ar/customers.json";
 import arCashRegister from "@/locales/ar/cashRegister.json";
 import arSuppliers from "@/locales/ar/suppliers.json";
 import arTables from "@/locales/ar/tables.json";
+import arDiningAreas from "@/locales/ar/diningAreas.json";
+import arFloorPlan from "@/locales/ar/floorPlan.json";
 import arReports from "@/locales/ar/reports.json";
 import arKitchen from "@/locales/ar/kitchen.json";
 import arBar from "@/locales/ar/bar.json";
@@ -345,6 +351,8 @@ interface LocaleBundle {
   cashRegister: MessageRecord;
   suppliers: MessageRecord;
   tables: MessageRecord;
+  diningAreas: MessageRecord;
+  floorPlan: MessageRecord;
   reports: MessageRecord;
   kitchen: MessageRecord;
   bar: MessageRecord;
@@ -454,6 +462,8 @@ const fr: LocaleBundle = {
   cashRegister: frCashRegister,
   suppliers: frSuppliers,
   tables: frTables,
+  diningAreas: frDiningAreas,
+  floorPlan: frFloorPlan,
   reports: frReports,
   kitchen: frKitchen,
   bar: frBar,
@@ -563,6 +573,8 @@ const en: LocaleBundle = {
   cashRegister: enCashRegister,
   suppliers: enSuppliers,
   tables: enTables,
+  diningAreas: enDiningAreas,
+  floorPlan: enFloorPlan,
   reports: enReports,
   kitchen: enKitchen,
   bar: enBar,
@@ -672,6 +684,8 @@ const ar: LocaleBundle = {
   cashRegister: arCashRegister,
   suppliers: arSuppliers,
   tables: arTables,
+  diningAreas: arDiningAreas,
+  floorPlan: arFloorPlan,
   reports: arReports,
   kitchen: arKitchen,
   bar: arBar,

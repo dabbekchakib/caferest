@@ -94,6 +94,12 @@
     "stockAdjustmentHighValueApproval": "La valeur totale dépasse le seuil d'approbation : seule une personne autorisée peut approuver.",
     "stockAdjustmentSelfApproval": "Vous ne pouvez pas approuver votre propre ajustement.",
     "stockAdjustmentInsufficientStock": "Stock insuffisant pour un ou plusieurs articles.",
+    "diningAreaNotFound": "Espace de la salle introuvable.",
+    "diningSlugExists": "Un slug existe déjà pour un autre espace.",
+    "tableNumberExists": "Un numéro de table existe déjà pour cet établissement.",
+    "tableSizeInvalid": "La taille de la table est invalide.",
+    "tablePositionInvalid": "La position de la table est hors du plan de salle.",
+    "tableRotationInvalid": "L'angle de rotation de la table est invalide.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

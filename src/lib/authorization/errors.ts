@@ -103,6 +103,12 @@ export const AUTHORIZATION_ERROR_CODES = {
   STOCK_ADJUSTMENT_SELF_APPROVAL: "STOCK_ADJUSTMENT_SELF_APPROVAL",
   STOCK_ADJUSTMENT_INSUFFICIENT_STOCK:
     "STOCK_ADJUSTMENT_INSUFFICIENT_STOCK",
+  DINING_AREA_NOT_FOUND: "DINING_AREA_NOT_FOUND",
+  DUPLICATE_DINING_SLUG: "DUPLICATE_DINING_SLUG",
+  DUPLICATE_TABLE_NUMBER: "DUPLICATE_TABLE_NUMBER",
+  TABLE_SIZE_INVALID: "TABLE_SIZE_INVALID",
+  TABLE_POSITION_INVALID: "TABLE_POSITION_INVALID",
+  TABLE_ROTATION_INVALID: "TABLE_ROTATION_INVALID",
   GENERIC: "GENERIC",
 } as const;
 
@@ -228,6 +234,12 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
       "authorization.errors.stockAdjustmentSelfApproval",
     STOCK_ADJUSTMENT_INSUFFICIENT_STOCK:
       "authorization.errors.stockAdjustmentInsufficientStock",
+    DINING_AREA_NOT_FOUND: "authorization.errors.diningAreaNotFound",
+    DUPLICATE_DINING_SLUG: "authorization.errors.diningSlugExists",
+    DUPLICATE_TABLE_NUMBER: "authorization.errors.tableNumberExists",
+    TABLE_SIZE_INVALID: "authorization.errors.tableSizeInvalid",
+    TABLE_POSITION_INVALID: "authorization.errors.tablePositionInvalid",
+    TABLE_ROTATION_INVALID: "authorization.errors.tableRotationInvalid",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -285,6 +297,9 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   uq_stock_adjustment_items_added: "STOCK_ADJUSTMENT_DUPLICATE_ITEM",
   uq_stock_adjustment_reasons_system_code: "STOCK_ADJUSTMENT_INVALID_REASON",
   uq_stock_adjustment_reasons_est_code: "STOCK_ADJUSTMENT_INVALID_REASON",
+  uq_dining_areas_establishment_slug: "DUPLICATE_DINING_SLUG",
+  uq_tables_establishment_slug: "DUPLICATE_DINING_SLUG",
+  uq_tables_establishment_number: "DUPLICATE_TABLE_NUMBER",
 };
 
 /**

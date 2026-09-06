@@ -1598,6 +1598,10 @@ export interface Database {
           id: string;
           establishment_id: string;
           name: string;
+          slug: string;
+          description: string | null;
+          color: string | null;
+          icon: string | null;
           sort_order: number;
           is_active: boolean;
           created_at: Datetime;
@@ -1607,6 +1611,10 @@ export interface Database {
           id?: string;
           establishment_id: string;
           name: string;
+          slug: string;
+          description?: string | null;
+          color?: string | null;
+          icon?: string | null;
           sort_order?: number;
           is_active?: boolean;
           created_at?: Datetime;
@@ -1615,16 +1623,47 @@ export interface Database {
         Update: Partial<Database["public"]["Tables"]["dining_areas"]["Insert"]>;
         Relationships: [];
       };
+      dining_area_translations: {
+        Row: {
+          id: string;
+          dining_area_id: string;
+          locale: string;
+          name: string | null;
+          description: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          dining_area_id: string;
+          locale: string;
+          name?: string | null;
+          description?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["dining_area_translations"]["Insert"]
+        >;
+        Relationships: [];
+      };
       tables: {
         Row: {
           id: string;
           establishment_id: string;
           area_id: string | null;
           name: string;
-          code: string | null;
+          slug: string;
+          table_number: string | null;
           capacity: number;
+          shape: TableShape;
           position_x: number | null;
           position_y: number | null;
+          width: number | null;
+          height: number | null;
+          rotation: number;
+          color: string | null;
+          sort_order: number;
           status: TableStatus;
           is_active: boolean;
           created_at: Datetime;
@@ -1635,10 +1674,17 @@ export interface Database {
           establishment_id: string;
           area_id?: string | null;
           name: string;
-          code?: string | null;
+          slug: string;
+          table_number?: string | null;
           capacity?: number;
+          shape?: TableShape;
           position_x?: number | null;
           position_y?: number | null;
+          width?: number | null;
+          height?: number | null;
+          rotation?: number;
+          color?: string | null;
+          sort_order?: number;
           status?: TableStatus;
           is_active?: boolean;
           created_at?: Datetime;
@@ -2121,7 +2167,14 @@ export type StocktakeMode = "standard" | "blind";
 export type StocktakeItemCountStatus = "pending" | "counted";
 
 export type TableStatus =
-  "available" | "occupied" | "reserved" | "cleaning" | "blocked";
+  | "available"
+  | "occupied"
+  | "reserved"
+  | "cleaning"
+  | "disabled"
+  | "blocked";
+
+export type TableShape = "round" | "square" | "rectangle";
 
 export type OrderStatus =
   | "draft"

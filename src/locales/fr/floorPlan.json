@@ -1,0 +1,43 @@
+{
+  "title": "Plan de salle",
+  "description": "Déplacez les tables pour aménager la salle.",
+  "addTable": "Ajouter une table",
+  "save": "Enregistrer",
+  "saved": "Plan de salle enregistré",
+  "readonly": "Mode lecture seule.",
+  "tool": {
+    "select": "Sélection",
+    "pan": "Déplacer la vue",
+    "grid": "Grille",
+    "snap": "Magnétisme",
+    "zoomOut": "Zoom arrière",
+    "zoomIn": "Zoom avant",
+    "reset": "Réinitialiser la vue"
+  },
+  "summary": {
+    "tables": "tables",
+    "areas": "espaces",
+    "unsaved": "non enregistrés"
+  },
+  "legend": {
+    "title": "Légende des statuts"
+  },
+  "areas": {
+    "title": "Espaces",
+    "empty": "Aucun espace de la salle.",
+    "tables": "tables"
+  },
+  "properties": {
+    "title": "Propriétés",
+    "empty": "Sélectionnez une table sur le plan pour la modifier.",
+    "x": "X",
+    "y": "Y",
+    "width": "Largeur",
+    "height": "Hauteur",
+    "rotation": "Rotation",
+    "status": "Statut",
+    "area": "Zone",
+    "areaNone": "Aucune zone",
+    "rotate": "Pivoter +15°"
+  }
+}

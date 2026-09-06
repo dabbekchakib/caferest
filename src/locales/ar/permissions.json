@@ -36,7 +36,9 @@
     "audit": "سجل التدقيق",
     "units": "الوحدات",
     "unit_conversions": "التحويلات",
-    "recipe_yields": "المردود"
+    "recipe_yields": "المردود",
+    "dining_areas": "مناطق تناول الطعام",
+    "tables": "الطاولات"
   },
   "slugs": {
     "dashboard.view": "عرض لوحة التحكم",
@@ -156,6 +158,18 @@
     "recipe_yields.view": "عرض المردود",
     "recipe_yields.create": "إنشاء المردود",
     "recipe_yields.update": "تعديل المردود",
-    "recipe_yields.delete": "حذف المردود"
+    "recipe_yields.delete": "حذف المردود",
+    "dining_areas.view": "عرض مناطق تناول الطعام",
+    "dining_areas.create": "إنشاء مناطق تناول الطعام",
+    "dining_areas.update": "تعديل مناطق تناول الطعام",
+    "dining_areas.delete": "حذف مناطق تناول الطعام",
+    "dining_areas.reorder": "إعادة ترتيب المناطق",
+    "tables.view": "عرض الطاولات",
+    "tables.create": "إنشاء الطاولات",
+    "tables.update": "تعديل الطاولات",
+    "tables.delete": "حذف الطاولات",
+    "tables.reorder": "إعادة ترتيب الطاولات",
+    "tables.status": "تغيير حالة الطاولات",
+    "tables.floor_plan": "تعديل مخطط القاعة"
   }
 }

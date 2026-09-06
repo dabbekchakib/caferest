@@ -94,6 +94,12 @@
     "stockAdjustmentHighValueApproval": "تتجاوز القيمة الإجمالية حد الاعتماد: يمكن لشخص مخول فقط الاعتماد.",
     "stockAdjustmentSelfApproval": "لا يمكنك اعتماد تسويتك الخاصة.",
     "stockAdjustmentInsufficientStock": "مخزون غير كافٍ لبند واحد أو أكثر.",
+    "diningAreaNotFound": "منطقة تناول الطعام غير موجودة.",
+    "diningSlugExists": "يوجد معرّف مكرر لمنطقة أخرى.",
+    "tableNumberExists": "يوجد رقم طاولة مكرر لهذه المنشأة.",
+    "tableSizeInvalid": "حجم الطاولة غير صالح.",
+    "tablePositionInvalid": "موضع الطاولة خارج مخطط القاعة.",
+    "tableRotationInvalid": "زاوية دوران الطاولة غير صالحة.",
     "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
   },
   "switch": {

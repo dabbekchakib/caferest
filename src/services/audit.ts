@@ -132,6 +132,23 @@ const AUDIT_ACTIONS = [
   "stock_adjustment.validated",
   "stock_adjustment.cancelled",
   "stock_adjustment.deleted",
+  "dining_area.created",
+  "dining_area.updated",
+  "dining_area.deleted",
+  "dining_area.reordered",
+  "dining_area.activated",
+  "dining_area.deactivated",
+  "table.created",
+  "table.updated",
+  "table.deleted",
+  "table.duplicated",
+  "table.moved",
+  "table.resized",
+  "table.rotated",
+  "table.status_changed",
+  "table.activated",
+  "table.deactivated",
+  "table.floor_updated",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];

@@ -5,6 +5,8 @@ import {
   ClipboardList,
   CookingPot,
   Martini,
+  MapPin,
+  Armchair,
   LayoutGrid,
   ListOrdered,
   ReceiptText,
@@ -60,9 +62,31 @@ export const navSections: NavSection[] = [
     items: [
       { labelKey: "newOrder", href: "/pos", icon: ShoppingCart },
       { labelKey: "orders", href: "/orders", icon: ClipboardList, badge: "4" },
-      { labelKey: "tables", href: "/tables", icon: LayoutGrid },
       { labelKey: "kitchen", href: "/kitchen", icon: CookingPot },
       { labelKey: "bar", href: "/bar", icon: Martini },
+    ],
+  },
+  {
+    labelKey: "dining",
+    items: [
+      {
+        labelKey: "diningAreas",
+        href: "/dining-areas",
+        icon: MapPin,
+        permission: "dining_areas.view",
+      },
+      {
+        labelKey: "tables",
+        href: "/tables",
+        icon: Armchair,
+        permission: "tables.view",
+      },
+      {
+        labelKey: "floorPlan",
+        href: "/floor-plan",
+        icon: LayoutGrid,
+        permission: "tables.floor_plan",
+      },
     ],
   },
   {
