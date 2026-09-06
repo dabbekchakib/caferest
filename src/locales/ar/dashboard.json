@@ -36,5 +36,10 @@
   "statusInProgress": "قيد التنفيذ",
   "statusPending": "قيد الانتظار",
   "remaining": "{remaining} متبقي|{remaining} متبقية",
-  "remainingUnit": "متبقي"
+  "remainingUnit": "متبقي",
+  "today": "اليوم",
+  "salesByType": "المبيعات حسب النوع",
+  "openOrders": "الطلبات المفتوحة",
+  "noOpenOrders": "لا توجد طلبات مفتوحة",
+  "noOpenOrdersDescription": "ستظهر الطلبات الجديدة هنا فور إنشائها في نقطة البيع."
 }

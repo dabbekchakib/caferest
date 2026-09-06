@@ -8,6 +8,8 @@ import {
   transitionOrderSchema,
   orderRefSchema,
 } from "@/validations/pos";
+import { mergeOrdersSchema, splitOrderSchema } from "@/lib/orders/schemas";
+import { permissionForTargetStatus } from "@/lib/orders/actions";
 import {
   requirePermission,
   requireCurrentEstablishment,
@@ -18,12 +20,19 @@ import {
   createPosOrder,
   getPosOrder,
   getPosSettings,
+  listPosCustomers,
+  mergePosOrders,
+  splitPosOrder,
   transitionPosOrder,
   updatePosOrderDetails,
   updatePosOrderItems,
 } from "@/services/pos-service";
 import type { ActionResult } from "@/lib/authorization/action-result";
-import type { PosOrderCreateResult, PosOrderDetail } from "@/lib/pos/types";
+import type {
+  PosOrderCreateResult,
+  PosOrderDetail,
+  PosOrderStatus,
+} from "@/lib/pos/types";
 
 export type CreatePosOrderInput = {
   clientOperationId?: string | null;
@@ -260,14 +269,24 @@ export async function updatePosOrderDetailsAction(
 
 type TransitionInput = {
   orderId: string;
-  toStatus: "confirmed" | "open" | "cancelled";
+  toStatus: PosOrderStatus;
   clientOperationId?: string | null;
   reason?: string | null;
 };
 
+const ORDER_AUDIT_ACTIONS: Partial<Record<PosOrderStatus, string>> = {
+  open: "order.held",
+  confirmed: "order.confirmed",
+  preparing: "order.preparing",
+  ready: "order.ready",
+  served: "order.served",
+  completed: "order.completed",
+  cancelled: "order.cancelled",
+};
+
 async function transition(
   input: TransitionInput,
-  permission: string
+  permissionOverride?: string
 ): Promise<ActionResult<PosOrderCreateResult>> {
   try {
     const establishmentId = await requireCurrentEstablishment();
@@ -279,7 +298,7 @@ async function transition(
     });
     if (!parsed.success) return fail(parsed.error);
 
-    await requirePermission(permission);
+    await requirePermission(permissionOverride ?? permissionForTargetStatus(parsed.data.toStatus));
 
     const before = await getPosOrder(establishmentId, parsed.data.orderId);
     if (!before) throw new Error("ORDER_NOT_FOUND");
@@ -294,13 +313,8 @@ async function transition(
 
     const wasHeld = Boolean(before.heldAt);
     const auditAction =
-      parsed.data.toStatus === "cancelled"
-        ? "order.cancelled"
-        : parsed.data.toStatus === "open"
-          ? "order.held"
-          : wasHeld
-            ? "order.resumed"
-            : "order.confirmed";
+      ORDER_AUDIT_ACTIONS[parsed.data.toStatus] ??
+      (wasHeld ? "order.resumed" : "order.updated");
 
     await writeAudit({
       action: auditAction,
@@ -326,31 +340,140 @@ async function transition(
   }
 }
 
+/** Transition générique (module /orders — toute transition valide). */
+export async function transitionPosOrderAction(
+  input: TransitionInput
+): Promise<ActionResult<PosOrderCreateResult>> {
+  return transition(input);
+}
+
 export async function confirmPosOrderAction(
   input: Omit<TransitionInput, "toStatus">
 ): Promise<ActionResult<PosOrderCreateResult>> {
-  return transition({ ...input, toStatus: "confirmed" }, "orders.update");
+  return transition({ ...input, toStatus: "confirmed" });
 }
 
 export async function holdPosOrderAction(
   input: Omit<TransitionInput, "toStatus">
 ): Promise<ActionResult<PosOrderCreateResult>> {
-  return transition({ ...input, toStatus: "open" }, "orders.update");
+  return transition({ ...input, toStatus: "open" });
 }
 
 export async function resumePosOrderAction(
   input: Omit<TransitionInput, "toStatus">
 ): Promise<ActionResult<PosOrderCreateResult>> {
-  return transition({ ...input, toStatus: "confirmed" }, "orders.update");
+  return transition({ ...input, toStatus: "confirmed" });
 }
 
 export async function cancelPosOrderAction(
   input: Omit<TransitionInput, "toStatus" | "clientOperationId">
 ): Promise<ActionResult<PosOrderCreateResult>> {
-  return transition(
-    { ...input, toStatus: "cancelled", clientOperationId: null },
-    "orders.cancel"
-  );
+  return transition({
+    ...input,
+    toStatus: "cancelled",
+    clientOperationId: null,
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Fusion & séparation (module /orders)
+// ---------------------------------------------------------------------------
+
+type MergeInput = { sourceOrderId: string; targetOrderId: string };
+
+export async function mergePosOrdersAction(
+  input: MergeInput
+): Promise<ActionResult<PosOrderCreateResult>> {
+  try {
+    const establishmentId = await requireCurrentEstablishment();
+    const parsed = mergeOrdersSchema.safeParse(input);
+    if (!parsed.success) return fail(parsed.error);
+
+    await requirePermission("orders.update");
+
+    const result = await mergePosOrders(
+      establishmentId,
+      parsed.data.sourceOrderId,
+      parsed.data.targetOrderId
+    );
+
+    await writeAudit({
+      action: "order.merged",
+      establishmentId,
+      entityType: "order",
+      entityId: parsed.data.targetOrderId,
+      newValues: {
+        number: result.orderNumber,
+        mergedFrom: parsed.data.sourceOrderId,
+      },
+    });
+
+    revalidatePath("/pos");
+    revalidatePath("/orders");
+    return ok(result);
+  } catch (error) {
+    return fail(error);
+  }
+}
+
+type SplitInput = {
+  sourceOrderId: string;
+  orderType: string;
+  clientOperationId?: string | null;
+  tableId?: string | null;
+  diningAreaId?: string | null;
+  customerId?: string | null;
+  notes?: string | null;
+  items: Array<{ id: string }>;
+};
+
+export async function splitPosOrderAction(
+  input: SplitInput
+): Promise<ActionResult<PosOrderCreateResult>> {
+  try {
+    const establishmentId = await requireCurrentEstablishment();
+    const parsed = splitOrderSchema.safeParse({
+      sourceOrderId: input.sourceOrderId,
+      orderType: input.orderType,
+      clientOperationId: input.clientOperationId ?? null,
+      tableId: input.tableId ?? null,
+      diningAreaId: input.diningAreaId ?? null,
+      customerId: input.customerId ?? null,
+      notes: input.notes ?? null,
+      items: input.items.map((item) => item.id),
+    });
+    if (!parsed.success) return fail(parsed.error);
+
+    await requirePermission("orders.update");
+
+    const result = await splitPosOrder(establishmentId, {
+      sourceOrderId: parsed.data.sourceOrderId,
+      orderType: parsed.data.orderType,
+      clientOperationId: parsed.data.clientOperationId ?? null,
+      tableId: parsed.data.tableId ?? null,
+      diningAreaId: parsed.data.diningAreaId ?? null,
+      customerId: parsed.data.customerId ?? null,
+      notes: parsed.data.notes ?? null,
+      items: parsed.data.items,
+    });
+
+    await writeAudit({
+      action: "order.split",
+      establishmentId,
+      entityType: "order",
+      entityId: parsed.data.sourceOrderId,
+      newValues: {
+        number: result.orderNumber,
+        movedItems: parsed.data.items.length,
+      },
+    });
+
+    revalidatePath("/pos");
+    revalidatePath("/orders");
+    return ok(result);
+  } catch (error) {
+    return fail(error);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -380,24 +503,7 @@ export async function listPosCustomersAction(): Promise<
   try {
     const establishmentId = await requireCurrentEstablishment();
     await requirePermission("pos.access");
-    const { createClient } = await import("@/lib/supabase/server");
-    const supabase = await createClient();
-    const { data, error } = await supabase
-      .from("customers")
-      .select("id, first_name, last_name")
-      .eq("establishment_id", establishmentId)
-      .eq("is_active", true)
-      .order("first_name", { ascending: true })
-      .limit(200);
-    if (error) return fail(error);
-
-    const rows = (data ?? []).map((customer) => ({
-      id: customer.id,
-      name: [customer.first_name, customer.last_name]
-        .filter(Boolean)
-        .join(" ")
-        .trim(),
-    }));
+    const rows = await listPosCustomers(establishmentId);
     return ok(rows);
   } catch (error) {
     return fail(error);

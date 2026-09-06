@@ -3,45 +3,43 @@ import {
   LayoutDashboard,
   ShoppingCart,
   ClipboardList,
-  CookingPot,
-  Martini,
   MapPin,
   Armchair,
   LayoutGrid,
-  ListOrdered,
-  ReceiptText,
-  Wallet,
-  Banknote,
   Package,
   FolderTree,
   Wheat,
   BookOpenText,
-  Factory,
   Truck,
-  ClipboardPlus,
+  ClipboardList as ClipboardListAlt,
   PackageCheck,
-  Boxes,
-  ArrowLeftRight,
   ClipboardMinus,
-  Users,
-  Sparkles,
-  BarChart3,
-  LineChart,
+  Ruler,
+  ArrowLeftRight,
   UserCog,
   ShieldCheck,
-  History,
   Settings,
   BookMarked,
-  Ruler,
+  ClipboardCheck,
 } from "lucide-react";
 
+/**
+ * Registre central de navigation (Phase 20).
+ *
+ * Source unique de vérité pour le menu, le drawer mobile, la bottom-nav, les
+ * breadcrumbs et la matrice du /system-test. Trois règles strictes :
+ *   - chaque `href` pointe vers une route RÉELLE et fonctionnelle ;
+ *   - aucun lien mort, aucune route inventée, aucun placeholder fonctionnel ;
+ *   - chaque item porte sa permission (masqué si non accordée).
+ */
+
 export interface NavItem {
+  /** Clé i18n (namespace navigation) pour l'étiquette. */
   labelKey: string;
   href: string;
   icon: LucideIcon;
   badge?: string;
-  disabled?: boolean;
-  /** Permission slug controlling item visibility (filters sidebar/menus). */
+  /** Permission slug contrôlant la visibilité. */
   permission?: string;
 }
 
@@ -60,20 +58,28 @@ export const navSections: NavSection[] = [
   {
     labelKey: "pos",
     items: [
-      { labelKey: "newOrder", href: "/pos", icon: ShoppingCart, permission: "pos.access" },
-      { labelKey: "orders", href: "/orders", icon: ClipboardList, badge: "4", permission: "orders.view" },
-      { labelKey: "kitchen", href: "/kitchen", icon: CookingPot },
-      { labelKey: "bar", href: "/bar", icon: Martini },
+      {
+        labelKey: "newOrder",
+        href: "/pos",
+        icon: ShoppingCart,
+        permission: "pos.access",
+      },
+      {
+        labelKey: "orders",
+        href: "/orders",
+        icon: ClipboardList,
+        permission: "orders.view",
+      },
     ],
   },
   {
     labelKey: "dining",
     items: [
       {
-        labelKey: "diningAreas",
-        href: "/dining-areas",
-        icon: MapPin,
-        permission: "dining_areas.view",
+        labelKey: "floorPlan",
+        href: "/floor-plan",
+        icon: LayoutGrid,
+        permission: "tables.floor_plan",
       },
       {
         labelKey: "tables",
@@ -82,26 +88,22 @@ export const navSections: NavSection[] = [
         permission: "tables.view",
       },
       {
-        labelKey: "floorPlan",
-        href: "/floor-plan",
-        icon: LayoutGrid,
-        permission: "tables.floor_plan",
+        labelKey: "diningAreas",
+        href: "/dining-areas",
+        icon: MapPin,
+        permission: "dining_areas.view",
       },
     ],
   },
   {
-    labelKey: "sales",
+    labelKey: "catalog",
     items: [
-      { labelKey: "salesReports", href: "/sales", icon: ReceiptText },
-      { labelKey: "tickets", href: "/tickets", icon: ListOrdered },
-      { labelKey: "payments", href: "/payments", icon: Wallet },
-      { labelKey: "cashRegister", href: "/register", icon: Banknote },
-    ],
-  },
-  {
-    labelKey: "products",
-    items: [
-      { labelKey: "products", href: "/products", icon: Package, permission: "products.view" },
+      {
+        labelKey: "products",
+        href: "/products",
+        icon: Package,
+        permission: "products.view",
+      },
       {
         labelKey: "categories",
         href: "/categories",
@@ -114,39 +116,52 @@ export const navSections: NavSection[] = [
         icon: Wheat,
         permission: "ingredients.view",
       },
-      { labelKey: "recipes", href: "/recipes", icon: BookOpenText, permission: "recipes.view" },
-      { labelKey: "yields", href: "/yields", icon: Factory },
+      {
+        labelKey: "recipes",
+        href: "/recipes",
+        icon: BookOpenText,
+        permission: "recipes.view",
+      },
     ],
   },
   {
     labelKey: "supply",
     items: [
-      { labelKey: "suppliers", href: "/suppliers", icon: Truck, permission: "suppliers.view" },
       {
-        labelKey: "purchaseRequests",
-        href: "/purchase-requests",
-        icon: ClipboardPlus,
+        labelKey: "suppliers",
+        href: "/suppliers",
+        icon: Truck,
+        permission: "suppliers.view",
       },
       {
         labelKey: "purchaseOrders",
         href: "/purchase-orders",
-        icon: ClipboardList,
+        icon: ClipboardListAlt,
         permission: "purchases.view",
       },
-      { labelKey: "receiving", href: "/receipts", icon: PackageCheck, permission: "goods_receipts.view" },
+      {
+        labelKey: "receiving",
+        href: "/receipts",
+        icon: PackageCheck,
+        permission: "goods_receipts.view",
+      },
     ],
   },
   {
     labelKey: "stock",
     items: [
-      { labelKey: "inventory", href: "/inventory", icon: Boxes },
       {
-        labelKey: "stockMovements",
-        href: "/stock-movements",
-        icon: ArrowLeftRight,
+        labelKey: "stockCounts",
+        href: "/stocktakes",
+        icon: ClipboardCheck,
+        permission: "stocktakes.view",
       },
-      { labelKey: "stockCounts", href: "/stocktakes", icon: ClipboardMinus, permission: "stocktakes.view" },
-      { labelKey: "losses", href: "/stock-adjustments", icon: ClipboardMinus, permission: "stock_adjustments.view" },
+      {
+        labelKey: "losses",
+        href: "/stock-adjustments",
+        icon: ClipboardMinus,
+        permission: "stock_adjustments.view",
+      },
       {
         labelKey: "units",
         href: "/units",
@@ -162,25 +177,20 @@ export const navSections: NavSection[] = [
     ],
   },
   {
-    labelKey: "customers",
-    items: [
-      { labelKey: "customers", href: "/customers", icon: Users },
-      { labelKey: "loyalty", href: "/loyalty", icon: Sparkles },
-    ],
-  },
-  {
-    labelKey: "reports",
-    items: [
-      { labelKey: "reports", href: "/reports", icon: BarChart3 },
-      { labelKey: "analytics", href: "/analytics", icon: LineChart },
-    ],
-  },
-  {
     labelKey: "administration",
     items: [
-      { labelKey: "users", href: "/users", icon: UserCog, permission: "users.view" },
-      { labelKey: "roles", href: "/roles", icon: ShieldCheck, permission: "roles.view" },
-      { labelKey: "journal", href: "/logs", icon: History, permission: "audit_logs.view" },
+      {
+        labelKey: "users",
+        href: "/users",
+        icon: UserCog,
+        permission: "users.view",
+      },
+      {
+        labelKey: "roles",
+        href: "/roles",
+        icon: ShieldCheck,
+        permission: "roles.view",
+      },
     ],
   },
   {
@@ -188,20 +198,97 @@ export const navSections: NavSection[] = [
     items: [
       { labelKey: "settings", href: "/settings", icon: Settings },
       { labelKey: "styleGuide", href: "/style-guide", icon: BookMarked },
+      { labelKey: "uiTest", href: "/ui-test", icon: ClipboardCheck },
+      {
+        labelKey: "systemTest",
+        href: "/system-test",
+        icon: ShieldCheck,
+        permission: "settings.view",
+      },
     ],
   },
 ];
+
+/** Toutes les entrées à plat (pour le drawer mobile / bottom-nav / tests). */
+export function flattenNavItems(): NavItem[] {
+  return navSections.flatMap((section) => section.items);
+}
+
+/** Tous les chemins réels référencés par le registre (aucun doublon). */
+export function registeredRoutes(): string[] {
+  return Array.from(new Set(flattenNavItems().map((item) => item.href)));
+}
+
+export interface BreadcrumbStep {
+  href: string;
+  labelKey: string;
+}
+
+/**
+ * Résout le fil d'Ariane d'un pathname depuis le registre central : accueil,
+ * puis l'entrée de menu dont le href est le PLUS LONG préfixe du pathname, puis
+ * (éventuellement) un jalon « detail » pour les segments dynamiques
+ * (/orders/123, /products/456/edit, …).
+ */
+export function resolveBreadcrumbTrail(pathname: string): BreadcrumbStep[] {
+  const home: BreadcrumbStep = { href: "/dashboard", labelKey: "home" };
+  if (pathname === "/dashboard" || pathname === "/") return [home];
+
+  let best: BreadcrumbStep | null = null;
+  for (const item of flattenNavItems()) {
+    if (pathname === item.href) {
+      best = { href: item.href, labelKey: item.labelKey };
+      break;
+    }
+    if (
+      pathname.startsWith(item.href + "/") &&
+      (!best || item.href.length > best.href.length)
+    ) {
+      best = { href: item.href, labelKey: item.labelKey };
+    }
+  }
+  if (!best) return [home];
+
+  const trail: BreadcrumbStep[] = [home, best];
+  const rest = pathname.slice(best.href.length).split("/").filter(Boolean);
+  if (rest.length > 0) {
+    trail.push({ href: "", labelKey: "detail" });
+  }
+  return trail;
+}
+
+/** Clé i18n du titre de topbar pour un pathname (dérivé du registre). */
+export function resolveNavLabelKey(pathname: string): string | null {
+  const trail = resolveBreadcrumbTrail(pathname);
+  if (trail.length <= 1) return null;
+  const moduleStep = trail[1];
+  return moduleStep.labelKey === "home" ? null : moduleStep.labelKey;
+}
 
 export interface BottomNavItem {
   labelKey: string;
   href: string;
   icon: LucideIcon;
+  permission?: string;
 }
 
 export const bottomNavItems: BottomNavItem[] = [
   { labelKey: "home", href: "/dashboard", icon: LayoutDashboard },
-  { labelKey: "pos", href: "/pos", icon: ShoppingCart },
-  { labelKey: "orders", href: "/orders", icon: ClipboardList },
-  { labelKey: "inventory", href: "/inventory", icon: Boxes },
-  { labelKey: "more", href: "/menu", icon: LayoutGrid },
+  {
+    labelKey: "pos",
+    href: "/pos",
+    icon: ShoppingCart,
+    permission: "pos.access",
+  },
+  {
+    labelKey: "orders",
+    href: "/orders",
+    icon: ClipboardList,
+    permission: "orders.view",
+  },
+  {
+    labelKey: "settings",
+    href: "/settings",
+    icon: Settings,
+  },
 ];

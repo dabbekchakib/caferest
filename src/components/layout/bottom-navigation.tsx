@@ -4,18 +4,23 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { bottomNavItems } from "@/lib/navigation";
+import { useAuthorization } from "@/hooks/use-authorization";
 import { cn } from "@/lib/utils";
 
 export function BottomNavigation() {
   const pathname = usePathname();
   const t = useTranslations("navigation");
+  const { can } = useAuthorization();
+  const items = bottomNavItems.filter(
+    (item) => !item.permission || can(item.permission)
+  );
 
   return (
     <nav
       className="fixed inset-x-0 bottom-0 z-40 flex h-16 items-stretch border-t border-[var(--color-border)] bg-[var(--color-header)] lg:hidden"
       aria-label={t("mobileLabel")}
     >
-      {bottomNavItems.map((item) => {
+      {items.map((item) => {
         const active =
           pathname === item.href ||
           (item.href !== "/dashboard" && pathname.startsWith(item.href));

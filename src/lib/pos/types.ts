@@ -4,7 +4,17 @@
 
 export type SaleType = "dine_in" | "takeaway" | "delivery" | "counter";
 
-export type PosOrderStatus = "draft" | "open" | "confirmed" | "cancelled";
+/** Statuts de commande (miroir du CHECK orders_status_check). */
+export type PosOrderStatus =
+  | "draft"
+  | "open"
+  | "pending"
+  | "confirmed"
+  | "preparing"
+  | "ready"
+  | "served"
+  | "completed"
+  | "cancelled";
 
 export interface PosProduct {
   id: string;
@@ -85,6 +95,7 @@ export interface PosOrderSummary {
   diningAreaName: string | null;
   customerId: string | null;
   customerName: string | null;
+  serverName: string | null;
   notes: string | null;
   itemsCount: number;
   quantity: number;
@@ -93,6 +104,8 @@ export interface PosOrderSummary {
   taxAmount: number;
   total: number;
   heldAt: string | null;
+  confirmedAt: string | null;
+  cancelledAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -114,4 +127,29 @@ export interface PosAreaRef {
   id: string;
   name: string;
   tables: PosTableRef[];
+}
+
+/** Événement de la timeline d'une commande (order_status_history). */
+export interface PosOrderStatusEvent {
+  id: string;
+  status: PosOrderStatus;
+  fromStatus: PosOrderStatus | null;
+  userName: string | null;
+  reason: string | null;
+  createdAt: string;
+}
+
+/** Événement readonly (rayonnement de l'historique depuis la DB). */
+export type PosOrderStatusEventRow = Omit<
+  PosOrderStatusEvent,
+  "userName"
+> & { userName?: string | null };
+
+/** Page de commandes (liste filtrable / paginable). */
+export interface PosOrderListResult {
+  items: PosOrderSummary[];
+  total: number;
+  page: number;
+  pageSize: number;
+  totalPages: number;
 }

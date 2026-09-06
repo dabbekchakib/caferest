@@ -36,5 +36,10 @@
   "statusInProgress": "In progress",
   "statusPending": "Pending",
   "remaining": "{remaining} remaining|{remaining} remaining",
-  "remainingUnit": "remaining"
+  "remainingUnit": "remaining",
+  "today": "today",
+  "salesByType": "Sales by type",
+  "openOrders": "Open orders",
+  "noOpenOrders": "No open orders",
+  "noOpenOrdersDescription": "New orders will appear here as soon as they are created in the POS."
 }

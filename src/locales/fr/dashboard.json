@@ -36,5 +36,10 @@
   "statusInProgress": "En cours",
   "statusPending": "En attente",
   "remaining": "{remaining} restant|{remaining} restants",
-  "remainingUnit": "restant"
+  "remainingUnit": "restant",
+  "today": "aujourd'hui",
+  "salesByType": "Ventes par type",
+  "openOrders": "Commandes ouvertes",
+  "noOpenOrders": "Aucune commande ouverte",
+  "noOpenOrdersDescription": "Les nouvelles commandes apparaîtront ici dès leur création au POS."
 }

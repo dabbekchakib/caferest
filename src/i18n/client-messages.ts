@@ -36,6 +36,7 @@ import frValidation from "@/locales/fr/validation.json";
 import frNotifications from "@/locales/fr/notifications.json";
 import frStyleGuide from "@/locales/fr/styleGuide.json";
 import frUiTest from "@/locales/fr/uiTest.json";
+import frSystemTest from "@/locales/fr/system-test.json";
 import frForm from "@/locales/fr/form.json";
 import frUsers from "@/locales/fr/users.json";
 import frRoles from "@/locales/fr/roles.json";
@@ -146,6 +147,7 @@ import enValidation from "@/locales/en/validation.json";
 import enNotifications from "@/locales/en/notifications.json";
 import enStyleGuide from "@/locales/en/styleGuide.json";
 import enUiTest from "@/locales/en/uiTest.json";
+import enSystemTest from "@/locales/en/system-test.json";
 import enForm from "@/locales/en/form.json";
 import enUsers from "@/locales/en/users.json";
 import enRoles from "@/locales/en/roles.json";
@@ -256,6 +258,7 @@ import arValidation from "@/locales/ar/validation.json";
 import arNotifications from "@/locales/ar/notifications.json";
 import arStyleGuide from "@/locales/ar/styleGuide.json";
 import arUiTest from "@/locales/ar/uiTest.json";
+import arSystemTest from "@/locales/ar/system-test.json";
 import arForm from "@/locales/ar/form.json";
 import arUsers from "@/locales/ar/users.json";
 import arRoles from "@/locales/ar/roles.json";
@@ -367,6 +370,7 @@ interface LocaleBundle {
   notifications: MessageRecord;
   styleGuide: MessageRecord;
   uiTest: MessageRecord;
+  systemTest: MessageRecord;
   form: MessageRecord;
   users: MessageRecord;
   roles: MessageRecord;
@@ -479,6 +483,7 @@ const fr: LocaleBundle = {
   notifications: frNotifications,
   styleGuide: frStyleGuide,
   uiTest: frUiTest,
+  systemTest: frSystemTest,
   form: frForm,
   users: frUsers,
   roles: frRoles,
@@ -591,6 +596,7 @@ const en: LocaleBundle = {
   notifications: enNotifications,
   styleGuide: enStyleGuide,
   uiTest: enUiTest,
+  systemTest: enSystemTest,
   form: enForm,
   users: enUsers,
   roles: enRoles,
@@ -703,6 +709,7 @@ const ar: LocaleBundle = {
   notifications: arNotifications,
   styleGuide: arStyleGuide,
   uiTest: arUiTest,
+  systemTest: arSystemTest,
   form: arForm,
   users: arUsers,
   roles: arRoles,

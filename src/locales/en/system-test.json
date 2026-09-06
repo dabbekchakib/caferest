@@ -1,0 +1,14 @@
+{
+  "title": "System test",
+  "description": "Matrix of modules, real routes and their integration status.",
+  "module": "Module",
+  "route": "Route",
+  "status": "Status",
+  "statusOk": "OK",
+  "statusMissing": "Missing",
+  "nav": "Menu",
+  "navYes": "Present",
+  "navNo": "Absent",
+  "open": "Open",
+  "footnote": "Status is computed from the project's real route tree."
+}

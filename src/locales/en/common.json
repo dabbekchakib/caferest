@@ -50,6 +50,12 @@
     "demo": "CafeRest Demo",
     "demoPhase": "Phase 04 — Internationalization"
   },
+  "pages": {
+    "notFound": "Page not found",
+    "notFoundDescription": "The page you are looking for does not exist or has been moved.",
+    "backHome": "Back to home",
+    "retry": "Retry"
+  },
   "pagination": {
     "label": "Pagination",
     "showing": "Showing {from}-{to} of {total}",

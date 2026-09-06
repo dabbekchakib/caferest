@@ -1,0 +1,14 @@
+{
+  "title": "Test système",
+  "description": "Matrice des modules, routes réelles et état de leur intégration.",
+  "module": "Module",
+  "route": "Route",
+  "status": "État",
+  "statusOk": "OK",
+  "statusMissing": "Manquant",
+  "nav": "Menu",
+  "navYes": "Présent",
+  "navNo": "Absent",
+  "open": "Ouvrir",
+  "footnote": "L'état est calculé depuis l'arborescence réelle des routes du projet."
+}

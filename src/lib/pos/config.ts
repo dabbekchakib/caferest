@@ -1,8 +1,13 @@
 /**
  * Constantes de configuration du module POS (pures, testables).
+ *
+ * La machine d'état canonique des commandes vit dans `src/lib/orders/workflow` ;
+ * ce module ne fait que réexposer les statuts et utiliser la même machine, afin
+ * que POS et module commandes ne divergent jamais.
  */
 
 import type { PosOrderStatus, SaleType } from "./types";
+import { ALL_ORDER_STATUSES, ORDER_WORKFLOW } from "../orders/workflow";
 
 /** Types de vente gérés par la base (CHECK orders_type_check). */
 export const SALE_TYPES: readonly SaleType[] = [
@@ -19,16 +24,17 @@ export const POS_DISPLAY_TYPES: readonly SaleType[] = [
   "counter",
 ];
 
-/** Statuts de commande gérés par la Phase 19. */
-export const ORDER_STATUSES: readonly PosOrderStatus[] = [
-  "draft",
-  "open",
-  "confirmed",
-  "cancelled",
-];
+/** Statuts de commande gérés (miroir du CHECK orders_status_check). */
+export const ORDER_STATUSES: readonly PosOrderStatus[] = ALL_ORDER_STATUSES;
 
 /** Commandes affichées dans le panneau « commandes ouvertes ». */
-export const OPEN_ORDER_STATUSES: readonly PosOrderStatus[] = ["open", "confirmed"];
+export const OPEN_ORDER_STATUSES: readonly PosOrderStatus[] = [
+  "open",
+  "confirmed",
+  "preparing",
+  "ready",
+  "served",
+];
 
 /** Clés de paramètres POS (table settings, groupe 'pos'). */
 export const POS_SETTINGS_KEYS = {
@@ -43,16 +49,11 @@ export const POS_SETTINGS_DEFAULTS = {
   allowNegativeStock: false,
 } as const;
 
-/** Transitions de statut autorisées (les autres sont rejetées côté serveur). */
+/** Transitions de statut autorisées — miroir exact de order_workflow.sql. */
 export const POS_TRANSITIONS: Record<
   PosOrderStatus,
   readonly PosOrderStatus[]
-> = {
-  draft: ["confirmed"],
-  open: ["confirmed", "cancelled"],
-  confirmed: ["open", "cancelled"],
-  cancelled: [],
-};
+> = ORDER_WORKFLOW;
 
 export function isSaleType(value: unknown): value is SaleType {
   return (

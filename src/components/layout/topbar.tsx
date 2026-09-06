@@ -32,6 +32,7 @@ import { NotificationItem } from "@/components/shared/notification-item";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { EstablishmentSwitcher } from "@/components/rbac/establishment-switcher";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { useToast } from "@/stores/use-toast-store";
 import { Badge } from "@/components/ui/badge";
 import { useAuth } from "@/hooks/use-auth";
@@ -39,25 +40,7 @@ import { signOut } from "@/lib/auth/auth-service";
 import { createClient } from "@/lib/supabase/client";
 import type { AuthClientLike } from "@/lib/auth/auth-types";
 import { APP_NAME } from "@/lib/constants";
-
-/** Route segment → navigation namespace key for the topbar title. */
-const SEGMENT_NAV_KEY: Record<string, string> = {
-  dashboard: "dashboard",
-  pos: "pointOfSale",
-  orders: "orders",
-  tables: "tables",
-  kitchen: "kitchen",
-  menu: "menu",
-  inventory: "inventory",
-  customers: "customers",
-  suppliers: "suppliers",
-  reports: "reports",
-  settings: "settings",
-  users: "users",
-  roles: "roles",
-  logs: "journal",
-  "style-guide": "styleGuide",
-};
+import { resolveNavLabelKey } from "@/lib/navigation";
 
 function getInitials(value: string): string {
   const cleaned = value.trim().replace(/\s+/g, " ");
@@ -81,7 +64,7 @@ export function Topbar({ title }: { title?: string }) {
   const { user, profile } = useAuth();
 
   const segment = pathname.split("/")[1] ?? "";
-  const navKey = segment ? SEGMENT_NAV_KEY[segment] : undefined;
+  const navKey = segment ? resolveNavLabelKey(pathname) ?? undefined : undefined;
   const resolvedTitle = navKey ? tn(navKey) : (title ?? APP_NAME);
 
   const displayName = profile?.full_name?.trim() || user?.email || "CafeRest";
@@ -142,9 +125,10 @@ export function Topbar({ title }: { title?: string }) {
         <PanelLeft className="size-5" aria-hidden />
       </button>
 
-      <h1 className="hidden truncate text-base font-semibold sm:block">
-        {resolvedTitle}
-      </h1>
+      <div className="hidden min-w-0 sm:block">
+        <Breadcrumbs className="mb-0.5" />
+        <h1 className="truncate text-base font-semibold">{resolvedTitle}</h1>
+      </div>
 
       <div className="ms-auto flex items-center gap-2">
         <ConnectionStatus status="online" className="hidden md:inline-flex" />

@@ -50,6 +50,12 @@
     "demo": "Démo CaféRest",
     "demoPhase": "Phase 04 — Internationalisation"
   },
+  "pages": {
+    "notFound": "Page introuvable",
+    "notFoundDescription": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "backHome": "Retour à l'accueil",
+    "retry": "Réessayer"
+  },
   "pagination": {
     "label": "Pagination",
     "showing": "Affichage {from}-{to} sur {total}",

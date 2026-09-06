@@ -1783,6 +1783,30 @@ export interface Database {
         Update: Partial<Database["public"]["Tables"]["orders"]["Insert"]>;
         Relationships: [];
       };
+      order_status_history: {
+        Row: {
+          id: string;
+          order_id: string;
+          status: OrderStatus;
+          from_status: OrderStatus | null;
+          user_id: string | null;
+          reason: string | null;
+          created_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          order_id: string;
+          status: OrderStatus;
+          from_status?: OrderStatus | null;
+          user_id?: string | null;
+          reason?: string | null;
+          created_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["order_status_history"]["Insert"]
+        >;
+        Relationships: [];
+      };
       order_items: {
         Row: {
           id: string;

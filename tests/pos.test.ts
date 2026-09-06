@@ -69,25 +69,50 @@ test("pos config exposes the sale types and order statuses", () => {
     "counter",
   ]);
   assert.deepEqual([...POS_DISPLAY_TYPES], ["dine_in", "takeaway", "counter"]);
-  assert.deepEqual([...ORDER_STATUSES], ["draft", "open", "confirmed", "cancelled"]);
-  assert.deepEqual([...OPEN_ORDER_STATUSES], ["open", "confirmed"]);
+  assert.deepEqual([...ORDER_STATUSES], [
+    "draft",
+    "open",
+    "pending",
+    "confirmed",
+    "preparing",
+    "ready",
+    "served",
+    "completed",
+    "cancelled",
+  ]);
+  assert.deepEqual([...OPEN_ORDER_STATUSES], [
+    "open",
+    "confirmed",
+    "preparing",
+    "ready",
+    "served",
+  ]);
   assert.equal(isSaleType("takeaway"), true);
   assert.equal(isSaleType("delivery"), true);
   assert.equal(isSaleType("drive"), false);
   assert.equal(isOrderStatus("open"), true);
-  assert.equal(isOrderStatus("completed"), false);
+  assert.equal(isOrderStatus("completed"), true);
 });
 
 test("pos transitions follow the defined matrix", () => {
-  assert.deepEqual(POS_TRANSITIONS.draft, ["confirmed"]);
+  assert.deepEqual(POS_TRANSITIONS.draft, ["open", "confirmed"]);
   assert.deepEqual(POS_TRANSITIONS.open, ["confirmed", "cancelled"]);
-  assert.deepEqual(POS_TRANSITIONS.confirmed, ["open", "cancelled"]);
+  assert.deepEqual(POS_TRANSITIONS.confirmed, ["open", "preparing", "cancelled"]);
+  assert.deepEqual(POS_TRANSITIONS.preparing, ["ready", "cancelled"]);
+  assert.deepEqual(POS_TRANSITIONS.ready, ["served"]);
+  assert.deepEqual(POS_TRANSITIONS.served, ["completed"]);
+  assert.deepEqual(POS_TRANSITIONS.completed, []);
   assert.deepEqual(POS_TRANSITIONS.cancelled, []);
   assert.equal(canTransition("open", "confirmed"), true);
   assert.equal(canTransition("confirmed", "open"), true);
   assert.equal(canTransition("open", "cancelled"), true);
   assert.equal(canTransition("open", "draft"), false);
   assert.equal(canTransition("cancelled", "open"), false);
+  assert.equal(canTransition("confirmed", "preparing"), true);
+  assert.equal(canTransition("preparing", "ready"), true);
+  assert.equal(canTransition("ready", "served"), true);
+  assert.equal(canTransition("served", "completed"), true);
+  assert.equal(canTransition("preparing", "served"), false);
 });
 
 test("pos settings keys and defaults stay aligned", () => {

@@ -24,14 +24,17 @@ import type {
   PosOrderCreateResult,
   PosOrderDetail,
   PosOrderItemRow,
+  PosOrderListResult,
+  PosOrderStatusEvent,
   PosOrderSummary,
   PosProduct,
   PosSettings,
   PosTableRef,
 } from "@/lib/pos/types";
+import type { OrderListFiltersInput } from "@/lib/orders/schemas";
 
 const ORDER_SELECT =
-  "id, order_number, status, order_type, table_id, dining_area_id, customer_id, notes, subtotal, discount_amount, tax_amount, total, held_at, created_at, updated_at";
+  "id, order_number, status, order_type, table_id, dining_area_id, customer_id, user_id, notes, subtotal, discount_amount, tax_amount, total, held_at, confirmed_at, cancelled_at, created_at, updated_at";
 
 interface RawOrderRow {
   id: string;
@@ -41,12 +44,15 @@ interface RawOrderRow {
   table_id: string | null;
   dining_area_id: string | null;
   customer_id: string | null;
+  user_id: string | null;
   notes: string | null;
   subtotal: number;
   discount_amount: number;
   tax_amount: number;
   total: number;
   held_at: string | null;
+  confirmed_at: string | null;
+  cancelled_at: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -225,6 +231,104 @@ export async function getPosOrder(
 }
 
 // ---------------------------------------------------------------------------
+// Liste paginée des commandes (/orders)
+// ---------------------------------------------------------------------------
+
+export async function getOrdersPage(
+  establishmentId: string,
+  filters: OrderListFiltersInput
+): Promise<PosOrderListResult> {
+  const supabase = await createClient();
+  const page = filters.page ?? 1;
+  const pageSize = filters.pageSize ?? 15;
+  const offset = (page - 1) * pageSize;
+
+  let query = supabase
+    .from("orders")
+    .select(ORDER_SELECT, { count: "exact" })
+    .eq("establishment_id", establishmentId)
+    .order("created_at", { ascending: false });
+
+  if (filters.status) query = query.eq("status", filters.status);
+  if (filters.orderType) query = query.eq("order_type", filters.orderType);
+  if (filters.tableId) query = query.eq("table_id", filters.tableId);
+  if (filters.customerId) query = query.eq("customer_id", filters.customerId);
+  if (filters.query) {
+    query = query.ilike("order_number", `%${filters.query}%`);
+  }
+
+  query = query.range(offset, offset + pageSize - 1);
+
+  const { data, count, error } = await query;
+  if (error) throw toAuthorizationError(error);
+
+  const items = await enrichOrderSummaries(
+    establishmentId,
+    (data ?? []) as RawOrderRow[]
+  );
+  const total = count ?? items.length;
+  return {
+    items,
+    total,
+    page,
+    pageSize,
+    totalPages: Math.max(1, Math.ceil(total / pageSize)),
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Historique des statuts (order_status_history)
+// ---------------------------------------------------------------------------
+
+export async function listOrderStatusHistory(
+  establishmentId: string,
+  orderId: string
+): Promise<PosOrderStatusEvent[]> {
+  const supabase = await createClient();
+
+  const { data: order, error: orderError } = await supabase
+    .from("orders")
+    .select("id")
+    .eq("id", orderId)
+    .eq("establishment_id", establishmentId)
+    .maybeSingle();
+  if (orderError) throw toAuthorizationError(orderError);
+  if (!order) return [];
+
+  const { data, error } = await supabase
+    .from("order_status_history")
+    .select("id, order_id, status, from_status, user_id, reason, created_at")
+    .eq("order_id", orderId)
+    .order("created_at", { ascending: true });
+  if (error) throw toAuthorizationError(error);
+
+  const rows = data ?? [];
+  const userIds = Array.from(
+    new Set(rows.map((row) => row.user_id).filter((id): id is string => Boolean(id)))
+  );
+  const userNames = new Map<string, string>();
+  if (userIds.length > 0) {
+    const { data: profiles, error: profilesError } = await supabase
+      .from("profiles")
+      .select("id, full_name")
+      .in("id", userIds);
+    if (profilesError) throw toAuthorizationError(profilesError);
+    for (const profile of profiles ?? []) {
+      userNames.set(profile.id, profile.full_name ?? "");
+    }
+  }
+
+  return rows.map((row) => ({
+    id: row.id,
+    status: row.status as PosOrderStatusEvent["status"],
+    fromStatus: row.from_status as PosOrderStatusEvent["fromStatus"],
+    userName: row.user_id ? userNames.get(row.user_id) ?? null : null,
+    reason: row.reason,
+    createdAt: row.created_at,
+  }));
+}
+
+// ---------------------------------------------------------------------------
 // Writes — toujours via les RPC atomiques
 // ---------------------------------------------------------------------------
 
@@ -330,6 +434,80 @@ export async function transitionPosOrder(
 }
 
 // ---------------------------------------------------------------------------
+// Fusion & séparation de commandes (RPC atomiques)
+// ---------------------------------------------------------------------------
+
+export async function mergePosOrders(
+  establishmentId: string,
+  sourceOrderId: string,
+  targetOrderId: string
+): Promise<PosOrderCreateResult> {
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("merge_pos_orders", {
+    p_est: establishmentId,
+    p_source_order_id: sourceOrderId,
+    p_target_order_id: targetOrderId,
+  });
+  if (error) throw toAuthorizationError(error);
+  return data as PosOrderCreateResult;
+}
+
+export async function splitPosOrder(
+  establishmentId: string,
+  input: {
+    sourceOrderId: string;
+    orderType: string;
+    clientOperationId: string | null;
+    tableId: string | null;
+    diningAreaId: string | null;
+    customerId: string | null;
+    notes: string | null;
+    items: readonly string[];
+  }
+): Promise<PosOrderCreateResult> {
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("split_pos_order", {
+    p_est: establishmentId,
+    p_source_order_id: input.sourceOrderId,
+    p_order_type: input.orderType,
+    p_client_operation_id: input.clientOperationId,
+    p_table_id: input.tableId ?? null,
+    p_dining_area_id: input.diningAreaId ?? null,
+    p_customer_id: input.customerId ?? null,
+    p_notes: input.notes,
+    p_items: input.items.map((id) => ({ id })),
+  });
+  if (error) throw toAuthorizationError(error);
+  return data as PosOrderCreateResult;
+}
+
+// ---------------------------------------------------------------------------
+// Clients réutilisables (POS + module commandes)
+// ---------------------------------------------------------------------------
+
+export async function listPosCustomers(
+  establishmentId: string
+): Promise<Array<{ id: string; name: string }>> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("customers")
+    .select("id, first_name, last_name")
+    .eq("establishment_id", establishmentId)
+    .eq("is_active", true)
+    .order("first_name", { ascending: true })
+    .limit(200);
+  if (error) throw toAuthorizationError(error);
+
+  return (data ?? []).map((customer) => ({
+    id: customer.id,
+    name: [customer.first_name, customer.last_name]
+      .filter(Boolean)
+      .join(" ")
+      .trim(),
+  }));
+}
+
+// ---------------------------------------------------------------------------
 // Références pour le sélecteur de table (salle + tables)
 // ---------------------------------------------------------------------------
 
@@ -410,9 +588,12 @@ async function enrichOrderSummaries(
       rows.map((row) => row.customer_id).filter((id): id is string => Boolean(id))
     )
   );
+  const userIds = Array.from(
+    new Set(rows.map((row) => row.user_id).filter((id): id is string => Boolean(id)))
+  );
   const orderIds = rows.map((row) => row.id);
 
-  const [tablesRes, areasRes, customersRes, itemsRes] = await Promise.all([
+  const [tablesRes, areasRes, customersRes, usersRes, itemsRes] = await Promise.all([
     tableIds.length
       ? supabase.from("tables").select("id, table_number").in("id", tableIds)
       : Promise.resolve({ data: [], error: null }),
@@ -425,12 +606,16 @@ async function enrichOrderSummaries(
           .select("id, first_name, last_name")
           .in("id", customerIds)
       : Promise.resolve({ data: [], error: null }),
+    userIds.length
+      ? supabase.from("profiles").select("id, full_name").in("id", userIds)
+      : Promise.resolve({ data: [], error: null }),
     supabase.from("order_items").select("order_id, quantity").in("order_id", orderIds),
   ]);
 
   if (tablesRes.error) throw toAuthorizationError(tablesRes.error);
   if (areasRes.error) throw toAuthorizationError(areasRes.error);
   if (customersRes.error) throw toAuthorizationError(customersRes.error);
+  if (usersRes.error) throw toAuthorizationError(usersRes.error);
   if (itemsRes.error) throw toAuthorizationError(itemsRes.error);
 
   const tableNumbers = new Map(
@@ -444,6 +629,9 @@ async function enrichOrderSummaries(
       row.id,
       [row.first_name, row.last_name].filter(Boolean).join(" ").trim(),
     ])
+  );
+  const profileNames = new Map(
+    (usersRes.data ?? []).map((row) => [row.id, row.full_name])
   );
   const itemStats = new Map<string, { itemsCount: number; quantity: number }>();
   for (const item of itemsRes.data ?? []) {
@@ -470,6 +658,7 @@ async function enrichOrderSummaries(
       customerName: row.customer_id
         ? customerNames.get(row.customer_id) ?? null
         : null,
+      serverName: row.user_id ? profileNames.get(row.user_id) ?? null : null,
       notes: row.notes,
       itemsCount: stats.itemsCount,
       quantity: stats.quantity,
@@ -478,6 +667,8 @@ async function enrichOrderSummaries(
       taxAmount: row.tax_amount,
       total: row.total,
       heldAt: row.held_at,
+      confirmedAt: row.confirmed_at,
+      cancelledAt: row.cancelled_at,
       createdAt: row.created_at,
       updatedAt: row.updated_at,
     };

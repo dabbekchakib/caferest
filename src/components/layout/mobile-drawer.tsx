@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import { navSections } from "@/lib/navigation";
 import { useAppStore } from "@/stores/use-app-store";
 import { useLockBody } from "@/hooks/use-lock-body";
+import { useAuthorization } from "@/hooks/use-authorization";
 import { cn } from "@/lib/utils";
 import { useSyncExternalStore } from "react";
 
@@ -27,6 +28,7 @@ export function MobileDrawer() {
   const pathname = usePathname();
   const t = useTranslations("navigation");
   const tc = useTranslations("common");
+  const { can } = useAuthorization();
   useLockBody(open);
   const mounted = useMounted();
 
@@ -71,13 +73,18 @@ export function MobileDrawer() {
           </button>
         </div>
         <nav className="flex-1 space-y-5 overflow-y-auto px-3 py-4">
-          {navSections.map((section) => (
+          {navSections.map((section) => {
+            const items = section.items.filter(
+              (item) => !item.permission || can(item.permission)
+            );
+            if (items.length === 0) return null;
+            return (
             <div key={section.labelKey}>
               <p className="mb-1.5 px-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--color-sidebar-muted)]">
                 {t(section.labelKey)}
               </p>
               <ul className="space-y-0.5">
-                {section.items.map((item) => {
+                {items.map((item) => {
                   const active =
                     pathname === item.href ||
                     (item.href !== "/dashboard" &&
@@ -107,7 +114,8 @@ export function MobileDrawer() {
                 })}
               </ul>
             </div>
-          ))}
+            );
+          })}
         </nav>
       </div>
     </div>,
