@@ -97,8 +97,9 @@ Journal append-only : `from_status`, `to_status`, `reason`, `changed_by`.
   4. gardes : lignes complètes + variance élevée ;
   5. un `stock_movements` par ligne non nulle, taggé
      `stocktake_id` + `stocktake_item_id` (UNIQUE partiel → retry no-op) ;
-  6. upsert `stock_items` : moyenne pondérée sur gain, coût inchangé sur
-     perte, coût nul quand la ligne tombe à 0 ;
+  6. upsert `stock_items` : quantité `± variance` (gain → `+`, perte → `−`),
+     moyenne pondérée sur gain, coût inchangé sur perte, coût nul quand la
+     ligne tombe à 0 ;
   7. scelle : `validated`, `validated_by/at`, historique.
 - `cancel_stocktake` : `draft|counting|pending_review|approved → cancelled`
   (motif). `delete_stocktake` : brouillons uniquement (cascade lignes +
