@@ -1732,6 +1732,8 @@ export interface Database {
           order_number: string;
           customer_id: string | null;
           table_id: string | null;
+          dining_area_id: string | null;
+          client_operation_id: string | null;
           user_id: string | null;
           status: OrderStatus;
           order_type: OrderType;
@@ -1740,8 +1742,16 @@ export interface Database {
           tax_amount: number;
           total: number;
           notes: string | null;
+          created_by: string | null;
+          updated_by: string | null;
           created_at: Datetime;
           updated_at: Datetime;
+          confirmed_at: Datetime | null;
+          confirmed_by: string | null;
+          held_at: Datetime | null;
+          cancelled_at: Datetime | null;
+          cancelled_by: string | null;
+          cancellation_reason: string | null;
         };
         Insert: {
           id?: string;
@@ -1749,6 +1759,8 @@ export interface Database {
           order_number: string;
           customer_id?: string | null;
           table_id?: string | null;
+          dining_area_id?: string | null;
+          client_operation_id?: string | null;
           user_id?: string | null;
           status?: OrderStatus;
           order_type?: OrderType;
@@ -1757,8 +1769,16 @@ export interface Database {
           tax_amount?: number;
           total?: number;
           notes?: string | null;
+          created_by?: string | null;
+          updated_by?: string | null;
           created_at?: Datetime;
           updated_at?: Datetime;
+          confirmed_at?: Datetime | null;
+          confirmed_by?: string | null;
+          held_at?: Datetime | null;
+          cancelled_at?: Datetime | null;
+          cancelled_by?: string | null;
+          cancellation_reason?: string | null;
         };
         Update: Partial<Database["public"]["Tables"]["orders"]["Insert"]>;
         Relationships: [];
@@ -1768,8 +1788,10 @@ export interface Database {
           id: string;
           order_id: string;
           product_id: string | null;
+          product_name: string | null;
           quantity: number;
           unit_price: number;
+          tax_rate: number;
           discount_amount: number;
           tax_amount: number;
           total: number;
@@ -1781,8 +1803,10 @@ export interface Database {
           id?: string;
           order_id: string;
           product_id?: string | null;
+          product_name?: string | null;
           quantity?: number;
           unit_price?: number;
+          tax_rate?: number;
           discount_amount?: number;
           tax_amount?: number;
           total?: number;
@@ -2178,6 +2202,7 @@ export type TableShape = "round" | "square" | "rectangle";
 
 export type OrderStatus =
   | "draft"
+  | "open"
   | "pending"
   | "confirmed"
   | "preparing"
@@ -2186,7 +2211,7 @@ export type OrderStatus =
   | "completed"
   | "cancelled";
 
-export type OrderType = "dine_in" | "takeaway" | "delivery";
+export type OrderType = "dine_in" | "takeaway" | "delivery" | "counter";
 
 export type PaymentMethodType = "cash" | "card" | "bank_transfer" | "other";
 export type PaymentStatus = "pending" | "completed" | "failed" | "refunded";

@@ -100,6 +100,17 @@
     "tableSizeInvalid": "The table size is invalid.",
     "tablePositionInvalid": "The table position is outside of the floor plan.",
     "tableRotationInvalid": "The table rotation angle is invalid.",
+    "orderNotFound": "Order not found.",
+    "orderWrongStatus": "This order cannot be moved to that status.",
+    "orderBadTransition": "Status transition not allowed.",
+    "orderEmpty": "The cart is empty. Add at least one item.",
+    "orderInvalidType": "Invalid sale type.",
+    "orderInvalidTable": "The selected table is invalid or unavailable.",
+    "orderInvalidArea": "The selected dining area is invalid.",
+    "orderInvalidCustomer": "The selected customer is invalid.",
+    "orderItemInvalid": "A cart item is invalid or unavailable.",
+    "orderDiscountInvalid": "The discount amount is invalid.",
+    "orderDiscountForbidden": "Discounts are not allowed for this establishment.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

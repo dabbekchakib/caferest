@@ -109,6 +109,17 @@ export const AUTHORIZATION_ERROR_CODES = {
   TABLE_SIZE_INVALID: "TABLE_SIZE_INVALID",
   TABLE_POSITION_INVALID: "TABLE_POSITION_INVALID",
   TABLE_ROTATION_INVALID: "TABLE_ROTATION_INVALID",
+  ORDER_NOT_FOUND: "ORDER_NOT_FOUND",
+  ORDER_WRONG_STATUS: "ORDER_WRONG_STATUS",
+  ORDER_BAD_TRANSITION: "ORDER_BAD_TRANSITION",
+  ORDER_EMPTY: "ORDER_EMPTY",
+  ORDER_INVALID_TYPE: "ORDER_INVALID_TYPE",
+  ORDER_INVALID_TABLE: "ORDER_INVALID_TABLE",
+  ORDER_INVALID_AREA: "ORDER_INVALID_AREA",
+  ORDER_INVALID_CUSTOMER: "ORDER_INVALID_CUSTOMER",
+  ORDER_ITEM_INVALID: "ORDER_ITEM_INVALID",
+  ORDER_DISCOUNT_INVALID: "ORDER_DISCOUNT_INVALID",
+  ORDER_DISCOUNT_FORBIDDEN: "ORDER_DISCOUNT_FORBIDDEN",
   GENERIC: "GENERIC",
 } as const;
 
@@ -240,6 +251,17 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
     TABLE_SIZE_INVALID: "authorization.errors.tableSizeInvalid",
     TABLE_POSITION_INVALID: "authorization.errors.tablePositionInvalid",
     TABLE_ROTATION_INVALID: "authorization.errors.tableRotationInvalid",
+    ORDER_NOT_FOUND: "authorization.errors.orderNotFound",
+    ORDER_WRONG_STATUS: "authorization.errors.orderWrongStatus",
+    ORDER_BAD_TRANSITION: "authorization.errors.orderBadTransition",
+    ORDER_EMPTY: "authorization.errors.orderEmpty",
+    ORDER_INVALID_TYPE: "authorization.errors.orderInvalidType",
+    ORDER_INVALID_TABLE: "authorization.errors.orderInvalidTable",
+    ORDER_INVALID_AREA: "authorization.errors.orderInvalidArea",
+    ORDER_INVALID_CUSTOMER: "authorization.errors.orderInvalidCustomer",
+    ORDER_ITEM_INVALID: "authorization.errors.orderItemInvalid",
+    ORDER_DISCOUNT_INVALID: "authorization.errors.orderDiscountInvalid",
+    ORDER_DISCOUNT_FORBIDDEN: "authorization.errors.orderDiscountForbidden",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -353,6 +375,17 @@ export const RPC_MESSAGE_TO_CODE: Record<string, AuthorizationErrorCode> = {
   stock_adjustment_self_approval: "STOCK_ADJUSTMENT_SELF_APPROVAL",
   stock_adjustment_insufficient_stock:
     "STOCK_ADJUSTMENT_INSUFFICIENT_STOCK",
+  order_not_found: "ORDER_NOT_FOUND",
+  order_wrong_status: "ORDER_WRONG_STATUS",
+  order_bad_transition: "ORDER_BAD_TRANSITION",
+  order_empty: "ORDER_EMPTY",
+  order_invalid_type: "ORDER_INVALID_TYPE",
+  order_invalid_table: "ORDER_INVALID_TABLE",
+  order_invalid_area: "ORDER_INVALID_AREA",
+  order_invalid_customer: "ORDER_INVALID_CUSTOMER",
+  order_item_invalid: "ORDER_ITEM_INVALID",
+  order_discount_invalid: "ORDER_DISCOUNT_INVALID",
+  order_discount_forbidden: "ORDER_DISCOUNT_FORBIDDEN",
 };
 
 export class AuthorizationError extends Error {

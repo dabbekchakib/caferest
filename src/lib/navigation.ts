@@ -60,8 +60,8 @@ export const navSections: NavSection[] = [
   {
     labelKey: "pos",
     items: [
-      { labelKey: "newOrder", href: "/pos", icon: ShoppingCart },
-      { labelKey: "orders", href: "/orders", icon: ClipboardList, badge: "4" },
+      { labelKey: "newOrder", href: "/pos", icon: ShoppingCart, permission: "pos.access" },
+      { labelKey: "orders", href: "/orders", icon: ClipboardList, badge: "4", permission: "orders.view" },
       { labelKey: "kitchen", href: "/kitchen", icon: CookingPot },
       { labelKey: "bar", href: "/bar", icon: Martini },
     ],

@@ -34,6 +34,8 @@
     "src/lib/stock-adjustments/*.ts",
     "src/lib/tables/*.ts",
     "src/lib/floor-plan/*.ts",
+    "src/lib/pos/*.ts",
+    "src/validations/pos.ts",
     "src/validations/recipes.ts",
     "src/validations/yields.ts",
     "src/validations/suppliers.ts",

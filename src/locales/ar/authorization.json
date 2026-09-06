@@ -100,6 +100,17 @@
     "tableSizeInvalid": "حجم الطاولة غير صالح.",
     "tablePositionInvalid": "موضع الطاولة خارج مخطط القاعة.",
     "tableRotationInvalid": "زاوية دوران الطاولة غير صالحة.",
+    "orderNotFound": "الطلب غير موجود.",
+    "orderWrongStatus": "لا يمكن نقل هذا الطلب إلى هذه الحالة.",
+    "orderBadTransition": "نقل الحالة غير مسموح.",
+    "orderEmpty": "السلة فارغة. أضف عنصرًا واحدًا على الأقل.",
+    "orderInvalidType": "نوع البيع غير صالح.",
+    "orderInvalidTable": "الطاولة المحددة غير صالحة أو غير متاحة.",
+    "orderInvalidArea": "منطقة الصالة المحددة غير صالحة.",
+    "orderInvalidCustomer": "العميل المحدد غير صالح.",
+    "orderItemInvalid": "عنصر من السلة غير صالح أو غير متاح.",
+    "orderDiscountInvalid": "مبلغ الخصم غير صالح.",
+    "orderDiscountForbidden": "الخصومات غير مسموح بها لهذه المؤسسة.",
     "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
   },
   "switch": {

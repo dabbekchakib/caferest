@@ -149,6 +149,16 @@ const AUDIT_ACTIONS = [
   "table.activated",
   "table.deactivated",
   "table.floor_updated",
+  "order.created",
+  "order.updated",
+  "order.type_changed",
+  "order.table_changed",
+  "order.customer_changed",
+  "order.discount_changed",
+  "order.confirmed",
+  "order.held",
+  "order.resumed",
+  "order.cancelled",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];

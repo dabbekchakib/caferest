@@ -1,0 +1,21 @@
+{
+  "title": "Panier",
+  "itemCount": "{count} article|{count} articles",
+  "clear": "Vider",
+  "emptyHint": "Sélectionnez des produits dans le catalogue pour commencer.",
+  "decrease": "Diminuer la quantité",
+  "increase": "Augmenter la quantité",
+  "remove": "Retirer l'article",
+  "discount": "Remise",
+  "subtotal": "Sous-total",
+  "tax": "TVA",
+  "total": "TOTAL",
+  "placeOrder": "Commander · {total}",
+  "noTable": "Sans table",
+  "unassignedArea": "Non assigné",
+  "tableStatus": {
+    "available": "Libre",
+    "occupied": "Occupée",
+    "reserved": "Réservée"
+  }
+}

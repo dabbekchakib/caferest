@@ -100,6 +100,17 @@
     "tableSizeInvalid": "La taille de la table est invalide.",
     "tablePositionInvalid": "La position de la table est hors du plan de salle.",
     "tableRotationInvalid": "L'angle de rotation de la table est invalide.",
+    "orderNotFound": "Commande introuvable.",
+    "orderWrongStatus": "La commande ne peut pas passer dans ce statut.",
+    "orderBadTransition": "Transition de statut non autorisée.",
+    "orderEmpty": "Le panier est vide. Ajoutez au moins un article.",
+    "orderInvalidType": "Type de vente invalide.",
+    "orderInvalidTable": "La table sélectionnée est invalide ou indisponible.",
+    "orderInvalidArea": "L'espace sélectionné est invalide.",
+    "orderInvalidCustomer": "Le client sélectionné est invalide.",
+    "orderItemInvalid": "Un article du panier est invalide ou indisponible.",
+    "orderDiscountInvalid": "Le montant de la remise est invalide.",
+    "orderDiscountForbidden": "Les remises ne sont pas autorisées pour cet établissement.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

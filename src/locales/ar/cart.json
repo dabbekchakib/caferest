@@ -1,0 +1,21 @@
+{
+  "title": "السلة",
+  "itemCount": "{count} عنصر واحد|{count} عناصر",
+  "clear": "مسح",
+  "emptyHint": "اختر منتجات من الكتالوج للبدء.",
+  "decrease": "تقليل الكمية",
+  "increase": "زيادة الكمية",
+  "remove": "إزالة العنصر",
+  "discount": "الخصم",
+  "subtotal": "المجموع الفرعي",
+  "tax": "الضريبة",
+  "total": "الإجمالي",
+  "placeOrder": "إرسال · {total}",
+  "noTable": "بدون طاولة",
+  "unassignedArea": "غير معيّنة",
+  "tableStatus": {
+    "available": "متاحة",
+    "occupied": "مشغولة",
+    "reserved": "محجوزة"
+  }
+}

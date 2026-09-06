@@ -5,6 +5,7 @@ import frCommon from "@/locales/fr/common.json";
 import frNavigation from "@/locales/fr/navigation.json";
 import frDashboard from "@/locales/fr/dashboard.json";
 import frPos from "@/locales/fr/pos.json";
+import frCart from "@/locales/fr/cart.json";
 import frProducts from "@/locales/fr/products.json";
 import frInventory from "@/locales/fr/inventory.json";
 import frRecipes from "@/locales/fr/recipes.json";
@@ -114,6 +115,7 @@ import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
 import enDashboard from "@/locales/en/dashboard.json";
 import enPos from "@/locales/en/pos.json";
+import enCart from "@/locales/en/cart.json";
 import enProducts from "@/locales/en/products.json";
 import enInventory from "@/locales/en/inventory.json";
 import enRecipes from "@/locales/en/recipes.json";
@@ -223,6 +225,7 @@ import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
 import arDashboard from "@/locales/ar/dashboard.json";
 import arPos from "@/locales/ar/pos.json";
+import arCart from "@/locales/ar/cart.json";
 import arProducts from "@/locales/ar/products.json";
 import arInventory from "@/locales/ar/inventory.json";
 import arRecipes from "@/locales/ar/recipes.json";
@@ -333,6 +336,7 @@ interface LocaleBundle {
   navigation: MessageRecord;
   dashboard: MessageRecord;
   pos: MessageRecord;
+  cart: MessageRecord;
   products: MessageRecord;
   inventory: MessageRecord;
   recipes: MessageRecord;
@@ -444,6 +448,7 @@ const fr: LocaleBundle = {
   navigation: frNavigation,
   dashboard: frDashboard,
   pos: frPos,
+  cart: frCart,
   products: frProducts,
   inventory: frInventory,
   recipes: frRecipes,
@@ -555,6 +560,7 @@ const en: LocaleBundle = {
   navigation: enNavigation,
   dashboard: enDashboard,
   pos: enPos,
+  cart: enCart,
   products: enProducts,
   inventory: enInventory,
   recipes: enRecipes,
@@ -666,6 +672,7 @@ const ar: LocaleBundle = {
   navigation: arNavigation,
   dashboard: arDashboard,
   pos: arPos,
+  cart: arCart,
   products: arProducts,
   inventory: arInventory,
   recipes: arRecipes,

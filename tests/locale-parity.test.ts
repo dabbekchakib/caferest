@@ -276,6 +276,15 @@ import arFloorPlan from "../src/locales/ar/floorPlan.json";
 import frNavigation from "../src/locales/fr/navigation.json";
 import enNavigation from "../src/locales/en/navigation.json";
 import arNavigation from "../src/locales/ar/navigation.json";
+import frPos from "../src/locales/fr/pos.json";
+import enPos from "../src/locales/en/pos.json";
+import arPos from "../src/locales/ar/pos.json";
+import frOrders from "../src/locales/fr/orders.json";
+import enOrders from "../src/locales/en/orders.json";
+import arOrders from "../src/locales/ar/orders.json";
+import frCart from "../src/locales/fr/cart.json";
+import enCart from "../src/locales/en/cart.json";
+import arCart from "../src/locales/ar/cart.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -389,6 +398,9 @@ const namespaces = [
   ["diningAreas", enDiningAreas, frDiningAreas, arDiningAreas],
   ["floorPlan", enFloorPlan, frFloorPlan, arFloorPlan],
   ["navigation", enNavigation, frNavigation, arNavigation],
+  ["pos", enPos, frPos, arPos],
+  ["orders", enOrders, frOrders, arOrders],
+  ["cart", enCart, frCart, arCart],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

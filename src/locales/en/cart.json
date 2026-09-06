@@ -1,0 +1,21 @@
+{
+  "title": "Cart",
+  "itemCount": "{count} item|{count} items",
+  "clear": "Clear",
+  "emptyHint": "Select products from the catalog to start.",
+  "decrease": "Decrease quantity",
+  "increase": "Increase quantity",
+  "remove": "Remove item",
+  "discount": "Discount",
+  "subtotal": "Subtotal",
+  "tax": "Tax",
+  "total": "TOTAL",
+  "placeOrder": "Order · {total}",
+  "noTable": "No table",
+  "unassignedArea": "Unassigned",
+  "tableStatus": {
+    "available": "Available",
+    "occupied": "Occupied",
+    "reserved": "Reserved"
+  }
+}
