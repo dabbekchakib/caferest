@@ -56,6 +56,18 @@
     "purchaseOrderEmpty": "Le bon de commande doit contenir au moins un article.",
     "purchaseOrderDiscountInvalid": "La remise configurée sur cet article est invalide.",
     "purchaseOrderDuplicateNumber": "Un bon de commande avec ce numéro existe déjà.",
+    "purchaseOrderNotReceivable": "Ce bon de commande ne peut pas être réceptionné dans son état actuel.",
+    "goodsReceiptNotFound": "Bon de réception introuvable.",
+    "goodsReceiptLocked": "Ce bon de réception ne peut plus être modifié dans son état actuel.",
+    "goodsReceiptInvalidStatus": "L'action demandée n'est pas autorisée pour le statut actuel du bon de réception.",
+    "goodsReceiptEmpty": "Le bon de réception doit contenir au moins un article.",
+    "goodsReceiptDateInvalid": "La date de réception est antérieure à la date du bon de commande.",
+    "goodsReceiptOverdelivery": "La quantité réceptionnée dépasse la quantité commandée.",
+    "goodsReceiptQuantityInvalid": "Les quantités du bon de réception sont invalides (reçue, acceptée et rejetée incohérentes).",
+    "goodsReceiptItemInvalid": "Article de réception invalide : référence incorrecte ou incomplète.",
+    "goodsReceiptDuplicateNumber": "Un bon de réception avec ce numéro existe déjà.",
+    "stockLocationInvalid": "L'emplacement de stock sélectionné est invalide ou inactif.",
+    "stockUnitIncompatible": "Impossible de convertir l'unité d'achat vers l'unité de stock de cet ingrédient.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

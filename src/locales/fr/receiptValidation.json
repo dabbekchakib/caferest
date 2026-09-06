@@ -1,0 +1,6 @@
+{
+  "noItems": "La réception doit contenir au moins un article.",
+  "splitInvalid": "La quantité acceptée ajoutée à la quantité rejetée ne peut pas dépasser la quantité reçue.",
+  "overdelivery": "La quantité reçue dépasse la quantité restante du bon de commande.",
+  "locationRequired": "Un emplacement de stock actif est requis."
+}

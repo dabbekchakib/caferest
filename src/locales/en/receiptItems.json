@@ -1,0 +1,20 @@
+{
+  "ingredient": "Ingredient",
+  "description": "Description",
+  "supplierSku": "Supplier ref.",
+  "ordered": "Ordered",
+  "previouslyReceived": "Previously received",
+  "remaining": "Remaining",
+  "received": "Received",
+  "accepted": "Accepted",
+  "rejected": "Rejected",
+  "unitPrice": "Unit price",
+  "discount": "Discount",
+  "tax": "Tax",
+  "total": "Total",
+  "lot": "Lot",
+  "batch": "Batch no.",
+  "expiry": "Expiry",
+  "notes": "Notes",
+  "noItems": "No items in this receipt."
+}

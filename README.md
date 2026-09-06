@@ -107,6 +107,7 @@ All tables use Supabase RLS policies for security.
 - `docs/yields.md` — Yield management and theoretical consumption
 - `docs/suppliers.md` — Suppliers and the purchase catalog
 - `docs/purchase-orders.md` — Purchase orders (Phase 14)
+- `docs/goods-receipts.md` — Goods receipts & stock-in (Phase 15)
 
 ## Deployment (Vercel)
 

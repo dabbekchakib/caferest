@@ -998,12 +998,20 @@ export interface Database {
           ingredient_id: string;
           location_id: string | null;
           movement_type: StockMovementType;
+          direction: StockMovementDirection;
           quantity: number;
+          base_quantity: number | null;
+          base_unit_id: string | null;
           unit_id: string | null;
           unit_cost: number;
           total_cost: number;
           reference_type: string | null;
           reference_id: string | null;
+          goods_receipt_id: string | null;
+          goods_receipt_item_id: string | null;
+          lot_number: string | null;
+          batch_number: string | null;
+          expiry_date: string | null;
           reason: string | null;
           created_by: string | null;
           created_at: Datetime;
@@ -1014,18 +1022,178 @@ export interface Database {
           ingredient_id: string;
           location_id?: string | null;
           movement_type: StockMovementType;
+          direction?: StockMovementDirection;
           quantity: number;
+          base_quantity?: number | null;
+          base_unit_id?: string | null;
           unit_id?: string | null;
           unit_cost?: number;
           total_cost?: number;
           reference_type?: string | null;
           reference_id?: string | null;
+          goods_receipt_id?: string | null;
+          goods_receipt_item_id?: string | null;
+          lot_number?: string | null;
+          batch_number?: string | null;
+          expiry_date?: string | null;
           reason?: string | null;
           created_by?: string | null;
           created_at?: Datetime;
         };
         Update: Partial<
           Database["public"]["Tables"]["stock_movements"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      goods_receipts: {
+        Row: {
+          id: string;
+          establishment_id: string;
+          purchase_order_id: string;
+          receipt_number: string;
+          receipt_date: Datetime;
+          supplier_id: string;
+          inventory_location_id: string | null;
+          status: GoodsReceiptStatus;
+          delivery_note_number: string | null;
+          supplier_invoice_number: string | null;
+          subtotal: number;
+          discount_amount: number;
+          tax_amount: number;
+          total_amount: number;
+          notes: string | null;
+          internal_notes: string | null;
+          received_by: string | null;
+          validated_by: string | null;
+          validated_at: Datetime | null;
+          cancelled_by: string | null;
+          cancelled_at: Datetime | null;
+          cancellation_reason: string | null;
+          created_by: string | null;
+          updated_by: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id: string;
+          purchase_order_id: string;
+          receipt_number: string;
+          receipt_date?: Datetime;
+          supplier_id: string;
+          inventory_location_id?: string | null;
+          status?: GoodsReceiptStatus;
+          delivery_note_number?: string | null;
+          supplier_invoice_number?: string | null;
+          subtotal?: number;
+          discount_amount?: number;
+          tax_amount?: number;
+          total_amount?: number;
+          notes?: string | null;
+          internal_notes?: string | null;
+          received_by?: string | null;
+          validated_by?: string | null;
+          validated_at?: Datetime | null;
+          cancelled_by?: string | null;
+          cancelled_at?: Datetime | null;
+          cancellation_reason?: string | null;
+          created_by?: string | null;
+          updated_by?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["goods_receipts"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      goods_receipt_items: {
+        Row: {
+          id: string;
+          goods_receipt_id: string;
+          purchase_order_item_id: string;
+          ingredient_id: string;
+          description: string | null;
+          supplier_sku: string | null;
+          ordered_quantity: number;
+          previously_received_quantity: number;
+          received_quantity: number;
+          accepted_quantity: number;
+          rejected_quantity: number;
+          purchase_unit_id: string | null;
+          stock_unit_id: string | null;
+          conversion_factor: number;
+          unit_price: number;
+          discount_amount: number;
+          tax_rate: number;
+          tax_amount: number;
+          subtotal: number;
+          total_amount: number;
+          lot_number: string | null;
+          batch_number: string | null;
+          expiry_date: string | null;
+          notes: string | null;
+          sort_order: number;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          goods_receipt_id: string;
+          purchase_order_item_id: string;
+          ingredient_id: string;
+          description?: string | null;
+          supplier_sku?: string | null;
+          ordered_quantity: number;
+          previously_received_quantity?: number;
+          received_quantity?: number;
+          accepted_quantity?: number;
+          rejected_quantity?: number;
+          purchase_unit_id?: string | null;
+          stock_unit_id?: string | null;
+          conversion_factor?: number;
+          unit_price?: number;
+          discount_amount?: number;
+          tax_rate?: number;
+          tax_amount?: number;
+          subtotal?: number;
+          total_amount?: number;
+          lot_number?: string | null;
+          batch_number?: string | null;
+          expiry_date?: string | null;
+          notes?: string | null;
+          sort_order?: number;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["goods_receipt_items"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      goods_receipt_status_history: {
+        Row: {
+          id: string;
+          establishment_id: string;
+          goods_receipt_id: string;
+          from_status: string | null;
+          to_status: string;
+          reason: string | null;
+          changed_by: string | null;
+          created_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id: string;
+          goods_receipt_id: string;
+          from_status?: string | null;
+          to_status: string;
+          reason?: string | null;
+          changed_by?: string | null;
+          created_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["goods_receipt_status_history"]["Insert"]
         >;
         Relationships: [];
       };
@@ -1647,6 +1815,14 @@ export type StockMovementType =
   | "waste"
   | "return"
   | "opening";
+
+export type StockMovementDirection = "in" | "out";
+
+export type GoodsReceiptStatus =
+  | "draft"
+  | "pending_validation"
+  | "validated"
+  | "cancelled";
 
 export type TableStatus =
   "available" | "occupied" | "reserved" | "cleaning" | "blocked";

@@ -119,7 +119,7 @@ as $$
     and (p_default_payment_method_id is null or exists (
       select 1 from public.payment_methods pm
       where pm.id = p_default_payment_method_id
-        and pm.establishment_id = p_establishment_id)));
+        and pm.establishment_id = p_establishment_id));
 $$;
 
 create or replace function public.supplier_catalog_references_valid(
@@ -661,7 +661,7 @@ begin
 
   -- "Sucre" carton unit: a 24-bag carton (spec §18 example).
   insert into public.units (establishment_id, name, symbol, slug, type, description, precision, is_base, is_system)
-  select v_est, 'Carton de sucre', 'carton', 'carton-sucre', 'piece',
+  select v_est, 'Carton de sucre', 'carton', 'carton-sucre', 'count',
          'Carton de 24 paquets', 0, false, false
     where not exists (
       select 1 from public.units where establishment_id = v_est and slug = 'carton-sucre'
@@ -670,8 +670,8 @@ begin
   select id into v_card from public.units where establishment_id = v_est and slug = 'carton-sucre';
 
   -- 1 carton = 24 pieces (pair stored B = A * factor B := A * 24).
-  insert into public.unit_conversions (establishment_id, from_unit_id, to_unit_id, factor, offset_value, description)
-  select v_est, v_card, v_piece, 24, 0, '1 carton de sucre = 24 paquets'
+  insert into public.unit_conversions (establishment_id, from_unit_id, to_unit_id, factor, offset_value)
+  select v_est, v_card, v_piece, 24, 0
     where v_card is not null and v_piece is not null
       and not exists (
         select 1 from public.unit_conversions

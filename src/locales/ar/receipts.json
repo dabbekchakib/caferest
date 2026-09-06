@@ -1,0 +1,21 @@
+{
+  "title": "سندات الاستلام",
+  "subtitle": "إدارة استلام طلبات الشراء من الموردين.",
+  "newReceipt": "استلام جديد",
+  "searchPlaceholder": "البحث بالرقم…",
+  "emptyTitle": "لا توجد سندات استلام",
+  "emptyDescription": "أنشئ أول سند استلام من طلب شراء معتمد أو مُرسل.",
+  "createFirst": "استلام طلب",
+  "results": "نتائج",
+  "columns": {
+    "number": "الرقم",
+    "supplier": "المورد",
+    "date": "التاريخ",
+    "purchaseOrder": "طلب الشراء",
+    "location": "الموقع",
+    "status": "الحالة",
+    "items": "الأصناف",
+    "total": "الإجمالي",
+    "actions": "إجراءات"
+  }
+}

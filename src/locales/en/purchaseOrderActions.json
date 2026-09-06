@@ -15,6 +15,7 @@
   "closeTitle": "Close",
   "closeDescription": "The order will be closed.",
   "duplicate": "Duplicate",
+  "receive": "Receive",
   "delete": "Delete",
   "edit": "Edit",
   "cancelReason": "Cancellation reason",

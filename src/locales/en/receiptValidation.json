@@ -1,0 +1,6 @@
+{
+  "noItems": "The receipt must contain at least one item.",
+  "splitInvalid": "Accepted plus rejected quantity cannot exceed the received quantity.",
+  "overdelivery": "The received quantity exceeds the remaining quantity of the purchase order.",
+  "locationRequired": "An active stock location is required."
+}

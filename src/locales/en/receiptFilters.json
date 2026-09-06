@@ -1,0 +1,11 @@
+{
+  "statusAll": "All statuses",
+  "statusDraft": "Drafts",
+  "statusPendingValidation": "Pending validation",
+  "statusValidated": "Validated",
+  "statusCancelled": "Cancelled",
+  "fromDate": "From",
+  "toDate": "To",
+  "reset": "Reset",
+  "results": "results"
+}

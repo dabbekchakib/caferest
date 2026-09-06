@@ -1,0 +1,20 @@
+{
+  "ingredient": "المكوّن",
+  "description": "الوصف",
+  "supplierSku": "مرجع المورد",
+  "ordered": "المطلوب",
+  "previouslyReceived": "تم استلامه مسبقًا",
+  "remaining": "المتبقي",
+  "received": "المستلم",
+  "accepted": "المقبول",
+  "rejected": "المرفوض",
+  "unitPrice": "سعر الوحدة",
+  "discount": "الخصم",
+  "tax": "الضريبة",
+  "total": "الإجمالي",
+  "lot": "الدفعة",
+  "batch": "رقم الدفعة",
+  "expiry": "تاريخ الانتهاء",
+  "notes": "ملاحظات",
+  "noItems": "لا توجد بنود في هذا الاستلام."
+}

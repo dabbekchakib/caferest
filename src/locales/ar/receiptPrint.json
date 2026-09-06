@@ -1,0 +1,16 @@
+{
+  "print": "طباعة",
+  "title": "سند استلام",
+  "number": "رقم",
+  "date": "التاريخ",
+  "supplier": "المورد",
+  "location": "الموقع",
+  "purchaseOrder": "طلب الشراء",
+  "deliveryNote": "إذن التسليم",
+  "supplierInvoice": "الفاتورة",
+  "receivedBy": "استلمه",
+  "validatedBy": "تحقق منه",
+  "signedBy": "التوقيع",
+  "notice": "مستند مُنشأ آليًا. ليس له قيمة محاسبية رسمية.",
+  "footer": "تم إنشاء سند الاستلام هذا تلقائيًا بواسطة CafeRest."
+}

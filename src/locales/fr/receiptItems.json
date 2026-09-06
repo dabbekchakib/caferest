@@ -1,0 +1,20 @@
+{
+  "ingredient": "Ingrédient",
+  "description": "Désignation",
+  "supplierSku": "Réf. fournisseur",
+  "ordered": "Commandé",
+  "previouslyReceived": "Déjà reçu",
+  "remaining": "Restant",
+  "received": "Reçu",
+  "accepted": "Accepté",
+  "rejected": "Rejeté",
+  "unitPrice": "Prix unitaire",
+  "discount": "Remise",
+  "tax": "Taxe",
+  "total": "Total",
+  "lot": "Lot",
+  "batch": "N° de lot",
+  "expiry": "DLC",
+  "notes": "Notes",
+  "noItems": "Aucun article dans cette réception."
+}

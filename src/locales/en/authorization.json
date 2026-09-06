@@ -56,6 +56,18 @@
     "purchaseOrderEmpty": "The purchase order must contain at least one item.",
     "purchaseOrderDiscountInvalid": "The discount configured on this item is invalid.",
     "purchaseOrderDuplicateNumber": "A purchase order with this number already exists.",
+    "purchaseOrderNotReceivable": "This purchase order cannot be received in its current state.",
+    "goodsReceiptNotFound": "Goods receipt not found.",
+    "goodsReceiptLocked": "This goods receipt can no longer be modified in its current state.",
+    "goodsReceiptInvalidStatus": "This action is not allowed for the current goods receipt status.",
+    "goodsReceiptEmpty": "The goods receipt must contain at least one item.",
+    "goodsReceiptDateInvalid": "The receipt date is before the purchase order date.",
+    "goodsReceiptOverdelivery": "The received quantity exceeds the ordered quantity.",
+    "goodsReceiptQuantityInvalid": "The receipt quantities are invalid (received, accepted and rejected are inconsistent).",
+    "goodsReceiptItemInvalid": "Invalid receipt line: incorrect or incomplete references.",
+    "goodsReceiptDuplicateNumber": "A goods receipt with this number already exists.",
+    "stockLocationInvalid": "The selected stock location is invalid or inactive.",
+    "stockUnitIncompatible": "Cannot convert the purchase unit to this ingredient's stock unit.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

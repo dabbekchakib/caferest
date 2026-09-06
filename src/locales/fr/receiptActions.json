@@ -1,0 +1,20 @@
+{
+  "edit": "Modifier",
+  "delete": "Supprimer",
+  "submit": "Soumettre la réception",
+  "validate": "Valider la réception",
+  "cancel": "Annuler la réception",
+  "submitTitle": "Soumettre la réception",
+  "submitDescription": "La réception passera en attente de validation. Les lignes ne seront plus modifiables.",
+  "validateTitle": "Valider la réception",
+  "validateDescription": "La validation créera les mouvements de stock, mettra à jour les quantités et le coût moyen de chaque ingrédient. Cette action est irréversible.",
+  "cancelTitle": "Annuler la réception",
+  "cancelDescription": "La réception sera annulée et ne pourra plus être validée. L'opération reste consignée à l'historique.",
+  "cancelReason": "Motif d'annulation",
+  "reasonPlaceholder": "Indiquer un motif…",
+  "confirm": "Confirmer",
+  "submitted": "La réception a été soumise pour validation.",
+  "validated": "La réception a été validée et le stock mis à jour.",
+  "cancelled": "La réception a été annulée.",
+  "deleted": "La réception a été supprimée."
+}

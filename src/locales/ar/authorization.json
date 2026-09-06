@@ -56,6 +56,18 @@
     "purchaseOrderEmpty": "يجب أن يحتوي طلب الشراء على عنصر واحد على الأقل.",
     "purchaseOrderDiscountInvalid": "الخصم المحدد على هذا العنصر غير صالح.",
     "purchaseOrderDuplicateNumber": "يوجد طلب شراء بهذا الرقم بالفعل.",
+    "purchaseOrderNotReceivable": "لا يمكن استلام طلب الشراء هذا في حالته الحالية.",
+    "goodsReceiptNotFound": "سند الاستلام غير موجود.",
+    "goodsReceiptLocked": "لا يمكن تعديل سند الاستلام هذا في حالته الحالية.",
+    "goodsReceiptInvalidStatus": "هذا الإجراء غير مسموح به للحالة الحالية لسند الاستلام.",
+    "goodsReceiptEmpty": "يجب أن يحتوي سند الاستلام على بند واحد على الأقل.",
+    "goodsReceiptDateInvalid": "تاريخ الاستلام أقدم من تاريخ طلب الشراء.",
+    "goodsReceiptOverdelivery": "الكمية المستلمة تتجاوز الكمية المطلوبة.",
+    "goodsReceiptQuantityInvalid": "كميات سند الاستلام غير صالحة (المستلمة والمقبولة والمرفوضة غير متسقة).",
+    "goodsReceiptItemInvalid": "بند استلام غير صالح: مراجع خاطئة أو ناقصة.",
+    "goodsReceiptDuplicateNumber": "يوجد سند استلام بهذا الرقم بالفعل.",
+    "stockLocationInvalid": "موقع المخزون المحدد غير صالح أو غير نشط.",
+    "stockUnitIncompatible": "تعذّر تحويل وحدة الشراء إلى وحدة مخزون هذا المكوّن.",
     "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
   },
   "switch": {

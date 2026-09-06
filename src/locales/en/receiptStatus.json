@@ -1,0 +1,6 @@
+{
+  "draft": "Draft",
+  "pendingValidation": "Pending validation",
+  "validated": "Validated",
+  "cancelled": "Cancelled"
+}

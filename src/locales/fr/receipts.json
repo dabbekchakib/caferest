@@ -1,0 +1,21 @@
+{
+  "title": "Bons de réception",
+  "subtitle": "Gérez les réceptions de vos bons de commande fournisseurs.",
+  "newReceipt": "Nouvelle réception",
+  "searchPlaceholder": "Rechercher par numéro…",
+  "emptyTitle": "Aucun bon de réception",
+  "emptyDescription": "Créez votre premier bon de réception à partir d'un bon de commande approuvé ou envoyé.",
+  "createFirst": "Réceptionner une commande",
+  "results": "résultats",
+  "columns": {
+    "number": "Numéro",
+    "supplier": "Fournisseur",
+    "date": "Date",
+    "purchaseOrder": "Bon de commande",
+    "location": "Emplacement",
+    "status": "Statut",
+    "items": "Articles",
+    "total": "Total",
+    "actions": "Actions"
+  }
+}

@@ -63,6 +63,18 @@ export const AUTHORIZATION_ERROR_CODES = {
   PURCHASE_ORDER_EMPTY: "PURCHASE_ORDER_EMPTY",
   PURCHASE_ORDER_DISCOUNT_INVALID: "PURCHASE_ORDER_DISCOUNT_INVALID",
   PURCHASE_ORDER_DUPLICATE_NUMBER: "PURCHASE_ORDER_DUPLICATE_NUMBER",
+  PURCHASE_ORDER_NOT_RECEIVABLE: "PURCHASE_ORDER_NOT_RECEIVABLE",
+  GOODS_RECEIPT_NOT_FOUND: "GOODS_RECEIPT_NOT_FOUND",
+  GOODS_RECEIPT_LOCKED: "GOODS_RECEIPT_LOCKED",
+  GOODS_RECEIPT_INVALID_STATUS: "GOODS_RECEIPT_INVALID_STATUS",
+  GOODS_RECEIPT_EMPTY: "GOODS_RECEIPT_EMPTY",
+  GOODS_RECEIPT_DATE_INVALID: "GOODS_RECEIPT_DATE_INVALID",
+  GOODS_RECEIPT_OVERDELIVERY: "GOODS_RECEIPT_OVERDELIVERY",
+  GOODS_RECEIPT_QUANTITY_INVALID: "GOODS_RECEIPT_QUANTITY_INVALID",
+  GOODS_RECEIPT_ITEM_INVALID: "GOODS_RECEIPT_ITEM_INVALID",
+  GOODS_RECEIPT_DUPLICATE_NUMBER: "GOODS_RECEIPT_DUPLICATE_NUMBER",
+  STOCK_LOCATION_INVALID: "STOCK_LOCATION_INVALID",
+  STOCK_UNIT_INCOMPATIBLE: "STOCK_UNIT_INCOMPATIBLE",
   GENERIC: "GENERIC",
 } as const;
 
@@ -132,6 +144,22 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
       "authorization.errors.purchaseOrderDiscountInvalid",
     PURCHASE_ORDER_DUPLICATE_NUMBER:
       "authorization.errors.purchaseOrderDuplicateNumber",
+    PURCHASE_ORDER_NOT_RECEIVABLE:
+      "authorization.errors.purchaseOrderNotReceivable",
+    GOODS_RECEIPT_NOT_FOUND: "authorization.errors.goodsReceiptNotFound",
+    GOODS_RECEIPT_LOCKED: "authorization.errors.goodsReceiptLocked",
+    GOODS_RECEIPT_INVALID_STATUS:
+      "authorization.errors.goodsReceiptInvalidStatus",
+    GOODS_RECEIPT_EMPTY: "authorization.errors.goodsReceiptEmpty",
+    GOODS_RECEIPT_DATE_INVALID: "authorization.errors.goodsReceiptDateInvalid",
+    GOODS_RECEIPT_OVERDELIVERY: "authorization.errors.goodsReceiptOverdelivery",
+    GOODS_RECEIPT_QUANTITY_INVALID:
+      "authorization.errors.goodsReceiptQuantityInvalid",
+    GOODS_RECEIPT_ITEM_INVALID: "authorization.errors.goodsReceiptItemInvalid",
+    GOODS_RECEIPT_DUPLICATE_NUMBER:
+      "authorization.errors.goodsReceiptDuplicateNumber",
+    STOCK_LOCATION_INVALID: "authorization.errors.stockLocationInvalid",
+    STOCK_UNIT_INCOMPATIBLE: "authorization.errors.stockUnitIncompatible",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -181,6 +209,9 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   supplier_price_history_quantity_check: "INGREDIENT_SUPPLIER_NOREFS",
   uq_purchase_orders_establishment_order_number:
     "PURCHASE_ORDER_DUPLICATE_NUMBER",
+  uq_goods_receipts_establishment_number: "GOODS_RECEIPT_DUPLICATE_NUMBER",
+  goods_receipt_items_overdelivery_check: "GOODS_RECEIPT_OVERDELIVERY",
+  goods_receipt_items_split_check: "GOODS_RECEIPT_QUANTITY_INVALID",
 };
 
 /**
@@ -196,6 +227,17 @@ export const RPC_MESSAGE_TO_CODE: Record<string, AuthorizationErrorCode> = {
   purchase_order_empty: "PURCHASE_ORDER_EMPTY",
   purchase_order_discount_invalid: "PURCHASE_ORDER_DISCOUNT_INVALID",
   cross_establishment_reference: "CROSS_ESTABLISHMENT_REFERENCE",
+  purchase_order_not_receivable: "PURCHASE_ORDER_NOT_RECEIVABLE",
+  goods_receipt_not_found: "GOODS_RECEIPT_NOT_FOUND",
+  goods_receipt_locked: "GOODS_RECEIPT_LOCKED",
+  goods_receipt_invalid_status: "GOODS_RECEIPT_INVALID_STATUS",
+  goods_receipt_empty: "GOODS_RECEIPT_EMPTY",
+  goods_receipt_date_invalid: "GOODS_RECEIPT_DATE_INVALID",
+  goods_receipt_overdelivery: "GOODS_RECEIPT_OVERDELIVERY",
+  goods_receipt_quantity_invalid: "GOODS_RECEIPT_QUANTITY_INVALID",
+  goods_receipt_item_invalid: "GOODS_RECEIPT_ITEM_INVALID",
+  stock_location_invalid: "STOCK_LOCATION_INVALID",
+  stock_unit_incompatible: "STOCK_UNIT_INCOMPATIBLE",
 };
 
 export class AuthorizationError extends Error {

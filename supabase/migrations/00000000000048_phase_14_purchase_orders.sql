@@ -371,10 +371,10 @@ create or replace function public.restore_purchase_order_lines(
   p_order_id uuid,
   p_supplier_id uuid,
   p_items jsonb,
-  out_subtotal numeric,
-  out_discount numeric,
-  out_tax numeric,
-  out_total numeric
+  out_subtotal OUT numeric,
+  out_discount OUT numeric,
+  out_tax OUT numeric,
+  out_total OUT numeric
 )
 returns record
 language plpgsql

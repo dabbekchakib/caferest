@@ -1,0 +1,16 @@
+{
+  "print": "Imprimer",
+  "title": "Bon de réception",
+  "number": "N°",
+  "date": "Date",
+  "supplier": "Fournisseur",
+  "location": "Emplacement",
+  "purchaseOrder": "Bon de commande",
+  "deliveryNote": "Bon de livraison",
+  "supplierInvoice": "Facture",
+  "receivedBy": "Réceptionné par",
+  "validatedBy": "Validé par",
+  "signedBy": "Signature",
+  "notice": "Document établi par le système. Sans valeur comptable officielle.",
+  "footer": "Ce bon de réception a été généré automatiquement par CafeRest."
+}

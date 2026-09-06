@@ -1,0 +1,20 @@
+{
+  "edit": "Edit",
+  "delete": "Delete",
+  "submit": "Submit receipt",
+  "validate": "Validate receipt",
+  "cancel": "Cancel receipt",
+  "submitTitle": "Submit receipt",
+  "submitDescription": "The receipt will move to pending validation. Lines will no longer be editable.",
+  "validateTitle": "Validate receipt",
+  "validateDescription": "Validation will create the stock movements, update quantities and average cost of each ingredient. This action is irreversible.",
+  "cancelTitle": "Cancel receipt",
+  "cancelDescription": "The receipt will be cancelled and can no longer be validated. The operation stays recorded in the history.",
+  "cancelReason": "Cancellation reason",
+  "reasonPlaceholder": "Provide a reason…",
+  "confirm": "Confirm",
+  "submitted": "The receipt has been submitted for validation.",
+  "validated": "The receipt has been validated and stock updated.",
+  "cancelled": "The receipt has been cancelled.",
+  "deleted": "The receipt has been deleted."
+}

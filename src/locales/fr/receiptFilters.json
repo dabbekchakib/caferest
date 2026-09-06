@@ -1,0 +1,11 @@
+{
+  "statusAll": "Tous les statuts",
+  "statusDraft": "Brouillons",
+  "statusPendingValidation": "En attente de validation",
+  "statusValidated": "Validées",
+  "statusCancelled": "Annulées",
+  "fromDate": "Du",
+  "toDate": "Au",
+  "reset": "Réinitialiser",
+  "results": "résultats"
+}

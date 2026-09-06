@@ -1,0 +1,19 @@
+{
+  "title": "Stock entry",
+  "description": "Validation generated the following stock movements.",
+  "quantity": "Quantity",
+  "unit": "Unit",
+  "unitCost": "Unit cost",
+  "totalCost": "Total cost",
+  "taxExcluded": "Excluding tax",
+  "lot": "Lot",
+  "batch": "Batch no.",
+  "expiry": "Expiry",
+  "reference": "Reference",
+  "movementType": "Movement type",
+  "in": "In",
+  "out": "Out",
+  "baseUnit": "Stock unit",
+  "stockedQuantity": "Stocked quantity",
+  "notStockTracked": "Some ingredients are not stock-tracked: they were received without generating a movement."
+}

@@ -25,7 +25,7 @@ export default async function PurchaseOrderDetailPage({
   const order = await getPurchaseOrder(establishmentId, id);
   if (!order) notFound();
 
-  const [canUpdate, canDelete, canDuplicate, pSubmit, pApprove, pSend, pCancel, pClose] =
+  const [canUpdate, canDelete, canDuplicate, pSubmit, pApprove, pSend, pCancel, pClose, canReceive] =
     await Promise.all([
       hasPermission("purchases.update"),
       hasPermission("purchases.delete"),
@@ -35,6 +35,7 @@ export default async function PurchaseOrderDetailPage({
       hasPermission("purchases.send"),
       hasPermission("purchases.cancel"),
       hasPermission("purchases.close"),
+      hasPermission("goods_receipts.create"),
     ]);
 
   const actionPermissions: Record<PurchaseOrderAction, boolean> = {
@@ -53,6 +54,7 @@ export default async function PurchaseOrderDetailPage({
       canDelete={canDelete}
       canDuplicate={canDuplicate}
       canPrint={true}
+      canReceive={canReceive}
     />
   );
 }

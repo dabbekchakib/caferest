@@ -1,0 +1,11 @@
+{
+  "statusAll": "كل الحالات",
+  "statusDraft": "المسودات",
+  "statusPendingValidation": "بانتظار التحقق",
+  "statusValidated": "تم التحقق",
+  "statusCancelled": "الملغاة",
+  "fromDate": "من",
+  "toDate": "إلى",
+  "reset": "إعادة تعيين",
+  "results": "نتائج"
+}

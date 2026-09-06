@@ -156,6 +156,42 @@ import arPurchaseOrderPrint from "../src/locales/ar/purchaseOrderPrint.json";
 import frPurchaseOrderHistory from "../src/locales/fr/purchaseOrderHistory.json";
 import enPurchaseOrderHistory from "../src/locales/en/purchaseOrderHistory.json";
 import arPurchaseOrderHistory from "../src/locales/ar/purchaseOrderHistory.json";
+import frReceipts from "../src/locales/fr/receipts.json";
+import enReceipts from "../src/locales/en/receipts.json";
+import arReceipts from "../src/locales/ar/receipts.json";
+import frReceiptForm from "../src/locales/fr/receiptForm.json";
+import enReceiptForm from "../src/locales/en/receiptForm.json";
+import arReceiptForm from "../src/locales/ar/receiptForm.json";
+import frReceiptDetails from "../src/locales/fr/receiptDetails.json";
+import enReceiptDetails from "../src/locales/en/receiptDetails.json";
+import arReceiptDetails from "../src/locales/ar/receiptDetails.json";
+import frReceiptItems from "../src/locales/fr/receiptItems.json";
+import enReceiptItems from "../src/locales/en/receiptItems.json";
+import arReceiptItems from "../src/locales/ar/receiptItems.json";
+import frReceiptStatus from "../src/locales/fr/receiptStatus.json";
+import enReceiptStatus from "../src/locales/en/receiptStatus.json";
+import arReceiptStatus from "../src/locales/ar/receiptStatus.json";
+import frReceiptActions from "../src/locales/fr/receiptActions.json";
+import enReceiptActions from "../src/locales/en/receiptActions.json";
+import arReceiptActions from "../src/locales/ar/receiptActions.json";
+import frReceiptValidation from "../src/locales/fr/receiptValidation.json";
+import enReceiptValidation from "../src/locales/en/receiptValidation.json";
+import arReceiptValidation from "../src/locales/ar/receiptValidation.json";
+import frReceiptTotals from "../src/locales/fr/receiptTotals.json";
+import enReceiptTotals from "../src/locales/en/receiptTotals.json";
+import arReceiptTotals from "../src/locales/ar/receiptTotals.json";
+import frReceiptFilters from "../src/locales/fr/receiptFilters.json";
+import enReceiptFilters from "../src/locales/en/receiptFilters.json";
+import arReceiptFilters from "../src/locales/ar/receiptFilters.json";
+import frReceiptPrint from "../src/locales/fr/receiptPrint.json";
+import enReceiptPrint from "../src/locales/en/receiptPrint.json";
+import arReceiptPrint from "../src/locales/ar/receiptPrint.json";
+import frReceiptHistory from "../src/locales/fr/receiptHistory.json";
+import enReceiptHistory from "../src/locales/en/receiptHistory.json";
+import arReceiptHistory from "../src/locales/ar/receiptHistory.json";
+import frStockReceipt from "../src/locales/fr/stockReceipt.json";
+import enStockReceipt from "../src/locales/en/stockReceipt.json";
+import arStockReceipt from "../src/locales/ar/stockReceipt.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -229,6 +265,18 @@ const namespaces = [
   ["purchaseOrderFilters", enPurchaseOrderFilters, frPurchaseOrderFilters, arPurchaseOrderFilters],
   ["purchaseOrderPrint", enPurchaseOrderPrint, frPurchaseOrderPrint, arPurchaseOrderPrint],
   ["purchaseOrderHistory", enPurchaseOrderHistory, frPurchaseOrderHistory, arPurchaseOrderHistory],
+  ["receipts", enReceipts, frReceipts, arReceipts],
+  ["receiptForm", enReceiptForm, frReceiptForm, arReceiptForm],
+  ["receiptDetails", enReceiptDetails, frReceiptDetails, arReceiptDetails],
+  ["receiptItems", enReceiptItems, frReceiptItems, arReceiptItems],
+  ["receiptStatus", enReceiptStatus, frReceiptStatus, arReceiptStatus],
+  ["receiptActions", enReceiptActions, frReceiptActions, arReceiptActions],
+  ["receiptValidation", enReceiptValidation, frReceiptValidation, arReceiptValidation],
+  ["receiptTotals", enReceiptTotals, frReceiptTotals, arReceiptTotals],
+  ["receiptFilters", enReceiptFilters, frReceiptFilters, arReceiptFilters],
+  ["receiptPrint", enReceiptPrint, frReceiptPrint, arReceiptPrint],
+  ["receiptHistory", enReceiptHistory, frReceiptHistory, arReceiptHistory],
+  ["stockReceipt", enStockReceipt, frStockReceipt, arStockReceipt],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

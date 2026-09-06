@@ -8,6 +8,7 @@ import {
   ArrowLeft,
   Check,
   Copy,
+  PackageCheck,
   Pencil,
   Printer,
   Send,
@@ -48,6 +49,7 @@ export interface PurchaseOrderDetailProps {
   canDelete: boolean;
   canDuplicate: boolean;
   canPrint: boolean;
+  canReceive: boolean;
 }
 
 const ACTION_LABEL_KEYS: Record<PurchaseOrderAction, string> = {
@@ -65,6 +67,7 @@ export function PurchaseOrderDetail({
   canDelete,
   canDuplicate,
   canPrint,
+  canReceive,
 }: PurchaseOrderDetailProps) {
   const td = useTranslations("purchaseOrderDetails");
   const tActions = useTranslations("purchaseOrderActions");
@@ -203,6 +206,15 @@ export function PurchaseOrderDetail({
                 </Button>
               </Link>
             )}
+            {canReceive &&
+              ["approved", "sent", "partially_received"].includes(order.status) && (
+                <Link href={`/receipts/create?po=${order.id}`}>
+                  <Button variant="outline" size="sm">
+                    <PackageCheck className="size-4" aria-hidden />{" "}
+                    {tActions("receive")}
+                  </Button>
+                </Link>
+              )}
             {canUpdate && editable && (
               <Link href={`/purchase-orders/${order.id}/edit`}>
                 <Button variant="outline" size="sm">

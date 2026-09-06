@@ -71,6 +71,18 @@ import frPurchaseOrderTotals from "@/locales/fr/purchaseOrderTotals.json";
 import frPurchaseOrderFilters from "@/locales/fr/purchaseOrderFilters.json";
 import frPurchaseOrderPrint from "@/locales/fr/purchaseOrderPrint.json";
 import frPurchaseOrderHistory from "@/locales/fr/purchaseOrderHistory.json";
+import frReceipts from "@/locales/fr/receipts.json";
+import frReceiptForm from "@/locales/fr/receiptForm.json";
+import frReceiptDetails from "@/locales/fr/receiptDetails.json";
+import frReceiptItems from "@/locales/fr/receiptItems.json";
+import frReceiptStatus from "@/locales/fr/receiptStatus.json";
+import frReceiptActions from "@/locales/fr/receiptActions.json";
+import frReceiptValidation from "@/locales/fr/receiptValidation.json";
+import frReceiptTotals from "@/locales/fr/receiptTotals.json";
+import frReceiptFilters from "@/locales/fr/receiptFilters.json";
+import frReceiptPrint from "@/locales/fr/receiptPrint.json";
+import frReceiptHistory from "@/locales/fr/receiptHistory.json";
+import frStockReceipt from "@/locales/fr/stockReceipt.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -142,6 +154,18 @@ import enPurchaseOrderTotals from "@/locales/en/purchaseOrderTotals.json";
 import enPurchaseOrderFilters from "@/locales/en/purchaseOrderFilters.json";
 import enPurchaseOrderPrint from "@/locales/en/purchaseOrderPrint.json";
 import enPurchaseOrderHistory from "@/locales/en/purchaseOrderHistory.json";
+import enReceipts from "@/locales/en/receipts.json";
+import enReceiptForm from "@/locales/en/receiptForm.json";
+import enReceiptDetails from "@/locales/en/receiptDetails.json";
+import enReceiptItems from "@/locales/en/receiptItems.json";
+import enReceiptStatus from "@/locales/en/receiptStatus.json";
+import enReceiptActions from "@/locales/en/receiptActions.json";
+import enReceiptValidation from "@/locales/en/receiptValidation.json";
+import enReceiptTotals from "@/locales/en/receiptTotals.json";
+import enReceiptFilters from "@/locales/en/receiptFilters.json";
+import enReceiptPrint from "@/locales/en/receiptPrint.json";
+import enReceiptHistory from "@/locales/en/receiptHistory.json";
+import enStockReceipt from "@/locales/en/stockReceipt.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -213,6 +237,18 @@ import arPurchaseOrderTotals from "@/locales/ar/purchaseOrderTotals.json";
 import arPurchaseOrderFilters from "@/locales/ar/purchaseOrderFilters.json";
 import arPurchaseOrderPrint from "@/locales/ar/purchaseOrderPrint.json";
 import arPurchaseOrderHistory from "@/locales/ar/purchaseOrderHistory.json";
+import arReceipts from "@/locales/ar/receipts.json";
+import arReceiptForm from "@/locales/ar/receiptForm.json";
+import arReceiptDetails from "@/locales/ar/receiptDetails.json";
+import arReceiptItems from "@/locales/ar/receiptItems.json";
+import arReceiptStatus from "@/locales/ar/receiptStatus.json";
+import arReceiptActions from "@/locales/ar/receiptActions.json";
+import arReceiptValidation from "@/locales/ar/receiptValidation.json";
+import arReceiptTotals from "@/locales/ar/receiptTotals.json";
+import arReceiptFilters from "@/locales/ar/receiptFilters.json";
+import arReceiptPrint from "@/locales/ar/receiptPrint.json";
+import arReceiptHistory from "@/locales/ar/receiptHistory.json";
+import arStockReceipt from "@/locales/ar/stockReceipt.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -285,6 +321,18 @@ interface LocaleBundle {
   purchaseOrderFilters: MessageRecord;
   purchaseOrderPrint: MessageRecord;
   purchaseOrderHistory: MessageRecord;
+  receipts: MessageRecord;
+  receiptForm: MessageRecord;
+  receiptDetails: MessageRecord;
+  receiptItems: MessageRecord;
+  receiptStatus: MessageRecord;
+  receiptActions: MessageRecord;
+  receiptValidation: MessageRecord;
+  receiptTotals: MessageRecord;
+  receiptFilters: MessageRecord;
+  receiptPrint: MessageRecord;
+  receiptHistory: MessageRecord;
+  stockReceipt: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -358,6 +406,18 @@ const fr: LocaleBundle = {
   purchaseOrderFilters: frPurchaseOrderFilters,
   purchaseOrderPrint: frPurchaseOrderPrint,
   purchaseOrderHistory: frPurchaseOrderHistory,
+  receipts: frReceipts,
+  receiptForm: frReceiptForm,
+  receiptDetails: frReceiptDetails,
+  receiptItems: frReceiptItems,
+  receiptStatus: frReceiptStatus,
+  receiptActions: frReceiptActions,
+  receiptValidation: frReceiptValidation,
+  receiptTotals: frReceiptTotals,
+  receiptFilters: frReceiptFilters,
+  receiptPrint: frReceiptPrint,
+  receiptHistory: frReceiptHistory,
+  stockReceipt: frStockReceipt,
 };
 
 const en: LocaleBundle = {
@@ -431,6 +491,18 @@ const en: LocaleBundle = {
   purchaseOrderFilters: enPurchaseOrderFilters,
   purchaseOrderPrint: enPurchaseOrderPrint,
   purchaseOrderHistory: enPurchaseOrderHistory,
+  receipts: enReceipts,
+  receiptForm: enReceiptForm,
+  receiptDetails: enReceiptDetails,
+  receiptItems: enReceiptItems,
+  receiptStatus: enReceiptStatus,
+  receiptActions: enReceiptActions,
+  receiptValidation: enReceiptValidation,
+  receiptTotals: enReceiptTotals,
+  receiptFilters: enReceiptFilters,
+  receiptPrint: enReceiptPrint,
+  receiptHistory: enReceiptHistory,
+  stockReceipt: enStockReceipt,
 };
 
 const ar: LocaleBundle = {
@@ -504,6 +576,18 @@ const ar: LocaleBundle = {
   purchaseOrderFilters: arPurchaseOrderFilters,
   purchaseOrderPrint: arPurchaseOrderPrint,
   purchaseOrderHistory: arPurchaseOrderHistory,
+  receipts: arReceipts,
+  receiptForm: arReceiptForm,
+  receiptDetails: arReceiptDetails,
+  receiptItems: arReceiptItems,
+  receiptStatus: arReceiptStatus,
+  receiptActions: arReceiptActions,
+  receiptValidation: arReceiptValidation,
+  receiptTotals: arReceiptTotals,
+  receiptFilters: arReceiptFilters,
+  receiptPrint: arReceiptPrint,
+  receiptHistory: arReceiptHistory,
+  stockReceipt: arStockReceipt,
 };
 
 export type MessagesBundle = typeof fr;

@@ -1,0 +1,16 @@
+{
+  "print": "Print",
+  "title": "Goods receipt",
+  "number": "No.",
+  "date": "Date",
+  "supplier": "Supplier",
+  "location": "Location",
+  "purchaseOrder": "Purchase order",
+  "deliveryNote": "Delivery note",
+  "supplierInvoice": "Invoice",
+  "receivedBy": "Received by",
+  "validatedBy": "Validated by",
+  "signedBy": "Signature",
+  "notice": "System-generated document. No official accounting value.",
+  "footer": "This goods receipt was generated automatically by CafeRest."
+}

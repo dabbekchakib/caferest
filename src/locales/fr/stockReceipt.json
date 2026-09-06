@@ -1,0 +1,19 @@
+{
+  "title": "Entrée en stock",
+  "description": "La validation a généré les mouvements de stock suivants.",
+  "quantity": "Quantité",
+  "unit": "Unité",
+  "unitCost": "Coût unitaire",
+  "totalCost": "Coût total",
+  "taxExcluded": "Hors taxe",
+  "lot": "Lot",
+  "batch": "N° de lot",
+  "expiry": "DLC",
+  "reference": "Référence",
+  "movementType": "Type de mouvement",
+  "in": "Entrée",
+  "out": "Sortie",
+  "baseUnit": "Unité de stock",
+  "stockedQuantity": "Quantité en stock",
+  "notStockTracked": "Certains ingrédients ne sont pas suivis en stock : ils ont été reçus sans générer de mouvement."
+}
