@@ -1,0 +1,22 @@
+{
+  "title": "Stocktakes",
+  "subtitle": "Physical counting, variances and stock adjustments.",
+  "newStocktake": "New stocktake",
+  "startCount": "Start counting",
+  "delete": "Delete",
+  "searchPlaceholder": "Search by number…",
+  "emptyTitle": "No stocktake",
+  "emptyDescription": "Create your first stocktake to count the stock of a location.",
+  "createFirst": "Create a stocktake",
+  "results": "results",
+  "modeBlind": "Blind mode",
+  "modeStandard": "Standard mode",
+  "columns": {
+    "number": "Number",
+    "location": "Location",
+    "mode": "Mode",
+    "status": "Status",
+    "counted": "Counted",
+    "createdBy": "Created by"
+  }
+}

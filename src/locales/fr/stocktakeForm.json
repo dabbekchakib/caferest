@@ -1,0 +1,15 @@
+{
+  "title": "Nouvel inventaire",
+  "numberPreview": "Numéro",
+  "location": "Emplacement",
+  "noLocations": "Aucun emplacement actif",
+  "locationRequired": "Choisissez un emplacement à inventorier.",
+  "mode": "Mode de comptage",
+  "modeStandard": "Standard",
+  "modeStandardHelp": "Les quantités théoriques sont visibles pendant le comptage.",
+  "modeBlind": "Aveugle",
+  "modeBlindHelp": "Les quantités théoriques sont masquées pendant le comptage.",
+  "notes": "Notes",
+  "notesPlaceholder": "Remarques internes sur cet inventaire…",
+  "submitCreate": "Créer l'inventaire"
+}

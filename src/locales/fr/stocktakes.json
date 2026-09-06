@@ -1,0 +1,22 @@
+{
+  "title": "Inventaires",
+  "subtitle": "Comptage physique, écarts et ajustements de stock.",
+  "newStocktake": "Nouvel inventaire",
+  "startCount": "Commencer le comptage",
+  "delete": "Supprimer",
+  "searchPlaceholder": "Rechercher par numéro…",
+  "emptyTitle": "Aucun inventaire",
+  "emptyDescription": "Créez votre premier inventaire pour compter le stock d'un emplacement.",
+  "createFirst": "Créer un inventaire",
+  "results": "résultats",
+  "modeBlind": "Mode aveugle",
+  "modeStandard": "Mode standard",
+  "columns": {
+    "number": "Numéro",
+    "location": "Emplacement",
+    "mode": "Mode",
+    "status": "Statut",
+    "counted": "Compté",
+    "createdBy": "Créé par"
+  }
+}

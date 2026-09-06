@@ -1,0 +1,22 @@
+{
+  "title": "الجرد",
+  "subtitle": "العد الفعلي والفروقات وتسويات المخزون.",
+  "newStocktake": "جرد جديد",
+  "startCount": "بدء العد",
+  "delete": "حذف",
+  "searchPlaceholder": "البحث بالرقم…",
+  "emptyTitle": "لا يوجد جرد",
+  "emptyDescription": "أنشئ أول جرد لعدّ مخزون أحد المواقع.",
+  "createFirst": "إنشاء جرد",
+  "results": "نتيجة",
+  "modeBlind": "وضع أعمى",
+  "modeStandard": "الوضع القياسي",
+  "columns": {
+    "number": "الرقم",
+    "location": "الموقع",
+    "mode": "الوضع",
+    "status": "الحالة",
+    "counted": "المُعدّ",
+    "createdBy": "أنشأه"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "مراجعة الجرد",
+  "backToDetail": "العودة إلى التفاصيل",
+  "missingTitle": "عدّ غير مكتمل",
+  "missingDescription": "{count, plural, =0 {لا يوجد سطر ناقص} one {بقي سطر # غير معدود.} other {بقي # أسطر غير معدودة.}}",
+  "total": "الأسطر",
+  "surplus": "الفائض",
+  "missing": "العجز",
+  "net": "الرصيد الصافي",
+  "expected": "نظري",
+  "counted": "مُعدّ",
+  "cancelStocktake": "إلغاء الجرد",
+  "complete": "إنهاء العد",
+  "completed": "أُحيل الجرد إلى المراجعة",
+  "cancelled": "أُلغي الجرد"
+}

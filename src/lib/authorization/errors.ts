@@ -75,6 +75,18 @@ export const AUTHORIZATION_ERROR_CODES = {
   GOODS_RECEIPT_DUPLICATE_NUMBER: "GOODS_RECEIPT_DUPLICATE_NUMBER",
   STOCK_LOCATION_INVALID: "STOCK_LOCATION_INVALID",
   STOCK_UNIT_INCOMPATIBLE: "STOCK_UNIT_INCOMPATIBLE",
+  STOCKTAKE_NOT_FOUND: "STOCKTAKE_NOT_FOUND",
+  STOCKTAKE_LOCKED: "STOCKTAKE_LOCKED",
+  STOCKTAKE_INVALID_STATUS: "STOCKTAKE_INVALID_STATUS",
+  STOCKTAKE_WRONG_STATUS: "STOCKTAKE_WRONG_STATUS",
+  STOCKTAKE_INVALID_LOCATION: "STOCKTAKE_INVALID_LOCATION",
+  STOCKTAKE_INVALID_MODE: "STOCKTAKE_INVALID_MODE",
+  STOCKTAKE_INVALID_SCOPE: "STOCKTAKE_INVALID_SCOPE",
+  STOCKTAKE_EMPTY: "STOCKTAKE_EMPTY",
+  STOCKTAKE_ITEM_NOT_FOUND: "STOCKTAKE_ITEM_NOT_FOUND",
+  STOCKTAKE_INCOMPLETE: "STOCKTAKE_INCOMPLETE",
+  STOCKTAKE_HIGH_VARIANCE_APPROVAL: "STOCKTAKE_HIGH_VARIANCE_APPROVAL",
+  STOCKTAKE_DUPLICATE_NUMBER: "STOCKTAKE_DUPLICATE_NUMBER",
   GENERIC: "GENERIC",
 } as const;
 
@@ -160,6 +172,20 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
       "authorization.errors.goodsReceiptDuplicateNumber",
     STOCK_LOCATION_INVALID: "authorization.errors.stockLocationInvalid",
     STOCK_UNIT_INCOMPATIBLE: "authorization.errors.stockUnitIncompatible",
+    STOCKTAKE_NOT_FOUND: "authorization.errors.stocktakeNotFound",
+    STOCKTAKE_LOCKED: "authorization.errors.stocktakeLocked",
+    STOCKTAKE_INVALID_STATUS: "authorization.errors.stocktakeInvalidStatus",
+    STOCKTAKE_WRONG_STATUS: "authorization.errors.stocktakeWrongStatus",
+    STOCKTAKE_INVALID_LOCATION: "authorization.errors.stocktakeInvalidLocation",
+    STOCKTAKE_INVALID_MODE: "authorization.errors.stocktakeInvalidMode",
+    STOCKTAKE_INVALID_SCOPE: "authorization.errors.stocktakeInvalidScope",
+    STOCKTAKE_EMPTY: "authorization.errors.stocktakeEmpty",
+    STOCKTAKE_ITEM_NOT_FOUND: "authorization.errors.stocktakeItemNotFound",
+    STOCKTAKE_INCOMPLETE: "authorization.errors.stocktakeIncomplete",
+    STOCKTAKE_HIGH_VARIANCE_APPROVAL:
+      "authorization.errors.stocktakeHighVarianceApproval",
+    STOCKTAKE_DUPLICATE_NUMBER:
+      "authorization.errors.stocktakeDuplicateNumber",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -212,6 +238,8 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   uq_goods_receipts_establishment_number: "GOODS_RECEIPT_DUPLICATE_NUMBER",
   goods_receipt_items_overdelivery_check: "GOODS_RECEIPT_OVERDELIVERY",
   goods_receipt_items_split_check: "GOODS_RECEIPT_QUANTITY_INVALID",
+  uq_stocktakes_establishment_number: "STOCKTAKE_DUPLICATE_NUMBER",
+  stocktake_items_ingredient_unique: "STOCKTAKE_ITEM_NOT_FOUND",
 };
 
 /**
@@ -238,6 +266,17 @@ export const RPC_MESSAGE_TO_CODE: Record<string, AuthorizationErrorCode> = {
   goods_receipt_item_invalid: "GOODS_RECEIPT_ITEM_INVALID",
   stock_location_invalid: "STOCK_LOCATION_INVALID",
   stock_unit_incompatible: "STOCK_UNIT_INCOMPATIBLE",
+  stocktake_not_found: "STOCKTAKE_NOT_FOUND",
+  stocktake_locked: "STOCKTAKE_LOCKED",
+  stocktake_invalid_status: "STOCKTAKE_INVALID_STATUS",
+  stocktake_wrong_status: "STOCKTAKE_WRONG_STATUS",
+  stocktake_invalid_location: "STOCKTAKE_INVALID_LOCATION",
+  stocktake_invalid_mode: "STOCKTAKE_INVALID_MODE",
+  stocktake_invalid_scope: "STOCKTAKE_INVALID_SCOPE",
+  stocktake_empty: "STOCKTAKE_EMPTY",
+  stocktake_item_not_found: "STOCKTAKE_ITEM_NOT_FOUND",
+  stocktake_incomplete: "STOCKTAKE_INCOMPLETE",
+  stocktake_high_variance_approval: "STOCKTAKE_HIGH_VARIANCE_APPROVAL",
 };
 
 export class AuthorizationError extends Error {

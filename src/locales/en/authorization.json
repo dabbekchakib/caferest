@@ -68,6 +68,18 @@
     "goodsReceiptDuplicateNumber": "A goods receipt with this number already exists.",
     "stockLocationInvalid": "The selected stock location is invalid or inactive.",
     "stockUnitIncompatible": "Cannot convert the purchase unit to this ingredient's stock unit.",
+    "stocktakeNotFound": "Stocktake not found.",
+    "stocktakeLocked": "This stocktake can no longer be changed in its current state.",
+    "stocktakeInvalidStatus": "This action is not allowed for the current stocktake status.",
+    "stocktakeWrongStatus": "Counting is only possible on a stocktake in progress.",
+    "stocktakeInvalidLocation": "The stocktake location is invalid or inactive.",
+    "stocktakeInvalidMode": "The counting mode is invalid.",
+    "stocktakeInvalidScope": "The counting scope is invalid.",
+    "stocktakeEmpty": "The stocktake must contain at least one item.",
+    "stocktakeItemNotFound": "Stocktake item not found or out of scope.",
+    "stocktakeIncomplete": "All lines must be counted before finishing the stocktake.",
+    "stocktakeHighVarianceApproval": "Some variances exceed the approval thresholds: approve them before validating.",
+    "stocktakeDuplicateNumber": "A stocktake with this number already exists.",
     "generic": "Something went wrong. Please try again."
   },
   "switch": {

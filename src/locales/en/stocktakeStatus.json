@@ -1,0 +1,8 @@
+{
+  "draft": "Draft",
+  "counting": "Counting in progress",
+  "pendingReview": "Pending review",
+  "approved": "Approved",
+  "validated": "Validated",
+  "cancelled": "Cancelled"
+}

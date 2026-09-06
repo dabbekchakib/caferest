@@ -1,0 +1,19 @@
+{
+  "print": "Print",
+  "title": "Stocktake sheet",
+  "number": "Number",
+  "createdAt": "Created on",
+  "location": "Location",
+  "mode": "Mode",
+  "startedAt": "Started on",
+  "startedBy": "Started by",
+  "validatedAt": "Validated on",
+  "validatedBy": "Validated by",
+  "netValue": "Net balance",
+  "ingredient": "Ingredient",
+  "expected": "Theoretical",
+  "counted": "Counted",
+  "variance": "Variance",
+  "value": "Value",
+  "notes": "Notes"
+}

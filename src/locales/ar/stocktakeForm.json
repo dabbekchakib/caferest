@@ -1,0 +1,15 @@
+{
+  "title": "جرد جديد",
+  "numberPreview": "الرقم",
+  "location": "الموقع",
+  "noLocations": "لا يوجد موقع نشط",
+  "locationRequired": "اختر موقعًا لعدّه.",
+  "mode": "وضع العد",
+  "modeStandard": "قياسي",
+  "modeStandardHelp": "تظهر الكميات النظرية أثناء العد.",
+  "modeBlind": "أعمى",
+  "modeBlindHelp": "تُخفى الكميات النظرية أثناء العد.",
+  "notes": "ملاحظات",
+  "notesPlaceholder": "ملاحظات داخلية حول هذا الجرد…",
+  "submitCreate": "إنشاء الجرد"
+}

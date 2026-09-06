@@ -111,6 +111,17 @@ const AUDIT_ACTIONS = [
   "goods_receipt.deleted",
   "stock.received",
   "stock.receipt.created",
+  "stocktake.created",
+  "stocktake.updated",
+  "stocktake.deleted",
+  "stocktake.started",
+  "stocktake.count_updated",
+  "stocktake.completed",
+  "stocktake.approved",
+  "stocktake.validated",
+  "stocktake.cancelled",
+  "stocktake.adjustment_created",
+  "stock.adjusted",
 ] as const;
 
 export type AuditAction = (typeof AUDIT_ACTIONS)[number];

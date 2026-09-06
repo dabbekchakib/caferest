@@ -1,0 +1,8 @@
+{
+  "pageTitle": "Variances",
+  "severity": {
+    "none": "No variance",
+    "warning": "Alert",
+    "approval": "Approval required"
+  }
+}

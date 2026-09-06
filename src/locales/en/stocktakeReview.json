@@ -1,0 +1,16 @@
+{
+  "title": "Stocktake review",
+  "backToDetail": "Back to detail",
+  "missingTitle": "Incomplete count",
+  "missingDescription": "{count, plural, =0 {No missing line} one {# line still uncounted.} other {# lines still uncounted.}}",
+  "total": "Lines",
+  "surplus": "Surplus",
+  "missing": "Shortages",
+  "net": "Net balance",
+  "expected": "Theoretical",
+  "counted": "Counted",
+  "cancelStocktake": "Cancel stocktake",
+  "complete": "Finish counting",
+  "completed": "Stocktake sent to review",
+  "cancelled": "Stocktake cancelled"
+}

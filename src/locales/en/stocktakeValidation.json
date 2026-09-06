@@ -1,0 +1,16 @@
+{
+  "modeInvalid": "Invalid counting mode.",
+  "scopeInvalid": "Invalid scope.",
+  "statusInvalid": "Invalid status.",
+  "approveTitle": "Approve stocktake",
+  "validateTitle": "Validate stocktake",
+  "cancelTitle": "Cancel stocktake",
+  "deleteTitle": "Delete stocktake",
+  "confirm": "Confirm",
+  "confirmCancel": "Cancel stocktake",
+  "approveDescription": "The stocktake will move to “Approved” and wait for the stock validation.",
+  "validateDescription": "Stock will be adjusted according to the variances. This action is irreversible.",
+  "cancelDescription": "The stocktake will be cancelled and no stock entry will be made.",
+  "deleteDescription": "This action is irreversible. Only a draft can be deleted.",
+  "reasonPlaceholder": "Reason (optional)…"
+}

@@ -1,0 +1,8 @@
+{
+  "draft": "Brouillon",
+  "counting": "Comptage en cours",
+  "pendingReview": "En attente de revue",
+  "approved": "Approuvé",
+  "validated": "Validé",
+  "cancelled": "Annulé"
+}

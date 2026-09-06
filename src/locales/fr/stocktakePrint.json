@@ -1,0 +1,19 @@
+{
+  "print": "Imprimer",
+  "title": "Feuille d'inventaire",
+  "number": "Numéro",
+  "createdAt": "Créé le",
+  "location": "Emplacement",
+  "mode": "Mode",
+  "startedAt": "Démarré le",
+  "startedBy": "Démarré par",
+  "validatedAt": "Validé le",
+  "validatedBy": "Validé par",
+  "netValue": "Solde net",
+  "ingredient": "Ingrédient",
+  "expected": "Théorique",
+  "counted": "Compté",
+  "variance": "Écart",
+  "value": "Valeur",
+  "notes": "Notes"
+}

@@ -192,6 +192,42 @@ import arReceiptHistory from "../src/locales/ar/receiptHistory.json";
 import frStockReceipt from "../src/locales/fr/stockReceipt.json";
 import enStockReceipt from "../src/locales/en/stockReceipt.json";
 import arStockReceipt from "../src/locales/ar/stockReceipt.json";
+import frStocktakes from "../src/locales/fr/stocktakes.json";
+import enStocktakes from "../src/locales/en/stocktakes.json";
+import arStocktakes from "../src/locales/ar/stocktakes.json";
+import frStocktakeForm from "../src/locales/fr/stocktakeForm.json";
+import enStocktakeForm from "../src/locales/en/stocktakeForm.json";
+import arStocktakeForm from "../src/locales/ar/stocktakeForm.json";
+import frStocktakeCount from "../src/locales/fr/stocktakeCount.json";
+import enStocktakeCount from "../src/locales/en/stocktakeCount.json";
+import arStocktakeCount from "../src/locales/ar/stocktakeCount.json";
+import frStocktakeReview from "../src/locales/fr/stocktakeReview.json";
+import enStocktakeReview from "../src/locales/en/stocktakeReview.json";
+import arStocktakeReview from "../src/locales/ar/stocktakeReview.json";
+import frStocktakeDetails from "../src/locales/fr/stocktakeDetails.json";
+import enStocktakeDetails from "../src/locales/en/stocktakeDetails.json";
+import arStocktakeDetails from "../src/locales/ar/stocktakeDetails.json";
+import frStocktakeStatus from "../src/locales/fr/stocktakeStatus.json";
+import enStocktakeStatus from "../src/locales/en/stocktakeStatus.json";
+import arStocktakeStatus from "../src/locales/ar/stocktakeStatus.json";
+import frStocktakeActions from "../src/locales/fr/stocktakeActions.json";
+import enStocktakeActions from "../src/locales/en/stocktakeActions.json";
+import arStocktakeActions from "../src/locales/ar/stocktakeActions.json";
+import frStocktakeValidation from "../src/locales/fr/stocktakeValidation.json";
+import enStocktakeValidation from "../src/locales/en/stocktakeValidation.json";
+import arStocktakeValidation from "../src/locales/ar/stocktakeValidation.json";
+import frStocktakeVariance from "../src/locales/fr/stocktakeVariance.json";
+import enStocktakeVariance from "../src/locales/en/stocktakeVariance.json";
+import arStocktakeVariance from "../src/locales/ar/stocktakeVariance.json";
+import frStocktakeFilters from "../src/locales/fr/stocktakeFilters.json";
+import enStocktakeFilters from "../src/locales/en/stocktakeFilters.json";
+import arStocktakeFilters from "../src/locales/ar/stocktakeFilters.json";
+import frStocktakeHistory from "../src/locales/fr/stocktakeHistory.json";
+import enStocktakeHistory from "../src/locales/en/stocktakeHistory.json";
+import arStocktakeHistory from "../src/locales/ar/stocktakeHistory.json";
+import frStocktakePrint from "../src/locales/fr/stocktakePrint.json";
+import enStocktakePrint from "../src/locales/en/stocktakePrint.json";
+import arStocktakePrint from "../src/locales/ar/stocktakePrint.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -277,6 +313,18 @@ const namespaces = [
   ["receiptPrint", enReceiptPrint, frReceiptPrint, arReceiptPrint],
   ["receiptHistory", enReceiptHistory, frReceiptHistory, arReceiptHistory],
   ["stockReceipt", enStockReceipt, frStockReceipt, arStockReceipt],
+  ["stocktakes", enStocktakes, frStocktakes, arStocktakes],
+  ["stocktakeForm", enStocktakeForm, frStocktakeForm, arStocktakeForm],
+  ["stocktakeCount", enStocktakeCount, frStocktakeCount, arStocktakeCount],
+  ["stocktakeReview", enStocktakeReview, frStocktakeReview, arStocktakeReview],
+  ["stocktakeDetails", enStocktakeDetails, frStocktakeDetails, arStocktakeDetails],
+  ["stocktakeStatus", enStocktakeStatus, frStocktakeStatus, arStocktakeStatus],
+  ["stocktakeActions", enStocktakeActions, frStocktakeActions, arStocktakeActions],
+  ["stocktakeValidation", enStocktakeValidation, frStocktakeValidation, arStocktakeValidation],
+  ["stocktakeVariance", enStocktakeVariance, frStocktakeVariance, arStocktakeVariance],
+  ["stocktakeFilters", enStocktakeFilters, frStocktakeFilters, arStocktakeFilters],
+  ["stocktakeHistory", enStocktakeHistory, frStocktakeHistory, arStocktakeHistory],
+  ["stocktakePrint", enStocktakePrint, frStocktakePrint, arStocktakePrint],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

@@ -1,0 +1,9 @@
+{
+  "status": "Statut",
+  "mode": "Mode",
+  "location": "Emplacement",
+  "statusAll": "Tous les statuts",
+  "modeAll": "Tous les modes",
+  "locationAll": "Tous les emplacements",
+  "reset": "Réinitialiser"
+}

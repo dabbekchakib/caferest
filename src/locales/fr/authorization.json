@@ -68,6 +68,18 @@
     "goodsReceiptDuplicateNumber": "Un bon de réception avec ce numéro existe déjà.",
     "stockLocationInvalid": "L'emplacement de stock sélectionné est invalide ou inactif.",
     "stockUnitIncompatible": "Impossible de convertir l'unité d'achat vers l'unité de stock de cet ingrédient.",
+    "stocktakeNotFound": "Inventaire introuvable.",
+    "stocktakeLocked": "Cet inventaire ne peut plus être modifié dans son état actuel.",
+    "stocktakeInvalidStatus": "L'action demandée n'est pas autorisée pour le statut actuel de l'inventaire.",
+    "stocktakeWrongStatus": "Le comptage n'est possible que sur un inventaire en cours de comptage.",
+    "stocktakeInvalidLocation": "L'emplacement de l'inventaire est invalide ou inactif.",
+    "stocktakeInvalidMode": "Le mode de comptage est invalide.",
+    "stocktakeInvalidScope": "Le portée de comptage est invalide.",
+    "stocktakeEmpty": "L'inventaire doit contenir au moins un article.",
+    "stocktakeItemNotFound": "Article d'inventaire introuvable ou hors portée.",
+    "stocktakeIncomplete": "Toutes les lignes doivent être comptées avant de terminer l'inventaire.",
+    "stocktakeHighVarianceApproval": "Des écarts dépassent les seuils d'approbation : approuvez-les avant de valider.",
+    "stocktakeDuplicateNumber": "Un inventaire avec ce numéro existe déjà.",
     "generic": "Une erreur est survenue. Veuillez réessayer."
   },
   "switch": {

@@ -1,0 +1,15 @@
+{
+  "title": "New stocktake",
+  "numberPreview": "Number",
+  "location": "Location",
+  "noLocations": "No active location",
+  "locationRequired": "Choose a location to count.",
+  "mode": "Counting mode",
+  "modeStandard": "Standard",
+  "modeStandardHelp": "Theoretical quantities are visible while counting.",
+  "modeBlind": "Blind",
+  "modeBlindHelp": "Theoretical quantities are hidden while counting.",
+  "notes": "Notes",
+  "notesPlaceholder": "Internal notes about this stocktake…",
+  "submitCreate": "Create stocktake"
+}

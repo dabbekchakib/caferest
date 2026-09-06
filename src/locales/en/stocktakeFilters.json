@@ -1,0 +1,9 @@
+{
+  "status": "Status",
+  "mode": "Mode",
+  "location": "Location",
+  "statusAll": "All statuses",
+  "modeAll": "All modes",
+  "locationAll": "All locations",
+  "reset": "Reset"
+}

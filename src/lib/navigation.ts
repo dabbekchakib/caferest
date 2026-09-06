@@ -121,7 +121,7 @@ export const navSections: NavSection[] = [
         href: "/stock-movements",
         icon: ArrowLeftRight,
       },
-      { labelKey: "stockCounts", href: "/stock-counts", icon: ClipboardMinus },
+      { labelKey: "stockCounts", href: "/stocktakes", icon: ClipboardMinus, permission: "stocktakes.view" },
       { labelKey: "losses", href: "/losses", icon: ClipboardMinus },
       {
         labelKey: "units",

@@ -83,6 +83,18 @@ import frReceiptFilters from "@/locales/fr/receiptFilters.json";
 import frReceiptPrint from "@/locales/fr/receiptPrint.json";
 import frReceiptHistory from "@/locales/fr/receiptHistory.json";
 import frStockReceipt from "@/locales/fr/stockReceipt.json";
+import frStocktakes from "@/locales/fr/stocktakes.json";
+import frStocktakeForm from "@/locales/fr/stocktakeForm.json";
+import frStocktakeCount from "@/locales/fr/stocktakeCount.json";
+import frStocktakeReview from "@/locales/fr/stocktakeReview.json";
+import frStocktakeDetails from "@/locales/fr/stocktakeDetails.json";
+import frStocktakeStatus from "@/locales/fr/stocktakeStatus.json";
+import frStocktakeActions from "@/locales/fr/stocktakeActions.json";
+import frStocktakeValidation from "@/locales/fr/stocktakeValidation.json";
+import frStocktakeVariance from "@/locales/fr/stocktakeVariance.json";
+import frStocktakeFilters from "@/locales/fr/stocktakeFilters.json";
+import frStocktakeHistory from "@/locales/fr/stocktakeHistory.json";
+import frStocktakePrint from "@/locales/fr/stocktakePrint.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -166,6 +178,18 @@ import enReceiptFilters from "@/locales/en/receiptFilters.json";
 import enReceiptPrint from "@/locales/en/receiptPrint.json";
 import enReceiptHistory from "@/locales/en/receiptHistory.json";
 import enStockReceipt from "@/locales/en/stockReceipt.json";
+import enStocktakes from "@/locales/en/stocktakes.json";
+import enStocktakeForm from "@/locales/en/stocktakeForm.json";
+import enStocktakeCount from "@/locales/en/stocktakeCount.json";
+import enStocktakeReview from "@/locales/en/stocktakeReview.json";
+import enStocktakeDetails from "@/locales/en/stocktakeDetails.json";
+import enStocktakeStatus from "@/locales/en/stocktakeStatus.json";
+import enStocktakeActions from "@/locales/en/stocktakeActions.json";
+import enStocktakeValidation from "@/locales/en/stocktakeValidation.json";
+import enStocktakeVariance from "@/locales/en/stocktakeVariance.json";
+import enStocktakeFilters from "@/locales/en/stocktakeFilters.json";
+import enStocktakeHistory from "@/locales/en/stocktakeHistory.json";
+import enStocktakePrint from "@/locales/en/stocktakePrint.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -249,6 +273,18 @@ import arReceiptFilters from "@/locales/ar/receiptFilters.json";
 import arReceiptPrint from "@/locales/ar/receiptPrint.json";
 import arReceiptHistory from "@/locales/ar/receiptHistory.json";
 import arStockReceipt from "@/locales/ar/stockReceipt.json";
+import arStocktakes from "@/locales/ar/stocktakes.json";
+import arStocktakeForm from "@/locales/ar/stocktakeForm.json";
+import arStocktakeCount from "@/locales/ar/stocktakeCount.json";
+import arStocktakeReview from "@/locales/ar/stocktakeReview.json";
+import arStocktakeDetails from "@/locales/ar/stocktakeDetails.json";
+import arStocktakeStatus from "@/locales/ar/stocktakeStatus.json";
+import arStocktakeActions from "@/locales/ar/stocktakeActions.json";
+import arStocktakeValidation from "@/locales/ar/stocktakeValidation.json";
+import arStocktakeVariance from "@/locales/ar/stocktakeVariance.json";
+import arStocktakeFilters from "@/locales/ar/stocktakeFilters.json";
+import arStocktakeHistory from "@/locales/ar/stocktakeHistory.json";
+import arStocktakePrint from "@/locales/ar/stocktakePrint.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -333,6 +369,18 @@ interface LocaleBundle {
   receiptPrint: MessageRecord;
   receiptHistory: MessageRecord;
   stockReceipt: MessageRecord;
+  stocktakes: MessageRecord;
+  stocktakeForm: MessageRecord;
+  stocktakeCount: MessageRecord;
+  stocktakeReview: MessageRecord;
+  stocktakeDetails: MessageRecord;
+  stocktakeStatus: MessageRecord;
+  stocktakeActions: MessageRecord;
+  stocktakeValidation: MessageRecord;
+  stocktakeVariance: MessageRecord;
+  stocktakeFilters: MessageRecord;
+  stocktakeHistory: MessageRecord;
+  stocktakePrint: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -418,6 +466,18 @@ const fr: LocaleBundle = {
   receiptPrint: frReceiptPrint,
   receiptHistory: frReceiptHistory,
   stockReceipt: frStockReceipt,
+  stocktakes: frStocktakes,
+  stocktakeForm: frStocktakeForm,
+  stocktakeCount: frStocktakeCount,
+  stocktakeReview: frStocktakeReview,
+  stocktakeDetails: frStocktakeDetails,
+  stocktakeStatus: frStocktakeStatus,
+  stocktakeActions: frStocktakeActions,
+  stocktakeValidation: frStocktakeValidation,
+  stocktakeVariance: frStocktakeVariance,
+  stocktakeFilters: frStocktakeFilters,
+  stocktakeHistory: frStocktakeHistory,
+  stocktakePrint: frStocktakePrint,
 };
 
 const en: LocaleBundle = {
@@ -503,6 +563,18 @@ const en: LocaleBundle = {
   receiptPrint: enReceiptPrint,
   receiptHistory: enReceiptHistory,
   stockReceipt: enStockReceipt,
+  stocktakes: enStocktakes,
+  stocktakeForm: enStocktakeForm,
+  stocktakeCount: enStocktakeCount,
+  stocktakeReview: enStocktakeReview,
+  stocktakeDetails: enStocktakeDetails,
+  stocktakeStatus: enStocktakeStatus,
+  stocktakeActions: enStocktakeActions,
+  stocktakeValidation: enStocktakeValidation,
+  stocktakeVariance: enStocktakeVariance,
+  stocktakeFilters: enStocktakeFilters,
+  stocktakeHistory: enStocktakeHistory,
+  stocktakePrint: enStocktakePrint,
 };
 
 const ar: LocaleBundle = {
@@ -588,6 +660,18 @@ const ar: LocaleBundle = {
   receiptPrint: arReceiptPrint,
   receiptHistory: arReceiptHistory,
   stockReceipt: arStockReceipt,
+  stocktakes: arStocktakes,
+  stocktakeForm: arStocktakeForm,
+  stocktakeCount: arStocktakeCount,
+  stocktakeReview: arStocktakeReview,
+  stocktakeDetails: arStocktakeDetails,
+  stocktakeStatus: arStocktakeStatus,
+  stocktakeActions: arStocktakeActions,
+  stocktakeValidation: arStocktakeValidation,
+  stocktakeVariance: arStocktakeVariance,
+  stocktakeFilters: arStocktakeFilters,
+  stocktakeHistory: arStocktakeHistory,
+  stocktakePrint: arStocktakePrint,
 };
 
 export type MessagesBundle = typeof fr;

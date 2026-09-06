@@ -1,0 +1,16 @@
+{
+  "title": "Revue de l'inventaire",
+  "backToDetail": "Retour au détail",
+  "missingTitle": "Comptage incomplet",
+  "missingDescription": "{count, plural, =0 {Aucune ligne manquante} one {Il reste # ligne non comptée.} other {Il reste # lignes non comptées.}}",
+  "total": "Lignes",
+  "surplus": "Surplus",
+  "missing": "Manquants",
+  "net": "Solde net",
+  "expected": "Théorique",
+  "counted": "Compté",
+  "cancelStocktake": "Annuler l'inventaire",
+  "complete": "Terminer le comptage",
+  "completed": "Inventaire transmis à la revue",
+  "cancelled": "Inventaire annulé"
+}

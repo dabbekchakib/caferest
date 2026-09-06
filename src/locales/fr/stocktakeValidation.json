@@ -1,0 +1,16 @@
+{
+  "modeInvalid": "Mode de comptage invalide.",
+  "scopeInvalid": "Portée invalide.",
+  "statusInvalid": "Statut invalide.",
+  "approveTitle": "Approuver l'inventaire",
+  "validateTitle": "Valider l'inventaire",
+  "cancelTitle": "Annuler l'inventaire",
+  "deleteTitle": "Supprimer l'inventaire",
+  "confirm": "Confirmer",
+  "confirmCancel": "Annuler l'inventaire",
+  "approveDescription": "L'inventaire passera au statut « Approuvé » en attendant la validation du stock.",
+  "validateDescription": "Le stock sera ajusté selon les écarts. Cette action est irréversible.",
+  "cancelDescription": "L'inventaire sera annulé et aucune écriture de stock ne sera effectuée.",
+  "deleteDescription": "Cette action est irréversible. Seul un brouillon peut être supprimé.",
+  "reasonPlaceholder": "Motif (optionnel)…"
+}

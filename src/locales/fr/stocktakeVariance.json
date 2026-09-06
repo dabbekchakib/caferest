@@ -1,0 +1,8 @@
+{
+  "pageTitle": "Écarts",
+  "severity": {
+    "none": "Aucun écart",
+    "warning": "Alarme",
+    "approval": "Approbation requise"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "created": "Stocktake created",
+  "approved": "Stocktake approved",
+  "validated": "Stocktake validated · stock adjusted",
+  "cancelled": "Stocktake cancelled",
+  "deleted": "Stocktake deleted"
+}

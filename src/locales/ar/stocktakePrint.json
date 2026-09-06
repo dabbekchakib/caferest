@@ -1,0 +1,19 @@
+{
+  "print": "طباعة",
+  "title": "ورقة الجرد",
+  "number": "الرقم",
+  "createdAt": "أُنشئ في",
+  "location": "الموقع",
+  "mode": "الوضع",
+  "startedAt": "بدأ في",
+  "startedBy": "بدأه",
+  "validatedAt": "فُعّل في",
+  "validatedBy": "فعّله",
+  "netValue": "الرصيد الصافي",
+  "ingredient": "المكون",
+  "expected": "نظري",
+  "counted": "مُعدّ",
+  "variance": "الفرق",
+  "value": "القيمة",
+  "notes": "ملاحظات"
+}

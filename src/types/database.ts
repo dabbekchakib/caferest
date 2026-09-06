@@ -1009,6 +1009,8 @@ export interface Database {
           reference_id: string | null;
           goods_receipt_id: string | null;
           goods_receipt_item_id: string | null;
+          stocktake_id: string | null;
+          stocktake_item_id: string | null;
           lot_number: string | null;
           batch_number: string | null;
           expiry_date: string | null;
@@ -1033,6 +1035,8 @@ export interface Database {
           reference_id?: string | null;
           goods_receipt_id?: string | null;
           goods_receipt_item_id?: string | null;
+          stocktake_id?: string | null;
+          stocktake_item_id?: string | null;
           lot_number?: string | null;
           batch_number?: string | null;
           expiry_date?: string | null;
@@ -1194,6 +1198,132 @@ export interface Database {
         };
         Update: Partial<
           Database["public"]["Tables"]["goods_receipt_status_history"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      stocktakes: {
+        Row: {
+          id: string;
+          establishment_id: string;
+          inventory_location_id: string;
+          stocktake_number: string;
+          status: StocktakeStatus;
+          mode: StocktakeMode;
+          started_at: Datetime | null;
+          completed_at: Datetime | null;
+          approved_at: Datetime | null;
+          validated_at: Datetime | null;
+          cancelled_at: Datetime | null;
+          created_by: string | null;
+          started_by: string | null;
+          completed_by: string | null;
+          approved_by: string | null;
+          validated_by: string | null;
+          cancelled_by: string | null;
+          notes: string | null;
+          cancellation_reason: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id: string;
+          inventory_location_id: string;
+          stocktake_number: string;
+          status?: StocktakeStatus;
+          mode?: StocktakeMode;
+          started_at?: Datetime | null;
+          completed_at?: Datetime | null;
+          approved_at?: Datetime | null;
+          validated_at?: Datetime | null;
+          cancelled_at?: Datetime | null;
+          created_by?: string | null;
+          started_by?: string | null;
+          completed_by?: string | null;
+          approved_by?: string | null;
+          validated_by?: string | null;
+          cancelled_by?: string | null;
+          notes?: string | null;
+          cancellation_reason?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["stocktakes"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      stocktake_items: {
+        Row: {
+          id: string;
+          stocktake_id: string;
+          ingredient_id: string;
+          unit_id: string | null;
+          base_unit_id: string | null;
+          snapshot_quantity: number;
+          movements_quantity: number | null;
+          expected_quantity: number | null;
+          counted_quantity: number | null;
+          variance_quantity: number | null;
+          variance_percentage: number | null;
+          unit_cost: number;
+          variance_value: number | null;
+          count_status: StocktakeItemCountStatus;
+          notes: string | null;
+          counted_by: string | null;
+          counted_at: Datetime | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          stocktake_id: string;
+          ingredient_id: string;
+          unit_id?: string | null;
+          base_unit_id?: string | null;
+          snapshot_quantity?: number;
+          movements_quantity?: number | null;
+          expected_quantity?: number | null;
+          counted_quantity?: number | null;
+          variance_quantity?: number | null;
+          variance_percentage?: number | null;
+          unit_cost?: number;
+          variance_value?: number | null;
+          count_status?: StocktakeItemCountStatus;
+          notes?: string | null;
+          counted_by?: string | null;
+          counted_at?: Datetime | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["stocktake_items"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      stocktake_status_history: {
+        Row: {
+          id: string;
+          establishment_id: string;
+          stocktake_id: string;
+          from_status: string | null;
+          to_status: string;
+          reason: string | null;
+          changed_by: string | null;
+          created_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id: string;
+          stocktake_id: string;
+          from_status?: string | null;
+          to_status: string;
+          reason?: string | null;
+          changed_by?: string | null;
+          created_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["stocktake_status_history"]["Insert"]
         >;
         Relationships: [];
       };
@@ -1823,6 +1953,18 @@ export type GoodsReceiptStatus =
   | "pending_validation"
   | "validated"
   | "cancelled";
+
+export type StocktakeStatus =
+  | "draft"
+  | "counting"
+  | "pending_review"
+  | "approved"
+  | "validated"
+  | "cancelled";
+
+export type StocktakeMode = "standard" | "blind";
+
+export type StocktakeItemCountStatus = "pending" | "counted";
 
 export type TableStatus =
   "available" | "occupied" | "reserved" | "cleaning" | "blocked";

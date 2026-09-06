@@ -68,6 +68,18 @@
     "goodsReceiptDuplicateNumber": "يوجد سند استلام بهذا الرقم بالفعل.",
     "stockLocationInvalid": "موقع المخزون المحدد غير صالح أو غير نشط.",
     "stockUnitIncompatible": "تعذّر تحويل وحدة الشراء إلى وحدة مخزون هذا المكوّن.",
+    "stocktakeNotFound": "الجرد غير موجود.",
+    "stocktakeLocked": "لا يمكن تعديل هذا الجرد في حالته الحالية.",
+    "stocktakeInvalidStatus": "هذا الإجراء غير مسموح للحالة الحالية للجرد.",
+    "stocktakeWrongStatus": "لا يمكن العد إلا على جرد قيد التقدم.",
+    "stocktakeInvalidLocation": "موقع الجرد غير صالح أو غير نشط.",
+    "stocktakeInvalidMode": "وضع العد غير صالح.",
+    "stocktakeInvalidScope": "نطاق العد غير صالح.",
+    "stocktakeEmpty": "يجب أن يحتوي الجرد على بند واحد على الأقل.",
+    "stocktakeItemNotFound": "بند الجرد غير موجود أو خارج النطاق.",
+    "stocktakeIncomplete": "يجب عدّ كل الأسطر قبل إنهاء الجرد.",
+    "stocktakeHighVarianceApproval": "تتجاوز بعض الفروقات عتبات الاعتماد: اعتمدها قبل التفعيل.",
+    "stocktakeDuplicateNumber": "يوجد جرد بهذا الرقم بالفعل.",
     "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
   },
   "switch": {

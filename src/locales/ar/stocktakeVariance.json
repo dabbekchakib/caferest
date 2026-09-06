@@ -1,0 +1,8 @@
+{
+  "pageTitle": "الفروقات",
+  "severity": {
+    "none": "لا فروقات",
+    "warning": "تنبيه",
+    "approval": "يتطلب موافقة"
+  }
+}

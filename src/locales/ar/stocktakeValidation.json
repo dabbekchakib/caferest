@@ -1,0 +1,16 @@
+{
+  "modeInvalid": "وضع عد غير صالح.",
+  "scopeInvalid": "نطاق غير صالح.",
+  "statusInvalid": "حالة غير صالحة.",
+  "approveTitle": "اعتماد الجرد",
+  "validateTitle": "تفعيل الجرد",
+  "cancelTitle": "إلغاء الجرد",
+  "deleteTitle": "حذف الجرد",
+  "confirm": "تأكيد",
+  "confirmCancel": "إلغاء الجرد",
+  "approveDescription": "سينتقل الجرد إلى حالة «معتمد» بانتظار تفعيل المخزون.",
+  "validateDescription": "سيُعدَّل المخزون وفق الفروقات. هذا الإجراء لا رجعة فيه.",
+  "cancelDescription": "سيُلغى الجرد ولن تُسجَّل أي حركة مخزون.",
+  "deleteDescription": "هذا الإجراء لا رجعة فيه. لا يمكن حذف إلا المسودّات.",
+  "reasonPlaceholder": "السبب (اختياري)…"
+}

@@ -108,6 +108,7 @@ All tables use Supabase RLS policies for security.
 - `docs/suppliers.md` — Suppliers and the purchase catalog
 - `docs/purchase-orders.md` — Purchase orders (Phase 14)
 - `docs/goods-receipts.md` — Goods receipts & stock-in (Phase 15)
+- `docs/stocktakes.md` — Physical stocktakes & stock adjustments (Phase 16)
 
 ## Deployment (Vercel)
 
