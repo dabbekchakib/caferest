@@ -1,0 +1,12 @@
+{
+  "loss": "فقدان",
+  "breakage": "كسر",
+  "waste": "هدر",
+  "expired": "انتهاء صلاحية",
+  "damaged": "تالف",
+  "internal_consumption": "استهلاك داخلي",
+  "sample": "عينة",
+  "staff_consumption": "استهلاك الموظفين",
+  "cleaning": "تنظيف",
+  "other": "أخرى"
+}

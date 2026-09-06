@@ -1,0 +1,12 @@
+{
+  "loss": "Perte",
+  "breakage": "Casse",
+  "waste": "Déchet",
+  "expired": "Péremption",
+  "damaged": "Endommagé",
+  "internal_consumption": "Consommation interne",
+  "sample": "Échantillon",
+  "staff_consumption": "Consommation personnel",
+  "cleaning": "Nettoyage",
+  "other": "Autre"
+}

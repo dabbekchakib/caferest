@@ -1,0 +1,18 @@
+{
+  "title": "Items",
+  "ingredient": "Ingredient",
+  "ingredientPlaceholder": "Select an ingredient…",
+  "ingredientRequired": "Please select an ingredient.",
+  "quantity": "Quantity",
+  "quantityPlaceholder": "Quantity…",
+  "quantityRequired": "Please enter a valid quantity.",
+  "duplicateItem": "This ingredient is already in the list.",
+  "add": "Add",
+  "remove": "Remove",
+  "emptyLines": "No lines yet. Add at least one item.",
+  "availability": "Available",
+  "unitCost": "Unit cost",
+  "lineValue": "Line value",
+  "lineAdded": "Item added",
+  "empty": "Add at least one item before saving."
+}

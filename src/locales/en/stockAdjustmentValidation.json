@@ -1,0 +1,16 @@
+{
+  "submitTitle": "Submit adjustment",
+  "submitDescription": "Submitting freezes the lines and the costs. The adjustment can no longer be modified.",
+  "willRequireApproval": "The total value exceeds the approval threshold: an approval will be required.",
+  "autoApproved": "Below the threshold: the adjustment will be approved automatically on submission.",
+  "approveTitle": "Approve adjustment",
+  "approveDescription": "Approving this adjustment authorizes its validation and the stock decrease.",
+  "validateTitle": "Validate adjustment",
+  "validateDescription": "Validation decreases the stock. This action is irreversible.",
+  "reasonPlaceholder": "Comment (optional)…",
+  "cancelTitle": "Cancel adjustment",
+  "cancelDescription": "The adjustment will be marked as cancelled and can no longer be used.",
+  "deleteTitle": "Delete adjustment",
+  "deleteDescription": "Are you sure you want to delete this adjustment? This action is irreversible.",
+  "confirm": "Confirm"
+}

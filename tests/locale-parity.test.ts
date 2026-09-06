@@ -228,6 +228,42 @@ import arStocktakeHistory from "../src/locales/ar/stocktakeHistory.json";
 import frStocktakePrint from "../src/locales/fr/stocktakePrint.json";
 import enStocktakePrint from "../src/locales/en/stocktakePrint.json";
 import arStocktakePrint from "../src/locales/ar/stocktakePrint.json";
+import frStockAdjustments from "../src/locales/fr/stockAdjustments.json";
+import enStockAdjustments from "../src/locales/en/stockAdjustments.json";
+import arStockAdjustments from "../src/locales/ar/stockAdjustments.json";
+import frStockAdjustmentForm from "../src/locales/fr/stockAdjustmentForm.json";
+import enStockAdjustmentForm from "../src/locales/en/stockAdjustmentForm.json";
+import arStockAdjustmentForm from "../src/locales/ar/stockAdjustmentForm.json";
+import frStockAdjustmentItems from "../src/locales/fr/stockAdjustmentItems.json";
+import enStockAdjustmentItems from "../src/locales/en/stockAdjustmentItems.json";
+import arStockAdjustmentItems from "../src/locales/ar/stockAdjustmentItems.json";
+import frStockAdjustmentDetails from "../src/locales/fr/stockAdjustmentDetails.json";
+import enStockAdjustmentDetails from "../src/locales/en/stockAdjustmentDetails.json";
+import arStockAdjustmentDetails from "../src/locales/ar/stockAdjustmentDetails.json";
+import frStockAdjustmentStatus from "../src/locales/fr/stockAdjustmentStatus.json";
+import enStockAdjustmentStatus from "../src/locales/en/stockAdjustmentStatus.json";
+import arStockAdjustmentStatus from "../src/locales/ar/stockAdjustmentStatus.json";
+import frStockAdjustmentActions from "../src/locales/fr/stockAdjustmentActions.json";
+import enStockAdjustmentActions from "../src/locales/en/stockAdjustmentActions.json";
+import arStockAdjustmentActions from "../src/locales/ar/stockAdjustmentActions.json";
+import frStockAdjustmentValidation from "../src/locales/fr/stockAdjustmentValidation.json";
+import enStockAdjustmentValidation from "../src/locales/en/stockAdjustmentValidation.json";
+import arStockAdjustmentValidation from "../src/locales/ar/stockAdjustmentValidation.json";
+import frStockAdjustmentTotals from "../src/locales/fr/stockAdjustmentTotals.json";
+import enStockAdjustmentTotals from "../src/locales/en/stockAdjustmentTotals.json";
+import arStockAdjustmentTotals from "../src/locales/ar/stockAdjustmentTotals.json";
+import frStockAdjustmentFilters from "../src/locales/fr/stockAdjustmentFilters.json";
+import enStockAdjustmentFilters from "../src/locales/en/stockAdjustmentFilters.json";
+import arStockAdjustmentFilters from "../src/locales/ar/stockAdjustmentFilters.json";
+import frStockAdjustmentHistory from "../src/locales/fr/stockAdjustmentHistory.json";
+import enStockAdjustmentHistory from "../src/locales/en/stockAdjustmentHistory.json";
+import arStockAdjustmentHistory from "../src/locales/ar/stockAdjustmentHistory.json";
+import frStockAdjustmentPrint from "../src/locales/fr/stockAdjustmentPrint.json";
+import enStockAdjustmentPrint from "../src/locales/en/stockAdjustmentPrint.json";
+import arStockAdjustmentPrint from "../src/locales/ar/stockAdjustmentPrint.json";
+import frStockAdjustmentTypes from "../src/locales/fr/stockAdjustmentTypes.json";
+import enStockAdjustmentTypes from "../src/locales/en/stockAdjustmentTypes.json";
+import arStockAdjustmentTypes from "../src/locales/ar/stockAdjustmentTypes.json";
 
 type JsonValue =
   string | number | boolean | null | JsonValue[] | { [k: string]: JsonValue };
@@ -325,6 +361,18 @@ const namespaces = [
   ["stocktakeFilters", enStocktakeFilters, frStocktakeFilters, arStocktakeFilters],
   ["stocktakeHistory", enStocktakeHistory, frStocktakeHistory, arStocktakeHistory],
   ["stocktakePrint", enStocktakePrint, frStocktakePrint, arStocktakePrint],
+  ["stockAdjustments", enStockAdjustments, frStockAdjustments, arStockAdjustments],
+  ["stockAdjustmentForm", enStockAdjustmentForm, frStockAdjustmentForm, arStockAdjustmentForm],
+  ["stockAdjustmentItems", enStockAdjustmentItems, frStockAdjustmentItems, arStockAdjustmentItems],
+  ["stockAdjustmentDetails", enStockAdjustmentDetails, frStockAdjustmentDetails, arStockAdjustmentDetails],
+  ["stockAdjustmentStatus", enStockAdjustmentStatus, frStockAdjustmentStatus, arStockAdjustmentStatus],
+  ["stockAdjustmentActions", enStockAdjustmentActions, frStockAdjustmentActions, arStockAdjustmentActions],
+  ["stockAdjustmentValidation", enStockAdjustmentValidation, frStockAdjustmentValidation, arStockAdjustmentValidation],
+  ["stockAdjustmentTotals", enStockAdjustmentTotals, frStockAdjustmentTotals, arStockAdjustmentTotals],
+  ["stockAdjustmentFilters", enStockAdjustmentFilters, frStockAdjustmentFilters, arStockAdjustmentFilters],
+  ["stockAdjustmentHistory", enStockAdjustmentHistory, frStockAdjustmentHistory, arStockAdjustmentHistory],
+  ["stockAdjustmentPrint", enStockAdjustmentPrint, frStockAdjustmentPrint, arStockAdjustmentPrint],
+  ["stockAdjustmentTypes", enStockAdjustmentTypes, frStockAdjustmentTypes, arStockAdjustmentTypes],
 ] as const;
 
 for (const [ns, en, fr, ar] of namespaces) {

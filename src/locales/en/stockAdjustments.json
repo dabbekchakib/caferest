@@ -1,0 +1,18 @@
+{
+  "title": "Stock adjustments",
+  "newAdjustment": "New adjustment",
+  "delete": "Delete",
+  "searchPlaceholder": "Search by number…",
+  "emptyTitle": "No adjustments",
+  "emptyDescription": "Create your first adjustment to take stock out (loss, breakage, expiry, etc.).",
+  "createFirst": "Create an adjustment",
+  "results": "results",
+  "columns": {
+    "number": "Number",
+    "type": "Type",
+    "location": "Location",
+    "status": "Status",
+    "lines": "Lines",
+    "createdBy": "Created by"
+  }
+}

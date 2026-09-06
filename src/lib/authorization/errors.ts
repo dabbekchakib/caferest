@@ -87,6 +87,22 @@ export const AUTHORIZATION_ERROR_CODES = {
   STOCKTAKE_INCOMPLETE: "STOCKTAKE_INCOMPLETE",
   STOCKTAKE_HIGH_VARIANCE_APPROVAL: "STOCKTAKE_HIGH_VARIANCE_APPROVAL",
   STOCKTAKE_DUPLICATE_NUMBER: "STOCKTAKE_DUPLICATE_NUMBER",
+  STOCK_ADJUSTMENT_NOT_FOUND: "STOCK_ADJUSTMENT_NOT_FOUND",
+  STOCK_ADJUSTMENT_WRONG_STATUS: "STOCK_ADJUSTMENT_WRONG_STATUS",
+  STOCK_ADJUSTMENT_INVALID_LOCATION: "STOCK_ADJUSTMENT_INVALID_LOCATION",
+  STOCK_ADJUSTMENT_INVALID_TYPE: "STOCK_ADJUSTMENT_INVALID_TYPE",
+  STOCK_ADJUSTMENT_INVALID_DATE: "STOCK_ADJUSTMENT_INVALID_DATE",
+  STOCK_ADJUSTMENT_INVALID_REASON: "STOCK_ADJUSTMENT_INVALID_REASON",
+  STOCK_ADJUSTMENT_QUANTITY_INVALID: "STOCK_ADJUSTMENT_QUANTITY_INVALID",
+  STOCK_ADJUSTMENT_DUPLICATE_ITEM: "STOCK_ADJUSTMENT_DUPLICATE_ITEM",
+  STOCK_ADJUSTMENT_ITEM_INVALID: "STOCK_ADJUSTMENT_ITEM_INVALID",
+  STOCK_ADJUSTMENT_ITEM_NOT_FOUND: "STOCK_ADJUSTMENT_ITEM_NOT_FOUND",
+  STOCK_ADJUSTMENT_EMPTY: "STOCK_ADJUSTMENT_EMPTY",
+  STOCK_ADJUSTMENT_HIGH_VALUE_APPROVAL:
+    "STOCK_ADJUSTMENT_HIGH_VALUE_APPROVAL",
+  STOCK_ADJUSTMENT_SELF_APPROVAL: "STOCK_ADJUSTMENT_SELF_APPROVAL",
+  STOCK_ADJUSTMENT_INSUFFICIENT_STOCK:
+    "STOCK_ADJUSTMENT_INSUFFICIENT_STOCK",
   GENERIC: "GENERIC",
 } as const;
 
@@ -186,6 +202,32 @@ export const AUTHORIZATION_ERROR_KEYS: Record<AuthorizationErrorCode, string> =
       "authorization.errors.stocktakeHighVarianceApproval",
     STOCKTAKE_DUPLICATE_NUMBER:
       "authorization.errors.stocktakeDuplicateNumber",
+    STOCK_ADJUSTMENT_NOT_FOUND: "authorization.errors.stockAdjustmentNotFound",
+    STOCK_ADJUSTMENT_WRONG_STATUS:
+      "authorization.errors.stockAdjustmentWrongStatus",
+    STOCK_ADJUSTMENT_INVALID_LOCATION:
+      "authorization.errors.stockAdjustmentInvalidLocation",
+    STOCK_ADJUSTMENT_INVALID_TYPE:
+      "authorization.errors.stockAdjustmentInvalidType",
+    STOCK_ADJUSTMENT_INVALID_DATE:
+      "authorization.errors.stockAdjustmentInvalidDate",
+    STOCK_ADJUSTMENT_INVALID_REASON:
+      "authorization.errors.stockAdjustmentInvalidReason",
+    STOCK_ADJUSTMENT_QUANTITY_INVALID:
+      "authorization.errors.stockAdjustmentQuantityInvalid",
+    STOCK_ADJUSTMENT_DUPLICATE_ITEM:
+      "authorization.errors.stockAdjustmentDuplicateItem",
+    STOCK_ADJUSTMENT_ITEM_INVALID:
+      "authorization.errors.stockAdjustmentItemInvalid",
+    STOCK_ADJUSTMENT_ITEM_NOT_FOUND:
+      "authorization.errors.stockAdjustmentItemNotFound",
+    STOCK_ADJUSTMENT_EMPTY: "authorization.errors.stockAdjustmentEmpty",
+    STOCK_ADJUSTMENT_HIGH_VALUE_APPROVAL:
+      "authorization.errors.stockAdjustmentHighValueApproval",
+    STOCK_ADJUSTMENT_SELF_APPROVAL:
+      "authorization.errors.stockAdjustmentSelfApproval",
+    STOCK_ADJUSTMENT_INSUFFICIENT_STOCK:
+      "authorization.errors.stockAdjustmentInsufficientStock",
     GENERIC: "authorization.errors.generic",
   };
 
@@ -240,6 +282,9 @@ export const DB_CONSTRAINT_TO_CODE: Record<string, AuthorizationErrorCode> = {
   goods_receipt_items_split_check: "GOODS_RECEIPT_QUANTITY_INVALID",
   uq_stocktakes_establishment_number: "STOCKTAKE_DUPLICATE_NUMBER",
   stocktake_items_ingredient_unique: "STOCKTAKE_ITEM_NOT_FOUND",
+  uq_stock_adjustment_items_added: "STOCK_ADJUSTMENT_DUPLICATE_ITEM",
+  uq_stock_adjustment_reasons_system_code: "STOCK_ADJUSTMENT_INVALID_REASON",
+  uq_stock_adjustment_reasons_est_code: "STOCK_ADJUSTMENT_INVALID_REASON",
 };
 
 /**
@@ -277,6 +322,22 @@ export const RPC_MESSAGE_TO_CODE: Record<string, AuthorizationErrorCode> = {
   stocktake_item_not_found: "STOCKTAKE_ITEM_NOT_FOUND",
   stocktake_incomplete: "STOCKTAKE_INCOMPLETE",
   stocktake_high_variance_approval: "STOCKTAKE_HIGH_VARIANCE_APPROVAL",
+  stock_adjustment_not_found: "STOCK_ADJUSTMENT_NOT_FOUND",
+  stock_adjustment_wrong_status: "STOCK_ADJUSTMENT_WRONG_STATUS",
+  stock_adjustment_invalid_location: "STOCK_ADJUSTMENT_INVALID_LOCATION",
+  stock_adjustment_invalid_type: "STOCK_ADJUSTMENT_INVALID_TYPE",
+  stock_adjustment_invalid_date: "STOCK_ADJUSTMENT_INVALID_DATE",
+  stock_adjustment_invalid_reason: "STOCK_ADJUSTMENT_INVALID_REASON",
+  stock_adjustment_quantity_invalid: "STOCK_ADJUSTMENT_QUANTITY_INVALID",
+  stock_adjustment_duplicate_item: "STOCK_ADJUSTMENT_DUPLICATE_ITEM",
+  stock_adjustment_item_invalid: "STOCK_ADJUSTMENT_ITEM_INVALID",
+  stock_adjustment_item_not_found: "STOCK_ADJUSTMENT_ITEM_NOT_FOUND",
+  stock_adjustment_empty: "STOCK_ADJUSTMENT_EMPTY",
+  stock_adjustment_high_value_approval:
+    "STOCK_ADJUSTMENT_HIGH_VALUE_APPROVAL",
+  stock_adjustment_self_approval: "STOCK_ADJUSTMENT_SELF_APPROVAL",
+  stock_adjustment_insufficient_stock:
+    "STOCK_ADJUSTMENT_INSUFFICIENT_STOCK",
 };
 
 export class AuthorizationError extends Error {

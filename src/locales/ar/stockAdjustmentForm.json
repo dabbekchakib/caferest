@@ -1,0 +1,17 @@
+{
+  "title": "تسوية مخزون جديدة",
+  "numberPreview": "الرقم المتوقع",
+  "location": "الموقع",
+  "noLocations": "لا يوجد موقع متاح",
+  "type": "نوع التسوية",
+  "date": "التاريخ",
+  "reason": "السبب",
+  "noReason": "بدون سبب",
+  "internalReference": "المرجع الداخلي",
+  "referencePlaceholder": "مثال: طلب رقم 123",
+  "notes": "ملاحظات",
+  "notesPlaceholder": "تفاصيل إضافية (اختياري)",
+  "locationRequired": "يرجى اختيار موقع.",
+  "requiresApprovalTitle": "الموافقة مطلوبة",
+  "requiresApprovalDescription": "تتجاوز القيمة الإجمالية الحد المحدد: ستحتاج هذه التسوية إلى موافقة قبل التحقق."
+}

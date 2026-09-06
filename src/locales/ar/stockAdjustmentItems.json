@@ -1,0 +1,18 @@
+{
+  "title": "العناصر",
+  "ingredient": "المكوّن",
+  "ingredientPlaceholder": "اختر مكوّناً…",
+  "ingredientRequired": "يرجى اختيار مكوّن.",
+  "quantity": "الكمية",
+  "quantityPlaceholder": "الكمية…",
+  "quantityRequired": "يرجى إدخال كمية صالحة.",
+  "duplicateItem": "هذا المكوّن موجود بالفعل في القائمة.",
+  "add": "إضافة",
+  "remove": "إزالة",
+  "emptyLines": "لا توجد أسطر بعد. أضف عنصراً واحداً على الأقل.",
+  "availability": "المتوفر",
+  "unitCost": "التكلفة الوحدوية",
+  "lineValue": "قيمة السطر",
+  "lineAdded": "تمت إضافة العنصر",
+  "empty": "أضف عنصراً واحداً على الأقل قبل الحفظ."
+}

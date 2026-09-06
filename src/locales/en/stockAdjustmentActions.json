@@ -1,0 +1,9 @@
+{
+  "create": "Create adjustment",
+  "created": "Adjustment created",
+  "submitted": "Adjustment submitted",
+  "approved": "Adjustment approved",
+  "validated": "Adjustment validated",
+  "cancelled": "Adjustment cancelled",
+  "deleted": "Adjustment deleted"
+}

@@ -1,0 +1,12 @@
+{
+  "loss": "Loss",
+  "breakage": "Breakage",
+  "waste": "Waste",
+  "expired": "Expired",
+  "damaged": "Damaged",
+  "internal_consumption": "Internal consumption",
+  "sample": "Sample",
+  "staff_consumption": "Staff consumption",
+  "cleaning": "Cleaning",
+  "other": "Other"
+}

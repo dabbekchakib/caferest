@@ -1,0 +1,18 @@
+{
+  "title": "تسوية المخزون",
+  "print": "طباعة",
+  "number": "الرقم",
+  "type": "النوع",
+  "date": "التاريخ",
+  "location": "الموقع",
+  "reason": "السبب",
+  "internalReference": "المرجع الداخلي",
+  "createdBy": "أنشأه",
+  "createdAt": "أنشئ في",
+  "approvedBy": "اعتمده",
+  "notes": "ملاحظات",
+  "totalQuantity": "الكمية الإجمالية",
+  "totalValue": "القيمة الإجمالية",
+  "signature": "توقيع الاعتماد",
+  "validatedBy": "تحقق منه"
+}

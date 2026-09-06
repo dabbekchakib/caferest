@@ -1,0 +1,16 @@
+{
+  "submitTitle": "Soumettre l'ajustement",
+  "submitDescription": "La soumission gèle les lignes et les coûts. L'ajustement ne pourra plus être modifié.",
+  "willRequireApproval": "La valeur totale dépasse le seuil d'approbation : une approbation sera requise.",
+  "autoApproved": "Sous le seuil : l'ajustement sera approuvé automatiquement à la soumission.",
+  "approveTitle": "Approuver l'ajustement",
+  "approveDescription": "Approuver cet ajustement autorise sa validation et la sortie de stock.",
+  "validateTitle": "Valider l'ajustement",
+  "validateDescription": "La validation décrémente le stock. Cette action est irréversible.",
+  "reasonPlaceholder": "Commentaire (optionnel)…",
+  "cancelTitle": "Annuler l'ajustement",
+  "cancelDescription": "L'ajustement sera marqué comme annulé et ne pourra plus être utilisé.",
+  "deleteTitle": "Supprimer l'ajustement",
+  "deleteDescription": "Voulez-vous vraiment supprimer cet ajustement ? Cette action est irréversible.",
+  "confirm": "Confirmer"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Nouvel ajustement de stock",
+  "numberPreview": "Numéro prévu",
+  "location": "Emplacement",
+  "noLocations": "Aucun emplacement disponible",
+  "type": "Type d'ajustement",
+  "date": "Date",
+  "reason": "Motif",
+  "noReason": "Aucun motif",
+  "internalReference": "Référence interne",
+  "referencePlaceholder": "Par exemple : commande n°123",
+  "notes": "Notes",
+  "notesPlaceholder": "Détails supplémentaires (optionnel)",
+  "locationRequired": "Veuillez sélectionner un emplacement.",
+  "requiresApprovalTitle": "Approbation requise",
+  "requiresApprovalDescription": "La valeur totale dépasse le seuil défini : cet ajustement devra être approuvé avant validation."
+}

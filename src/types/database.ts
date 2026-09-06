@@ -1011,6 +1011,8 @@ export interface Database {
           goods_receipt_item_id: string | null;
           stocktake_id: string | null;
           stocktake_item_id: string | null;
+          stock_adjustment_id: string | null;
+          stock_adjustment_item_id: string | null;
           lot_number: string | null;
           batch_number: string | null;
           expiry_date: string | null;
@@ -1037,6 +1039,8 @@ export interface Database {
           goods_receipt_item_id?: string | null;
           stocktake_id?: string | null;
           stocktake_item_id?: string | null;
+          stock_adjustment_id?: string | null;
+          stock_adjustment_item_id?: string | null;
           lot_number?: string | null;
           batch_number?: string | null;
           expiry_date?: string | null;
@@ -1198,6 +1202,156 @@ export interface Database {
         };
         Update: Partial<
           Database["public"]["Tables"]["goods_receipt_status_history"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      stock_adjustment_items: {
+        Row: {
+          id: string;
+          stock_adjustment_id: string;
+          ingredient_id: string;
+          unit_id: string | null;
+          base_unit_id: string | null;
+          base_quantity: number;
+          unit_cost: number;
+          total_cost: number;
+          notes: string | null;
+          sort_order: number;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          stock_adjustment_id: string;
+          ingredient_id: string;
+          unit_id?: string | null;
+          base_unit_id?: string | null;
+          base_quantity?: number;
+          unit_cost?: number;
+          total_cost?: number;
+          notes?: string | null;
+          sort_order?: number;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["stock_adjustment_items"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      stock_adjustment_reasons: {
+        Row: {
+          id: string;
+          establishment_id: string | null;
+          code: string;
+          label: string;
+          adjustment_type: string | null;
+          is_system: boolean;
+          is_active: boolean;
+          sort_order: number;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id?: string | null;
+          code: string;
+          label: string;
+          adjustment_type?: string | null;
+          is_system?: boolean;
+          is_active?: boolean;
+          sort_order?: number;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["stock_adjustment_reasons"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      stock_adjustment_status_history: {
+        Row: {
+          id: string;
+          establishment_id: string;
+          stock_adjustment_id: string;
+          from_status: string | null;
+          to_status: string;
+          reason: string | null;
+          changed_by: string | null;
+          created_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id: string;
+          stock_adjustment_id: string;
+          from_status?: string | null;
+          to_status: string;
+          reason?: string | null;
+          changed_by?: string | null;
+          created_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["stock_adjustment_status_history"]["Insert"]
+        >;
+        Relationships: [];
+      };
+      stock_adjustments: {
+        Row: {
+          id: string;
+          establishment_id: string;
+          inventory_location_id: string;
+          adjustment_number: string;
+          status: StockAdjustmentStatus;
+          adjustment_type: StockAdjustmentType;
+          adjustment_date: Datetime;
+          reason_id: string | null;
+          notes: string | null;
+          internal_reference: string | null;
+          total_quantity: number;
+          total_value: number;
+          requires_approval: boolean;
+          submitted_by: string | null;
+          submitted_at: Datetime | null;
+          approved_by: string | null;
+          approved_at: Datetime | null;
+          validated_by: string | null;
+          validated_at: Datetime | null;
+          cancelled_by: string | null;
+          cancelled_at: Datetime | null;
+          cancellation_reason: string | null;
+          created_by: string | null;
+          created_at: Datetime;
+          updated_at: Datetime;
+        };
+        Insert: {
+          id?: string;
+          establishment_id: string;
+          inventory_location_id: string;
+          adjustment_number: string;
+          status?: StockAdjustmentStatus;
+          adjustment_type: StockAdjustmentType;
+          adjustment_date?: Datetime;
+          reason_id?: string | null;
+          notes?: string | null;
+          internal_reference?: string | null;
+          total_quantity?: number;
+          total_value?: number;
+          requires_approval?: boolean;
+          submitted_by?: string | null;
+          submitted_at?: Datetime | null;
+          approved_by?: string | null;
+          approved_at?: Datetime | null;
+          validated_by?: string | null;
+          validated_at?: Datetime | null;
+          cancelled_by?: string | null;
+          cancelled_at?: Datetime | null;
+          cancellation_reason?: string | null;
+          created_by?: string | null;
+          created_at?: Datetime;
+          updated_at?: Datetime;
+        };
+        Update: Partial<
+          Database["public"]["Tables"]["stock_adjustments"]["Insert"]
         >;
         Relationships: [];
       };
@@ -1984,3 +2138,21 @@ export type OrderType = "dine_in" | "takeaway" | "delivery";
 export type PaymentMethodType = "cash" | "card" | "bank_transfer" | "other";
 export type PaymentStatus = "pending" | "completed" | "failed" | "refunded";
 export type CashSessionStatus = "open" | "closed" | "reconciled";
+export type StockAdjustmentStatus =
+  | "draft"
+  | "pending_approval"
+  | "approved"
+  | "validated"
+  | "cancelled";
+
+export type StockAdjustmentType =
+  | "loss"
+  | "breakage"
+  | "waste"
+  | "expired"
+  | "damaged"
+  | "internal_consumption"
+  | "sample"
+  | "staff_consumption"
+  | "cleaning"
+  | "other";

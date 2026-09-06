@@ -1,0 +1,18 @@
+{
+  "title": "Articles",
+  "ingredient": "Ingrédient",
+  "ingredientPlaceholder": "Sélectionner un ingrédient…",
+  "ingredientRequired": "Veuillez sélectionner un ingrédient.",
+  "quantity": "Quantité",
+  "quantityPlaceholder": "Quantité…",
+  "quantityRequired": "Veuillez saisir une quantité valide.",
+  "duplicateItem": "Cet ingrédient figure déjà dans la liste.",
+  "add": "Ajouter",
+  "remove": "Retirer",
+  "emptyLines": "Aucune ligne pour le moment. Ajoutez au moins un article.",
+  "availability": "Disponible",
+  "unitCost": "Coût unitaire",
+  "lineValue": "Valeur ligne",
+  "lineAdded": "Article ajouté",
+  "empty": "Ajoutez au moins un article avant d'enregistrer."
+}

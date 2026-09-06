@@ -1,0 +1,18 @@
+{
+  "title": "Ajustements de stock",
+  "newAdjustment": "Nouvel ajustement",
+  "delete": "Supprimer",
+  "searchPlaceholder": "Rechercher par numéro…",
+  "emptyTitle": "Aucun ajustement",
+  "emptyDescription": "Créez votre premier ajustement pour sortir du stock (perte, casse, péremption…).",
+  "createFirst": "Créer un ajustement",
+  "results": "résultats",
+  "columns": {
+    "number": "Numéro",
+    "type": "Type",
+    "location": "Emplacement",
+    "status": "Statut",
+    "lines": "Lignes",
+    "createdBy": "Créé par"
+  }
+}

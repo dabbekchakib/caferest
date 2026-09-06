@@ -95,6 +95,18 @@ import frStocktakeVariance from "@/locales/fr/stocktakeVariance.json";
 import frStocktakeFilters from "@/locales/fr/stocktakeFilters.json";
 import frStocktakeHistory from "@/locales/fr/stocktakeHistory.json";
 import frStocktakePrint from "@/locales/fr/stocktakePrint.json";
+import frStockAdjustments from "@/locales/fr/stockAdjustments.json";
+import frStockAdjustmentForm from "@/locales/fr/stockAdjustmentForm.json";
+import frStockAdjustmentItems from "@/locales/fr/stockAdjustmentItems.json";
+import frStockAdjustmentDetails from "@/locales/fr/stockAdjustmentDetails.json";
+import frStockAdjustmentStatus from "@/locales/fr/stockAdjustmentStatus.json";
+import frStockAdjustmentActions from "@/locales/fr/stockAdjustmentActions.json";
+import frStockAdjustmentValidation from "@/locales/fr/stockAdjustmentValidation.json";
+import frStockAdjustmentTotals from "@/locales/fr/stockAdjustmentTotals.json";
+import frStockAdjustmentFilters from "@/locales/fr/stockAdjustmentFilters.json";
+import frStockAdjustmentHistory from "@/locales/fr/stockAdjustmentHistory.json";
+import frStockAdjustmentPrint from "@/locales/fr/stockAdjustmentPrint.json";
+import frStockAdjustmentTypes from "@/locales/fr/stockAdjustmentTypes.json";
 
 import enCommon from "@/locales/en/common.json";
 import enNavigation from "@/locales/en/navigation.json";
@@ -190,6 +202,18 @@ import enStocktakeVariance from "@/locales/en/stocktakeVariance.json";
 import enStocktakeFilters from "@/locales/en/stocktakeFilters.json";
 import enStocktakeHistory from "@/locales/en/stocktakeHistory.json";
 import enStocktakePrint from "@/locales/en/stocktakePrint.json";
+import enStockAdjustments from "@/locales/en/stockAdjustments.json";
+import enStockAdjustmentForm from "@/locales/en/stockAdjustmentForm.json";
+import enStockAdjustmentItems from "@/locales/en/stockAdjustmentItems.json";
+import enStockAdjustmentDetails from "@/locales/en/stockAdjustmentDetails.json";
+import enStockAdjustmentStatus from "@/locales/en/stockAdjustmentStatus.json";
+import enStockAdjustmentActions from "@/locales/en/stockAdjustmentActions.json";
+import enStockAdjustmentValidation from "@/locales/en/stockAdjustmentValidation.json";
+import enStockAdjustmentTotals from "@/locales/en/stockAdjustmentTotals.json";
+import enStockAdjustmentFilters from "@/locales/en/stockAdjustmentFilters.json";
+import enStockAdjustmentHistory from "@/locales/en/stockAdjustmentHistory.json";
+import enStockAdjustmentPrint from "@/locales/en/stockAdjustmentPrint.json";
+import enStockAdjustmentTypes from "@/locales/en/stockAdjustmentTypes.json";
 
 import arCommon from "@/locales/ar/common.json";
 import arNavigation from "@/locales/ar/navigation.json";
@@ -285,6 +309,18 @@ import arStocktakeVariance from "@/locales/ar/stocktakeVariance.json";
 import arStocktakeFilters from "@/locales/ar/stocktakeFilters.json";
 import arStocktakeHistory from "@/locales/ar/stocktakeHistory.json";
 import arStocktakePrint from "@/locales/ar/stocktakePrint.json";
+import arStockAdjustments from "@/locales/ar/stockAdjustments.json";
+import arStockAdjustmentForm from "@/locales/ar/stockAdjustmentForm.json";
+import arStockAdjustmentItems from "@/locales/ar/stockAdjustmentItems.json";
+import arStockAdjustmentDetails from "@/locales/ar/stockAdjustmentDetails.json";
+import arStockAdjustmentStatus from "@/locales/ar/stockAdjustmentStatus.json";
+import arStockAdjustmentActions from "@/locales/ar/stockAdjustmentActions.json";
+import arStockAdjustmentValidation from "@/locales/ar/stockAdjustmentValidation.json";
+import arStockAdjustmentTotals from "@/locales/ar/stockAdjustmentTotals.json";
+import arStockAdjustmentFilters from "@/locales/ar/stockAdjustmentFilters.json";
+import arStockAdjustmentHistory from "@/locales/ar/stockAdjustmentHistory.json";
+import arStockAdjustmentPrint from "@/locales/ar/stockAdjustmentPrint.json";
+import arStockAdjustmentTypes from "@/locales/ar/stockAdjustmentTypes.json";
 
 interface LocaleBundle {
   common: MessageRecord;
@@ -381,6 +417,18 @@ interface LocaleBundle {
   stocktakeFilters: MessageRecord;
   stocktakeHistory: MessageRecord;
   stocktakePrint: MessageRecord;
+  stockAdjustments: MessageRecord;
+  stockAdjustmentForm: MessageRecord;
+  stockAdjustmentItems: MessageRecord;
+  stockAdjustmentDetails: MessageRecord;
+  stockAdjustmentStatus: MessageRecord;
+  stockAdjustmentActions: MessageRecord;
+  stockAdjustmentValidation: MessageRecord;
+  stockAdjustmentTotals: MessageRecord;
+  stockAdjustmentFilters: MessageRecord;
+  stockAdjustmentHistory: MessageRecord;
+  stockAdjustmentPrint: MessageRecord;
+  stockAdjustmentTypes: MessageRecord;
 }
 
 const fr: LocaleBundle = {
@@ -478,6 +526,18 @@ const fr: LocaleBundle = {
   stocktakeFilters: frStocktakeFilters,
   stocktakeHistory: frStocktakeHistory,
   stocktakePrint: frStocktakePrint,
+  stockAdjustments: frStockAdjustments,
+  stockAdjustmentForm: frStockAdjustmentForm,
+  stockAdjustmentItems: frStockAdjustmentItems,
+  stockAdjustmentDetails: frStockAdjustmentDetails,
+  stockAdjustmentStatus: frStockAdjustmentStatus,
+  stockAdjustmentActions: frStockAdjustmentActions,
+  stockAdjustmentValidation: frStockAdjustmentValidation,
+  stockAdjustmentTotals: frStockAdjustmentTotals,
+  stockAdjustmentFilters: frStockAdjustmentFilters,
+  stockAdjustmentHistory: frStockAdjustmentHistory,
+  stockAdjustmentPrint: frStockAdjustmentPrint,
+  stockAdjustmentTypes: frStockAdjustmentTypes,
 };
 
 const en: LocaleBundle = {
@@ -575,6 +635,18 @@ const en: LocaleBundle = {
   stocktakeFilters: enStocktakeFilters,
   stocktakeHistory: enStocktakeHistory,
   stocktakePrint: enStocktakePrint,
+  stockAdjustments: enStockAdjustments,
+  stockAdjustmentForm: enStockAdjustmentForm,
+  stockAdjustmentItems: enStockAdjustmentItems,
+  stockAdjustmentDetails: enStockAdjustmentDetails,
+  stockAdjustmentStatus: enStockAdjustmentStatus,
+  stockAdjustmentActions: enStockAdjustmentActions,
+  stockAdjustmentValidation: enStockAdjustmentValidation,
+  stockAdjustmentTotals: enStockAdjustmentTotals,
+  stockAdjustmentFilters: enStockAdjustmentFilters,
+  stockAdjustmentHistory: enStockAdjustmentHistory,
+  stockAdjustmentPrint: enStockAdjustmentPrint,
+  stockAdjustmentTypes: enStockAdjustmentTypes,
 };
 
 const ar: LocaleBundle = {
@@ -672,6 +744,18 @@ const ar: LocaleBundle = {
   stocktakeFilters: arStocktakeFilters,
   stocktakeHistory: arStocktakeHistory,
   stocktakePrint: arStocktakePrint,
+  stockAdjustments: arStockAdjustments,
+  stockAdjustmentForm: arStockAdjustmentForm,
+  stockAdjustmentItems: arStockAdjustmentItems,
+  stockAdjustmentDetails: arStockAdjustmentDetails,
+  stockAdjustmentStatus: arStockAdjustmentStatus,
+  stockAdjustmentActions: arStockAdjustmentActions,
+  stockAdjustmentValidation: arStockAdjustmentValidation,
+  stockAdjustmentTotals: arStockAdjustmentTotals,
+  stockAdjustmentFilters: arStockAdjustmentFilters,
+  stockAdjustmentHistory: arStockAdjustmentHistory,
+  stockAdjustmentPrint: arStockAdjustmentPrint,
+  stockAdjustmentTypes: arStockAdjustmentTypes,
 };
 
 export type MessagesBundle = typeof fr;

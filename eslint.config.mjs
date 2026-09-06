@@ -33,6 +33,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Compiled test output:
     "dist-tests/**",
+    // Local throwaway live-test scripts (gitignored scratch dir):
+    "supabase/.temp/**",
   ]),
 ]);
 

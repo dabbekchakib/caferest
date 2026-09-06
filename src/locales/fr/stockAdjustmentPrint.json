@@ -1,0 +1,18 @@
+{
+  "title": "Ajustement de stock",
+  "print": "Imprimer",
+  "number": "Numéro",
+  "type": "Type",
+  "date": "Date",
+  "location": "Emplacement",
+  "reason": "Motif",
+  "internalReference": "Référence interne",
+  "createdBy": "Créé par",
+  "createdAt": "Créé le",
+  "approvedBy": "Approuvé par",
+  "notes": "Notes",
+  "totalQuantity": "Quantité totale",
+  "totalValue": "Valeur totale",
+  "signature": "Signature approbation",
+  "validatedBy": "Validé par"
+}

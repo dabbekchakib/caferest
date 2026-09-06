@@ -1,0 +1,18 @@
+{
+  "title": "تسويات المخزون",
+  "newAdjustment": "تسوية جديدة",
+  "delete": "حذف",
+  "searchPlaceholder": "البحث بالرقم…",
+  "emptyTitle": "لا توجد تسويات",
+  "emptyDescription": "أنشئ أول تسوية لإخراج مخزون (فقدان، كسر، انتهاء صلاحية…).",
+  "createFirst": "إنشاء تسوية",
+  "results": "نتيجة",
+  "columns": {
+    "number": "الرقم",
+    "type": "النوع",
+    "location": "الموقع",
+    "status": "الحالة",
+    "lines": "الأسطر",
+    "createdBy": "أنشأه"
+  }
+}

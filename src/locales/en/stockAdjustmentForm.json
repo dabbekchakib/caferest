@@ -1,0 +1,17 @@
+{
+  "title": "New stock adjustment",
+  "numberPreview": "Next number",
+  "location": "Location",
+  "noLocations": "No location available",
+  "type": "Adjustment type",
+  "date": "Date",
+  "reason": "Reason",
+  "noReason": "No reason",
+  "internalReference": "Internal reference",
+  "referencePlaceholder": "e.g. order #123",
+  "notes": "Notes",
+  "notesPlaceholder": "Additional details (optional)",
+  "locationRequired": "Please select a location.",
+  "requiresApprovalTitle": "Approval required",
+  "requiresApprovalDescription": "The total value exceeds the configured threshold: this adjustment will need approval before validation."
+}
